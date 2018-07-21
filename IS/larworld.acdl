@@ -1,6 +1,6 @@
 <asset_composite xmlns="http://namespaces.softwareag.com/acdl/1.0" targetNamespace="http://namespaces.softwareag.com/webMethods/IS" name="larworld" runtimeVersion="10.3.0.0">
   <implementation.generic type="ispackage" />
-  <buildInfo name="BuildVersion" value="10.3.0.15" />
+  <buildInfo name="BuildVersion" value="10.3.0.16" />
   <buildInfo name="BuildTimestamp" value="2018-06-19T16:35:41" />
   <buildInfo name="MinimumTargetRuntimeVersion" value="10.3.0.1" />
   <property name="activatePkgOnInstall" displayName="Activate Package On Install">
