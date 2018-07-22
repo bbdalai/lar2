@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<asset_composite name="local-integrationServer-default" displayName="local-integrationServer-default" targetNamespace="http://namespaces.softwareag.com/webMethods/CC" xmlns="http://namespaces.softwareag.com/acdl/1.0" xmlns:EDA="http://namespaces.softwareag.com/webMethods/EDA" xmlns:MWS="http://namespaces.softwareag.com/webMethods/MWS" xmlns:IS="http://namespaces.softwareag.com/webMethods/IS" xmlns:APIPORTAL="http://namespaces.softwareag.com/webMethods/APIPORTAL" xmlns:AgileApps="http://namespaces.softwareag.com/webMethods/AgileApps" xmlns:BROKER="http://namespaces.softwareag.com/webMethods/BROKER" xmlns:implDetails="http://namespaces.softwareag.com/acdl/implDetails" xmlns:UniversalMessaging="http://namespaces.softwareag.com/webMethods/UniversalMessaging" xmlns:TN="http://namespaces.softwareag.com/webMethods/TN" xmlns:RULES="http://namespaces.softwareag.com/webMethods/RULES" xmlns:BPM="http://namespaces.softwareag.com/webMethods/BPM" xmlns:Optimize="http://namespaces.softwareag.com/webMethods/Optimize">
+    <buildInfo name="build.timestamp" value="2018-07-22T08:01:02"/>
+    <buildInfo name="build.version"/>
+    <property name="eclipse.ignoreApp" many="false" isSecure="false" displayName="eclipse.ignoreApp">
+        <value>true</value>
+    </property>
+    <property name="Port.@alias" many="false" isSecure="false" displayName="Port.@alias">
+        <value>diagnostics</value>
+    </property>
+    <property name="osgi.install.area.stripquotes" many="false" isSecure="false" displayName="osgi.install.area.stripquotes">
+        <value>TRUE</value>
+    </property>
+    <property name="osgi.install.area" many="false" isSecure="false" displayName="osgi.install.area">
+        <value>"%OSGI_INSTALL_AREA%"</value>
+    </property>
+    <property name="Port.Enabled" many="false" isSecure="false" displayName="Port.Enabled">
+        <value>false</value>
+    </property>
+    <property name="java.io.tmpdir.stripquotes" many="false" isSecure="false" displayName="java.io.tmpdir.stripquotes">
+        <value>TRUE</value>
+    </property>
+    <property name="java.io.tmpdir" many="false" isSecure="false" displayName="java.io.tmpdir">
+        <value>"%OSGI_INSTALL_AREA%/workspace/temp"</value>
+    </property>
+    <property name="osgi.noShutdown" many="false" isSecure="false" displayName="osgi.noShutdown">
+        <value>true</value>
+    </property>
+</asset_composite>
