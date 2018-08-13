@@ -6,7 +6,7 @@
         <value></value>
     </property>
     <property name="pre-um1.universal-messaging-umserver1.um-jndi-cf-confactory1.url" many="false" isSecure="false" displayName="pre-um1.universal-messaging-umserver1.um-jndi-cf-confactory1.url">
-        <value>nsp://localhost:9001</value>
+        <value>$UM_URL</value>
     </property>
     <property name="pre-um1.universal-messaging-umserver1.um-jndi-dest-que1.autocreatedest" many="false" isSecure="false" displayName="pre-um1.universal-messaging-umserver1.um-jndi-dest-que1.autocreatedest">
         <value>false</value>
