@@ -9,7 +9,7 @@
         <value>true</value>
     </property>
     <property name="universal-messaging-umserver.um-jndi-cf-loanum.url" many="false" isSecure="false" displayName="universal-messaging-umserver.um-jndi-cf-loanum.url">
-        <value>nsp://vmdbvt05:9000</value>
+        <value>nsp://192.168.132.142:9000</value>
     </property>
     <property name="universal-messaging-umserver.common-local-users-administrator.password" many="false" isSecure="false" displayName="universal-messaging-umserver.common-local-users-administrator.password">
         <value>manage</value>
