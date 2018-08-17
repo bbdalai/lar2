@@ -1,7 +1,7 @@
-<asset_composite xmlns="http://namespaces.softwareag.com/acdl/1.0" targetNamespace="http://namespaces.softwareag.com/webMethods/IS" name="test2" runtimeVersion="10.3.0.0">
+<asset_composite xmlns="http://namespaces.softwareag.com/acdl/1.0" targetNamespace="http://namespaces.softwareag.com/webMethods/IS" name="SalesLaunch" runtimeVersion="10.3.0.0">
   <implementation.generic type="ispackage" />
-  <buildInfo name="BuildVersion" value="10.3.0.0.1534453058218" />
-  <buildInfo name="BuildTimestamp" value="2018-08-17T02:27:38" />
+  <buildInfo name="BuildVersion" value="10.3.0.0.1534481011648" />
+  <buildInfo name="BuildTimestamp" value="2018-08-17T10:13:32" />
   <buildInfo name="MinimumTargetRuntimeVersion" value="10.3.0.0" />
   <property name="activatePkgOnInstall" displayName="Activate Package On Install">
     <value>true</value>
@@ -30,46 +30,43 @@
   <property name="syncDocTypesToBroker" displayName="Synchronize Document Types To Broker During Deployment">
     <value>true</value>
   </property>
-  <asset name="ISPackage.test2" displayName="test2">
+  <asset name="ISPackage.SalesLaunch" displayName="SalesLaunch">
     <implementation.generic type="ispackage" />
   </asset>
-  <asset name="testf2.yu" displayName="testf2:yu">
+  <asset name="salesLaunch.startcampaign" displayName="salesLaunch:startcampaign">
     <implementation.generic type="isflowservice" />
   </asset>
-  <asset name="test2.code" displayName="code">
+  <asset name="SalesLaunch.pub" displayName="pub">
     <implementation.generic type="isfolder" />
   </asset>
-  <asset name="test2.code.classes" displayName="code/classes">
+  <asset name="SalesLaunch.code" displayName="code">
     <implementation.generic type="isfolder" />
   </asset>
-  <asset name="test2.code.jars" displayName="code/jars">
+  <asset name="SalesLaunch.code.classes" displayName="code/classes">
     <implementation.generic type="isfolder" />
   </asset>
-  <asset name="test2.code.source" displayName="code/source">
+  <asset name="SalesLaunch.code.source" displayName="code/source">
     <implementation.generic type="isfolder" />
   </asset>
-  <asset name="test2.config" displayName="config">
+  <asset name="SalesLaunch.code.jars" displayName="code/jars">
     <implementation.generic type="isfolder" />
   </asset>
-  <asset name="test2.config.aclmap_pkg.cnf" displayName="config/aclmap_pkg.cnf">
-    <implementation.generic type="isfile" />
-  </asset>
-  <asset name="test2.doc" displayName="doc">
+  <asset name="SalesLaunch.config" displayName="config">
     <implementation.generic type="isfolder" />
   </asset>
-  <asset name="test2.lib" displayName="lib">
+  <asset name="SalesLaunch.doc" displayName="doc">
     <implementation.generic type="isfolder" />
   </asset>
-  <asset name="test2.pub" displayName="pub">
+  <asset name="SalesLaunch.templates" displayName="templates">
     <implementation.generic type="isfolder" />
   </asset>
-  <asset name="test2.resources" displayName="resources">
+  <asset name="SalesLaunch.web" displayName="web">
     <implementation.generic type="isfolder" />
   </asset>
-  <asset name="test2.templates" displayName="templates">
+  <asset name="SalesLaunch.resources" displayName="resources">
     <implementation.generic type="isfolder" />
   </asset>
-  <asset name="test2.web" displayName="web">
+  <asset name="SalesLaunch.lib" displayName="lib">
     <implementation.generic type="isfolder" />
   </asset>
 </asset_composite>

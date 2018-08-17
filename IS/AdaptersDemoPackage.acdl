@@ -1,176 +1,176 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<asset_composite name="AdaptersDemoPackage" runtimeVersion="10.3.0.0" targetNamespace="http://namespaces.softwareag.com/webMethods/IS" xmlns="http://namespaces.softwareag.com/acdl/1.0" xmlns:EDA="http://namespaces.softwareag.com/webMethods/EDA" xmlns:MWS="http://namespaces.softwareag.com/webMethods/MWS" xmlns:IS="http://namespaces.softwareag.com/webMethods/IS" xmlns:APIPORTAL="http://namespaces.softwareag.com/webMethods/APIPORTAL" xmlns:AgileApps="http://namespaces.softwareag.com/webMethods/AgileApps" xmlns:BROKER="http://namespaces.softwareag.com/webMethods/BROKER" xmlns:implDetails="http://namespaces.softwareag.com/acdl/implDetails" xmlns:UniversalMessaging="http://namespaces.softwareag.com/webMethods/UniversalMessaging" xmlns:TN="http://namespaces.softwareag.com/webMethods/TN" xmlns:RULES="http://namespaces.softwareag.com/webMethods/RULES" xmlns:BPM="http://namespaces.softwareag.com/webMethods/BPM" xmlns:Optimize="http://namespaces.softwareag.com/webMethods/Optimize">
-    <implementation.generic type="ispackage"/>
-    <buildInfo name="BuildTimestamp" value="2018-08-13T17:35:35"/>
-    <buildInfo name="BuildVersion" value="10.3.0.0.1534161935790"/>
-    <buildInfo name="MinimumTargetRuntimeVersion" value="10.3.0.0"/>
-    <asset name="ISPackage.AdaptersDemoPackage" displayName="AdaptersDemoPackage" isDeployable="true">
-        <implementation.generic type="ispackage"/>
-    </asset>
-    <asset name="notifications.onBoardEmployeeNotificationPublishDocument" displayName="notifications:onBoardEmployeeNotificationPublishDocument" isDeployable="true">
-        <implementation.generic type="isdocumenttype"/>
-    </asset>
-    <asset name="notifications.onBoardEmployeeNotification" displayName="notifications:onBoardEmployeeNotification" isDeployable="true">
-        <implementation.generic type="artpollingnotification"/>
-        <dependsOn>IS:connections.azuresqlConnection</dependsOn>
-        <dependsOn>IS:notifications.onBoardEmployeeNotificationPublishDocument</dependsOn>
-        <property name="art.deployment.state" many="false" isSecure="false" displayName="art.deployment.state">
-            <value>enable</value>
-        </property>
-        <property name="notificationImmediate" many="false" isSecure="false" displayName="Immediate:">
-            <value>false</value>
-        </property>
-        <property name="notificationInterval" many="false" isSecure="false" displayName="Interval: (seconds)">
-            <value>10</value>
-        </property>
-        <property name="notificationOverlap" many="false" isSecure="false" displayName="Overlap:">
-            <value>false</value>
-        </property>
-    </asset>
-    <asset name="notifications.trigger" displayName="notifications:trigger" isDeployable="true">
-        <implementation.generic type="istrigger"/>
-        <dependsOn>IS:notifications.onBoardEmployeeNotificationPublishDocument</dependsOn>
-        <dependsOn>IS:services.action</dependsOn>
-    </asset>
-    <asset name="services.User" displayName="services:User" isDeployable="true">
-        <implementation.generic type="isdocumenttype"/>
-    </asset>
-    <asset name="services.action" displayName="services:action" isDeployable="true">
-        <implementation.generic type="isflowservice"/>
-        <dependsOn>IS:notifications.onBoardEmployeeNotificationPublishDocument</dependsOn>
-        <dependsOn>IS:services.addUser</dependsOn>
-    </asset>
-    <asset name="services.selectAzure" displayName="services:selectAzure" isDeployable="true">
-        <implementation.generic type="artservice"/>
-        <dependsOn>IS:connections.azuresqlConnection</dependsOn>
-    </asset>
-    <asset name="services.getUsersFinance" displayName="services:getUsersFinance" isDeployable="true">
-        <implementation.generic type="artservice"/>
-        <dependsOn>IS:connections.azuresqlConnection</dependsOn>
-    </asset>
-    <asset name="services.addUser" displayName="services:addUser" isDeployable="true">
-        <implementation.generic type="artservice"/>
-        <dependsOn>IS:connections.azuresqlConnection</dependsOn>
-    </asset>
-    <asset name="services.insertEmployeeData" displayName="services:insertEmployeeData" isDeployable="true">
-        <implementation.generic type="artservice"/>
-        <dependsOn>IS:connections.azuresqlConnection</dependsOn>
-    </asset>
-    <asset name="connections.azuresqlConnection" displayName="connections:azuresqlConnection" isDeployable="true">
-        <implementation.generic type="artconnection"/>
-        <property name="art.deployment.state" many="false" isSecure="false" displayName="art.deployment.state">
-            <value>enable</value>
-        </property>
-        <property name="transactionType" many="false" isSecure="false">
-            <value>LOCAL_TRANSACTION</value>
-        </property>
-        <property name="datasourceClass" many="false" isSecure="false">
-            <value>com.microsoft.sqlserver.jdbc.SQLServerDataSource</value>
-        </property>
-        <property name="serverName" many="false" isSecure="false">
-            <value>sag.database.windows.net</value>
-        </property>
-        <property name="user" many="false" isSecure="false">
-            <value>Pundits@sag</value>
-        </property>
-        <property name="password" many="false" isSecure="true">
-            <value>{AES}e+eosws3H9ZKtNrxML8i1Q==</value>
-        </property>
-        <property name="databaseName" many="false" isSecure="false">
-            <value>adapters_sql_db</value>
-        </property>
-        <property name="portNumber" many="false" isSecure="false">
-            <value></value>
-        </property>
-        <property name="networkProtocol" many="false" isSecure="false">
-            <value></value>
-        </property>
-        <property name="otherProperties" many="false" isSecure="false">
-            <value></value>
-        </property>
-        <property name=".CMGRPROP.poolable" many="false" isSecure="false" displayName="poolable">
-            <value>true</value>
-        </property>
-        <property name=".CMGRPROP.minimumPoolSize" many="false" isSecure="false" displayName=".CMGRPROP.minimumPoolSize">
-            <value>2</value>
-        </property>
-        <property name=".CMGRPROP.maximumPoolSize" many="false" isSecure="false" displayName="maximumPoolSize">
-            <value>10</value>
-        </property>
-        <property name=".CMGRPROP.poolIncrementSize" many="false" isSecure="false" displayName="poolIncrementSize">
-            <value>1</value>
-        </property>
-        <property name=".CMGRPROP.blockingTimeout" many="false" isSecure="false" displayName="blockingTimeout">
-            <value>1000</value>
-        </property>
-        <property name=".CMGRPROP.expireTimeout" many="false" isSecure="false" displayName="expireTimeout">
-            <value>1000</value>
-        </property>
-        <property name=".CMGRPROP.startupRetryCount" many="false" isSecure="false" displayName="startupRetryCount">
-            <value>0</value>
-        </property>
-        <property name=".CMGRPROP.startupBackoffSecs" many="false" isSecure="false" displayName="startupBackoffSecs">
-            <value>10</value>
-        </property>
-    </asset>
-    <asset name="AdaptersDemoPackage.code" displayName="code" isDeployable="true">
-        <implementation.generic type="isfolder"/>
-    </asset>
-    <asset name="AdaptersDemoPackage.code.classes" displayName="code/classes" isDeployable="true">
-        <implementation.generic type="isfolder"/>
-    </asset>
-    <asset name="AdaptersDemoPackage.code.jars" displayName="code/jars" isDeployable="true">
-        <implementation.generic type="isfolder"/>
-    </asset>
-    <asset name="AdaptersDemoPackage.code.source" displayName="code/source" isDeployable="true">
-        <implementation.generic type="isfolder"/>
-    </asset>
-    <asset name="AdaptersDemoPackage.pub" displayName="pub" isDeployable="true">
-        <implementation.generic type="isfolder"/>
-    </asset>
-    <asset name="AdaptersDemoPackage.config" displayName="config" isDeployable="true">
-        <implementation.generic type="isfolder"/>
-    </asset>
-    <asset name="AdaptersDemoPackage.doc" displayName="doc" isDeployable="true">
-        <implementation.generic type="isfolder"/>
-    </asset>
-    <asset name="AdaptersDemoPackage.lib" displayName="lib" isDeployable="true">
-        <implementation.generic type="isfolder"/>
-    </asset>
-    <asset name="AdaptersDemoPackage.resources" displayName="resources" isDeployable="true">
-        <implementation.generic type="isfolder"/>
-    </asset>
-    <asset name="AdaptersDemoPackage.templates" displayName="templates" isDeployable="true">
-        <implementation.generic type="isfolder"/>
-    </asset>
-    <asset name="AdaptersDemoPackage.web" displayName="web" isDeployable="true">
-        <implementation.generic type="isfolder"/>
-    </asset>
-    <property name="activatePkgOnInstall" many="false" isSecure="false" displayName="Activate Package On Install">
-        <value>true</value>
+<asset_composite xmlns="http://namespaces.softwareag.com/acdl/1.0" targetNamespace="http://namespaces.softwareag.com/webMethods/IS" name="AdaptersDemoPackage" runtimeVersion="10.3.0.0">
+  <implementation.generic type="ispackage" />
+  <buildInfo name="BuildVersion" value="10.3.0.0.1534481011648" />
+  <buildInfo name="BuildTimestamp" value="2018-08-17T10:13:31" />
+  <buildInfo name="MinimumTargetRuntimeVersion" value="10.3.0.0" />
+  <property name="activatePkgOnInstall" displayName="Activate Package On Install">
+    <value>true</value>
+  </property>
+  <property name="archivePkgOnInstall" displayName="Archive Package On Install">
+    <value>true</value>
+  </property>
+  <property name="compilePackage" displayName="Compile Package On Install">
+    <value>true</value>
+  </property>
+  <property name="fragPackage" displayName="Fragment Package On Install">
+    <value>true</value>
+  </property>
+  <property name="clearACLs" displayName="Delete ACLs for the assets from the target Integration Server">
+    <value>false</value>
+  </property>
+  <property name="disallowActivePackageInstall" displayName="disallowActivePackageInstall">
+    <value>false</value>
+  </property>
+  <property name="packageExecutionCheck" displayName="packageExecutionCheck">
+    <value>0</value>
+  </property>
+  <property name="suspendTriggersDuringDeploy" displayName="Suspend Triggers During Deployment">
+    <value>false</value>
+  </property>
+  <property name="syncDocTypesToBroker" displayName="Synchronize Document Types To Broker During Deployment">
+    <value>true</value>
+  </property>
+  <asset name="ISPackage.AdaptersDemoPackage" displayName="AdaptersDemoPackage">
+    <implementation.generic type="ispackage" />
+  </asset>
+  <asset name="notifications.onBoardEmployeeNotificationPublishDocument" displayName="notifications:onBoardEmployeeNotificationPublishDocument">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="notifications.onBoardEmployeeNotification" displayName="notifications:onBoardEmployeeNotification">
+    <implementation.generic type="artpollingnotification" />
+    <property name="art.deployment.state" displayName="State After Deployment">
+      <value>disable</value>
     </property>
-    <property name="archivePkgOnInstall" many="false" isSecure="false" displayName="Archive Package On Install">
-        <value>true</value>
+    <property name="notificationImmediate" displayName="Immediate:">
+      <value>false</value>
     </property>
-    <property name="compilePackage" many="false" isSecure="false" displayName="Compile Package On Install">
-        <value>true</value>
+    <property name="notificationInterval" displayName="Interval: (seconds)">
+      <value>10</value>
     </property>
-    <property name="fragPackage" many="false" isSecure="false" displayName="Fragment Package On Install">
-        <value>true</value>
+    <property name="notificationOverlap" displayName="Overlap:">
+      <value>false</value>
     </property>
-    <property name="clearACLs" many="false" isSecure="false" displayName="Delete ACLs for the assets from the target Integration Server">
-        <value>false</value>
+    <dependsOn>IS:notifications.onBoardEmployeeNotificationPublishDocument</dependsOn>
+    <dependsOn>IS:connections.azuresqlConnection</dependsOn>
+  </asset>
+  <asset name="notifications.trigger" displayName="notifications:trigger">
+    <implementation.generic type="istrigger" />
+    <dependsOn>IS:services.action</dependsOn>
+    <dependsOn>IS:notifications.onBoardEmployeeNotificationPublishDocument</dependsOn>
+  </asset>
+  <asset name="services.User" displayName="services:User">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="services.action" displayName="services:action">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:notifications.onBoardEmployeeNotificationPublishDocument</dependsOn>
+    <dependsOn>IS:services.addUser</dependsOn>
+  </asset>
+  <asset name="services.selectAzure" displayName="services:selectAzure">
+    <implementation.generic type="artservice" />
+    <dependsOn>IS:connections.azuresqlConnection</dependsOn>
+  </asset>
+  <asset name="services.getUsersFinance" displayName="services:getUsersFinance">
+    <implementation.generic type="artservice" />
+    <dependsOn>IS:connections.azuresqlConnection</dependsOn>
+  </asset>
+  <asset name="services.addUser" displayName="services:addUser">
+    <implementation.generic type="artservice" />
+    <dependsOn>IS:connections.azuresqlConnection</dependsOn>
+  </asset>
+  <asset name="services.insertEmployeeData" displayName="services:insertEmployeeData">
+    <implementation.generic type="artservice" />
+    <dependsOn>IS:connections.azuresqlConnection</dependsOn>
+  </asset>
+  <asset name="connections.azuresqlConnection" displayName="connections:azuresqlConnection">
+    <implementation.generic type="artconnection" />
+    <property name="art.deployment.state" displayName="State After Deployment">
+      <value>disable</value>
     </property>
-    <property name="disallowActivePackageInstall" many="false" isSecure="false" displayName="disallowActivePackageInstall">
-        <value>false</value>
+    <property name="transactionType">
+      <value>LOCAL_TRANSACTION</value>
     </property>
-    <property name="packageExecutionCheck" many="false" isSecure="false" displayName="packageExecutionCheck">
-        <value>0</value>
+    <property name="datasourceClass">
+      <value>com.microsoft.sqlserver.jdbc.SQLServerDataSource</value>
     </property>
-    <property name="suspendTriggersDuringDeploy" many="false" isSecure="false" displayName="Suspend Triggers During Deployment">
-        <value>false</value>
+    <property name="serverName">
+      <value>sag.database.windows.net</value>
     </property>
-    <property name="syncDocTypesToBroker" many="false" isSecure="false" displayName="Synchronize Document Types To Broker During Deployment">
-        <value>true</value>
+    <property name="user">
+      <value>Pundits@sag</value>
     </property>
+    <property name="password" isSecure="true">
+      <value>{AES}aYrXC43dTWsDUHRWG5mhTA==</value>
+    </property>
+    <property name="databaseName">
+      <value>adapters_sql_db</value>
+    </property>
+    <property name="portNumber">
+      <value />
+    </property>
+    <property name="networkProtocol">
+      <value />
+    </property>
+    <property name="otherProperties">
+      <value />
+    </property>
+    <property name=".CMGRPROP.poolable" displayName="poolable">
+      <value>true</value>
+    </property>
+    <property name=".CMGRPROP.minimumPoolSize" displayName="minimumPoolSize">
+      <value>1</value>
+    </property>
+    <property name=".CMGRPROP.maximumPoolSize" displayName="maximumPoolSize">
+      <value>10</value>
+    </property>
+    <property name=".CMGRPROP.poolIncrementSize" displayName="poolIncrementSize">
+      <value>1</value>
+    </property>
+    <property name=".CMGRPROP.blockingTimeout" displayName="blockingTimeout">
+      <value>1000</value>
+    </property>
+    <property name=".CMGRPROP.expireTimeout" displayName="expireTimeout">
+      <value>1000</value>
+    </property>
+    <property name=".CMGRPROP.startupRetryCount" displayName="startupRetryCount">
+      <value>0</value>
+    </property>
+    <property name=".CMGRPROP.startupBackoffSecs" displayName="startupBackoffSecs">
+      <value>10</value>
+    </property>
+  </asset>
+  <asset name="AdaptersDemoPackage.code" displayName="code">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="AdaptersDemoPackage.code.classes" displayName="code/classes">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="AdaptersDemoPackage.code.jars" displayName="code/jars">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="AdaptersDemoPackage.code.source" displayName="code/source">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="AdaptersDemoPackage.pub" displayName="pub">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="AdaptersDemoPackage.config" displayName="config">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="AdaptersDemoPackage.doc" displayName="doc">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="AdaptersDemoPackage.lib" displayName="lib">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="AdaptersDemoPackage.resources" displayName="resources">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="AdaptersDemoPackage.templates" displayName="templates">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="AdaptersDemoPackage.web" displayName="web">
+    <implementation.generic type="isfolder" />
+  </asset>
 </asset_composite>
+
