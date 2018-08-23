@@ -1,7 +1,7 @@
 <asset_composite xmlns="http://namespaces.softwareag.com/acdl/1.0" targetNamespace="http://namespaces.softwareag.com/webMethods/IS" name="loanmessage" runtimeVersion="10.3.0.0">
   <implementation.generic type="ispackage" />
-  <buildInfo name="BuildVersion" value="10.3.0.0.1535030359644" />
-  <buildInfo name="BuildTimestamp" value="2018-08-23T19:49:20" />
+  <buildInfo name="BuildVersion" value="10.3.0.0.1535032011634" />
+  <buildInfo name="BuildTimestamp" value="2018-08-23T20:16:51" />
   <buildInfo name="MinimumTargetRuntimeVersion" value="10.3.0.0" />
   <property name="activatePkgOnInstall" displayName="Activate Package On Install">
     <value>true</value>
@@ -41,9 +41,6 @@
   </asset>
   <asset name="loanmessage.config" displayName="config">
     <implementation.generic type="isfolder" />
-  </asset>
-  <asset name="loanmessage.config.aclmap_pkg.cnf" displayName="config/aclmap_pkg.cnf">
-    <implementation.generic type="isfile" />
   </asset>
   <asset name="loanmessage.pub" displayName="pub">
     <implementation.generic type="isfolder" />
