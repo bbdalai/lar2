@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <asset_composite name="local-Universal-Messaging-umserver" displayName="local-Universal-Messaging-umserver" targetNamespace="http://namespaces.softwareag.com/webMethods/CC" xmlns="http://namespaces.softwareag.com/acdl/1.0" xmlns:EDA="http://namespaces.softwareag.com/webMethods/EDA" xmlns:MWS="http://namespaces.softwareag.com/webMethods/MWS" xmlns:IS="http://namespaces.softwareag.com/webMethods/IS" xmlns:APIPORTAL="http://namespaces.softwareag.com/webMethods/APIPORTAL" xmlns:AgileApps="http://namespaces.softwareag.com/webMethods/AgileApps" xmlns:BROKER="http://namespaces.softwareag.com/webMethods/BROKER" xmlns:implDetails="http://namespaces.softwareag.com/acdl/implDetails" xmlns:UniversalMessaging="http://namespaces.softwareag.com/webMethods/UniversalMessaging" xmlns:TN="http://namespaces.softwareag.com/webMethods/TN" xmlns:RULES="http://namespaces.softwareag.com/webMethods/RULES" xmlns:BPM="http://namespaces.softwareag.com/webMethods/BPM" xmlns:Optimize="http://namespaces.softwareag.com/webMethods/Optimize">
-    <buildInfo name="build.timestamp" value="2018-08-24T16:54:25"/>
+    <buildInfo name="build.timestamp" value="2018-08-25T00:43:59"/>
     <buildInfo name="build.version"/>
     <property name="universal-messaging-umserver.um-jndi-dest-topic2.autocreatedest" many="false" isSecure="false" displayName="universal-messaging-umserver.um-jndi-dest-topic2.autocreatedest">
-        <value>true</value>
+        <value>false</value>
     </property>
     <property name="universal-messaging-umserver.um-jndi-dest-que3.autocreatedest" many="false" isSecure="false" displayName="universal-messaging-umserver.um-jndi-dest-que3.autocreatedest">
-        <value>true</value>
+        <value>false</value>
     </property>
     <property name="universal-messaging-umserver.um-jndi-dest-que1.autocreatedest" many="false" isSecure="false" displayName="universal-messaging-umserver.um-jndi-dest-que1.autocreatedest">
-        <value>true</value>
+        <value>false</value>
     </property>
     <property name="universal-messaging-umserver.um-jndi-dest-topic1.autocreatedest" many="false" isSecure="false" displayName="universal-messaging-umserver.um-jndi-dest-topic1.autocreatedest">
-        <value>true</value>
+        <value>false</value>
     </property>
     <property name="universal-messaging-umserver.common-local-users-user-1.password" many="false" isSecure="false" displayName="universal-messaging-umserver.common-local-users-user-1.password">
         <value></value>
@@ -21,21 +21,21 @@
         <value></value>
     </property>
     <property name="universal-messaging-umserver.um-jndi-cf-cf-t-que-1.url" many="false" isSecure="false" displayName="universal-messaging-umserver.um-jndi-cf-cf-t-que-1.url">
-        <value>NSP://UNUSED:0</value>
+        <value>nsp://127.0.0.1:9000</value>
     </property>
     <property name="universal-messaging-umserver.um-jndi-cf-cf-t-topic-1.url" many="false" isSecure="false" displayName="universal-messaging-umserver.um-jndi-cf-cf-t-topic-1.url">
-        <value>NSP://UNUSED:0</value>
+        <value>nsp://127.0.0.1:9000</value>
     </property>
     <property name="universal-messaging-umserver.common-local-users-user-2.password" many="false" isSecure="false" displayName="universal-messaging-umserver.common-local-users-user-2.password">
         <value></value>
     </property>
     <property name="universal-messaging-umserver.um-jndi-cf-cf-t-1.url" many="false" isSecure="false" displayName="universal-messaging-umserver.um-jndi-cf-cf-t-1.url">
-        <value>NSP://UNUSED:0</value>
+        <value>nsp://127.0.0.1:9000</value>
     </property>
     <property name="universal-messaging-umserver.common-local-users-user-4.password" many="false" isSecure="false" displayName="universal-messaging-umserver.common-local-users-user-4.password">
         <value></value>
     </property>
     <property name="universal-messaging-umserver.um-jndi-cf-cf-t-2.url" many="false" isSecure="false" displayName="universal-messaging-umserver.um-jndi-cf-cf-t-2.url">
-        <value>NSP://UNUSED:0</value>
+        <value>nsp://127.0.0.1:9000</value>
     </property>
 </asset_composite>
