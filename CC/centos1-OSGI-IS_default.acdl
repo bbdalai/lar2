@@ -3,7 +3,7 @@
     <buildInfo name="build.timestamp" value="2018-08-24T12:55:49"/>
     <buildInfo name="build.version" value="10.3.0.0.5"/>
     <property name="integrationserver-default.common-jndi-cloud_demo_jndi.jndi.provider.url" many="false" isSecure="false" displayName="integrationserver-default.common-jndi-cloud_demo_jndi.jndi.provider.url">
-        <value>nsp://localhost:9000</value>
+        <value>${UM_URL}</value>
     </property>
     <property name="integrationserver-default.common-jndi-cloud_demo_jndi.jndi.provider.user" many="false" isSecure="false" displayName="integrationserver-default.common-jndi-cloud_demo_jndi.jndi.provider.user">
         <value></value>
