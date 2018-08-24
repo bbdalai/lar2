@@ -3,39 +3,39 @@
     <buildInfo name="build.timestamp" value="2018-08-25T00:43:59"/>
     <buildInfo name="build.version"/>
     <property name="universal-messaging-umserver.um-jndi-dest-topic2.autocreatedest" many="false" isSecure="false" displayName="universal-messaging-umserver.um-jndi-dest-topic2.autocreatedest">
-        <value>false</value>
+        <value>true</value>
     </property>
     <property name="universal-messaging-umserver.um-jndi-dest-que3.autocreatedest" many="false" isSecure="false" displayName="universal-messaging-umserver.um-jndi-dest-que3.autocreatedest">
-        <value>false</value>
+        <value>true</value>
     </property>
     <property name="universal-messaging-umserver.um-jndi-dest-que1.autocreatedest" many="false" isSecure="false" displayName="universal-messaging-umserver.um-jndi-dest-que1.autocreatedest">
-        <value>false</value>
+        <value>true</value>
     </property>
     <property name="universal-messaging-umserver.um-jndi-dest-topic1.autocreatedest" many="false" isSecure="false" displayName="universal-messaging-umserver.um-jndi-dest-topic1.autocreatedest">
-        <value>false</value>
+        <value>true</value>
     </property>
     <property name="universal-messaging-umserver.common-local-users-user-1.password" many="false" isSecure="false" displayName="universal-messaging-umserver.common-local-users-user-1.password">
-        <value></value>
+        <value>zz</value>
     </property>
     <property name="universal-messaging-umserver.common-local-users-administrator.password" many="false" isSecure="false" displayName="universal-messaging-umserver.common-local-users-administrator.password">
-        <value></value>
+        <value>zz</value>
     </property>
     <property name="universal-messaging-umserver.um-jndi-cf-cf-t-que-1.url" many="false" isSecure="false" displayName="universal-messaging-umserver.um-jndi-cf-cf-t-que-1.url">
-        <value>nsp://127.0.0.1:9000</value>
+        <value>NSP://UNUSED:0</value>
     </property>
     <property name="universal-messaging-umserver.um-jndi-cf-cf-t-topic-1.url" many="false" isSecure="false" displayName="universal-messaging-umserver.um-jndi-cf-cf-t-topic-1.url">
-        <value>nsp://127.0.0.1:9000</value>
+        <value>NSP://UNUSED:0</value>
     </property>
     <property name="universal-messaging-umserver.common-local-users-user-2.password" many="false" isSecure="false" displayName="universal-messaging-umserver.common-local-users-user-2.password">
-        <value></value>
+        <value>cc</value>
     </property>
     <property name="universal-messaging-umserver.um-jndi-cf-cf-t-1.url" many="false" isSecure="false" displayName="universal-messaging-umserver.um-jndi-cf-cf-t-1.url">
-        <value>nsp://127.0.0.1:9000</value>
+        <value>NSP://UNUSED:0</value>
     </property>
     <property name="universal-messaging-umserver.common-local-users-user-4.password" many="false" isSecure="false" displayName="universal-messaging-umserver.common-local-users-user-4.password">
-        <value></value>
+        <value>vv</value>
     </property>
     <property name="universal-messaging-umserver.um-jndi-cf-cf-t-2.url" many="false" isSecure="false" displayName="universal-messaging-umserver.um-jndi-cf-cf-t-2.url">
-        <value>nsp://127.0.0.1:9000</value>
+        <value>NSP://UNUSED:0</value>
     </property>
 </asset_composite>
