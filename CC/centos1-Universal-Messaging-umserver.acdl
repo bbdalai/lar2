@@ -3,7 +3,7 @@
     <buildInfo name="build.timestamp" value="2018-08-23T21:58:38"/>
     <buildInfo name="build.version" value="10.3.0.0.1"/>
     <property name="universal-messaging-umserver.um-jndi-cf-cloud_demo_cf.url" many="false" isSecure="false" displayName="universal-messaging-umserver.um-jndi-cf-cloud_demo_cf.url">
-        <value>nsp://192.168.132.145:9000</value>
+        <value>nsp://localhost:9000</value>
     </property>
     <property name="universal-messaging-umserver.um-jndi-dest-clouddemo.autocreatedest" many="false" isSecure="false" displayName="universal-messaging-umserver.um-jndi-dest-clouddemo.autocreatedest">
         <value>false</value>
