@@ -1,0 +1,76 @@
+<asset_composite xmlns="http://namespaces.softwareag.com/acdl/1.0" targetNamespace="http://namespaces.softwareag.com/webMethods/IS" name="bhre" runtimeVersion="10.3.0.0">
+  <implementation.generic type="ispackage" />
+  <buildInfo name="BuildVersion" value="10.3.0.0.1535467553816" />
+  <buildInfo name="BuildTimestamp" value="2018-08-28T20:15:53" />
+  <buildInfo name="MinimumTargetRuntimeVersion" value="10.3.0.0" />
+  <property name="activatePkgOnInstall" displayName="Activate Package On Install">
+    <value>true</value>
+  </property>
+  <property name="archivePkgOnInstall" displayName="Archive Package On Install">
+    <value>true</value>
+  </property>
+  <property name="compilePackage" displayName="Compile Package On Install">
+    <value>true</value>
+  </property>
+  <property name="fragPackage" displayName="Fragment Package On Install">
+    <value>true</value>
+  </property>
+  <property name="clearACLs" displayName="Delete ACLs for the assets from the target Integration Server">
+    <value>false</value>
+  </property>
+  <property name="disallowActivePackageInstall" displayName="disallowActivePackageInstall">
+    <value>false</value>
+  </property>
+  <property name="packageExecutionCheck" displayName="packageExecutionCheck">
+    <value>0</value>
+  </property>
+  <property name="suspendTriggersDuringDeploy" displayName="Suspend Triggers During Deployment">
+    <value>false</value>
+  </property>
+  <property name="syncDocTypesToBroker" displayName="Synchronize Document Types To Broker During Deployment">
+    <value>true</value>
+  </property>
+  <asset name="ISPackage.bhre" displayName="bhre">
+    <implementation.generic type="ispackage" />
+  </asset>
+  <asset name="bhre.flowTest2" displayName="bhre:flowTest2">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="bhre.code" displayName="code">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="bhre.code.classes" displayName="code/classes">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="bhre.code.jars" displayName="code/jars">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="bhre.code.source" displayName="code/source">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="bhre.config" displayName="config">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="bhre.config.aclmap_pkg.cnf" displayName="config/aclmap_pkg.cnf">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="bhre.doc" displayName="doc">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="bhre.lib" displayName="lib">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="bhre.pub" displayName="pub">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="bhre.resources" displayName="resources">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="bhre.templates" displayName="templates">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="bhre.web" displayName="web">
+    <implementation.generic type="isfolder" />
+  </asset>
+</asset_composite>
+
