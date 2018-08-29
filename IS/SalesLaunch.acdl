@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <asset_composite name="SalesLaunch" runtimeVersion="10.3.0.0" targetNamespace="http://namespaces.softwareag.com/webMethods/IS" xmlns="http://namespaces.softwareag.com/acdl/1.0" xmlns:EDA="http://namespaces.softwareag.com/webMethods/EDA" xmlns:MWS="http://namespaces.softwareag.com/webMethods/MWS" xmlns:IS="http://namespaces.softwareag.com/webMethods/IS" xmlns:APIPORTAL="http://namespaces.softwareag.com/webMethods/APIPORTAL" xmlns:AgileApps="http://namespaces.softwareag.com/webMethods/AgileApps" xmlns:BROKER="http://namespaces.softwareag.com/webMethods/BROKER" xmlns:implDetails="http://namespaces.softwareag.com/acdl/implDetails" xmlns:UniversalMessaging="http://namespaces.softwareag.com/webMethods/UniversalMessaging" xmlns:TN="http://namespaces.softwareag.com/webMethods/TN" xmlns:RULES="http://namespaces.softwareag.com/webMethods/RULES" xmlns:BPM="http://namespaces.softwareag.com/webMethods/BPM" xmlns:Optimize="http://namespaces.softwareag.com/webMethods/Optimize">
     <implementation.generic type="ispackage"/>
-    <buildInfo name="BuildTimestamp" value="2018-08-29T14:42:14"/>
-    <buildInfo name="BuildVersion" value="10.3.0.0.1535533932833"/>
+    <buildInfo name="BuildTimestamp" value="2018-08-28T12:56:34"/>
+    <buildInfo name="BuildVersion" value="10.3.0.0.1535441194087"/>
     <buildInfo name="MinimumTargetRuntimeVersion" value="10.3.0.0"/>
     <asset name="ISPackage.SalesLaunch" displayName="SalesLaunch" isDeployable="true">
         <implementation.generic type="ispackage"/>
@@ -46,14 +46,14 @@
     <property name="activatePkgOnInstall" many="false" isSecure="false" displayName="activatePkgOnInstall">
         <value>false</value>
     </property>
-    <property name="archivePkgOnInstall" many="false" isSecure="false" displayName="Archive Package On Install">
-        <value>true</value>
+    <property name="archivePkgOnInstall" many="false" isSecure="false" displayName="archivePkgOnInstall">
+        <value>false</value>
     </property>
-    <property name="compilePackage" many="false" isSecure="false" displayName="Compile Package On Install">
-        <value>true</value>
+    <property name="compilePackage" many="false" isSecure="false" displayName="compilePackage">
+        <value>false</value>
     </property>
-    <property name="fragPackage" many="false" isSecure="false" displayName="Fragment Package On Install">
-        <value>true</value>
+    <property name="fragPackage" many="false" isSecure="false" displayName="fragPackage">
+        <value>false</value>
     </property>
     <property name="clearACLs" many="false" isSecure="false" displayName="Delete ACLs for the assets from the target Integration Server">
         <value>false</value>
