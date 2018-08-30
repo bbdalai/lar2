@@ -1,4 +1,4 @@
-<asset_composite xmlns="http://namespaces.softwareag.com/acdl/1.0" targetNamespace="http://namespaces.softwareag.com/webMethods/IS" name="loanclient" runtimeVersion="10.3.0.0">
+<asset_composite xmlns="http://namespaces.softwareag.com/acdl/1.0" targetNamespace="http://namespaces.softwareag.com/webMethods/IS" name="SalesLaunch" runtimeVersion="10.3.0.0">
   <implementation.generic type="ispackage" />
   <buildInfo name="BuildVersion" value="10.3.0.0.1535634380211" />
   <buildInfo name="BuildTimestamp" value="2018-08-30T18:36:20" />
@@ -30,47 +30,43 @@
   <property name="syncDocTypesToBroker" displayName="Synchronize Document Types To Broker During Deployment">
     <value>true</value>
   </property>
-  <asset name="ISPackage.loanclient" displayName="loanclient">
+  <asset name="ISPackage.SalesLaunch" displayName="SalesLaunch">
     <implementation.generic type="ispackage" />
   </asset>
-  <asset name="loan.request" displayName="loan:request">
-    <implementation.generic type="isflowservice" />
-    <dependsOn>IS:loan.requestMessage</dependsOn>
-  </asset>
-  <asset name="loan.requestTest" displayName="loan:requestTest">
+  <asset name="salesLaunch.startcampaign" displayName="salesLaunch:startcampaign">
     <implementation.generic type="isflowservice" />
   </asset>
-  <asset name="loanclient.config" displayName="config">
+  <asset name="SalesLaunch.code" displayName="code">
     <implementation.generic type="isfolder" />
   </asset>
-  <asset name="loanclient.pub" displayName="pub">
+  <asset name="SalesLaunch.code.classes" displayName="code/classes">
     <implementation.generic type="isfolder" />
   </asset>
-  <asset name="loanclient.code" displayName="code">
+  <asset name="SalesLaunch.code.source" displayName="code/source">
     <implementation.generic type="isfolder" />
   </asset>
-  <asset name="loanclient.code.classes" displayName="code/classes">
+  <asset name="SalesLaunch.code.jars" displayName="code/jars">
     <implementation.generic type="isfolder" />
   </asset>
-  <asset name="loanclient.code.source" displayName="code/source">
+  <asset name="SalesLaunch.pub" displayName="pub">
     <implementation.generic type="isfolder" />
   </asset>
-  <asset name="loanclient.code.jars" displayName="code/jars">
+  <asset name="SalesLaunch.config" displayName="config">
     <implementation.generic type="isfolder" />
   </asset>
-  <asset name="loanclient.doc" displayName="doc">
+  <asset name="SalesLaunch.doc" displayName="doc">
     <implementation.generic type="isfolder" />
   </asset>
-  <asset name="loanclient.templates" displayName="templates">
+  <asset name="SalesLaunch.templates" displayName="templates">
     <implementation.generic type="isfolder" />
   </asset>
-  <asset name="loanclient.web" displayName="web">
+  <asset name="SalesLaunch.web" displayName="web">
     <implementation.generic type="isfolder" />
   </asset>
-  <asset name="loanclient.resources" displayName="resources">
+  <asset name="SalesLaunch.resources" displayName="resources">
     <implementation.generic type="isfolder" />
   </asset>
-  <asset name="loanclient.lib" displayName="lib">
+  <asset name="SalesLaunch.lib" displayName="lib">
     <implementation.generic type="isfolder" />
   </asset>
 </asset_composite>
