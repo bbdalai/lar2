@@ -1,0 +1,137 @@
+<asset_composite xmlns="http://namespaces.softwareag.com/acdl/1.0" targetNamespace="http://namespaces.softwareag.com/webMethods/IS" name="Inventory" runtimeVersion="10.3.0.0">
+  <implementation.generic type="ispackage" />
+  <buildInfo name="BuildVersion" value="10.3.0.0.1535625193677" />
+  <buildInfo name="BuildTimestamp" value="2018-08-30T16:03:13" />
+  <buildInfo name="MinimumTargetRuntimeVersion" value="10.3.0.0" />
+  <property name="activatePkgOnInstall" displayName="Activate Package On Install">
+    <value>true</value>
+  </property>
+  <property name="archivePkgOnInstall" displayName="Archive Package On Install">
+    <value>true</value>
+  </property>
+  <property name="compilePackage" displayName="Compile Package On Install">
+    <value>true</value>
+  </property>
+  <property name="fragPackage" displayName="Fragment Package On Install">
+    <value>true</value>
+  </property>
+  <property name="clearACLs" displayName="Delete ACLs for the assets from the target Integration Server">
+    <value>false</value>
+  </property>
+  <property name="disallowActivePackageInstall" displayName="disallowActivePackageInstall">
+    <value>false</value>
+  </property>
+  <property name="packageExecutionCheck" displayName="packageExecutionCheck">
+    <value>0</value>
+  </property>
+  <property name="suspendTriggersDuringDeploy" displayName="Suspend Triggers During Deployment">
+    <value>false</value>
+  </property>
+  <property name="syncDocTypesToBroker" displayName="Synchronize Document Types To Broker During Deployment">
+    <value>true</value>
+  </property>
+  <asset name="ISPackage.Inventory" displayName="Inventory">
+    <implementation.generic type="ispackage" />
+  </asset>
+  <asset name="wm.document.non_defaults_doc" displayName="wm.document:non_defaults_doc">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="wm.service._emp_odata.Address._insert" displayName="wm.service._emp_odata.Address:_insert">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="wm.service._emp_odata.Address._retrieve" displayName="wm.service._emp_odata.Address:_retrieve">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="wm.service._emp_odata.Address._update" displayName="wm.service._emp_odata.Address:_update">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="wm.service._emp_odata.Address._delete" displayName="wm.service._emp_odata.Address:_delete">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="wm.service._emp_odata.Employee._insert" displayName="wm.service._emp_odata.Employee:_insert">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="wm.service._emp_odata.Employee._update" displayName="wm.service._emp_odata.Employee:_update">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="wm.service._emp_odata.Employee._delete" displayName="wm.service._emp_odata.Employee:_delete">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="wm.service._emp_odata.Employee._retrieve" displayName="wm.service._emp_odata.Employee:_retrieve">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="wm.service._emp_odata.State._delete" displayName="wm.service._emp_odata.State:_delete">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="wm.service._emp_odata.State._retrieve" displayName="wm.service._emp_odata.State:_retrieve">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="wm.service._emp_odata.State._insert" displayName="wm.service._emp_odata.State:_insert">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="wm.service._emp_odata.State._update" displayName="wm.service._emp_odata.State:_update">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="wm.service._emp_odata.City._delete" displayName="wm.service._emp_odata.City:_delete">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="wm.service._emp_odata.City._retrieve" displayName="wm.service._emp_odata.City:_retrieve">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="wm.service._emp_odata.City._insert" displayName="wm.service._emp_odata.City:_insert">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="wm.service._emp_odata.City._update" displayName="wm.service._emp_odata.City:_update">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="wm.service.calculator_service" displayName="wm.service:calculator_service">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="wm.rest_resource.calc_rest_.docTypes.calc_rest" displayName="wm.rest_resource.calc_rest_.docTypes:calc_rest">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="wm.rest_resource.calc_rest" displayName="wm.rest_resource:calc_rest">
+    <implementation.generic type="isrestresource" />
+    <dependsOn>IS:wm.service.calculator_service</dependsOn>
+  </asset>
+  <asset name="Inventory.code" displayName="code">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="Inventory.code.classes" displayName="code/classes">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="Inventory.code.source" displayName="code/source">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="Inventory.code.jars" displayName="code/jars">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="Inventory.doc" displayName="doc">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="Inventory.pub" displayName="pub">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="Inventory.templates" displayName="templates">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="Inventory.web" displayName="web">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="Inventory.config" displayName="config">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="Inventory.config.aclmap_pkg.cnf" displayName="config/aclmap_pkg.cnf">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="Inventory.config.readmap_pkg.cnf" displayName="config/readmap_pkg.cnf">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="Inventory.resources" displayName="resources">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="Inventory.lib" displayName="lib">
+    <implementation.generic type="isfolder" />
+  </asset>
+</asset_composite>
+
