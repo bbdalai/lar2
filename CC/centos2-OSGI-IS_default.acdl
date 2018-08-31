@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<asset_composite name="centos2-OSGI-IS_default" displayName="centos2-OSGI-IS_default" targetNamespace="http://namespaces.softwareag.com/webMethods/CC" xmlns="http://namespaces.softwareag.com/acdl/1.0" xmlns:EDA="http://namespaces.softwareag.com/webMethods/EDA" xmlns:MWS="http://namespaces.softwareag.com/webMethods/MWS" xmlns:IS="http://namespaces.softwareag.com/webMethods/IS" xmlns:APIPORTAL="http://namespaces.softwareag.com/webMethods/APIPORTAL" xmlns:AgileApps="http://namespaces.softwareag.com/webMethods/AgileApps" xmlns:BROKER="http://namespaces.softwareag.com/webMethods/BROKER" xmlns:implDetails="http://namespaces.softwareag.com/acdl/implDetails" xmlns:UniversalMessaging="http://namespaces.softwareag.com/webMethods/UniversalMessaging" xmlns:TN="http://namespaces.softwareag.com/webMethods/TN" xmlns:RULES="http://namespaces.softwareag.com/webMethods/RULES" xmlns:BPM="http://namespaces.softwareag.com/webMethods/BPM" xmlns:Optimize="http://namespaces.softwareag.com/webMethods/Optimize">
+    <buildInfo name="BuildVersion" value="1"/>
+    <buildInfo name="build.timestamp" value="2018-08-31T16:10:24"/>
+    <buildInfo name="productId" value="integrationServer"/>
+    <property name="integrationserver-default.common-jndi-cloud_demo_jndi.jndi.provider.url" many="false" isSecure="false" displayName="integrationserver-default.common-jndi-cloud_demo_jndi.jndi.provider.url">
+        <value>nsp://localhost:9000/</value>
+    </property>
+    <property name="integrationserver-default.common-jndi-cloud_demo_jndi.jndi.provider.user" many="false" isSecure="false" displayName="integrationserver-default.common-jndi-cloud_demo_jndi.jndi.provider.user">
+        <value>''</value>
+    </property>
+    <property name="integrationserver-default.common-jms-cloud_demo_jms.jms.user" many="false" isSecure="false" displayName="integrationserver-default.common-jms-cloud_demo_jms.jms.user">
+        <value>''</value>
+    </property>
+</asset_composite>
