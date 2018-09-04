@@ -7,7 +7,7 @@
         <value>NSP://UNUSED:0</value>
     </property>
     <property name="universal-messaging-umserver.um-jndi-dest-clouddemo.autocreatedest" many="false" isSecure="false" displayName="universal-messaging-umserver.um-jndi-dest-clouddemo.autocreatedest">
-        <value>'false'</value>
+        <value>true</value>
     </property>
     <property name="universal-messaging-umserver.common-local-users-administrator.password" many="false" isSecure="true" displayName="universal-messaging-umserver.common-local-users-administrator.password">
         <value>''</value>
