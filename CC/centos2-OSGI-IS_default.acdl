@@ -1,19 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <asset_composite name="centos2-OSGI-IS_default" displayName="centos2-OSGI-IS_default" targetNamespace="http://namespaces.softwareag.com/webMethods/CC" xmlns="http://namespaces.softwareag.com/acdl/1.0" xmlns:EDA="http://namespaces.softwareag.com/webMethods/EDA" xmlns:MWS="http://namespaces.softwareag.com/webMethods/MWS" xmlns:IS="http://namespaces.softwareag.com/webMethods/IS" xmlns:APIPORTAL="http://namespaces.softwareag.com/webMethods/APIPORTAL" xmlns:AgileApps="http://namespaces.softwareag.com/webMethods/AgileApps" xmlns:BROKER="http://namespaces.softwareag.com/webMethods/BROKER" xmlns:implDetails="http://namespaces.softwareag.com/acdl/implDetails" xmlns:UniversalMessaging="http://namespaces.softwareag.com/webMethods/UniversalMessaging" xmlns:TN="http://namespaces.softwareag.com/webMethods/TN" xmlns:RULES="http://namespaces.softwareag.com/webMethods/RULES" xmlns:BPM="http://namespaces.softwareag.com/webMethods/BPM" xmlns:Optimize="http://namespaces.softwareag.com/webMethods/Optimize">
     <buildInfo name="BuildVersion" value="1"/>
-    <buildInfo name="build.timestamp" value="2018-09-05T18:19:26"/>
+    <buildInfo name="build.timestamp" value="2018-09-05T19:48:17"/>
     <buildInfo name="productId" value="integrationServer"/>
-    <property name="integrationserver-default.common-jndi-default_is_jndi_provider.jndi.provider.url" many="false" isSecure="false" displayName="integrationserver-default.common-jndi-default_is_jndi_provider.jndi.provider.url">
-        <value>${JNDI_URL}</value>
-    </property>
-    <property name="integrationserver-default.common-wmmessaging-is_um_connection.messaging.provider.auth.password" many="false" isSecure="true" displayName="integrationserver-default.common-wmmessaging-is_um_connection.messaging.provider.auth.password">
-        <value>'*****'</value>
-    </property>
     <property name="integrationserver-default.common-jndi-cloud_demo_jndi.jndi.provider.url" many="false" isSecure="false" displayName="integrationserver-default.common-jndi-cloud_demo_jndi.jndi.provider.url">
-        <value>${JNDI_URL}</value>
+        <value>nsp://localhost:9000</value>
     </property>
     <property name="integrationserver-default.common-jms-default_is_jms_connection.jms.user" many="false" isSecure="false" displayName="integrationserver-default.common-jms-default_is_jms_connection.jms.user">
         <value>''</value>
+    </property>
+    <property name="integrationserver-default.common-wmmessaging-is_um_connection.messaging.provider.auth.password" many="false" isSecure="true" displayName="integrationserver-default.common-wmmessaging-is_um_connection.messaging.provider.auth.password">
+        <value>'*****'</value>
     </property>
     <property name="integrationserver-default.common-jms-cloud_demo_jms.jms.user" many="false" isSecure="false" displayName="integrationserver-default.common-jms-cloud_demo_jms.jms.user">
         <value>Administrator</value>
@@ -24,16 +21,13 @@
     <property name="integrationserver-default.common-wmmessaging-is_um_connection.messaging.provider.auth.user" many="false" isSecure="false" displayName="integrationserver-default.common-wmmessaging-is_um_connection.messaging.provider.auth.user">
         <value>Administrator</value>
     </property>
-    <property name="integrationserver-default.common-jndi-default_is_jndi_provider.jndi.provider.user" many="false" isSecure="false" displayName="integrationserver-default.common-jndi-default_is_jndi_provider.jndi.provider.user">
-        <value>''</value>
+    <property name="integrationserver-default.common-jms-cloud_demo_jms.jms.password" many="false" isSecure="true" displayName="integrationserver-default.common-jms-cloud_demo_jms.jms.password">
+        <value>'{AES/CBC/PKCS5Padding}{qWK9Ulg67TMLpO2Oso2KUT3w5Z50S3doRLd1jIi9J24=}{ntp0+cWgjotafax02a20Ww==}C2pLkfmp2/8FOXOEeSjMBw=='</value>
     </property>
-    <property name="integrationserver-default.common-jms-cloud_demo_jms.jms.password" many="false" isSecure="false" displayName="integrationserver-default.common-jms-cloud_demo_jms.jms.password">
-        <value>manage</value>
-    </property>
-    <property name="integrationserver-default.common-jndi-cloud_demo_jndi.jndi.provider.password" many="false" isSecure="false" displayName="integrationserver-default.common-jndi-cloud_demo_jndi.jndi.provider.password">
-        <value>manage</value>
+    <property name="integrationserver-default.common-jndi-cloud_demo_jndi.jndi.provider.password" many="false" isSecure="true" displayName="integrationserver-default.common-jndi-cloud_demo_jndi.jndi.provider.password">
+        <value>'{AES/CBC/PKCS5Padding}{aCUxDm2XFY9Q8+SIHvcSJJTLGd2gaTtqRnFcyKi33YU=}{yWl/rIB7DLuqE1DslSaOvA==}z50WAbsJGon7A0JZILoWdA=='</value>
     </property>
     <property name="integrationserver-default.common-wmmessaging-is_um_connection.messaging.provider.url" many="false" isSecure="false" displayName="integrationserver-default.common-wmmessaging-is_um_connection.messaging.provider.url">
-        <value>${JNDI_URL}</value>
+        <value>nsp://localhost:9000</value>
     </property>
 </asset_composite>
