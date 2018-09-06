@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <asset_composite name="centos2-OSGI-IS_default" displayName="centos2-OSGI-IS_default" targetNamespace="http://namespaces.softwareag.com/webMethods/CC" xmlns="http://namespaces.softwareag.com/acdl/1.0" xmlns:EDA="http://namespaces.softwareag.com/webMethods/EDA" xmlns:MWS="http://namespaces.softwareag.com/webMethods/MWS" xmlns:IS="http://namespaces.softwareag.com/webMethods/IS" xmlns:APIPORTAL="http://namespaces.softwareag.com/webMethods/APIPORTAL" xmlns:AgileApps="http://namespaces.softwareag.com/webMethods/AgileApps" xmlns:BROKER="http://namespaces.softwareag.com/webMethods/BROKER" xmlns:implDetails="http://namespaces.softwareag.com/acdl/implDetails" xmlns:UniversalMessaging="http://namespaces.softwareag.com/webMethods/UniversalMessaging" xmlns:TN="http://namespaces.softwareag.com/webMethods/TN" xmlns:RULES="http://namespaces.softwareag.com/webMethods/RULES" xmlns:BPM="http://namespaces.softwareag.com/webMethods/BPM" xmlns:Optimize="http://namespaces.softwareag.com/webMethods/Optimize">
     <buildInfo name="BuildVersion" value="1"/>
-    <buildInfo name="build.timestamp" value="2018-09-06T05:30:17"/>
+    <buildInfo name="build.timestamp" value="2018-09-06T05:56:51"/>
     <buildInfo name="productId" value="integrationServer"/>
     <property name="integrationserver-default.common-wmmessaging-is_um_connection.messaging.provider.url" many="false" isSecure="false" displayName="integrationserver-default.common-wmmessaging-is_um_connection.messaging.provider.url">
         <value>nsp://localhost:9000</value>
@@ -13,7 +13,7 @@
         <value>Administrator</value>
     </property>
     <property name="integrationserver-default.common-jms-cloud_demo_jms.jms.password" many="false" isSecure="true" displayName="integrationserver-default.common-jms-cloud_demo_jms.jms.password">
-        <value>'{AES/CBC/PKCS5Padding}{0Vmtj4iVcFVdCaqplZee6ZyTovuy+hZ7pNjDqKecGEI=}{cuHrdfCetqZCQ4LpI01P+Q==}jf5Blv9EhNyQBQW7nRimjw=='</value>
+        <value>'{AES/CBC/PKCS5Padding}{Z9J5cnI6kjvoKgX6sTfDECRBVYLNJc9cskxd6BeY9mY=}{dkB0krQIFMaX9Y+Iq3xtFg==}UDqXFbGB8RR9koo4hlUxxg=='</value>
     </property>
     <property name="integrationserver-default.common-wmmessaging-is_um_connection.messaging.provider.auth.user" many="false" isSecure="false" displayName="integrationserver-default.common-wmmessaging-is_um_connection.messaging.provider.auth.user">
         <value>Administrator</value>
@@ -22,7 +22,7 @@
         <value>'*****'</value>
     </property>
     <property name="integrationserver-default.common-jndi-cloud_demo_jndi.jndi.provider.password" many="false" isSecure="true" displayName="integrationserver-default.common-jndi-cloud_demo_jndi.jndi.provider.password">
-        <value>'{AES/CBC/PKCS5Padding}{ez1YJXtFeartzlxjTHd2gZ2AwoqohwESLrtp40GSKaM=}{f+vyH/qgFc3xDP0T/+QsJw==}XhHNTS17m2Ijba8WbAoweQ=='</value>
+        <value>'{AES/CBC/PKCS5Padding}{uVmx9qxtyvZejc6P6PjO5/+Iwx7irFcTSPszX3iSAn0=}{l93rH6hIahKmUr9YxzOXsw==}/Oz8oML/msVbnoiWFMoj7A=='</value>
     </property>
     <property name="integrationserver-default.common-jms-cloud_demo_jms.jms.user" many="false" isSecure="false" displayName="integrationserver-default.common-jms-cloud_demo_jms.jms.user">
         <value>Administrator</value>
