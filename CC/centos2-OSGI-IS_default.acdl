@@ -4,7 +4,7 @@
     <buildInfo name="build.timestamp" value="2018-09-06T13:53:45"/>
     <buildInfo name="productId" value="integrationServer"/>
     <property name="integrationserver-default.common-jndi-cloud_demo_jndi.jndi.provider.url" many="false" isSecure="false" displayName="integrationserver-default.common-jndi-cloud_demo_jndi.jndi.provider.url">
-        <value>nsp://localhost:9000/</value>
+        <value>${JNDI_URL}</value>
     </property>
     <property name="integrationserver-default.common-jndi-cloud_demo_jndi.jndi.provider.user" many="false" isSecure="false" displayName="integrationserver-default.common-jndi-cloud_demo_jndi.jndi.provider.user">
         <value>''</value>
