@@ -4,15 +4,15 @@
     <buildInfo name="build.timestamp" value="2018-09-07T08:24:16"/>
     <buildInfo name="productId" value="integrationServer"/>
     <property name="integrationserver-default.common-wmmessaging-is_um_connection.messaging.provider.url" many="false" isSecure="false" displayName="integrationserver-default.common-wmmessaging-is_um_connection.messaging.provider.url">
-        <value>nsp://localhost:9000</value>
+        <value>${JNDI_URL}</value>
     </property>
     <property name="integrationserver-default.common-jndi-cloud_demo_jndi.jndi.provider.url" many="false" isSecure="false" displayName="integrationserver-default.common-jndi-cloud_demo_jndi.jndi.provider.url">
-        <value>nsp://localhost:9000/</value>
+        <value>${JNDI_URL}</value>
     </property>
     <property name="integrationserver-default.common-jndi-cloud_demo_jndi.jndi.provider.user" many="false" isSecure="false" displayName="integrationserver-default.common-jndi-cloud_demo_jndi.jndi.provider.user">
-        <value>''</value>
+        <value>Administrator</value>
     </property>
     <property name="integrationserver-default.common-jms-cloud_demo_jms.jms.user" many="false" isSecure="false" displayName="integrationserver-default.common-jms-cloud_demo_jms.jms.user">
-        <value>''</value>
+        <value>Administrator</value>
     </property>
 </asset_composite>
