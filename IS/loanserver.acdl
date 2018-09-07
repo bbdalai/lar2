@@ -1,0 +1,103 @@
+<asset_composite xmlns="http://namespaces.softwareag.com/acdl/1.0" targetNamespace="http://namespaces.softwareag.com/webMethods/IS" name="loanserver" runtimeVersion="10.3.0.0">
+  <implementation.generic type="ispackage" />
+  <buildInfo name="BuildVersion" value="10.3.0.0.1536298447024" />
+  <buildInfo name="BuildTimestamp" value="2018-09-07T11:04:07" />
+  <buildInfo name="MinimumTargetRuntimeVersion" value="10.3.0.0" />
+  <property name="activatePkgOnInstall" displayName="Activate Package On Install">
+    <value>true</value>
+  </property>
+  <property name="archivePkgOnInstall" displayName="Archive Package On Install">
+    <value>true</value>
+  </property>
+  <property name="compilePackage" displayName="Compile Package On Install">
+    <value>true</value>
+  </property>
+  <property name="fragPackage" displayName="Fragment Package On Install">
+    <value>true</value>
+  </property>
+  <property name="clearACLs" displayName="Delete ACLs for the assets from the target Integration Server">
+    <value>false</value>
+  </property>
+  <property name="disallowActivePackageInstall" displayName="disallowActivePackageInstall">
+    <value>false</value>
+  </property>
+  <property name="packageExecutionCheck" displayName="packageExecutionCheck">
+    <value>0</value>
+  </property>
+  <property name="suspendTriggersDuringDeploy" displayName="Suspend Triggers During Deployment">
+    <value>false</value>
+  </property>
+  <property name="syncDocTypesToBroker" displayName="Synchronize Document Types To Broker During Deployment">
+    <value>true</value>
+  </property>
+  <asset name="ISPackage.loanserver" displayName="loanserver">
+    <implementation.generic type="ispackage" />
+  </asset>
+  <asset name="loan.recordService" displayName="loan:recordService">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:loan.requestMessage</dependsOn>
+    <dependsOn>IS:loanserver.code.source.loan.java</dependsOn>
+    <dependsOn>IS:loanserver.code.classes.loan.class</dependsOn>
+    <dependsOn>IS:loan.getLoanStatus</dependsOn>
+  </asset>
+  <asset name="loan.getLoanStatus" displayName="loan:getLoanStatus">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:loan.responseMessage</dependsOn>
+    <dependsOn>IS:loanserver.code.source.loan.java</dependsOn>
+    <dependsOn>IS:loanserver.code.classes.loan.class</dependsOn>
+    <dependsOn>IS:loan.recordService</dependsOn>
+  </asset>
+  <asset name="loan.loanApprovalService" displayName="loan:loanApprovalService">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:loan.recordService</dependsOn>
+  </asset>
+  <asset name="loan.getLoanStatusTest" displayName="loan:getLoanStatusTest">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:loan.getLoanStatus</dependsOn>
+  </asset>
+  <asset name="loan.loanRequestListener" displayName="loan:loanRequestListener">
+    <implementation.generic type="isjmstrigger" />
+    <dependsOn>IS:loan.loanApprovalService</dependsOn>
+    <dependsOn>IS:JMSAlias.CLOUD_DEMO_JMS1</dependsOn>
+  </asset>
+  <asset name="loanserver.code" displayName="code">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="loanserver.code.classes" displayName="code/classes">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="loanserver.code.classes.loan.class" displayName="code/classes/loan.class">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="loanserver.code.source" displayName="code/source">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="loanserver.code.source.loan.java" displayName="code/source/loan.java">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="loanserver.code.jars" displayName="code/jars">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="loanserver.config" displayName="config">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="loanserver.pub" displayName="pub">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="loanserver.doc" displayName="doc">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="loanserver.templates" displayName="templates">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="loanserver.web" displayName="web">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="loanserver.resources" displayName="resources">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="loanserver.lib" displayName="lib">
+    <implementation.generic type="isfolder" />
+  </asset>
+</asset_composite>
+
