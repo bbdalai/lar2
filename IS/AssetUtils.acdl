@@ -1,0 +1,243 @@
+<asset_composite xmlns="http://namespaces.softwareag.com/acdl/1.0" targetNamespace="http://namespaces.softwareag.com/webMethods/IS" name="AssetUtils" runtimeVersion="10.3.0.0">
+  <implementation.generic type="ispackage" />
+  <buildInfo name="BuildVersion" value="10.3.0.0.1536289135487" />
+  <buildInfo name="BuildTimestamp" value="2018-09-07T08:28:55" />
+  <buildInfo name="MinimumTargetRuntimeVersion" value="10.3.0.0" />
+  <property name="activatePkgOnInstall" displayName="Activate Package On Install">
+    <value>true</value>
+  </property>
+  <property name="archivePkgOnInstall" displayName="Archive Package On Install">
+    <value>true</value>
+  </property>
+  <property name="compilePackage" displayName="Compile Package On Install">
+    <value>true</value>
+  </property>
+  <property name="fragPackage" displayName="Fragment Package On Install">
+    <value>true</value>
+  </property>
+  <property name="clearACLs" displayName="Delete ACLs for the assets from the target Integration Server">
+    <value>false</value>
+  </property>
+  <property name="disallowActivePackageInstall" displayName="disallowActivePackageInstall">
+    <value>false</value>
+  </property>
+  <property name="packageExecutionCheck" displayName="packageExecutionCheck">
+    <value>0</value>
+  </property>
+  <property name="suspendTriggersDuringDeploy" displayName="Suspend Triggers During Deployment">
+    <value>false</value>
+  </property>
+  <property name="syncDocTypesToBroker" displayName="Synchronize Document Types To Broker During Deployment">
+    <value>true</value>
+  </property>
+  <asset name="ISPackage.AssetUtils" displayName="AssetUtils">
+    <implementation.generic type="ispackage" />
+  </asset>
+  <asset name="service.math._math_odata.Operation._update" displayName="service.math._math_odata.Operation:_update">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:service.math.math_service_.services.Add</dependsOn>
+    <dependsOn>IS:service.math.math_service_.services.Divide</dependsOn>
+    <dependsOn>IS:service.math.math_service_.services.Multiply</dependsOn>
+    <dependsOn>IS:service.math.math_service_.services.Subtract</dependsOn>
+  </asset>
+  <asset name="service.math._math_odata.Operation._delete" displayName="service.math._math_odata.Operation:_delete">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="service.math._math_odata.Operation._insert" displayName="service.math._math_odata.Operation:_insert">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="service.math._math_odata.Operation._retrieve" displayName="service.math._math_odata.Operation:_retrieve">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="service.math.math_service_.docTypes.MathInterface_Multiply_Input" displayName="service.math.math_service_.docTypes:MathInterface_Multiply_Input">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:service.math.math_service_.docTypes.docTypeRef_ns1_MathInput</dependsOn>
+  </asset>
+  <asset name="service.math.math_service_.docTypes.MathInterface_Divide_Output" displayName="service.math.math_service_.docTypes:MathInterface_Divide_Output">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:service.math.math_service_.docTypes.docTypeRef_ns1_MathOutput</dependsOn>
+  </asset>
+  <asset name="service.math.math_service_.docTypes.MathInterface_Divide_Input" displayName="service.math.math_service_.docTypes:MathInterface_Divide_Input">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:service.math.math_service_.docTypes.docTypeRef_ns1_MathInput</dependsOn>
+  </asset>
+  <asset name="service.math.math_service_.docTypes.MathInterface_Multiply_Output" displayName="service.math.math_service_.docTypes:MathInterface_Multiply_Output">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:service.math.math_service_.docTypes.docTypeRef_ns1_MathOutput</dependsOn>
+  </asset>
+  <asset name="service.math.math_service_.docTypes.MathInterface_Add_Input" displayName="service.math.math_service_.docTypes:MathInterface_Add_Input">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:service.math.math_service_.docTypes.docTypeRef_ns1_MathInput</dependsOn>
+  </asset>
+  <asset name="service.math.math_service_.docTypes.docTypeRef_ns1_MathInput" displayName="service.math.math_service_.docTypes:docTypeRef_ns1_MathInput">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="service.math.math_service_.docTypes.docTypeRef_ns1_MathOutput" displayName="service.math.math_service_.docTypes:docTypeRef_ns1_MathOutput">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="service.math.math_service_.docTypes.MathInterface_Subtract_Output" displayName="service.math.math_service_.docTypes:MathInterface_Subtract_Output">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:service.math.math_service_.docTypes.docTypeRef_ns1_MathOutput</dependsOn>
+  </asset>
+  <asset name="service.math.math_service_.docTypes.MathInterface_Add_Output" displayName="service.math.math_service_.docTypes:MathInterface_Add_Output">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:service.math.math_service_.docTypes.docTypeRef_ns1_MathOutput</dependsOn>
+  </asset>
+  <asset name="service.math.math_service_.docTypes.MathInterface_Subtract_Input" displayName="service.math.math_service_.docTypes:MathInterface_Subtract_Input">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:service.math.math_service_.docTypes.docTypeRef_ns1_MathInput</dependsOn>
+  </asset>
+  <asset name="service.math.math_service_.docTypes.schema_math_service" displayName="service.math.math_service_.docTypes:schema_math_service">
+    <implementation.generic type="isschema" />
+  </asset>
+  <asset name="service.math.math_service_.services.Multiply" displayName="service.math.math_service_.services:Multiply">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:service.math.math_service_.docTypes.MathInterface_Multiply_Input</dependsOn>
+    <dependsOn>IS:service.math.math_service_.docTypes.MathInterface_Multiply_Output</dependsOn>
+  </asset>
+  <asset name="service.math.math_service_.services.Divide" displayName="service.math.math_service_.services:Divide">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:service.math.math_service_.docTypes.MathInterface_Divide_Input</dependsOn>
+    <dependsOn>IS:service.math.math_service_.docTypes.MathInterface_Divide_Output</dependsOn>
+  </asset>
+  <asset name="service.math.math_service_.services.Subtract" displayName="service.math.math_service_.services:Subtract">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:service.math.math_service_.docTypes.MathInterface_Subtract_Input</dependsOn>
+    <dependsOn>IS:service.math.math_service_.docTypes.MathInterface_Subtract_Output</dependsOn>
+  </asset>
+  <asset name="service.math.math_service_.services.Add" displayName="service.math.math_service_.services:Add">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:service.math.math_service_.docTypes.MathInterface_Add_Input</dependsOn>
+    <dependsOn>IS:service.math.math_service_.docTypes.MathInterface_Add_Output</dependsOn>
+  </asset>
+  <asset name="service.math.math_resource_.docTypes.math_resource_1" displayName="service.math.math_resource_.docTypes:math_resource_1">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="service.math.math_resource_.docTypes.math_resource" displayName="service.math.math_resource_.docTypes:math_resource">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="service.math.math_service_handler" displayName="service.math:math_service_handler">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:hdm.doc.math.math_service_header</dependsOn>
+  </asset>
+  <asset name="service.math.sampleFlowService" displayName="service.math:sampleFlowService">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="service.math.math_trigger_service" displayName="service.math:math_trigger_service">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:doc.math</dependsOn>
+    <dependsOn>IS:hdm.service.math.math_service_.services.Add</dependsOn>
+    <dependsOn>IS:hdm.service.math.math_service_.services.Divide</dependsOn>
+    <dependsOn>IS:hdm.service.math.math_service_.services.Multiply</dependsOn>
+    <dependsOn>IS:hdm.service.math.math_service_.services.Subtract</dependsOn>
+  </asset>
+  <asset name="service.math.math_resource" displayName="service.math:math_resource">
+    <implementation.generic type="isrestresource" />
+    <dependsOn>IS:service.math.math_service_.services.Add</dependsOn>
+    <dependsOn>IS:service.math.math_service_.services.Divide</dependsOn>
+    <dependsOn>IS:service.math.math_service_.services.Multiply</dependsOn>
+    <dependsOn>IS:service.math.math_service_.services.Subtract</dependsOn>
+  </asset>
+  <asset name="service.math.math_trigger" displayName="service.math:math_trigger">
+    <implementation.generic type="istrigger" />
+    <dependsOn>IS:service.math.math_trigger_service</dependsOn>
+    <dependsOn>IS:doc.math</dependsOn>
+  </asset>
+  <asset name="service.MathService.multiplyFloats" displayName="service.MathService:multiplyFloats">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:hdm.service.math.math_service_.docTypes.MathInterface_Multiply_Input</dependsOn>
+    <dependsOn>IS:AssetUtils.code.source.service.MathService.java</dependsOn>
+    <dependsOn>IS:AssetUtils.code.classes.service.MathService.class</dependsOn>
+    <dependsOn>IS:service.MathService.divideFloats</dependsOn>
+    <dependsOn>IS:service.MathService.addFloats</dependsOn>
+    <dependsOn>IS:service.MathService.subtractFloats</dependsOn>
+  </asset>
+  <asset name="service.MathService.divideFloats" displayName="service.MathService:divideFloats">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:hdm.service.math.math_service_.docTypes.MathInterface_Divide_Input</dependsOn>
+    <dependsOn>IS:AssetUtils.code.source.service.MathService.java</dependsOn>
+    <dependsOn>IS:AssetUtils.code.classes.service.MathService.class</dependsOn>
+    <dependsOn>IS:service.MathService.multiplyFloats</dependsOn>
+    <dependsOn>IS:service.MathService.addFloats</dependsOn>
+    <dependsOn>IS:service.MathService.subtractFloats</dependsOn>
+  </asset>
+  <asset name="service.MathService.addFloats" displayName="service.MathService:addFloats">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:service.math.math_service_.docTypes.MathInterface_Add_Input</dependsOn>
+    <dependsOn>IS:AssetUtils.code.source.service.MathService.java</dependsOn>
+    <dependsOn>IS:AssetUtils.code.classes.service.MathService.class</dependsOn>
+    <dependsOn>IS:service.MathService.multiplyFloats</dependsOn>
+    <dependsOn>IS:service.MathService.divideFloats</dependsOn>
+    <dependsOn>IS:service.MathService.subtractFloats</dependsOn>
+  </asset>
+  <asset name="service.MathService.subtractFloats" displayName="service.MathService:subtractFloats">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:hdm.service.math.math_service_.docTypes.MathInterface_Subtract_Input</dependsOn>
+    <dependsOn>IS:AssetUtils.code.source.service.MathService.java</dependsOn>
+    <dependsOn>IS:AssetUtils.code.classes.service.MathService.class</dependsOn>
+    <dependsOn>IS:service.MathService.multiplyFloats</dependsOn>
+    <dependsOn>IS:service.MathService.divideFloats</dependsOn>
+    <dependsOn>IS:service.MathService.addFloats</dependsOn>
+  </asset>
+  <asset name="doc.po_xml_schema.docTypeRef_tns_USAddress" displayName="doc.po_xml_schema:docTypeRef_tns_USAddress">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="doc.po_xml_schema.docTypeRef_tns_PurchaseOrderType" displayName="doc.po_xml_schema:docTypeRef_tns_PurchaseOrderType">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:doc.po_xml_schema.docTypeRef_tns_USAddress</dependsOn>
+  </asset>
+  <asset name="doc.po_xml_schema.po_xml" displayName="doc.po_xml_schema:po_xml">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:doc.po_xml_schema.docTypeRef_tns_PurchaseOrderType</dependsOn>
+  </asset>
+  <asset name="doc.po_xml_schema.schema_xml_po" displayName="doc.po_xml_schema:schema_xml_po">
+    <implementation.generic type="isschema" />
+  </asset>
+  <asset name="doc.default_specification" displayName="doc:default_specification">
+    <implementation.generic type="isspecification" />
+    <dependsOn>IS:wm.client.test.nsnode.doc.defaults_doc</dependsOn>
+  </asset>
+  <asset name="doc.math" displayName="doc:math">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="AssetUtils.code" displayName="code">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="AssetUtils.code.classes" displayName="code/classes">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="AssetUtils.code.classes.service.MathService.class" displayName="code/classes/service/MathService.class">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="AssetUtils.code.source" displayName="code/source">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="AssetUtils.code.source.service.MathService.java" displayName="code/source/service/MathService.java">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="AssetUtils.code.jars" displayName="code/jars">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="AssetUtils.pub" displayName="pub">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="AssetUtils.doc" displayName="doc">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="AssetUtils.templates" displayName="templates">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="AssetUtils.web" displayName="web">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="AssetUtils.config" displayName="config">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="AssetUtils.resources" displayName="resources">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="AssetUtils.lib" displayName="lib">
+    <implementation.generic type="isfolder" />
+  </asset>
+</asset_composite>
+
