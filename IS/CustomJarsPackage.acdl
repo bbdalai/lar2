@@ -1,0 +1,70 @@
+<asset_composite xmlns="http://namespaces.softwareag.com/acdl/1.0" targetNamespace="http://namespaces.softwareag.com/webMethods/IS" name="CustomJarsPackage" runtimeVersion="10.3.0.0">
+  <implementation.generic type="ispackage" />
+  <buildInfo name="BuildVersion" value="10.3.0.0.1536301894951" />
+  <buildInfo name="BuildTimestamp" value="2018-09-07T12:01:35" />
+  <buildInfo name="MinimumTargetRuntimeVersion" value="10.3.0.0" />
+  <property name="activatePkgOnInstall" displayName="Activate Package On Install">
+    <value>true</value>
+  </property>
+  <property name="archivePkgOnInstall" displayName="Archive Package On Install">
+    <value>true</value>
+  </property>
+  <property name="compilePackage" displayName="Compile Package On Install">
+    <value>true</value>
+  </property>
+  <property name="fragPackage" displayName="Fragment Package On Install">
+    <value>true</value>
+  </property>
+  <property name="clearACLs" displayName="Delete ACLs for the assets from the target Integration Server">
+    <value>false</value>
+  </property>
+  <property name="disallowActivePackageInstall" displayName="disallowActivePackageInstall">
+    <value>false</value>
+  </property>
+  <property name="packageExecutionCheck" displayName="packageExecutionCheck">
+    <value>0</value>
+  </property>
+  <property name="suspendTriggersDuringDeploy" displayName="Suspend Triggers During Deployment">
+    <value>false</value>
+  </property>
+  <property name="syncDocTypesToBroker" displayName="Synchronize Document Types To Broker During Deployment">
+    <value>true</value>
+  </property>
+  <asset name="ISPackage.CustomJarsPackage" displayName="CustomJarsPackage">
+    <implementation.generic type="ispackage" />
+  </asset>
+  <asset name="CustomJarsPackage.code" displayName="code">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="CustomJarsPackage.code.jars" displayName="code/jars">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="CustomJarsPackage.code.classes" displayName="code/classes">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="CustomJarsPackage.code.source" displayName="code/source">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="CustomJarsPackage.pub" displayName="pub">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="CustomJarsPackage.config" displayName="config">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="CustomJarsPackage.doc" displayName="doc">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="CustomJarsPackage.lib" displayName="lib">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="CustomJarsPackage.resources" displayName="resources">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="CustomJarsPackage.templates" displayName="templates">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="CustomJarsPackage.web" displayName="web">
+    <implementation.generic type="isfolder" />
+  </asset>
+</asset_composite>
+
