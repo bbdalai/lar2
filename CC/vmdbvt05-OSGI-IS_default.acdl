@@ -6,8 +6,8 @@
     <property name="integrationserver-default.common-truststores_partner1_ts1.truststore.type" many="false" isSecure="false" displayName="integrationserver-default.common-truststores_partner1_ts1.truststore.type">
         <value>JKS</value>
     </property>
-    <property name="integrationserver-default.common-truststores_partner1_ts1.truststore.password" many="false" isSecure="true" displayName="integrationserver-default.common-truststores_partner1_ts1.truststore.password">
-        <value>'{AES/CBC/PKCS5Padding}{fP/RJeMq9HGn6D7y5OAaCZ3ZdThT9BWlzJdI1ssPvKM=}{qUETIsY8FsHp2PYIINUMpA==}RHXEPzWj/VXPyyo/sSgu/w=='</value>
+    <property name="integrationserver-default.common-truststores_partner1_ts1.truststore.password" many="false" isSecure="false" displayName="integrationserver-default.common-truststores_partner1_ts1.truststore.password">
+        <value>ts1</value>
     </property>
     <property name="integrationserver-default.common-truststores_partner1_ts1.truststore.location" many="false" isSecure="false" displayName="integrationserver-default.common-truststores_partner1_ts1.truststore.location">
         <value>packages/mytruststore/config/secrets/partner1_ts1</value>
@@ -15,8 +15,8 @@
     <property name="integrationserver-default.common-keystores_partner1_ks1.keystore.type" many="false" isSecure="false" displayName="integrationserver-default.common-keystores_partner1_ks1.keystore.type">
         <value>JKS</value>
     </property>
-    <property name="integrationserver-default.common-keystores_partner1_ks1.keystore.password" many="false" isSecure="true" displayName="integrationserver-default.common-keystores_partner1_ks1.keystore.password">
-        <value>'{AES/CBC/PKCS5Padding}{9Xz0VKdWxWMPpOr7CaBF/NirYe9QqjcmpdvOK3bLB+o=}{49dOJ02S4/MxaTRg9slCfg==}TybkanbK/EkuOCxMUycXNg=='</value>
+    <property name="integrationserver-default.common-keystores_partner1_ks1.keystore.password" many="false" isSecure="false" displayName="integrationserver-default.common-keystores_partner1_ks1.keystore.password">
+        <value>ks1</value>
     </property>
     <property name="integrationserver-default.common-keystores_partner1_ks1.keystore.location" many="false" isSecure="false" displayName="integrationserver-default.common-keystores_partner1_ks1.keystore.location">
         <value>packages/mytruststore/config/secrets/partner1_ks1</value>
