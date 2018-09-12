@@ -4,6 +4,6 @@
     <buildInfo name="build.timestamp" value="2018-09-12T17:22:23"/>
     <buildInfo name="productId" value="integrationServer"/>
     <property name="integrationserver-default.common-wmmessaging-is_um_connection.messaging.provider.url" many="false" isSecure="false" displayName="integrationserver-default.common-wmmessaging-is_um_connection.messaging.provider.url">
-        <value>nsp://localhost:9000</value>
+        <value>${JNDI_URL}</value>
     </property>
 </asset_composite>
