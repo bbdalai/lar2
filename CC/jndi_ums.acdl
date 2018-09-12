@@ -10,9 +10,9 @@
         <value>''</value>
     </property>
     <property name="myjndi.integrationserver-default.common-jndi-_dcldev_um.jndi.provider.url" many="false" isSecure="false" displayName="myjndi.integrationserver-default.common-jndi-_dcldev_um.jndi.provider.url">
-        <value>${JNDI_URL}</value>
+        <value>nsp://dcldev01.eur.ad.sag:9001/</value>
     </property>
     <property name="myjndi.integrationserver-default.common-jndi-_dcgwm_um.jndi.provider.url" many="false" isSecure="false" displayName="myjndi.integrationserver-default.common-jndi-_dcgwm_um.jndi.provider.url">
-        <value>${JNDI_URL}</value>
+        <value>nsp://dcgwm01.eur.ad.sag:9001/</value>
     </property>
 </asset_composite>

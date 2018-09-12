@@ -34,7 +34,7 @@
         <value>''</value>
     </property>
     <property name="mytrustore.integrationserver-default.common-jndi-default_is_jndi_provider.jndi.provider.url" many="false" isSecure="false" displayName="mytrustore.integrationserver-default.common-jndi-default_is_jndi_provider.jndi.provider.url">
-        <value>${JNDI_URL}</value>
+        <value>nsp://localhost:9000</value>
     </property>
     <property name="mytrustore.integrationserver-default.common-keystores_default_is_keystore.keystore.key.password" many="false" isSecure="true" displayName="mytrustore.integrationserver-default.common-keystores_default_is_keystore.keystore.key.password">
         <value>'{AES/CBC/PKCS5Padding}{sUyMtwep9fXKo3SyDrCKmY+4urT2Y+3oXHCauIgATL0=}{hcgiwOIgOsXjYf6amDqDJw==}GoXvXVbrX56IdY3Wva5H0Q=='</value>
