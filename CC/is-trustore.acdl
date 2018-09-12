@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<asset_composite name="is-trustore" displayName="is-trustore" runtimeVersion="10.3" targetNamespace="http://namespaces.softwareag.com/webMethods/CC" xmlns="http://namespaces.softwareag.com/acdl/1.0" xmlns:EDA="http://namespaces.softwareag.com/webMethods/EDA" xmlns:MWS="http://namespaces.softwareag.com/webMethods/MWS" xmlns:IS="http://namespaces.softwareag.com/webMethods/IS" xmlns:APIPORTAL="http://namespaces.softwareag.com/webMethods/APIPORTAL" xmlns:AgileApps="http://namespaces.softwareag.com/webMethods/AgileApps" xmlns:BROKER="http://namespaces.softwareag.com/webMethods/BROKER" xmlns:implDetails="http://namespaces.softwareag.com/acdl/implDetails" xmlns:UniversalMessaging="http://namespaces.softwareag.com/webMethods/UniversalMessaging" xmlns:TN="http://namespaces.softwareag.com/webMethods/TN" xmlns:RULES="http://namespaces.softwareag.com/webMethods/RULES" xmlns:BPM="http://namespaces.softwareag.com/webMethods/BPM" xmlns:Optimize="http://namespaces.softwareag.com/webMethods/Optimize">
+    <buildInfo name="BuildVersion" value="10.3"/>
+    <buildInfo name="build.timestamp" value="2018-09-12T19:05:13"/>
+    <buildInfo name="productId" value="integrationServer"/>
+    <property name="mytrustore.integrationserver-default.common-truststores_default_wmcloud_truststore.truststore.type" many="false" isSecure="false" displayName="mytrustore.integrationserver-default.common-truststores_default_wmcloud_truststore.truststore.type">
+        <value>JKS</value>
+    </property>
+    <property name="mytrustore.integrationserver-default.common-keystores_default_is_keystore.keystore.password" many="false" isSecure="true" displayName="mytrustore.integrationserver-default.common-keystores_default_is_keystore.keystore.password">
+        <value>'{AES/CBC/PKCS5Padding}{iHzHZeq1fp5mbKCwC3wa1oeaE2X8UJ5fD6ZzQdYHGJ4=}{jJqqqQMlQ5SRsM/EaInQMg==}8K+RwoEtXu2BwsGVwHETNQ=='</value>
+    </property>
+    <property name="mytrustore.integrationserver-default.common-truststores_default_wmcloud_truststore.truststore.password" many="false" isSecure="true" displayName="mytrustore.integrationserver-default.common-truststores_default_wmcloud_truststore.truststore.password">
+        <value>'{AES/CBC/PKCS5Padding}{x2MAPxIHSHklEgQ19rPffspphT7Fx/PQ5Tegl7VyXLY=}{JFsuzsS4vPeV6LdvYl4JdQ==}d+FiXpYJCKICTKGJtl4ppw=='</value>
+    </property>
+    <property name="mytrustore.integrationserver-default.common-truststores_default_is_truststore.truststore.type" many="false" isSecure="false" displayName="mytrustore.integrationserver-default.common-truststores_default_is_truststore.truststore.type">
+        <value>JKS</value>
+    </property>
+    <property name="mytrustore.integrationserver-default.common-keystores_default_is_keystore.keystore.location" many="false" isSecure="false" displayName="mytrustore.integrationserver-default.common-keystores_default_is_keystore.keystore.location">
+        <value>..\..\..\common\conf\keystore.jks</value>
+    </property>
+    <property name="mytrustore.integrationserver-default.common-truststores_default_wmcloud_truststore.truststore.location" many="false" isSecure="false" displayName="mytrustore.integrationserver-default.common-truststores_default_wmcloud_truststore.truststore.location">
+        <value>packages\WmCloud\config\wmcloud_truststore.jks</value>
+    </property>
+    <property name="mytrustore.integrationserver-default.common-keystores_default_is_keystore.keystore.type" many="false" isSecure="false" displayName="mytrustore.integrationserver-default.common-keystores_default_is_keystore.keystore.type">
+        <value>JKS</value>
+    </property>
+    <property name="mytrustore.integrationserver-default.common-truststores_default_is_truststore.truststore.password" many="false" isSecure="true" displayName="mytrustore.integrationserver-default.common-truststores_default_is_truststore.truststore.password">
+        <value>'{AES/CBC/PKCS5Padding}{Sh258/+xb9c5A1h4wXBkw+yl0BYphqvFhoc86xdscHY=}{6MA/Qb8gWwFTVK4Z4fEiww==}vkJ9yKy4qyJzrgQNdUNnrg=='</value>
+    </property>
+    <property name="mytrustore.integrationserver-default.common-truststores_default_is_truststore.truststore.location" many="false" isSecure="false" displayName="mytrustore.integrationserver-default.common-truststores_default_is_truststore.truststore.location">
+        <value>..\..\..\common\conf\platform_truststore.jks</value>
+    </property>
+    <property name="mytrustore.integrationserver-default.common-jndi-default_is_jndi_provider.jndi.provider.user" many="false" isSecure="false" displayName="mytrustore.integrationserver-default.common-jndi-default_is_jndi_provider.jndi.provider.user">
+        <value>''</value>
+    </property>
+    <property name="mytrustore.integrationserver-default.common-jndi-default_is_jndi_provider.jndi.provider.url" many="false" isSecure="false" displayName="mytrustore.integrationserver-default.common-jndi-default_is_jndi_provider.jndi.provider.url">
+        <value>nsp://localhost:9000</value>
+    </property>
+    <property name="mytrustore.integrationserver-default.common-keystores_default_is_keystore.keystore.key.password" many="false" isSecure="true" displayName="mytrustore.integrationserver-default.common-keystores_default_is_keystore.keystore.key.password">
+        <value>'{AES/CBC/PKCS5Padding}{sUyMtwep9fXKo3SyDrCKmY+4urT2Y+3oXHCauIgATL0=}{hcgiwOIgOsXjYf6amDqDJw==}GoXvXVbrX56IdY3Wva5H0Q=='</value>
+    </property>
+</asset_composite>
