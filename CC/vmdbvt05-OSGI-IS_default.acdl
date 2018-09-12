@@ -31,7 +31,7 @@
         <value>../../../common/conf/platform_truststore.jks</value>
     </property>
     <property name="integrationserver-default.common-jndi-default_is_jndi_provider.jndi.provider.url" many="false" isSecure="false" displayName="integrationserver-default.common-jndi-default_is_jndi_provider.jndi.provider.url">
-        <value>nsp://localhost:9000</value>
+        <value>${JNDI_URL}</value>
     </property>
     <property name="integrationserver-default.common-jms-default_is_jms_connection.jms.user" many="false" isSecure="false" displayName="integrationserver-default.common-jms-default_is_jms_connection.jms.user">
         <value>''</value>
