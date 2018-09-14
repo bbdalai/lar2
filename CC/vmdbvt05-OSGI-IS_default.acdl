@@ -4,18 +4,18 @@
     <buildInfo name="build.timestamp" value="2018-09-14T17:09:44"/>
     <buildInfo name="productId" value="integrationServer"/>
     <property name="integrationserver-default.common-jndi-cloud_demo_jndi.jndi.provider.url" many="false" isSecure="false" displayName="integrationserver-default.common-jndi-cloud_demo_jndi.jndi.provider.url">
-        <value>nsp://vmdbvt05:9000/</value>
+        <value>${JNDI_URL}</value>
     </property>
     <property name="integrationserver-default.common-jndi-cloud_demo_jndi.jndi.provider.user" many="false" isSecure="false" displayName="integrationserver-default.common-jndi-cloud_demo_jndi.jndi.provider.user">
-        <value>bbdalai</value>
+        <value>${UM_USER}</value>
     </property>
-    <property name="integrationserver-default.common-jms-cloud_demo_jms.jms.password" many="false" isSecure="true" displayName="integrationserver-default.common-jms-cloud_demo_jms.jms.password">
-        <value>'{AES/CBC/PKCS5Padding}{r08qqXEHhGwivqzJMfc9XslTWzzoLzMVHUyAT5SZFqE=}{EO200nWZWxGEwjs8OXp2mg==}fW9O8Eh/i0c7Jh+7ogA4og=='</value>
+    <property name="integrationserver-default.common-jms-cloud_demo_jms.jms.password" many="false" isSecure="false" displayName="integrationserver-default.common-jms-cloud_demo_jms.jms.password">
+        <value>${UM_PASSWORD}</value>
     </property>
-    <property name="integrationserver-default.common-jndi-cloud_demo_jndi.jndi.provider.password" many="false" isSecure="true" displayName="integrationserver-default.common-jndi-cloud_demo_jndi.jndi.provider.password">
-        <value>'{AES/CBC/PKCS5Padding}{nKiwOf0sjOLZOM9JNx9vjjG41PqJ2joSkpnnFSRIS2Q=}{OARn4iqSi6ZuyM63A42Uew==}kppokcUnpOHinCm8ieobzw=='</value>
+    <property name="integrationserver-default.common-jndi-cloud_demo_jndi.jndi.provider.password" many="false" isSecure="false" displayName="integrationserver-default.common-jndi-cloud_demo_jndi.jndi.provider.password">
+        <value>${UM_PASSWORD}</value>
     </property>
     <property name="integrationserver-default.common-jms-cloud_demo_jms.jms.user" many="false" isSecure="false" displayName="integrationserver-default.common-jms-cloud_demo_jms.jms.user">
-        <value>bbdalai</value>
+        <value>${UM_USER}</value>
     </property>
 </asset_composite>
