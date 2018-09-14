@@ -1,7 +1,7 @@
 <asset_composite xmlns="http://namespaces.softwareag.com/acdl/1.0" targetNamespace="http://namespaces.softwareag.com/webMethods/IS" name="loanserver" runtimeVersion="10.3.0.0">
   <implementation.generic type="ispackage" />
-  <buildInfo name="BuildVersion" value="10.3.0.0.1536754432950" />
-  <buildInfo name="BuildTimestamp" value="2018-09-12T17:43:53" />
+  <buildInfo name="BuildVersion" value="10.3.0.0.1536920286130" />
+  <buildInfo name="BuildTimestamp" value="2018-09-14T15:48:06" />
   <buildInfo name="MinimumTargetRuntimeVersion" value="10.3.0.0" />
   <property name="activatePkgOnInstall" displayName="Activate Package On Install">
     <value>true</value>
@@ -59,6 +59,16 @@
     <implementation.generic type="isjmstrigger" />
     <dependsOn>IS:loan.loanApprovalService</dependsOn>
     <dependsOn>IS:JMSAlias.CLOUD_DEMO_JMS</dependsOn>
+  </asset>
+  <asset name="loan.nativeMessagingTrigger" displayName="loan:nativeMessagingTrigger">
+    <implementation.generic type="istrigger" />
+    <dependsOn>IS:loan.loanApprovalService_1</dependsOn>
+    <dependsOn>IS:loan.requestMessage1</dependsOn>
+  </asset>
+  <asset name="loan.loanApprovalService_1" displayName="loan:loanApprovalService_1">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:loan.requestMessage1</dependsOn>
+    <dependsOn>IS:loan.recordService</dependsOn>
   </asset>
   <asset name="loanserver.code" displayName="code">
     <implementation.generic type="isfolder" />
