@@ -4,27 +4,27 @@
     <buildInfo name="build.timestamp" value="2018-09-14T15:39:33"/>
     <buildInfo name="productId" value="integrationServer"/>
     <property name="integrationserver-default.common-wmmessaging-is_um_connection.messaging.provider.url" many="false" isSecure="false" displayName="integrationserver-default.common-wmmessaging-is_um_connection.messaging.provider.url">
-        <value>${JNDI_URL}</value>
+        <value>nsp://vmdbvt05:9000</value>
     </property>
     <property name="integrationserver-default.common-jndi-cloud_demo_jndi.jndi.provider.url" many="false" isSecure="false" displayName="integrationserver-default.common-jndi-cloud_demo_jndi.jndi.provider.url">
-        <value>${JNDI_URL}</value>
+        <value>nsp://vmdbvt05:9000/</value>
     </property>
     <property name="integrationserver-default.common-jndi-cloud_demo_jndi.jndi.provider.user" many="false" isSecure="false" displayName="integrationserver-default.common-jndi-cloud_demo_jndi.jndi.provider.user">
-        <value>${UM_USER}</value>
+        <value>bbdalai</value>
     </property>
-    <property name="integrationserver-default.common-jms-cloud_demo_jms.jms.password" many="false" isSecure="false" displayName="integrationserver-default.common-jms-cloud_demo_jms.jms.password">
-        <value>${UM_PASSWORD}</value>
+    <property name="integrationserver-default.common-jms-cloud_demo_jms.jms.password" many="false" isSecure="true" displayName="integrationserver-default.common-jms-cloud_demo_jms.jms.password">
+        <value>'{AES/CBC/PKCS5Padding}{3dsdIe7NEiaP7eHcNXs+8PojJplWgX7o7T/UpMNJW2s=}{vDFrmRMADlC1DksX9aXH3g==}nqZ8rZVjn23ZQeUKI4eY9A=='</value>
     </property>
     <property name="integrationserver-default.common-wmmessaging-is_um_connection.messaging.provider.auth.user" many="false" isSecure="false" displayName="integrationserver-default.common-wmmessaging-is_um_connection.messaging.provider.auth.user">
-        <value>${UM_USER}</value>
+        <value>bbdalai</value>
     </property>
-    <property name="integrationserver-default.common-wmmessaging-is_um_connection.messaging.provider.auth.password" many="false" isSecure="false" displayName="integrationserver-default.common-wmmessaging-is_um_connection.messaging.provider.auth.password">
-        <value>${UM_PASSWORD}</value>
+    <property name="integrationserver-default.common-wmmessaging-is_um_connection.messaging.provider.auth.password" many="false" isSecure="true" displayName="integrationserver-default.common-wmmessaging-is_um_connection.messaging.provider.auth.password">
+        <value>'*****'</value>
     </property>
-    <property name="integrationserver-default.common-jndi-cloud_demo_jndi.jndi.provider.password" many="false" isSecure="false" displayName="integrationserver-default.common-jndi-cloud_demo_jndi.jndi.provider.password">
-        <value>${UM_PASSWORD}</value>
+    <property name="integrationserver-default.common-jndi-cloud_demo_jndi.jndi.provider.password" many="false" isSecure="true" displayName="integrationserver-default.common-jndi-cloud_demo_jndi.jndi.provider.password">
+        <value>'{AES/CBC/PKCS5Padding}{bBspwiKhJU2pvmatKJvz9bVwvAWTHaRZlkJZGHhchy8=}{Da8C1ZM+fhQTUVZv8KEMZA==}t8DHjtri4bp+TracUZpBgA=='</value>
     </property>
     <property name="integrationserver-default.common-jms-cloud_demo_jms.jms.user" many="false" isSecure="false" displayName="integrationserver-default.common-jms-cloud_demo_jms.jms.user">
-        <value>${UM_USER}</value>
+        <value>bbdalai</value>
     </property>
 </asset_composite>
