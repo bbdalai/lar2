@@ -1,76 +1,82 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<asset_composite name="loanmessage" runtimeVersion="10.3.0.0" targetNamespace="http://namespaces.softwareag.com/webMethods/IS" xmlns="http://namespaces.softwareag.com/acdl/1.0" xmlns:EDA="http://namespaces.softwareag.com/webMethods/EDA" xmlns:MWS="http://namespaces.softwareag.com/webMethods/MWS" xmlns:IS="http://namespaces.softwareag.com/webMethods/IS" xmlns:APIPORTAL="http://namespaces.softwareag.com/webMethods/APIPORTAL" xmlns:AgileApps="http://namespaces.softwareag.com/webMethods/AgileApps" xmlns:BROKER="http://namespaces.softwareag.com/webMethods/BROKER" xmlns:implDetails="http://namespaces.softwareag.com/acdl/implDetails" xmlns:UniversalMessaging="http://namespaces.softwareag.com/webMethods/UniversalMessaging" xmlns:TN="http://namespaces.softwareag.com/webMethods/TN" xmlns:RULES="http://namespaces.softwareag.com/webMethods/RULES" xmlns:BPM="http://namespaces.softwareag.com/webMethods/BPM" xmlns:Optimize="http://namespaces.softwareag.com/webMethods/Optimize">
-    <implementation.generic type="ispackage"/>
-    <buildInfo name="BuildTimestamp" value="2018-09-12T16:43:58"/>
-    <buildInfo name="BuildVersion" value="10.3.0.0.1536750838897"/>
-    <buildInfo name="MinimumTargetRuntimeVersion" value="10.3.0.0"/>
-    <asset name="ISPackage.loanmessage" displayName="loanmessage" isDeployable="true">
-        <implementation.generic type="ispackage"/>
-    </asset>
-    <asset name="loan.responseMessage" displayName="loan:responseMessage" isDeployable="true">
-        <implementation.generic type="isdocumenttype"/>
-    </asset>
-    <asset name="loan.requestMessage" displayName="loan:requestMessage" isDeployable="true">
-        <implementation.generic type="isdocumenttype"/>
-    </asset>
-    <asset name="loanmessage.config" displayName="config" isDeployable="true">
-        <implementation.generic type="isfolder"/>
-    </asset>
-    <asset name="loanmessage.pub" displayName="pub" isDeployable="true">
-        <implementation.generic type="isfolder"/>
-    </asset>
-    <asset name="loanmessage.code" displayName="code" isDeployable="true">
-        <implementation.generic type="isfolder"/>
-    </asset>
-    <asset name="loanmessage.code.classes" displayName="code/classes" isDeployable="true">
-        <implementation.generic type="isfolder"/>
-    </asset>
-    <asset name="loanmessage.code.source" displayName="code/source" isDeployable="true">
-        <implementation.generic type="isfolder"/>
-    </asset>
-    <asset name="loanmessage.code.jars" displayName="code/jars" isDeployable="true">
-        <implementation.generic type="isfolder"/>
-    </asset>
-    <asset name="loanmessage.doc" displayName="doc" isDeployable="true">
-        <implementation.generic type="isfolder"/>
-    </asset>
-    <asset name="loanmessage.templates" displayName="templates" isDeployable="true">
-        <implementation.generic type="isfolder"/>
-    </asset>
-    <asset name="loanmessage.web" displayName="web" isDeployable="true">
-        <implementation.generic type="isfolder"/>
-    </asset>
-    <asset name="loanmessage.resources" displayName="resources" isDeployable="true">
-        <implementation.generic type="isfolder"/>
-    </asset>
-    <asset name="loanmessage.lib" displayName="lib" isDeployable="true">
-        <implementation.generic type="isfolder"/>
-    </asset>
-    <property name="activatePkgOnInstall" many="false" isSecure="false" displayName="activatePkgOnInstall">
-        <value>false</value>
-    </property>
-    <property name="archivePkgOnInstall" many="false" isSecure="false" displayName="Archive Package On Install">
-        <value>true</value>
-    </property>
-    <property name="compilePackage" many="false" isSecure="false" displayName="Compile Package On Install">
-        <value>true</value>
-    </property>
-    <property name="fragPackage" many="false" isSecure="false" displayName="Fragment Package On Install">
-        <value>true</value>
-    </property>
-    <property name="clearACLs" many="false" isSecure="false" displayName="Delete ACLs for the assets from the target Integration Server">
-        <value>false</value>
-    </property>
-    <property name="disallowActivePackageInstall" many="false" isSecure="false" displayName="disallowActivePackageInstall">
-        <value>false</value>
-    </property>
-    <property name="packageExecutionCheck" many="false" isSecure="false" displayName="packageExecutionCheck">
-        <value>0</value>
-    </property>
-    <property name="suspendTriggersDuringDeploy" many="false" isSecure="false" displayName="Suspend Triggers During Deployment">
-        <value>false</value>
-    </property>
-    <property name="syncDocTypesToBroker" many="false" isSecure="false" displayName="Synchronize Document Types To Broker During Deployment">
-        <value>true</value>
-    </property>
+<asset_composite xmlns="http://namespaces.softwareag.com/acdl/1.0" targetNamespace="http://namespaces.softwareag.com/webMethods/IS" name="loanmessage" runtimeVersion="10.3.0.0">
+  <implementation.generic type="ispackage" />
+  <buildInfo name="BuildVersion" value="10.3.0.0.1536920236398" />
+  <buildInfo name="BuildTimestamp" value="2018-09-14T15:47:16" />
+  <buildInfo name="MinimumTargetRuntimeVersion" value="10.3.0.0" />
+  <property name="activatePkgOnInstall" displayName="Activate Package On Install">
+    <value>true</value>
+  </property>
+  <property name="archivePkgOnInstall" displayName="Archive Package On Install">
+    <value>true</value>
+  </property>
+  <property name="compilePackage" displayName="Compile Package On Install">
+    <value>true</value>
+  </property>
+  <property name="fragPackage" displayName="Fragment Package On Install">
+    <value>true</value>
+  </property>
+  <property name="clearACLs" displayName="Delete ACLs for the assets from the target Integration Server">
+    <value>false</value>
+  </property>
+  <property name="disallowActivePackageInstall" displayName="disallowActivePackageInstall">
+    <value>false</value>
+  </property>
+  <property name="packageExecutionCheck" displayName="packageExecutionCheck">
+    <value>0</value>
+  </property>
+  <property name="suspendTriggersDuringDeploy" displayName="Suspend Triggers During Deployment">
+    <value>false</value>
+  </property>
+  <property name="syncDocTypesToBroker" displayName="Synchronize Document Types To Broker During Deployment">
+    <value>true</value>
+  </property>
+  <asset name="ISPackage.loanmessage" displayName="loanmessage">
+    <implementation.generic type="ispackage" />
+  </asset>
+  <asset name="loan.responseMessage" displayName="loan:responseMessage">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="loan.requestMessage" displayName="loan:requestMessage">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="loan.requestMessage1" displayName="loan:requestMessage1">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="loanmessage.config" displayName="config">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="loanmessage.config.readmap_pkg.cnf" displayName="config/readmap_pkg.cnf">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="loanmessage.pub" displayName="pub">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="loanmessage.code" displayName="code">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="loanmessage.code.classes" displayName="code/classes">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="loanmessage.code.source" displayName="code/source">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="loanmessage.code.jars" displayName="code/jars">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="loanmessage.doc" displayName="doc">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="loanmessage.templates" displayName="templates">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="loanmessage.web" displayName="web">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="loanmessage.resources" displayName="resources">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="loanmessage.lib" displayName="lib">
+    <implementation.generic type="isfolder" />
+  </asset>
 </asset_composite>
+
