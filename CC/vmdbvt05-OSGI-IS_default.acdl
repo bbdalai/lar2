@@ -4,6 +4,6 @@
     <buildInfo name="build.timestamp" value="2018-09-14T19:12:08"/>
     <buildInfo name="productId" value="integrationServer"/>
     <property name="integrationserver-default.common-jms-cloud_demo_jms.jms.user" many="false" isSecure="false" displayName="integrationserver-default.common-jms-cloud_demo_jms.jms.user">
-        <value>''</value>
+        <value>Administrator</value>
     </property>
 </asset_composite>
