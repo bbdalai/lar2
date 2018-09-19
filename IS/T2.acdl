@@ -1,7 +1,7 @@
 <asset_composite xmlns="http://namespaces.softwareag.com/acdl/1.0" targetNamespace="http://namespaces.softwareag.com/webMethods/IS" name="T2" runtimeVersion="10.3.0.0">
   <implementation.generic type="ispackage" />
-  <buildInfo name="BuildVersion" value="10.3.0.0.1537271722973" />
-  <buildInfo name="BuildTimestamp" value="2018-09-18T17:25:23" />
+  <buildInfo name="BuildVersion" value="10.3.0.0.1537341056043" />
+  <buildInfo name="BuildTimestamp" value="2018-09-19T12:40:56" />
   <buildInfo name="MinimumTargetRuntimeVersion" value="10.3.0.0" />
   <property name="activatePkgOnInstall" displayName="Activate Package On Install">
     <value>true</value>
@@ -33,6 +33,9 @@
   <asset name="ISPackage.T2" displayName="T2">
     <implementation.generic type="ispackage" />
   </asset>
+  <asset name="f.new_documentType" displayName="f:new_documentType">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
   <asset name="T2.code" displayName="code">
     <implementation.generic type="isfolder" />
   </asset>
@@ -47,6 +50,9 @@
   </asset>
   <asset name="T2.config" displayName="config">
     <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="T2.config.aclmap_pkg.cnf" displayName="config/aclmap_pkg.cnf">
+    <implementation.generic type="isfile" />
   </asset>
   <asset name="T2.doc" displayName="doc">
     <implementation.generic type="isfolder" />
