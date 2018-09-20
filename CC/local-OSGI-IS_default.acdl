@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <asset_composite name="local-OSGI-IS_default" displayName="local-OSGI-IS_default" targetNamespace="http://namespaces.softwareag.com/webMethods/CC" xmlns="http://namespaces.softwareag.com/acdl/1.0" xmlns:EDA="http://namespaces.softwareag.com/webMethods/EDA" xmlns:MWS="http://namespaces.softwareag.com/webMethods/MWS" xmlns:IS="http://namespaces.softwareag.com/webMethods/IS" xmlns:APIPORTAL="http://namespaces.softwareag.com/webMethods/APIPORTAL" xmlns:AgileApps="http://namespaces.softwareag.com/webMethods/AgileApps" xmlns:BROKER="http://namespaces.softwareag.com/webMethods/BROKER" xmlns:implDetails="http://namespaces.softwareag.com/acdl/implDetails" xmlns:UniversalMessaging="http://namespaces.softwareag.com/webMethods/UniversalMessaging" xmlns:TN="http://namespaces.softwareag.com/webMethods/TN" xmlns:RULES="http://namespaces.softwareag.com/webMethods/RULES" xmlns:BPM="http://namespaces.softwareag.com/webMethods/BPM" xmlns:Optimize="http://namespaces.softwareag.com/webMethods/Optimize">
     <buildInfo name="BuildVersion" value="1"/>
-    <buildInfo name="build.timestamp" value="2018-09-20T17:00:05"/>
+    <buildInfo name="build.timestamp" value="2018-09-20T17:15:55"/>
     <buildInfo name="productId" value="integrationServer"/>
-    <property name="integrationserver-default.common-truststores_default_wmcloud_truststore.truststore.password" many="false" isSecure="true" displayName="integrationserver-default.common-truststores_default_wmcloud_truststore.truststore.password">
-        <value>'{AES/CBC/PKCS5Padding}{HyxUxj7v8h6gu5qb8UnZVuwoiAYmeVcwLyYFdTPQJJo=}{+xb1HzAH/vjb7vE5FhIoyA==}Rg2yC8hHC79ZqNI4AR13AQ=='</value>
-    </property>
-    <property name="integrationserver-default.common-truststores_default_wmcloud_truststore.truststore.location" many="false" isSecure="false" displayName="integrationserver-default.common-truststores_default_wmcloud_truststore.truststore.location">
-        <value>packages\WmCloud\config\wmcloud_truststore.jks</value>
-    </property>
-    <property name="integrationserver-default.common-truststores_default_wmcloud_truststore.truststore.type" many="false" isSecure="false" displayName="integrationserver-default.common-truststores_default_wmcloud_truststore.truststore.type">
+    <property name="integrationserver-default.common-truststores_default_is_truststore.truststore.type" many="false" isSecure="false" displayName="integrationserver-default.common-truststores_default_is_truststore.truststore.type">
         <value>JKS</value>
+    </property>
+    <property name="integrationserver-default.common-truststores_default_is_truststore.truststore.password" many="false" isSecure="true" displayName="integrationserver-default.common-truststores_default_is_truststore.truststore.password">
+        <value>'{AES/CBC/PKCS5Padding}{bvNVcxcIOkdXq8mRVwBdDqPTwMQFRrdmsSqPv9qit5g=}{za5jnF0O3O4ppqWBweBEpQ==}UeUuCVFpiDdpM2YbLmqakQ=='</value>
+    </property>
+    <property name="integrationserver-default.common-truststores_default_is_truststore.truststore.location" many="false" isSecure="false" displayName="integrationserver-default.common-truststores_default_is_truststore.truststore.location">
+        <value>..\..\..\common\conf\platform_truststore.jks</value>
     </property>
 </asset_composite>
