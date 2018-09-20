@@ -1,7 +1,7 @@
 <asset_composite xmlns="http://namespaces.softwareag.com/acdl/1.0" targetNamespace="http://namespaces.softwareag.com/webMethods/IS" name="CT_Samplepackage" runtimeVersion="10.3.0.0">
   <implementation.generic type="ispackage" />
-  <buildInfo name="BuildVersion" value="10.3.0.0.1537426357819" />
-  <buildInfo name="BuildTimestamp" value="2018-09-20T12:22:37" />
+  <buildInfo name="BuildVersion" value="10.3.0.0.1537426710984" />
+  <buildInfo name="BuildTimestamp" value="2018-09-20T12:28:31" />
   <buildInfo name="MinimumTargetRuntimeVersion" value="10.3.0.0" />
   <property name="activatePkgOnInstall" displayName="Activate Package On Install">
     <value>true</value>
@@ -410,13 +410,7 @@
   <asset name="CT_Samplepackage.config" displayName="config">
     <implementation.generic type="isfolder" />
   </asset>
-  <asset name="CT_Samplepackage.config.aclmap_pkg.cnf" displayName="config/aclmap_pkg.cnf">
-    <implementation.generic type="isfile" />
-  </asset>
   <asset name="CT_Samplepackage.config.customProps.cnf.txt" displayName="config/customProps.cnf.txt">
-    <implementation.generic type="isfile" />
-  </asset>
-  <asset name="CT_Samplepackage.config.readmap_pkg.cnf" displayName="config/readmap_pkg.cnf">
     <implementation.generic type="isfile" />
   </asset>
   <asset name="CT_Samplepackage.config.urlalias.cnf" displayName="config/urlalias.cnf">
