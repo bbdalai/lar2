@@ -7,7 +7,7 @@
         <value>''</value>
     </property>
     <property name="integrationserver-default.common-jndi-cloud_demo_jdni.jndi.provider.url" many="false" isSecure="false" displayName="integrationserver-default.common-jndi-cloud_demo_jdni.jndi.provider.url">
-        <value>${JNDI_URL}</value>
+        <value>nsp://vmdbvt05:9000/</value>
     </property>
     <property name="integrationserver-default.common-jms-cloud_demo_jms.jms.user" many="false" isSecure="false" displayName="integrationserver-default.common-jms-cloud_demo_jms.jms.user">
         <value>''</value>
