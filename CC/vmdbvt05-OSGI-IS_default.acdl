@@ -4,12 +4,12 @@
     <buildInfo name="build.timestamp" value="2018-09-24T13:33:48"/>
     <buildInfo name="productId" value="integrationServer"/>
     <property name="integrationserver-default.common-wmmessaging-is_um_connection.messaging.provider.url" many="false" isSecure="false" displayName="integrationserver-default.common-wmmessaging-is_um_connection.messaging.provider.url">
-        <value>nsp://vmdbvt05:9000</value>
+        <value>${UM_URL}</value>
     </property>
     <property name="integrationserver-default.common-wmmessaging-is_um_connection.messaging.provider.auth.user" many="false" isSecure="false" displayName="integrationserver-default.common-wmmessaging-is_um_connection.messaging.provider.auth.user">
         <value>bbdalai</value>
     </property>
-    <property name="integrationserver-default.common-wmmessaging-is_um_connection.messaging.provider.auth.password" many="false" isSecure="true" displayName="integrationserver-default.common-wmmessaging-is_um_connection.messaging.provider.auth.password">
-        <value>'*****'</value>
+    <property name="integrationserver-default.common-wmmessaging-is_um_connection.messaging.provider.auth.password" many="false" isSecure="false" displayName="integrationserver-default.common-wmmessaging-is_um_connection.messaging.provider.auth.password">
+        <value>bbdalai01</value>
     </property>
 </asset_composite>
