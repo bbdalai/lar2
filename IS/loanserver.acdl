@@ -1,7 +1,7 @@
 <asset_composite xmlns="http://namespaces.softwareag.com/acdl/1.0" targetNamespace="http://namespaces.softwareag.com/webMethods/IS" name="loanserver" runtimeVersion="10.3.0.0">
   <implementation.generic type="ispackage" />
-  <buildInfo name="BuildVersion" value="10.3.0.0.1536920286130" />
-  <buildInfo name="BuildTimestamp" value="2018-09-14T15:48:06" />
+  <buildInfo name="BuildVersion" value="10.3.0.0.1537773569639" />
+  <buildInfo name="BuildTimestamp" value="2018-09-24T12:49:29" />
   <buildInfo name="MinimumTargetRuntimeVersion" value="10.3.0.0" />
   <property name="activatePkgOnInstall" displayName="Activate Package On Install">
     <value>true</value>
@@ -33,6 +33,15 @@
   <asset name="ISPackage.loanserver" displayName="loanserver">
     <implementation.generic type="ispackage" />
   </asset>
+  <asset name="loan.loanApprovalService_1" displayName="loan:loanApprovalService_1">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:loan.requestMessage1</dependsOn>
+    <dependsOn>IS:loan.recordService</dependsOn>
+  </asset>
+  <asset name="loan.getLoanStatusTest" displayName="loan:getLoanStatusTest">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:loan.getLoanStatus</dependsOn>
+  </asset>
   <asset name="loan.recordService" displayName="loan:recordService">
     <implementation.generic type="isjavaservice" />
     <dependsOn>IS:loan.requestMessage</dependsOn>
@@ -51,24 +60,15 @@
     <implementation.generic type="isflowservice" />
     <dependsOn>IS:loan.recordService</dependsOn>
   </asset>
-  <asset name="loan.getLoanStatusTest" displayName="loan:getLoanStatusTest">
-    <implementation.generic type="isflowservice" />
-    <dependsOn>IS:loan.getLoanStatus</dependsOn>
-  </asset>
-  <asset name="loan.loanRequestListener" displayName="loan:loanRequestListener">
-    <implementation.generic type="isjmstrigger" />
-    <dependsOn>IS:loan.loanApprovalService</dependsOn>
-    <dependsOn>IS:JMSAlias.CLOUD_DEMO_JMS</dependsOn>
-  </asset>
   <asset name="loan.nativeMessagingTrigger" displayName="loan:nativeMessagingTrigger">
     <implementation.generic type="istrigger" />
     <dependsOn>IS:loan.loanApprovalService_1</dependsOn>
     <dependsOn>IS:loan.requestMessage1</dependsOn>
   </asset>
-  <asset name="loan.loanApprovalService_1" displayName="loan:loanApprovalService_1">
-    <implementation.generic type="isflowservice" />
-    <dependsOn>IS:loan.requestMessage1</dependsOn>
-    <dependsOn>IS:loan.recordService</dependsOn>
+  <asset name="loan.loanRequestListener" displayName="loan:loanRequestListener">
+    <implementation.generic type="isjmstrigger" />
+    <dependsOn>IS:loan.loanApprovalService</dependsOn>
+    <dependsOn>IS:JMSAlias.CLOUD_DEMO_JMS</dependsOn>
   </asset>
   <asset name="loanserver.code" displayName="code">
     <implementation.generic type="isfolder" />
