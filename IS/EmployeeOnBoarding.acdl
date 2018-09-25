@@ -1,0 +1,181 @@
+<asset_composite xmlns="http://namespaces.softwareag.com/acdl/1.0" targetNamespace="http://namespaces.softwareag.com/webMethods/IS" name="EmployeeOnBoarding" runtimeVersion="10.3.0.0">
+  <implementation.generic type="ispackage" />
+  <buildInfo name="BuildVersion" value="10.3.0.0.1537872474645" />
+  <buildInfo name="BuildTimestamp" value="2018-09-25T16:17:54" />
+  <buildInfo name="MinimumTargetRuntimeVersion" value="10.3.0.0" />
+  <property name="activatePkgOnInstall" displayName="Activate Package On Install">
+    <value>true</value>
+  </property>
+  <property name="archivePkgOnInstall" displayName="Archive Package On Install">
+    <value>true</value>
+  </property>
+  <property name="compilePackage" displayName="Compile Package On Install">
+    <value>true</value>
+  </property>
+  <property name="fragPackage" displayName="Fragment Package On Install">
+    <value>true</value>
+  </property>
+  <property name="clearACLs" displayName="Delete ACLs for the assets from the target Integration Server">
+    <value>false</value>
+  </property>
+  <property name="disallowActivePackageInstall" displayName="disallowActivePackageInstall">
+    <value>false</value>
+  </property>
+  <property name="packageExecutionCheck" displayName="packageExecutionCheck">
+    <value>0</value>
+  </property>
+  <property name="suspendTriggersDuringDeploy" displayName="Suspend Triggers During Deployment">
+    <value>false</value>
+  </property>
+  <property name="syncDocTypesToBroker" displayName="Synchronize Document Types To Broker During Deployment">
+    <value>true</value>
+  </property>
+  <asset name="ISPackage.EmployeeOnBoarding" displayName="EmployeeOnBoarding">
+    <implementation.generic type="ispackage" />
+  </asset>
+  <asset name="services.User" displayName="services:User">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="triggers.um_messaging_trigger" displayName="triggers:um_messaging_trigger">
+    <implementation.generic type="istrigger" />
+    <dependsOn>IS:flowServices.action</dependsOn>
+    <dependsOn>IS:notifications.onBoardEmployeeNotificationPublishDocument</dependsOn>
+  </asset>
+  <asset name="connections.azuresqlConnection" displayName="connections:azuresqlConnection">
+    <implementation.generic type="artconnection" />
+    <property name="art.deployment.state" displayName="State After Deployment">
+      <value>disable</value>
+    </property>
+    <property name="transactionType">
+      <value>LOCAL_TRANSACTION</value>
+    </property>
+    <property name="datasourceClass">
+      <value>com.microsoft.sqlserver.jdbc.SQLServerDataSource</value>
+    </property>
+    <property name="serverName">
+      <value>sag.database.windows.net</value>
+    </property>
+    <property name="user">
+      <value>Pundits@sag</value>
+    </property>
+    <property name="password" isSecure="true">
+      <value>{AES}e+eosws3H9ZKtNrxML8i1Q==</value>
+    </property>
+    <property name="databaseName">
+      <value>adapters_sql_db</value>
+    </property>
+    <property name="portNumber">
+      <value />
+    </property>
+    <property name="networkProtocol">
+      <value />
+    </property>
+    <property name="otherProperties">
+      <value />
+    </property>
+    <property name=".CMGRPROP.poolable" displayName="poolable">
+      <value>false</value>
+    </property>
+  </asset>
+  <asset name="adapterServices.insertEmployeeData" displayName="adapterServices:insertEmployeeData">
+    <implementation.generic type="artservice" />
+    <dependsOn>IS:connections.azuresqlConnection</dependsOn>
+  </asset>
+  <asset name="adapterServices.selectAzure" displayName="adapterServices:selectAzure">
+    <implementation.generic type="artservice" />
+    <dependsOn>IS:connections.azuresqlConnection</dependsOn>
+  </asset>
+  <asset name="adapterServices.addUser" displayName="adapterServices:addUser">
+    <implementation.generic type="artservice" />
+    <dependsOn>IS:connections.azuresqlConnection</dependsOn>
+  </asset>
+  <asset name="adapterServices.getUsersFinance" displayName="adapterServices:getUsersFinance">
+    <implementation.generic type="artservice" />
+    <dependsOn>IS:connections.azuresqlConnection</dependsOn>
+  </asset>
+  <asset name="notifications.onBoardEmployeeNotificationPublishDocument" displayName="notifications:onBoardEmployeeNotificationPublishDocument">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="notifications.onBoardEmployeeNotification" displayName="notifications:onBoardEmployeeNotification">
+    <implementation.generic type="artpollingnotification" />
+    <property name="art.deployment.state" displayName="State After Deployment">
+      <value>disable</value>
+    </property>
+    <property name="notificationImmediate" displayName="Immediate:">
+      <value>false</value>
+    </property>
+    <property name="notificationInterval" displayName="Interval: (seconds)">
+      <value>10</value>
+    </property>
+    <property name="notificationOverlap" displayName="Overlap:">
+      <value>false</value>
+    </property>
+    <dependsOn>IS:notifications.onBoardEmployeeNotificationPublishDocument</dependsOn>
+    <dependsOn>IS:connections.azuresqlConnection</dependsOn>
+  </asset>
+  <asset name="flowServices.getEmployeeDetails" displayName="flowServices:getEmployeeDetails">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:adapterServices.selectAzure</dependsOn>
+  </asset>
+  <asset name="flowServices.action" displayName="flowServices:action">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:notifications.onBoardEmployeeNotificationPublishDocument</dependsOn>
+    <dependsOn>IS:adapterServices.addUser</dependsOn>
+  </asset>
+  <asset name="flowServices.registerEmployeeTest" displayName="flowServices:registerEmployeeTest">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:adapterServices.insertEmployeeData</dependsOn>
+  </asset>
+  <asset name="flowServices.getUsersFromFinanceDB" displayName="flowServices:getUsersFromFinanceDB">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:adapterServices.getUsersFinance</dependsOn>
+  </asset>
+  <asset name="flowServices.disableNotification" displayName="flowServices:disableNotification">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="flowServices.onBoardEmployee" displayName="flowServices:onBoardEmployee">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:flowServices.registerEmployee</dependsOn>
+  </asset>
+  <asset name="flowServices.registerEmployee" displayName="flowServices:registerEmployee">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:adapterServices.insertEmployeeData</dependsOn>
+  </asset>
+  <asset name="EmployeeOnBoarding.code" displayName="code">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="EmployeeOnBoarding.code.classes" displayName="code/classes">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="EmployeeOnBoarding.code.jars" displayName="code/jars">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="EmployeeOnBoarding.code.source" displayName="code/source">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="EmployeeOnBoarding.pub" displayName="pub">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="EmployeeOnBoarding.config" displayName="config">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="EmployeeOnBoarding.config.aclmap_pkg.cnf" displayName="config/aclmap_pkg.cnf">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="EmployeeOnBoarding.doc" displayName="doc">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="EmployeeOnBoarding.lib" displayName="lib">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="EmployeeOnBoarding.resources" displayName="resources">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="EmployeeOnBoarding.templates" displayName="templates">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="EmployeeOnBoarding.web" displayName="web">
+    <implementation.generic type="isfolder" />
+  </asset>
+</asset_composite>
+

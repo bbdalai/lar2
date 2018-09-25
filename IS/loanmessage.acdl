@@ -1,4 +1,4 @@
-<asset_composite xmlns="http://namespaces.softwareag.com/acdl/1.0" targetNamespace="http://namespaces.softwareag.com/webMethods/IS" name="mytruststore" runtimeVersion="10.3.0.0">
+<asset_composite xmlns="http://namespaces.softwareag.com/acdl/1.0" targetNamespace="http://namespaces.softwareag.com/webMethods/IS" name="loanmessage" runtimeVersion="10.3.0.0">
   <implementation.generic type="ispackage" />
   <buildInfo name="BuildVersion" value="10.3.0.0.1537872474645" />
   <buildInfo name="BuildTimestamp" value="2018-09-25T16:17:54" />
@@ -30,55 +30,52 @@
   <property name="syncDocTypesToBroker" displayName="Synchronize Document Types To Broker During Deployment">
     <value>true</value>
   </property>
-  <asset name="ISPackage.mytruststore" displayName="mytruststore">
+  <asset name="ISPackage.loanmessage" displayName="loanmessage">
     <implementation.generic type="ispackage" />
   </asset>
-  <asset name="mytruststore.code" displayName="code">
+  <asset name="loan.responseMessage" displayName="loan:responseMessage">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="loan.requestMessage1" displayName="loan:requestMessage1">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="loan.requestMessage" displayName="loan:requestMessage">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="loanmessage.config" displayName="config">
     <implementation.generic type="isfolder" />
   </asset>
-  <asset name="mytruststore.code.classes" displayName="code/classes">
-    <implementation.generic type="isfolder" />
-  </asset>
-  <asset name="mytruststore.code.source" displayName="code/source">
-    <implementation.generic type="isfolder" />
-  </asset>
-  <asset name="mytruststore.code.jars" displayName="code/jars">
-    <implementation.generic type="isfolder" />
-  </asset>
-  <asset name="mytruststore.doc" displayName="doc">
-    <implementation.generic type="isfolder" />
-  </asset>
-  <asset name="mytruststore.pub" displayName="pub">
-    <implementation.generic type="isfolder" />
-  </asset>
-  <asset name="mytruststore.templates" displayName="templates">
-    <implementation.generic type="isfolder" />
-  </asset>
-  <asset name="mytruststore.web" displayName="web">
-    <implementation.generic type="isfolder" />
-  </asset>
-  <asset name="mytruststore.config" displayName="config">
-    <implementation.generic type="isfolder" />
-  </asset>
-  <asset name="mytruststore.config.secrets" displayName="config/secrets">
-    <implementation.generic type="isfolder" />
-  </asset>
-  <asset name="mytruststore.config.secrets.lhcacert.der" displayName="config/secrets/lhcacert.der">
+  <asset name="loanmessage.config.readmap_pkg.cnf" displayName="config/readmap_pkg.cnf">
     <implementation.generic type="isfile" />
   </asset>
-  <asset name="mytruststore.config.secrets.partner1cert.der" displayName="config/secrets/partner1cert.der">
-    <implementation.generic type="isfile" />
-  </asset>
-  <asset name="mytruststore.config.secrets.partner1_ks1" displayName="config/secrets/partner1_ks1">
-    <implementation.generic type="isfile" />
-  </asset>
-  <asset name="mytruststore.config.secrets.partner1_ts1" displayName="config/secrets/partner1_ts1">
-    <implementation.generic type="isfile" />
-  </asset>
-  <asset name="mytruststore.resources" displayName="resources">
+  <asset name="loanmessage.pub" displayName="pub">
     <implementation.generic type="isfolder" />
   </asset>
-  <asset name="mytruststore.lib" displayName="lib">
+  <asset name="loanmessage.code" displayName="code">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="loanmessage.code.classes" displayName="code/classes">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="loanmessage.code.source" displayName="code/source">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="loanmessage.code.jars" displayName="code/jars">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="loanmessage.doc" displayName="doc">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="loanmessage.templates" displayName="templates">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="loanmessage.web" displayName="web">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="loanmessage.resources" displayName="resources">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="loanmessage.lib" displayName="lib">
     <implementation.generic type="isfolder" />
   </asset>
 </asset_composite>
