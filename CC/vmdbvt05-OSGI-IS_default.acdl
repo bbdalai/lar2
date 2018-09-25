@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <asset_composite name="vmdbvt05-OSGI-IS_default" displayName="vmdbvt05-OSGI-IS_default" targetNamespace="http://namespaces.softwareag.com/webMethods/CC" xmlns="http://namespaces.softwareag.com/acdl/1.0" xmlns:EDA="http://namespaces.softwareag.com/webMethods/EDA" xmlns:MWS="http://namespaces.softwareag.com/webMethods/MWS" xmlns:IS="http://namespaces.softwareag.com/webMethods/IS" xmlns:APIPORTAL="http://namespaces.softwareag.com/webMethods/APIPORTAL" xmlns:AgileApps="http://namespaces.softwareag.com/webMethods/AgileApps" xmlns:BROKER="http://namespaces.softwareag.com/webMethods/BROKER" xmlns:implDetails="http://namespaces.softwareag.com/acdl/implDetails" xmlns:UniversalMessaging="http://namespaces.softwareag.com/webMethods/UniversalMessaging" xmlns:TN="http://namespaces.softwareag.com/webMethods/TN" xmlns:RULES="http://namespaces.softwareag.com/webMethods/RULES" xmlns:BPM="http://namespaces.softwareag.com/webMethods/BPM" xmlns:Optimize="http://namespaces.softwareag.com/webMethods/Optimize">
     <buildInfo name="BuildVersion" value="1"/>
-    <buildInfo name="build.timestamp" value="2018-09-25T16:16:46"/>
+    <buildInfo name="build.timestamp" value="2018-09-25T16:20:03"/>
     <buildInfo name="productId" value="integrationServer"/>
     <property name="integrationserver-default.common-wmmessaging-is_um_connection.messaging.provider.url" many="false" isSecure="false" displayName="integrationserver-default.common-wmmessaging-is_um_connection.messaging.provider.url">
         <value>nsp://vmdbvt05:9000</value>
@@ -28,7 +28,7 @@
         <value>'25'</value>
     </property>
     <property name="integrationserver-default.common-jndi-default_is_jndi_provider.jndi.provider.password" many="false" isSecure="true" displayName="integrationserver-default.common-jndi-default_is_jndi_provider.jndi.provider.password">
-        <value>'{AES/CBC/PKCS5Padding}{7zr/pmQvaK8Lu9adhg+4LmIaVxfjs6K3/++ifGf1Pq4=}{6dW1PzmFD57ojvo6DdYp8A==}AgANaZe8xl+dGIH1XlQaXA=='</value>
+        <value>'{AES/CBC/PKCS5Padding}{4Hb1P5EAXwc6t1HK12PFiRLz48ssFc14Dd7vt6EdUzs=}{pAdiB5yMptUu1ycj0LpTcQ==}/+8iMYrRqjP9C3wRo0l52w=='</value>
     </property>
     <property name="integrationserver-default.is-resources.resources.serverthreadpool.schedulerthreadthrottle" many="false" isSecure="false" displayName="integrationserver-default.is-resources.resources.serverthreadpool.schedulerthreadthrottle">
         <value>'75'</value>
@@ -52,13 +52,13 @@
         <value>JKS</value>
     </property>
     <property name="integrationserver-default.common-truststores_default_is_truststore.truststore.password" many="false" isSecure="true" displayName="integrationserver-default.common-truststores_default_is_truststore.truststore.password">
-        <value>'{AES/CBC/PKCS5Padding}{XZpAuACr3Quo0qbYdbkj41aIbvm5PIgvV4OyKoaUUIM=}{SOIgqrY0VQ8xUUJhToOKdQ==}fF1sqgxntlOJZybXIZ86xQ=='</value>
+        <value>'{AES/CBC/PKCS5Padding}{IaSHklHgrSHTtBHA+Dz6P2gCHNOSOxcJg82gw3B2O/A=}{s3czLIjplzMwUM44sUFn8g==}o3ElWgym/AUYFF8hQRzuoA=='</value>
     </property>
     <property name="integrationserver-default.common-jms-cloud_demo_jms.jms.user" many="false" isSecure="false" displayName="integrationserver-default.common-jms-cloud_demo_jms.jms.user">
         <value>''</value>
     </property>
     <property name="integrationserver-default.common-keystores_default_is_keystore.keystore.key.password" many="false" isSecure="true" displayName="integrationserver-default.common-keystores_default_is_keystore.keystore.key.password">
-        <value>'{AES/CBC/PKCS5Padding}{rCtnQEWK4oYA+XGRNzCQ7ustsYiWt88knalW1u/z+MQ=}{fgLyHINh2x85V0kc/ATXwA==}GMurJEU1j7xwQBMSH5XCvA=='</value>
+        <value>'{AES/CBC/PKCS5Padding}{PtgeNvjAxMUouWl9JlvY/mc/zPdtEgHTe8dCFjJLMRk=}{qIXZV3bhoe1c+sr5uu3T8g==}H6jJtWb1qmXf0Kpb+4iGGA=='</value>
     </property>
     <property name="integrationserver-default.common-truststores_partner1_ts1.truststore.type" many="false" isSecure="false" displayName="integrationserver-default.common-truststores_partner1_ts1.truststore.type">
         <value>JKS</value>
@@ -70,13 +70,13 @@
         <value>bbdalai</value>
     </property>
     <property name="integrationserver-default.common-jndi-default_is_jndi_provider.jndi.provider.url" many="false" isSecure="false" displayName="integrationserver-default.common-jndi-default_is_jndi_provider.jndi.provider.url">
-        <value>${JNDI_URL}</value>
+        <value>nsp://localhost:9000</value>
     </property>
     <property name="integrationserver-default.is-resources.storesettings.xarecoverystore.storelocation" many="false" isSecure="false" displayName="integrationserver-default.is-resources.storesettings.xarecoverystore.storelocation">
         <value>XAStore</value>
     </property>
     <property name="integrationserver-default.common-keystores_default_is_keystore.keystore.password" many="false" isSecure="true" displayName="integrationserver-default.common-keystores_default_is_keystore.keystore.password">
-        <value>'{AES/CBC/PKCS5Padding}{tdgVAuT3uSiHeBVpRXSQH3eNiWSBtb2gZkSwAakYupc=}{iU4gcWAyF/Lo8sw98D4aag==}a+mWPW50awg3byg7j6uTVA=='</value>
+        <value>'{AES/CBC/PKCS5Padding}{D+RvAfKXh3hh38LZkJaaTquHIg01Fq/j9V9bn369ong=}{1c31foVbIQBzv723YkLluQ==}2XlQmfMIH8zHOLxh8G2Tmg=='</value>
     </property>
     <property name="integrationserver-default.is-resources.resources.serverthreadpool.maximumthreads" many="false" isSecure="false" displayName="integrationserver-default.is-resources.resources.serverthreadpool.maximumthreads">
         <value>'75'</value>
@@ -88,19 +88,19 @@
         <value>''</value>
     </property>
     <property name="integrationserver-default.common-truststores_partner1_ts1.truststore.password" many="false" isSecure="true" displayName="integrationserver-default.common-truststores_partner1_ts1.truststore.password">
-        <value>'{AES/CBC/PKCS5Padding}{kCiOa5IrgufUekUWQbP0tolWhvh4yWqXs9D8wvG8Mpc=}{7D0f7fQZH4O2Jlt4ciqUIw==}NqI1AXbgcQdZtRvn3xXz+A=='</value>
+        <value>'{AES/CBC/PKCS5Padding}{gUf6aWLABOisXZjUjrqWmbx5ToH3rT87Ho+H8asuvsY=}{HYFoahq2eJiA1IQyzQ+Qyg==}dlaAKWaV54l1775DLhGO6w=='</value>
     </property>
     <property name="integrationserver-default.common-truststores_default_is_truststore.truststore.location" many="false" isSecure="false" displayName="integrationserver-default.common-truststores_default_is_truststore.truststore.location">
         <value>../../../common/conf/platform_truststore.jks</value>
     </property>
     <property name="integrationserver-default.common-jndi-cloud_demo_jdni.jndi.provider.url" many="false" isSecure="false" displayName="integrationserver-default.common-jndi-cloud_demo_jdni.jndi.provider.url">
-        <value>${JNDI_URL}</value>
+        <value>nsp://vmdbvt05:9000/</value>
     </property>
     <property name="integrationserver-default.is-resources.storesettings.triggerdocumentstore.storelocation" many="false" isSecure="false" displayName="integrationserver-default.is-resources.storesettings.triggerdocumentstore.storelocation">
         <value>DocumentStore</value>
     </property>
     <property name="integrationserver-default.common-keystores_partner1_ks1.keystore.password" many="false" isSecure="true" displayName="integrationserver-default.common-keystores_partner1_ks1.keystore.password">
-        <value>'{AES/CBC/PKCS5Padding}{Ifxys0g4nQ6D7O7vh6bQCf7+cXXMlbSBQYQFtanJygM=}{R5cP7ceXKQjDzZWnv4RGFA==}WnC1WkFkUFDVG1VQpgoGHg=='</value>
+        <value>'{AES/CBC/PKCS5Padding}{S5Ej8JNz5irlYXg3KKb0fdMefei7rAZ+oyixs1+Wwi0=}{Sbgp6P+gOLHLyD4v1PDXWQ==}R7viEmX/s4/UifspJhCOsg=='</value>
     </property>
     <property name="integrationserver-default.common-jndi-default_is_jndi_provider.jndi.provider.user" many="false" isSecure="false" displayName="integrationserver-default.common-jndi-default_is_jndi_provider.jndi.provider.user">
         <value>bbdalai</value>
@@ -112,7 +112,7 @@
         <value>DocumentStore</value>
     </property>
     <property name="integrationserver-default.common-truststores_default_wmcloud_truststore.truststore.password" many="false" isSecure="true" displayName="integrationserver-default.common-truststores_default_wmcloud_truststore.truststore.password">
-        <value>'{AES/CBC/PKCS5Padding}{0Qd1y4z7/Lc9c3mnnPjXMvOqas+v+JywpwaTAtBB28o=}{vfuHeA/89i8zIcvbBrPg5g==}PLRWW1YeHftxe5U2Ph5PDA=='</value>
+        <value>'{AES/CBC/PKCS5Padding}{ns/ied1cKOX+E7PaolLP4VjHxv9m5pf6iJveM7/HAlc=}{+itU5VcaZwTXcMr6LyhiFA==}KCCL9teIk/smFD9hLP4uGw=='</value>
     </property>
     <property name="integrationserver-default.common-keystores_default_is_keystore.keystore.location" many="false" isSecure="false" displayName="integrationserver-default.common-keystores_default_is_keystore.keystore.location">
         <value>../../../common/conf/keystore.jks</value>
