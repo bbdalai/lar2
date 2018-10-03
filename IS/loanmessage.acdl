@@ -1,7 +1,7 @@
 <asset_composite xmlns="http://namespaces.softwareag.com/acdl/1.0" targetNamespace="http://namespaces.softwareag.com/webMethods/IS" name="loanmessage" runtimeVersion="10.3.0.0">
   <implementation.generic type="ispackage" />
-  <buildInfo name="BuildVersion" value="10.3.0.0.1538555079249" />
-  <buildInfo name="BuildTimestamp" value="2018-10-03T13:54:39" />
+  <buildInfo name="BuildVersion" value="10.3.0.0.1538573063253" />
+  <buildInfo name="BuildTimestamp" value="2018-10-03T18:54:23" />
   <buildInfo name="MinimumTargetRuntimeVersion" value="10.3.0.0" />
   <property name="activatePkgOnInstall" displayName="Activate Package On Install">
     <value>true</value>
