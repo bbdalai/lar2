@@ -76,7 +76,7 @@
         <value>bbdalai</value>
     </property>
     <property name="integrationserver-default.common-jndi-default_is_jndi_provider.jndi.provider.url" many="false" isSecure="false" displayName="integrationserver-default.common-jndi-default_is_jndi_provider.jndi.provider.url">
-        <value>nsp://localhost:9000</value>
+        <value>${JNDI_URL}</value>
     </property>
     <property name="integrationserver-default.is-resources.storesettings.xarecoverystore.storelocation" many="false" isSecure="false" displayName="integrationserver-default.is-resources.storesettings.xarecoverystore.storelocation">
         <value>XAStore</value>
@@ -100,7 +100,7 @@
         <value>../../../common/conf/platform_truststore.jks</value>
     </property>
     <property name="integrationserver-default.common-jndi-cloud_demo_jdni.jndi.provider.url" many="false" isSecure="false" displayName="integrationserver-default.common-jndi-cloud_demo_jdni.jndi.provider.url">
-        <value>nsp://vmdbvt05:9000/</value>
+        <value>${JNDI_URL}</value>
     </property>
     <property name="integrationserver-default.is-resources.storesettings.triggerdocumentstore.storelocation" many="false" isSecure="false" displayName="integrationserver-default.is-resources.storesettings.triggerdocumentstore.storelocation">
         <value>DocumentStore</value>
