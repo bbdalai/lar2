@@ -1,8 +1,8 @@
-<asset_composite xmlns="http://namespaces.softwareag.com/acdl/1.0" targetNamespace="http://namespaces.softwareag.com/webMethods/IS" name="loanmessage" runtimeVersion="10.3.0.0">
+<asset_composite xmlns="http://namespaces.softwareag.com/acdl/1.0" targetNamespace="http://namespaces.softwareag.com/webMethods/IS" name="loanmessage" runtimeVersion="10.4.0.0">
   <implementation.generic type="ispackage" />
-  <buildInfo name="BuildVersion" value="10.3.0.0.1538650707688" />
-  <buildInfo name="BuildTimestamp" value="2018-10-04T16:28:28" />
-  <buildInfo name="MinimumTargetRuntimeVersion" value="10.3.0.0" />
+  <buildInfo name="BuildVersion" value="10.4.0.0.1538653828058" />
+  <buildInfo name="BuildTimestamp" value="2018-10-04T14:50:28" />
+  <buildInfo name="MinimumTargetRuntimeVersion" value="10.4.0.0" />
   <property name="activatePkgOnInstall" displayName="Activate Package On Install">
     <value>true</value>
   </property>
@@ -18,10 +18,10 @@
   <property name="clearACLs" displayName="Delete ACLs for the assets from the target Integration Server">
     <value>false</value>
   </property>
-  <property name="disallowActivePackageInstall" displayName="disallowActivePackageInstall">
+  <property name="disallowActivePackageInstall" displayName="Disallow Active Package Install">
     <value>false</value>
   </property>
-  <property name="packageExecutionCheck" displayName="packageExecutionCheck">
+  <property name="packageExecutionCheck" displayName="Package Execution Check">
     <value>0</value>
   </property>
   <property name="suspendTriggersDuringDeploy" displayName="Suspend Triggers During Deployment">
@@ -42,40 +42,40 @@
   <asset name="loan.requestMessage" displayName="loan:requestMessage">
     <implementation.generic type="isdocumenttype" />
   </asset>
-  <asset name="loanmessage.config" displayName="config">
-    <implementation.generic type="isfolder" />
-  </asset>
-  <asset name="loanmessage.config.readmap_pkg.cnf" displayName="config/readmap_pkg.cnf">
-    <implementation.generic type="isfile" />
-  </asset>
-  <asset name="loanmessage.pub" displayName="pub">
-    <implementation.generic type="isfolder" />
-  </asset>
   <asset name="loanmessage.code" displayName="code">
     <implementation.generic type="isfolder" />
   </asset>
   <asset name="loanmessage.code.classes" displayName="code/classes">
     <implementation.generic type="isfolder" />
   </asset>
-  <asset name="loanmessage.code.source" displayName="code/source">
-    <implementation.generic type="isfolder" />
-  </asset>
   <asset name="loanmessage.code.jars" displayName="code/jars">
     <implementation.generic type="isfolder" />
   </asset>
+  <asset name="loanmessage.code.source" displayName="code/source">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="loanmessage.config" displayName="config">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="loanmessage.config.readmap_pkg.cnf" displayName="config/readmap_pkg.cnf">
+    <implementation.generic type="isfile" />
+  </asset>
   <asset name="loanmessage.doc" displayName="doc">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="loanmessage.lib" displayName="lib">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="loanmessage.pub" displayName="pub">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="loanmessage.resources" displayName="resources">
     <implementation.generic type="isfolder" />
   </asset>
   <asset name="loanmessage.templates" displayName="templates">
     <implementation.generic type="isfolder" />
   </asset>
   <asset name="loanmessage.web" displayName="web">
-    <implementation.generic type="isfolder" />
-  </asset>
-  <asset name="loanmessage.resources" displayName="resources">
-    <implementation.generic type="isfolder" />
-  </asset>
-  <asset name="loanmessage.lib" displayName="lib">
     <implementation.generic type="isfolder" />
   </asset>
 </asset_composite>

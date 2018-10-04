@@ -1,8 +1,8 @@
-<asset_composite xmlns="http://namespaces.softwareag.com/acdl/1.0" targetNamespace="http://namespaces.softwareag.com/webMethods/IS" name="loanserver" runtimeVersion="10.3.0.0">
+<asset_composite xmlns="http://namespaces.softwareag.com/acdl/1.0" targetNamespace="http://namespaces.softwareag.com/webMethods/IS" name="loanserver" runtimeVersion="10.4.0.0">
   <implementation.generic type="ispackage" />
-  <buildInfo name="BuildVersion" value="10.3.0.0.1538555151861" />
-  <buildInfo name="BuildTimestamp" value="2018-10-03T13:55:51" />
-  <buildInfo name="MinimumTargetRuntimeVersion" value="10.3.0.0" />
+  <buildInfo name="BuildVersion" value="10.4.0.0.1538653828058" />
+  <buildInfo name="BuildTimestamp" value="2018-10-04T14:50:28" />
+  <buildInfo name="MinimumTargetRuntimeVersion" value="10.4.0.0" />
   <property name="activatePkgOnInstall" displayName="Activate Package On Install">
     <value>true</value>
   </property>
@@ -18,10 +18,10 @@
   <property name="clearACLs" displayName="Delete ACLs for the assets from the target Integration Server">
     <value>false</value>
   </property>
-  <property name="disallowActivePackageInstall" displayName="disallowActivePackageInstall">
+  <property name="disallowActivePackageInstall" displayName="Disallow Active Package Install">
     <value>false</value>
   </property>
-  <property name="packageExecutionCheck" displayName="packageExecutionCheck">
+  <property name="packageExecutionCheck" displayName="Package Execution Check">
     <value>0</value>
   </property>
   <property name="suspendTriggersDuringDeploy" displayName="Suspend Triggers During Deployment">
@@ -79,34 +79,34 @@
   <asset name="loanserver.code.classes.loan.class" displayName="code/classes/loan.class">
     <implementation.generic type="isfile" />
   </asset>
+  <asset name="loanserver.code.jars" displayName="code/jars">
+    <implementation.generic type="isfolder" />
+  </asset>
   <asset name="loanserver.code.source" displayName="code/source">
     <implementation.generic type="isfolder" />
   </asset>
   <asset name="loanserver.code.source.loan.java" displayName="code/source/loan.java">
     <implementation.generic type="isfile" />
   </asset>
-  <asset name="loanserver.code.jars" displayName="code/jars">
+  <asset name="loanserver.config" displayName="config">
     <implementation.generic type="isfolder" />
   </asset>
-  <asset name="loanserver.config" displayName="config">
+  <asset name="loanserver.doc" displayName="doc">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="loanserver.lib" displayName="lib">
     <implementation.generic type="isfolder" />
   </asset>
   <asset name="loanserver.pub" displayName="pub">
     <implementation.generic type="isfolder" />
   </asset>
-  <asset name="loanserver.doc" displayName="doc">
+  <asset name="loanserver.resources" displayName="resources">
     <implementation.generic type="isfolder" />
   </asset>
   <asset name="loanserver.templates" displayName="templates">
     <implementation.generic type="isfolder" />
   </asset>
   <asset name="loanserver.web" displayName="web">
-    <implementation.generic type="isfolder" />
-  </asset>
-  <asset name="loanserver.resources" displayName="resources">
-    <implementation.generic type="isfolder" />
-  </asset>
-  <asset name="loanserver.lib" displayName="lib">
     <implementation.generic type="isfolder" />
   </asset>
 </asset_composite>
