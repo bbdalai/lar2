@@ -3,8 +3,8 @@
     <buildInfo name="BuildVersion" value="1"/>
     <buildInfo name="build.timestamp" value="2018-10-05T16:20:29"/>
     <buildInfo name="productId" value="integrationServer"/>
-    <property name="integrationserver-default.common-jms-cloud_demo_jms.jms.password" many="false" isSecure="true" displayName="integrationserver-default.common-jms-cloud_demo_jms.jms.password">
-        <value>'{AES/CBC/PKCS5Padding}{Q4PG7LEHemb9pJwXbBXRh41nLsT/uqEBttY1NwBaVGY=}{WK8u91tlmi3MbWbZW7aPrQ==}YK91teL2hfh3397Rt5MIpA=='</value>
+    <property name="integrationserver-default.common-jms-cloud_demo_jms.jms.password" many="false" isSecure="false" displayName="integrationserver-default.common-jms-cloud_demo_jms.jms.password">
+        <value>bbdalai01</value>
     </property>
     <property name="integrationserver-default.common-jms-cloud_demo_jms.jms.user" many="false" isSecure="false" displayName="integrationserver-default.common-jms-cloud_demo_jms.jms.user">
         <value>bbdalai</value>
