@@ -3,13 +3,13 @@
     <buildInfo name="BuildVersion" value="1"/>
     <buildInfo name="build.timestamp" value="2018-10-05T17:14:43"/>
     <buildInfo name="productId" value="integrationServer"/>
-    <property name="integrationserver-default.common-jndi-cloud_demo_jdni.jndi.provider.password" many="false" isSecure="true" displayName="integrationserver-default.common-jndi-cloud_demo_jdni.jndi.provider.password">
-        <value>'{AES/CBC/PKCS5Padding}{aOP2XXgEbLjOey/PH0+mUcjd28ny+3ss7VPENWJCItI=}{Iok+ZBAuhv5NqfeZg6w3Rw==}gPiLY4V5G7LNf/nggdr0mw=='</value>
+    <property name="integrationserver-default.common-jndi-cloud_demo_jdni.jndi.provider.password" many="false" isSecure="false" displayName="integrationserver-default.common-jndi-cloud_demo_jdni.jndi.provider.password">
+        <value>bbdalai01</value>
     </property>
     <property name="integrationserver-default.common-jndi-cloud_demo_jdni.jndi.provider.user" many="false" isSecure="false" displayName="integrationserver-default.common-jndi-cloud_demo_jdni.jndi.provider.user">
         <value>bbdalai</value>
     </property>
     <property name="integrationserver-default.common-jndi-cloud_demo_jdni.jndi.provider.url" many="false" isSecure="false" displayName="integrationserver-default.common-jndi-cloud_demo_jdni.jndi.provider.url">
-        <value>nsp://vmdbvt05:9000/</value>
+        <value>${JNDI_URL}</value>
     </property>
 </asset_composite>
