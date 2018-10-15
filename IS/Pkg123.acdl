@@ -1,137 +1,137 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<asset_composite name="Pkg123" runtimeVersion="10.3.0.0" targetNamespace="http://namespaces.softwareag.com/webMethods/IS" xmlns="http://namespaces.softwareag.com/acdl/1.0" xmlns:EDA="http://namespaces.softwareag.com/webMethods/EDA" xmlns:MWS="http://namespaces.softwareag.com/webMethods/MWS" xmlns:IS="http://namespaces.softwareag.com/webMethods/IS" xmlns:APIPORTAL="http://namespaces.softwareag.com/webMethods/APIPORTAL" xmlns:AgileApps="http://namespaces.softwareag.com/webMethods/AgileApps" xmlns:BROKER="http://namespaces.softwareag.com/webMethods/BROKER" xmlns:implDetails="http://namespaces.softwareag.com/acdl/implDetails" xmlns:UniversalMessaging="http://namespaces.softwareag.com/webMethods/UniversalMessaging" xmlns:TN="http://namespaces.softwareag.com/webMethods/TN" xmlns:RULES="http://namespaces.softwareag.com/webMethods/RULES" xmlns:BPM="http://namespaces.softwareag.com/webMethods/BPM" xmlns:Optimize="http://namespaces.softwareag.com/webMethods/Optimize">
-    <implementation.generic type="ispackage"/>
-    <buildInfo name="BuildTimestamp" value="2018-10-15T11:28:22"/>
-    <buildInfo name="BuildVersion" value="10.3.0.0.1539583102351"/>
-    <buildInfo name="MinimumTargetRuntimeVersion" value="10.3.0.0"/>
-    <asset name="ISPackage.Pkg123" displayName="Pkg123" isDeployable="true">
-        <implementation.generic type="ispackage"/>
-    </asset>
-    <asset name="ff.test" displayName="ff:test" isDeployable="true">
-        <implementation.generic type="isflowservice"/>
-    </asset>
-    <asset name="ff.adapterTest" displayName="ff:adapterTest" isDeployable="true">
-        <implementation.generic type="artservice"/>
-        <dependsOn>IS:JDBCAdapterConnections.OracleConnection</dependsOn>
-    </asset>
-    <asset name="TestConn.TestConn" displayName="TestConn:TestConn" isDeployable="true">
-        <implementation.generic type="artconnection"/>
-        <property name="art.deployment.state" many="false" isSecure="false" displayName="State After Deployment">
-            <value>disable</value>
-        </property>
-        <property name="transactionType" many="false" isSecure="false">
-            <value>NO_TRANSACTION</value>
-        </property>
-        <property name="datasourceClass" many="false" isSecure="false">
-            <value>oracle.jdbc.pool.OracleDataSource</value>
-        </property>
-        <property name="serverName" many="false" isSecure="false">
-            <value>dcldev01.eur.ad.sag</value>
-        </property>
-        <property name="user" many="false" isSecure="false">
-            <value>LDEVTRUNK</value>
-        </property>
-        <property name="password" many="false" isSecure="true">
-            <value>{AES}oBooLibYSauOl1vl1fOReg==</value>
-        </property>
-        <property name="databaseName" many="false" isSecure="false">
-            <value>XE</value>
-        </property>
-        <property name="portNumber" many="false" isSecure="false" displayName="portNumber">
-            <value>4444</value>
-        </property>
-        <property name="networkProtocol" many="false" isSecure="false">
-            <value>tcp</value>
-        </property>
-        <property name="otherProperties" many="false" isSecure="false">
-            <value>driverType=thin</value>
-        </property>
-        <property name=".CMGRPROP.poolable" many="false" isSecure="false" displayName="poolable">
-            <value>true</value>
-        </property>
-        <property name=".CMGRPROP.minimumPoolSize" many="false" isSecure="false" displayName="minimumPoolSize">
-            <value>1</value>
-        </property>
-        <property name=".CMGRPROP.maximumPoolSize" many="false" isSecure="false" displayName="maximumPoolSize">
-            <value>10</value>
-        </property>
-        <property name=".CMGRPROP.poolIncrementSize" many="false" isSecure="false" displayName=".CMGRPROP.poolIncrementSize">
-            <value>22</value>
-        </property>
-        <property name=".CMGRPROP.blockingTimeout" many="false" isSecure="false" displayName="blockingTimeout">
-            <value>1000</value>
-        </property>
-        <property name=".CMGRPROP.expireTimeout" many="false" isSecure="false" displayName="expireTimeout">
-            <value>1000</value>
-        </property>
-        <property name=".CMGRPROP.startupRetryCount" many="false" isSecure="false" displayName="startupRetryCount">
-            <value>0</value>
-        </property>
-        <property name=".CMGRPROP.startupBackoffSecs" many="false" isSecure="false" displayName="startupBackoffSecs">
-            <value>10</value>
-        </property>
-    </asset>
-    <asset name="Pkg123.code" displayName="code" isDeployable="true">
-        <implementation.generic type="isfolder"/>
-    </asset>
-    <asset name="Pkg123.code.classes" displayName="code/classes" isDeployable="true">
-        <implementation.generic type="isfolder"/>
-    </asset>
-    <asset name="Pkg123.code.jars" displayName="code/jars" isDeployable="true">
-        <implementation.generic type="isfolder"/>
-    </asset>
-    <asset name="Pkg123.code.source" displayName="code/source" isDeployable="true">
-        <implementation.generic type="isfolder"/>
-    </asset>
-    <asset name="Pkg123.config" displayName="config" isDeployable="true">
-        <implementation.generic type="isfolder"/>
-    </asset>
-    <asset name="Pkg123.config.aclmap_pkg.cnf" displayName="config/aclmap_pkg.cnf" isDeployable="true">
-        <implementation.generic type="isfile"/>
-    </asset>
-    <asset name="Pkg123.doc" displayName="doc" isDeployable="true">
-        <implementation.generic type="isfolder"/>
-    </asset>
-    <asset name="Pkg123.lib" displayName="lib" isDeployable="true">
-        <implementation.generic type="isfolder"/>
-    </asset>
-    <asset name="Pkg123.pub" displayName="pub" isDeployable="true">
-        <implementation.generic type="isfolder"/>
-    </asset>
-    <asset name="Pkg123.resources" displayName="resources" isDeployable="true">
-        <implementation.generic type="isfolder"/>
-    </asset>
-    <asset name="Pkg123.templates" displayName="templates" isDeployable="true">
-        <implementation.generic type="isfolder"/>
-    </asset>
-    <asset name="Pkg123.web" displayName="web" isDeployable="true">
-        <implementation.generic type="isfolder"/>
-    </asset>
-    <property name="activatePkgOnInstall" many="false" isSecure="false" displayName="Activate Package On Install">
-        <value>true</value>
+<asset_composite xmlns="http://namespaces.softwareag.com/acdl/1.0" targetNamespace="http://namespaces.softwareag.com/webMethods/IS" name="Pkg123" runtimeVersion="10.3.0.0">
+  <implementation.generic type="ispackage" />
+  <buildInfo name="BuildVersion" value="10.3.0.0.1539583869854" />
+  <buildInfo name="BuildTimestamp" value="2018-10-15T11:41:09" />
+  <buildInfo name="MinimumTargetRuntimeVersion" value="10.3.0.0" />
+  <property name="activatePkgOnInstall" displayName="Activate Package On Install">
+    <value>true</value>
+  </property>
+  <property name="archivePkgOnInstall" displayName="Archive Package On Install">
+    <value>true</value>
+  </property>
+  <property name="compilePackage" displayName="Compile Package On Install">
+    <value>true</value>
+  </property>
+  <property name="fragPackage" displayName="Fragment Package On Install">
+    <value>true</value>
+  </property>
+  <property name="clearACLs" displayName="Delete ACLs for the assets from the target Integration Server">
+    <value>false</value>
+  </property>
+  <property name="disallowActivePackageInstall" displayName="disallowActivePackageInstall">
+    <value>false</value>
+  </property>
+  <property name="packageExecutionCheck" displayName="packageExecutionCheck">
+    <value>0</value>
+  </property>
+  <property name="suspendTriggersDuringDeploy" displayName="Suspend Triggers During Deployment">
+    <value>false</value>
+  </property>
+  <property name="syncDocTypesToBroker" displayName="Synchronize Document Types To Broker During Deployment">
+    <value>true</value>
+  </property>
+  <asset name="ISPackage.Pkg123" displayName="Pkg123">
+    <implementation.generic type="ispackage" />
+  </asset>
+  <asset name="ff.test" displayName="ff:test">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="ff.adapterTest" displayName="ff:adapterTest">
+    <implementation.generic type="artservice" />
+    <dependsOn>IS:JDBCAdapterConnections.OracleConnection</dependsOn>
+  </asset>
+  <asset name="TestConn.TestConn" displayName="TestConn:TestConn">
+    <implementation.generic type="artconnection" />
+    <property name="art.deployment.state" displayName="State After Deployment">
+      <value>disable</value>
     </property>
-    <property name="archivePkgOnInstall" many="false" isSecure="false" displayName="Archive Package On Install">
-        <value>true</value>
+    <property name="transactionType">
+      <value>NO_TRANSACTION</value>
     </property>
-    <property name="compilePackage" many="false" isSecure="false" displayName="Compile Package On Install">
-        <value>true</value>
+    <property name="datasourceClass">
+      <value>oracle.jdbc.pool.OracleDataSource</value>
     </property>
-    <property name="fragPackage" many="false" isSecure="false" displayName="Fragment Package On Install">
-        <value>true</value>
+    <property name="serverName">
+      <value>dcldev01.eur.ad.sag</value>
     </property>
-    <property name="clearACLs" many="false" isSecure="false" displayName="Delete ACLs for the assets from the target Integration Server">
-        <value>false</value>
+    <property name="user">
+      <value>LDEVTRUNK</value>
     </property>
-    <property name="disallowActivePackageInstall" many="false" isSecure="false" displayName="disallowActivePackageInstall">
-        <value>false</value>
+    <property name="password" isSecure="true">
+      <value>{AES}oBooLibYSauOl1vl1fOReg==</value>
     </property>
-    <property name="packageExecutionCheck" many="false" isSecure="false" displayName="packageExecutionCheck">
-        <value>0</value>
+    <property name="databaseName">
+      <value>XE</value>
     </property>
-    <property name="suspendTriggersDuringDeploy" many="false" isSecure="false" displayName="Suspend Triggers During Deployment">
-        <value>false</value>
+    <property name="portNumber">
+      <value>1522</value>
     </property>
-    <property name="syncDocTypesToBroker" many="false" isSecure="false" displayName="Synchronize Document Types To Broker During Deployment">
-        <value>true</value>
+    <property name="networkProtocol">
+      <value>tcp</value>
     </property>
+    <property name="otherProperties">
+      <value>driverType=thin</value>
+    </property>
+    <property name=".CMGRPROP.poolable" displayName="poolable">
+      <value>true</value>
+    </property>
+    <property name=".CMGRPROP.minimumPoolSize" displayName="minimumPoolSize">
+      <value>1</value>
+    </property>
+    <property name=".CMGRPROP.maximumPoolSize" displayName="maximumPoolSize">
+      <value>10</value>
+    </property>
+    <property name=".CMGRPROP.poolIncrementSize" displayName="poolIncrementSize">
+      <value>1</value>
+    </property>
+    <property name=".CMGRPROP.blockingTimeout" displayName="blockingTimeout">
+      <value>1000</value>
+    </property>
+    <property name=".CMGRPROP.expireTimeout" displayName="expireTimeout">
+      <value>1000</value>
+    </property>
+    <property name=".CMGRPROP.startupRetryCount" displayName="startupRetryCount">
+      <value>0</value>
+    </property>
+    <property name=".CMGRPROP.startupBackoffSecs" displayName="startupBackoffSecs">
+      <value>10</value>
+    </property>
+  </asset>
+  <asset name="Pkg123.code" displayName="code">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="Pkg123.code.classes" displayName="code/classes">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="Pkg123.code.jars" displayName="code/jars">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="Pkg123.code.source" displayName="code/source">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="Pkg123.config" displayName="config">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="Pkg123.config.aclmap_pkg.cnf" displayName="config/aclmap_pkg.cnf">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="Pkg123.doc" displayName="doc">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="Pkg123.lib" displayName="lib">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="Pkg123.pub" displayName="pub">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="Pkg123.resources" displayName="resources">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="Pkg123.templates" displayName="templates">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="Pkg123.web" displayName="web">
+    <implementation.generic type="isfolder" />
+  </asset>
 </asset_composite>
+
