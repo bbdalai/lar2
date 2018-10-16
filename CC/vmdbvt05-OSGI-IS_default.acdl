@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<asset_composite name="vmdbvt05-OSGI-IS_default" displayName="vmdbvt05-OSGI-IS_default" targetNamespace="http://namespaces.softwareag.com/webMethods/CC" xmlns="http://namespaces.softwareag.com/acdl/1.0" xmlns:EDA="http://namespaces.softwareag.com/webMethods/EDA" xmlns:MWS="http://namespaces.softwareag.com/webMethods/MWS" xmlns:IS="http://namespaces.softwareag.com/webMethods/IS" xmlns:APIPORTAL="http://namespaces.softwareag.com/webMethods/APIPORTAL" xmlns:AgileApps="http://namespaces.softwareag.com/webMethods/AgileApps" xmlns:BROKER="http://namespaces.softwareag.com/webMethods/BROKER" xmlns:implDetails="http://namespaces.softwareag.com/acdl/implDetails" xmlns:UniversalMessaging="http://namespaces.softwareag.com/webMethods/UniversalMessaging" xmlns:TN="http://namespaces.softwareag.com/webMethods/TN" xmlns:RULES="http://namespaces.softwareag.com/webMethods/RULES" xmlns:BPM="http://namespaces.softwareag.com/webMethods/BPM" xmlns:Optimize="http://namespaces.softwareag.com/webMethods/Optimize">
+    <buildInfo name="BuildVersion" value="1"/>
+    <buildInfo name="build.timestamp" value="2018-10-16T12:13:41"/>
+    <buildInfo name="productId" value="integrationServer"/>
+    <property name="integrationserver-default.is-resources.storesettings.xarecoverystore.storelocation" many="false" isSecure="false" displayName="integrationserver-default.is-resources.storesettings.xarecoverystore.storelocation">
+        <value>XAStore</value>
+    </property>
+    <property name="integrationserver-default.is-resources.storesettings.brokerconfigured" many="false" isSecure="false" displayName="integrationserver-default.is-resources.storesettings.brokerconfigured">
+        <value>'false'</value>
+    </property>
+    <property name="integrationserver-default.is-resources.storesettings.defaultdocumentstore.storelocation" many="false" isSecure="false" displayName="integrationserver-default.is-resources.storesettings.defaultdocumentstore.storelocation">
+        <value>DocumentStore</value>
+    </property>
+    <property name="integrationserver-default.is-resources.resources.serverthreadpool.schedulerthreadthrottle" many="false" isSecure="false" displayName="integrationserver-default.is-resources.resources.serverthreadpool.schedulerthreadthrottle">
+        <value>'75'</value>
+    </property>
+    <property name="integrationserver-default.common-wmmessaging-is_um_connection.messaging.provider.auth.user" many="false" isSecure="false" displayName="integrationserver-default.common-wmmessaging-is_um_connection.messaging.provider.auth.user">
+        <value>bbdalai</value>
+    </property>
+    <property name="integrationserver-default.is-resources.storesettings.triggerdocumentstore.storelocation" many="false" isSecure="false" displayName="integrationserver-default.is-resources.storesettings.triggerdocumentstore.storelocation">
+        <value>DocumentStore</value>
+    </property>
+    <property name="integrationserver-default.is-resources.storesettings.triggerdocumentstore.initialstoresize" many="false" isSecure="false" displayName="integrationserver-default.is-resources.storesettings.triggerdocumentstore.initialstoresize">
+        <value>'35'</value>
+    </property>
+    <property name="integrationserver-default.is-resources.resources.serverthreadpool.availablethreadswarningthreshold" many="false" isSecure="false" displayName="integrationserver-default.is-resources.resources.serverthreadpool.availablethreadswarningthreshold">
+        <value>'15'</value>
+    </property>
+    <property name="integrationserver-default.is-resources.resources.session.maximumstatefulsessions" many="false" isSecure="false" displayName="integrationserver-default.is-resources.resources.session.maximumstatefulsessions">
+        <value>'2147483647'</value>
+    </property>
+    <property name="integrationserver-default.is-resources.resources.session.sessiontimeout" many="false" isSecure="false" displayName="integrationserver-default.is-resources.resources.session.sessiontimeout">
+        <value>'10'</value>
+    </property>
+    <property name="integrationserver-default.common-wmmessaging-is_um_connection.messaging.provider.auth.password" many="false" isSecure="true" displayName="integrationserver-default.common-wmmessaging-is_um_connection.messaging.provider.auth.password">
+        <value>'*****'</value>
+    </property>
+    <property name="integrationserver-default.is-resources.storesettings.triggerdocumentstore.user" many="false" isSecure="false" displayName="integrationserver-default.is-resources.storesettings.triggerdocumentstore.user">
+        <value>Administrator</value>
+    </property>
+    <property name="integrationserver-default.is-resources.storesettings.defaultdocumentstore.initialstoresize" many="false" isSecure="false" displayName="integrationserver-default.is-resources.storesettings.defaultdocumentstore.initialstoresize">
+        <value>'25'</value>
+    </property>
+    <property name="integrationserver-default.is-resources.resources.serverthreadpool.maximumthreads" many="false" isSecure="false" displayName="integrationserver-default.is-resources.resources.serverthreadpool.maximumthreads">
+        <value>'75'</value>
+    </property>
+    <property name="integrationserver-default.is-resources.resources.session.enablestatefulsessionlimit" many="false" isSecure="false" displayName="integrationserver-default.is-resources.resources.session.enablestatefulsessionlimit">
+        <value>'true'</value>
+    </property>
+    <property name="integrationserver-default.is-resources.resources.session.availablestatefulsessionwarningthreshold" many="false" isSecure="false" displayName="integrationserver-default.is-resources.resources.session.availablestatefulsessionwarningthreshold">
+        <value>'25'</value>
+    </property>
+    <property name="integrationserver-default.is-resources.resources.serverthreadpool.minimumthreads" many="false" isSecure="false" displayName="integrationserver-default.is-resources.resources.serverthreadpool.minimumthreads">
+        <value>'10'</value>
+    </property>
+    <property name="integrationserver-default.common-wmmessaging-is_um_connection.messaging.provider.url" many="false" isSecure="false" displayName="integrationserver-default.common-wmmessaging-is_um_connection.messaging.provider.url">
+        <value>nsp://vmdbvt05:9000</value>
+    </property>
+    <property name="integrationserver-default.is-resources.storesettings.xarecoverystore.initialstoresize" many="false" isSecure="false" displayName="integrationserver-default.is-resources.storesettings.xarecoverystore.initialstoresize">
+        <value>'10'</value>
+    </property>
+</asset_composite>
