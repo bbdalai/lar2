@@ -1,0 +1,83 @@
+<asset_composite xmlns="http://namespaces.softwareag.com/acdl/1.0" targetNamespace="http://namespaces.softwareag.com/webMethods/IS" name="TestPkg" runtimeVersion="10.4.0.0">
+  <implementation.generic type="ispackage" />
+  <buildInfo name="BuildVersion" value="10.4.0.0.1539673053007" />
+  <buildInfo name="BuildTimestamp" value="2018-10-16T12:27:33" />
+  <buildInfo name="MinimumTargetRuntimeVersion" value="10.4.0.0" />
+  <property name="activatePkgOnInstall" displayName="Activate Package On Install">
+    <value>true</value>
+  </property>
+  <property name="archivePkgOnInstall" displayName="Archive Package On Install">
+    <value>true</value>
+  </property>
+  <property name="compilePackage" displayName="Compile Package On Install">
+    <value>true</value>
+  </property>
+  <property name="fragPackage" displayName="Fragment Package On Install">
+    <value>true</value>
+  </property>
+  <property name="clearACLs" displayName="Delete ACLs for the assets from the target Integration Server">
+    <value>false</value>
+  </property>
+  <property name="disallowActivePackageInstall" displayName="Disallow Active Package Install">
+    <value>false</value>
+  </property>
+  <property name="packageExecutionCheck" displayName="Package Execution Check">
+    <value>0</value>
+  </property>
+  <property name="suspendTriggersDuringDeploy" displayName="Suspend Triggers During Deployment">
+    <value>false</value>
+  </property>
+  <property name="syncDocTypesToBroker" displayName="Synchronize Document Types During Deployment">
+    <value>true</value>
+  </property>
+  <asset name="ISPackage.TestPkg" displayName="TestPkg">
+    <implementation.generic type="ispackage" />
+  </asset>
+  <asset name="f.e" displayName="f:e">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="f.veggie" displayName="f:veggie">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="f.new_jsocDoc" displayName="f:new_jsocDoc">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:f.veggie</dependsOn>
+  </asset>
+  <asset name="TestPkg.code" displayName="code">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="TestPkg.code.classes" displayName="code/classes">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="TestPkg.code.jars" displayName="code/jars">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="TestPkg.code.source" displayName="code/source">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="TestPkg.config" displayName="config">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="TestPkg.config.aclmap_pkg.cnf" displayName="config/aclmap_pkg.cnf">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="TestPkg.doc" displayName="doc">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="TestPkg.lib" displayName="lib">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="TestPkg.pub" displayName="pub">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="TestPkg.resources" displayName="resources">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="TestPkg.templates" displayName="templates">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="TestPkg.web" displayName="web">
+    <implementation.generic type="isfolder" />
+  </asset>
+</asset_composite>
+
