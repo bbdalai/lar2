@@ -39,8 +39,8 @@
     <property name="integrationserver-default.common-keystores_default_is_keystore.keystore.key.password" many="false" isSecure="true" displayName="integrationserver-default.common-keystores_default_is_keystore.keystore.key.password">
         <value>'{AES/CBC/PKCS5Padding}{RVx+pMiY0fd8PFHJI7RR+Z3QB6YCERlW5P6Vb7bv3qM=}{RUb9BqfE0p/YybBMzm808g==}ng0mb++7/cbX0B3KY5nakg=='</value>
     </property>
-    <property name="integrationserver-default.common-jndi-cloud_demo_jdni.jndi.provider.password" many="false" isSecure="true" displayName="integrationserver-default.common-jndi-cloud_demo_jdni.jndi.provider.password">
-        <value>'{AES/CBC/PKCS5Padding}{2Gd3aqBxj+TFCb+4P6NqSmktdid423rU/FmFsHO0zGE=}{eji82ph8pgDqihYvRvJWog==}zd+lLa9cJxN9jJkfqtzzqw=='</value>
+    <property name="integrationserver-default.common-jndi-cloud_demo_jdni.jndi.provider.password" many="false" isSecure="false" displayName="integrationserver-default.common-jndi-cloud_demo_jdni.jndi.provider.password">
+        <value>${UM_PASSWORD}</value>
     </property>
     <property name="integrationserver-default.is-resources.resources.session.sessiontimeout" many="false" isSecure="false" displayName="integrationserver-default.is-resources.resources.session.sessiontimeout">
         <value>'10'</value>
@@ -61,22 +61,22 @@
         <value>'75'</value>
     </property>
     <property name="integrationserver-default.common-jndi-cloud_demo_jdni.jndi.provider.url" many="false" isSecure="false" displayName="integrationserver-default.common-jndi-cloud_demo_jdni.jndi.provider.url">
-        <value>nsp://vmdbvt05:9000/</value>
+        <value>${UM_URL}</value>
     </property>
     <property name="integrationserver-default.is-resources.resources.session.enablestatefulsessionlimit" many="false" isSecure="false" displayName="integrationserver-default.is-resources.resources.session.enablestatefulsessionlimit">
         <value>'true'</value>
     </property>
     <property name="integrationserver-default.common-jndi-cloud_demo_jdni.jndi.provider.user" many="false" isSecure="false" displayName="integrationserver-default.common-jndi-cloud_demo_jdni.jndi.provider.user">
-        <value>bbdalai</value>
+        <value>${UM_USER}</value>
     </property>
     <property name="integrationserver-default.common-jms-cloud_demo_jms.jms.user" many="false" isSecure="false" displayName="integrationserver-default.common-jms-cloud_demo_jms.jms.user">
-        <value>bbdalai</value>
+        <value>${UM_USER}</value>
     </property>
     <property name="integrationserver-default.is-resources.resources.session.availablestatefulsessionwarningthreshold" many="false" isSecure="false" displayName="integrationserver-default.is-resources.resources.session.availablestatefulsessionwarningthreshold">
         <value>'25'</value>
     </property>
-    <property name="integrationserver-default.common-jms-cloud_demo_jms.jms.password" many="false" isSecure="true" displayName="integrationserver-default.common-jms-cloud_demo_jms.jms.password">
-        <value>'{AES/CBC/PKCS5Padding}{5NVCk6r2MFv6HACZhfdcsM0yPwCU+KoCfXm5PgrGaic=}{eFDJYyjOsHrqlxuihhX21g==}cQvB6R3Z3zn+ZC/4ZexJnA=='</value>
+    <property name="integrationserver-default.common-jms-cloud_demo_jms.jms.password" many="false" isSecure="false" displayName="integrationserver-default.common-jms-cloud_demo_jms.jms.password">
+        <value>${UM_PASSWORD}</value>
     </property>
     <property name="integrationserver-default.is-resources.resources.serverthreadpool.minimumthreads" many="false" isSecure="false" displayName="integrationserver-default.is-resources.resources.serverthreadpool.minimumthreads">
         <value>'10'</value>
