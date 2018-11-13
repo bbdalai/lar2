@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <asset_composite name="vmdbvt05-OSGI-IS_default" displayName="vmdbvt05-OSGI-IS_default" targetNamespace="http://namespaces.softwareag.com/webMethods/CC" xmlns="http://namespaces.softwareag.com/acdl/1.0" xmlns:EDA="http://namespaces.softwareag.com/webMethods/EDA" xmlns:MWS="http://namespaces.softwareag.com/webMethods/MWS" xmlns:IS="http://namespaces.softwareag.com/webMethods/IS" xmlns:APIPORTAL="http://namespaces.softwareag.com/webMethods/APIPORTAL" xmlns:AgileApps="http://namespaces.softwareag.com/webMethods/AgileApps" xmlns:BROKER="http://namespaces.softwareag.com/webMethods/BROKER" xmlns:implDetails="http://namespaces.softwareag.com/acdl/implDetails" xmlns:UniversalMessaging="http://namespaces.softwareag.com/webMethods/UniversalMessaging" xmlns:TN="http://namespaces.softwareag.com/webMethods/TN" xmlns:RULES="http://namespaces.softwareag.com/webMethods/RULES" xmlns:BPM="http://namespaces.softwareag.com/webMethods/BPM" xmlns:Optimize="http://namespaces.softwareag.com/webMethods/Optimize">
     <buildInfo name="BuildVersion" value="1"/>
-    <buildInfo name="build.timestamp" value="2018-11-13T17:57:35"/>
+    <buildInfo name="build.timestamp" value="2018-11-13T18:00:37"/>
     <buildInfo name="productId" value="integrationServer"/>
     <property name="integrationserver-default.is-resources.storesettings.xarecoverystore.storelocation" many="false" isSecure="false" displayName="integrationserver-default.is-resources.storesettings.xarecoverystore.storelocation">
         <value>XAStore</value>
@@ -19,13 +19,13 @@
         <value>DocumentStore</value>
     </property>
     <property name="integrationserver-default.common-keystores_partner1_ks1.keystore.password" many="false" isSecure="true" displayName="integrationserver-default.common-keystores_partner1_ks1.keystore.password">
-        <value>'{AES/CBC/PKCS5Padding}{Fxxt8rhpJi0rcBQrzpkoRR8s2KUSnDaNgFw6NLDcQlw=}{8Esp2nbruE3lbMIepQwxsA==}1NknCmfHKzrjkFokhxIdlw=='</value>
+        <value>'{AES/CBC/PKCS5Padding}{MjVXGedQ4YtxxyBeSpfUIJwMpEdMc4L/BnqEfv4LAH4=}{sMR6yUP02UNP8w9rZQKJsA==}C73YX2Qb+Eb+nhdoe1mMcg=='</value>
     </property>
     <property name="integrationserver-default.is-resources.storesettings.triggerdocumentstore.initialstoresize" many="false" isSecure="false" displayName="integrationserver-default.is-resources.storesettings.triggerdocumentstore.initialstoresize">
         <value>'35'</value>
     </property>
     <property name="integrationserver-default.common-keystores_default_is_keystore.keystore.password" many="false" isSecure="true" displayName="integrationserver-default.common-keystores_default_is_keystore.keystore.password">
-        <value>'{AES/CBC/PKCS5Padding}{dcC5jiMoWOI0aS8duCFhgaxyjxH+42Ter6nXywxwy/Y=}{HjBSHGKeMhFsnTs/1VqWKA==}3TFfYUJFHkRxVTOMlr+8pw=='</value>
+        <value>'{AES/CBC/PKCS5Padding}{0oZ98K5efDhBHZ3FDx6TLx+WWjMieh12wJa3ZZob7Z0=}{m1D6vq64FHo7jIr/ZAG8CA==}qCuwDr1hWFXYNmRzyZM53w=='</value>
     </property>
     <property name="integrationserver-default.common-keystores_default_is_keystore.keystore.type" many="false" isSecure="false" displayName="integrationserver-default.common-keystores_default_is_keystore.keystore.type">
         <value>JKS</value>
@@ -37,10 +37,10 @@
         <value>'15'</value>
     </property>
     <property name="integrationserver-default.common-keystores_default_is_keystore.keystore.key.password" many="false" isSecure="true" displayName="integrationserver-default.common-keystores_default_is_keystore.keystore.key.password">
-        <value>'{AES/CBC/PKCS5Padding}{+raE0uAuLCjYBKNTT95hZVHqwm6vhie2+fF6EJYeFKQ=}{kQpLZwotWMCkb7VDGXHrow==}dUNibkNAENlHs5hf3ndoUw=='</value>
+        <value>'{AES/CBC/PKCS5Padding}{RVx+pMiY0fd8PFHJI7RR+Z3QB6YCERlW5P6Vb7bv3qM=}{RUb9BqfE0p/YybBMzm808g==}ng0mb++7/cbX0B3KY5nakg=='</value>
     </property>
-    <property name="integrationserver-default.common-jndi-cloud_demo_jdni.jndi.provider.password" many="false" isSecure="false" displayName="integrationserver-default.common-jndi-cloud_demo_jdni.jndi.provider.password">
-        <value>${UM_PASSWORD}</value>
+    <property name="integrationserver-default.common-jndi-cloud_demo_jdni.jndi.provider.password" many="false" isSecure="true" displayName="integrationserver-default.common-jndi-cloud_demo_jdni.jndi.provider.password">
+        <value>'{AES/CBC/PKCS5Padding}{2Gd3aqBxj+TFCb+4P6NqSmktdid423rU/FmFsHO0zGE=}{eji82ph8pgDqihYvRvJWog==}zd+lLa9cJxN9jJkfqtzzqw=='</value>
     </property>
     <property name="integrationserver-default.is-resources.resources.session.sessiontimeout" many="false" isSecure="false" displayName="integrationserver-default.is-resources.resources.session.sessiontimeout">
         <value>'10'</value>
@@ -61,22 +61,22 @@
         <value>'75'</value>
     </property>
     <property name="integrationserver-default.common-jndi-cloud_demo_jdni.jndi.provider.url" many="false" isSecure="false" displayName="integrationserver-default.common-jndi-cloud_demo_jdni.jndi.provider.url">
-        <value>${UM_URL}</value>
+        <value>nsp://vmdbvt05:9000/</value>
     </property>
     <property name="integrationserver-default.is-resources.resources.session.enablestatefulsessionlimit" many="false" isSecure="false" displayName="integrationserver-default.is-resources.resources.session.enablestatefulsessionlimit">
         <value>'true'</value>
     </property>
     <property name="integrationserver-default.common-jndi-cloud_demo_jdni.jndi.provider.user" many="false" isSecure="false" displayName="integrationserver-default.common-jndi-cloud_demo_jdni.jndi.provider.user">
-        <value>${UM_USER}</value>
+        <value>bbdalai</value>
     </property>
     <property name="integrationserver-default.common-jms-cloud_demo_jms.jms.user" many="false" isSecure="false" displayName="integrationserver-default.common-jms-cloud_demo_jms.jms.user">
-        <value>${UM_USER}</value>
+        <value>bbdalai</value>
     </property>
     <property name="integrationserver-default.is-resources.resources.session.availablestatefulsessionwarningthreshold" many="false" isSecure="false" displayName="integrationserver-default.is-resources.resources.session.availablestatefulsessionwarningthreshold">
         <value>'25'</value>
     </property>
-    <property name="integrationserver-default.common-jms-cloud_demo_jms.jms.password" many="false" isSecure="false" displayName="integrationserver-default.common-jms-cloud_demo_jms.jms.password">
-        <value>${UM_PASSWORD}</value>
+    <property name="integrationserver-default.common-jms-cloud_demo_jms.jms.password" many="false" isSecure="true" displayName="integrationserver-default.common-jms-cloud_demo_jms.jms.password">
+        <value>'{AES/CBC/PKCS5Padding}{5NVCk6r2MFv6HACZhfdcsM0yPwCU+KoCfXm5PgrGaic=}{eFDJYyjOsHrqlxuihhX21g==}cQvB6R3Z3zn+ZC/4ZexJnA=='</value>
     </property>
     <property name="integrationserver-default.is-resources.resources.serverthreadpool.minimumthreads" many="false" isSecure="false" displayName="integrationserver-default.is-resources.resources.serverthreadpool.minimumthreads">
         <value>'10'</value>
