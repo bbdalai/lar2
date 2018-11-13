@@ -16,7 +16,7 @@
         <value>'{AES/CBC/PKCS5Padding}{kl84oD21gHSrKFO5nPucNC6t1AmhhLNxKZax1a5/7XU=}{GY1CeUIWkkzggVh/+YhtkQ==}J5owItAGhzrxnsVs/kbYFg=='</value>
     </property>
     <property name="integrationserver-default.is-resources.resources.serverthreadpool.availablethreadswarningthreshold" many="false" isSecure="false" displayName="integrationserver-default.is-resources.resources.serverthreadpool.availablethreadswarningthreshold">
-        <value>9</value>
+        <value>'15'</value>
     </property>
     <property name="integrationserver-default.is-resources.resources.session.enablestatefulsessionlimit" many="false" isSecure="false" displayName="integrationserver-default.is-resources.resources.session.enablestatefulsessionlimit">
         <value>'true'</value>
