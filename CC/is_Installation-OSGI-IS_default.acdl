@@ -13,7 +13,7 @@
         <value>JKS</value>
     </property>
     <property name="integrationserver-default.common-jms-brokera_native_nt_q.jms.user" many="false" isSecure="false" displayName="integrationserver-default.common-jms-brokera_native_nt_q.jms.user">
-        <value>''</value>
+        <value>${UM_USER}</value>
     </property>
     <property name="integrationserver-default.is-resources.resources.serverthreadpool.minimumthreads" many="false" isSecure="false" displayName="integrationserver-default.is-resources.resources.serverthreadpool.minimumthreads">
         <value>'10'</value>
@@ -22,16 +22,16 @@
         <value>'10'</value>
     </property>
     <property name="integrationserver-default.common-jndi-ssl.jndi.provider.url" many="false" isSecure="false" displayName="integrationserver-default.common-jndi-ssl.jndi.provider.url">
-        <value>wmjmsnaming://BrokerA@cpai-d620:2050</value>
+        <value>${UM_URL}</value>
     </property>
     <property name="integrationserver-default.common-jms-brokera_native_xa_q.jms.provider.url" many="false" isSecure="false" displayName="integrationserver-default.common-jms-brokera_native_xa_q.jms.provider.url">
         <value>BrokerA@vm103sd2.eur.ad.sag:6849</value>
     </property>
     <property name="integrationserver-default.common-jms-brokera_xa_t1.jms.user" many="false" isSecure="false" displayName="integrationserver-default.common-jms-brokera_xa_t1.jms.user">
-        <value>''</value>
+        <value>${UM_USER}</value>
     </property>
     <property name="integrationserver-default.common-jndi-brokera_xa.jndi.provider.user" many="false" isSecure="false" displayName="integrationserver-default.common-jndi-brokera_xa.jndi.provider.user">
-        <value>''</value>
+        <value>${UM_USER}</value>
     </property>
     <property name="integrationserver-default.common-keystores_default_is_keystore.keystore.location" many="false" isSecure="false" displayName="integrationserver-default.common-keystores_default_is_keystore.keystore.location">
         <value>..\..\..\common\conf\keystore.jks</value>
@@ -39,8 +39,8 @@
     <property name="integrationserver-default.is-resources.resources.session.maximumstatefulsessions" many="false" isSecure="false" displayName="integrationserver-default.is-resources.resources.session.maximumstatefulsessions">
         <value>'2147483647'</value>
     </property>
-    <property name="integrationserver-default.common-jndi-ssl.jndi.provider.password" many="false" isSecure="true" displayName="integrationserver-default.common-jndi-ssl.jndi.provider.password">
-        <value>'{AES/CBC/PKCS5Padding}{qIorwD6hGYyFh2WyoB4egGyEYsuefkYYFZ9QKML/3bs=}{Of5GnMntsNDGJ4OUdx9HbQ==}I91nG7f3rXgfRJL78GMnJQ=='</value>
+    <property name="integrationserver-default.common-jndi-ssl.jndi.provider.password" many="false" isSecure="false" displayName="integrationserver-default.common-jndi-ssl.jndi.provider.password">
+        <value>${UM_PASSWORD}</value>
     </property>
     <property name="integrationserver-default.is-consumer-endpoints-https-consumer_https.consumer.transport.user" many="false" isSecure="false" displayName="integrationserver-default.is-consumer-endpoints-https-consumer_https.consumer.transport.user">
         <value>Administrator</value>
@@ -55,13 +55,13 @@
         <value>'true'</value>
     </property>
     <property name="integrationserver-default.common-jms-brokera_lt_t.jms.user" many="false" isSecure="false" displayName="integrationserver-default.common-jms-brokera_lt_t.jms.user">
-        <value>''</value>
+        <value>${UM_USER}</value>
     </property>
     <property name="integrationserver-default.common-keystores_default_is_keystore.keystore.password" many="false" isSecure="true" displayName="integrationserver-default.common-keystores_default_is_keystore.keystore.password">
         <value>'{AES/CBC/PKCS5Padding}{RrDW09xpbdvJGAoQWP/KQpLkZSrqygHLsu7mAqUS9+I=}{OikrBAzkjOsKpuSqnLO6nA==}lNwNQeABdF5GB/v5J8goJA=='</value>
     </property>
     <property name="integrationserver-default.common-jms-brokera_native_lt_t.jms.user" many="false" isSecure="false" displayName="integrationserver-default.common-jms-brokera_native_lt_t.jms.user">
-        <value>''</value>
+        <value>${UM_USER}</value>
     </property>
     <property name="integrationserver-default.is-resources.resources.session.availablestatefulsessionwarningthreshold" many="false" isSecure="false" displayName="integrationserver-default.is-resources.resources.session.availablestatefulsessionwarningthreshold">
         <value>'25'</value>
@@ -82,25 +82,25 @@
         <value>Administrator</value>
     </property>
     <property name="integrationserver-default.common-wmmessaging-umtest.messaging.provider.url" many="false" isSecure="false" displayName="integrationserver-default.common-wmmessaging-umtest.messaging.provider.url">
-        <value>nsp://localhost:9000</value>
+        <value>${UM_URL}</value>
     </property>
     <property name="integrationserver-default.is-consumer-endpoints-https-consumer_https.consumer.transport.port" many="false" isSecure="false" displayName="integrationserver-default.is-consumer-endpoints-https-consumer_https.consumer.transport.port">
         <value>'5734'</value>
     </property>
     <property name="integrationserver-default.common-jms-brokera_native_nt_t.jms.user" many="false" isSecure="false" displayName="integrationserver-default.common-jms-brokera_native_nt_t.jms.user">
-        <value>''</value>
+        <value>${UM_USER}</value>
     </property>
     <property name="integrationserver-default.is-consumer-endpoints-https-consumer_https.consumer.transport.auth.@type" many="false" isSecure="false" displayName="integrationserver-default.is-consumer-endpoints-https-consumer_https.consumer.transport.auth.@type">
         <value>Basic</value>
     </property>
     <property name="integrationserver-default.common-jms-brokera_xa_q1.jms.user" many="false" isSecure="false" displayName="integrationserver-default.common-jms-brokera_xa_q1.jms.user">
-        <value>''</value>
+        <value>${UM_USER}</value>
     </property>
     <property name="integrationserver-default.common-jndi-numa.jndi.provider.url" many="false" isSecure="false" displayName="integrationserver-default.common-jndi-numa.jndi.provider.url">
-        <value>nsp://VMDBVT06:9000/</value>
+        <value>${UM_URL}</value>
     </property>
     <property name="integrationserver-default.common-jms-brokera_native_xa_q.jms.user" many="false" isSecure="false" displayName="integrationserver-default.common-jms-brokera_native_xa_q.jms.user">
-        <value>''</value>
+        <value>${UM_USER}</value>
     </property>
     <property name="integrationserver-default.common-keystores_partner1_ks1.keystore.location" many="false" isSecure="false" displayName="integrationserver-default.common-keystores_partner1_ks1.keystore.location">
         <value>packages/test_https/pub/secureCerts/jpegu/partner1_ks1</value>
@@ -115,22 +115,22 @@
         <value>'{AES/CBC/PKCS5Padding}{UE1MMwHySeehGRbd5WL/NOXGf26DZ+DKhkUBlKCmIxo=}{ND0Ags9/YvEMRE8ZAWvIog==}0YS076bRse/khgtW0PJV1A=='</value>
     </property>
     <property name="integrationserver-default.common-jndi-ssl.jndi.provider.user" many="false" isSecure="false" displayName="integrationserver-default.common-jndi-ssl.jndi.provider.user">
-        <value>EMAILADDRESS=esebasti@webmethods.com, CN=B_BrokerUser1, OU=BrokerQA, O=webMethods, L=BayArea, ST=CA, C=US</value>
+        <value>${UM_USER}</value>
     </property>
     <property name="integrationserver-default.is-consumer-endpoints-https-consumer_https.consumer.wssecurity.keyalias" many="false" isSecure="false" displayName="integrationserver-default.is-consumer-endpoints-https-consumer_https.consumer.wssecurity.keyalias">
         <value>pk1</value>
     </property>
     <property name="integrationserver-default.common-jms-brokera_nt_t.jms.user" many="false" isSecure="false" displayName="integrationserver-default.common-jms-brokera_nt_t.jms.user">
-        <value>''</value>
+        <value>${UM_USER}</value>
     </property>
     <property name="integrationserver-default.common-jms-brokerb_xa_q1.jms.user" many="false" isSecure="false" displayName="integrationserver-default.common-jms-brokerb_xa_q1.jms.user">
-        <value>''</value>
+        <value>${UM_USER}</value>
     </property>
     <property name="integrationserver-default.is-consumer-endpoints-https-consumer_https.consumer.transport.protocol" many="false" isSecure="false" displayName="integrationserver-default.is-consumer-endpoints-https-consumer_https.consumer.transport.protocol">
         <value>HTTPS</value>
     </property>
     <property name="integrationserver-default.common-jndi-brokera.jndi.provider.url" many="false" isSecure="false" displayName="integrationserver-default.common-jndi-brokera.jndi.provider.url">
-        <value>wmjmsnaming://BrokerA@vm103sd2.eur.ad.sag:6849</value>
+        <value>${UM_URL}</value>
     </property>
     <property name="integrationserver-default.is-consumer-endpoints-https-consumer_https.consumer.transport.keystorealias" many="false" isSecure="false" displayName="integrationserver-default.is-consumer-endpoints-https-consumer_https.consumer.transport.keystorealias">
         <value>partner1_ks1</value>
@@ -145,7 +145,7 @@
         <value>partner1_ts1</value>
     </property>
     <property name="integrationserver-default.common-jndi-numb.jndi.provider.url" many="false" isSecure="false" displayName="integrationserver-default.common-jndi-numb.jndi.provider.url">
-        <value>nsp://VMDBVT06:9000/</value>
+        <value>${UM_URL}</value>
     </property>
     <property name="integrationserver-default.is-resources.storesettings.triggerdocumentstore.initialstoresize" many="false" isSecure="false" displayName="integrationserver-default.is-resources.storesettings.triggerdocumentstore.initialstoresize">
         <value>'35'</value>
@@ -157,7 +157,7 @@
         <value>XAStore</value>
     </property>
     <property name="integrationserver-default.common-jms-brokera_xa_t2.jms.user" many="false" isSecure="false" displayName="integrationserver-default.common-jms-brokera_xa_t2.jms.user">
-        <value>''</value>
+        <value>${UM_USER}</value>
     </property>
     <property name="integrationserver-default.is-resources.storesettings.triggerdocumentstore.inbounddocumenthistory" many="false" isSecure="false" displayName="integrationserver-default.is-resources.storesettings.triggerdocumentstore.inbounddocumenthistory">
         <value>'0'</value>
@@ -172,10 +172,10 @@
         <value>consumer HTTPS end point alias with Configured Keystore and Trustore</value>
     </property>
     <property name="integrationserver-default.common-jndi-brokerb_xa.jndi.provider.user" many="false" isSecure="false" displayName="integrationserver-default.common-jndi-brokerb_xa.jndi.provider.user">
-        <value>''</value>
+        <value>${UM_USER}</value>
     </property>
     <property name="integrationserver-default.common-jndi-brokerb.jndi.provider.url" many="false" isSecure="false" displayName="integrationserver-default.common-jndi-brokerb.jndi.provider.url">
-        <value>wmjmsnaming://BrokerB@vm103sd2.eur.ad.sag:6849</value>
+        <value>${UM_URL}</value>
     </property>
     <property name="integrationserver-default.common-jms-brokera_native_xa_t.jms.provider.url" many="false" isSecure="false" displayName="integrationserver-default.common-jms-brokera_native_xa_t.jms.provider.url">
         <value>BrokerA@vm103sd2.eur.ad.sag:6849</value>
@@ -190,13 +190,13 @@
         <value>BrokerA@vm103sd2.eur.ad.sag:6849</value>
     </property>
     <property name="integrationserver-default.common-jms-brokera_lt_q_1.jms.user" many="false" isSecure="false" displayName="integrationserver-default.common-jms-brokera_lt_q_1.jms.user">
-        <value>''</value>
+        <value>${UM_USER}</value>
     </property>
     <property name="integrationserver-default.common-keystores_default_is_keystore.keystore.key.password" many="false" isSecure="true" displayName="integrationserver-default.common-keystores_default_is_keystore.keystore.key.password">
         <value>'{AES/CBC/PKCS5Padding}{vRjujWNq9KR7T7feL0ZniEReyo8GEAfXUmnjbq/u5oY=}{9gsS8IdZBhbn1Uf1YweatQ==}sLEU3wcXPyPhiGT08vNulw=='</value>
     </property>
     <property name="integrationserver-default.common-jndi-numb.jndi.provider.user" many="false" isSecure="false" displayName="integrationserver-default.common-jndi-numb.jndi.provider.user">
-        <value>''</value>
+        <value>${UM_USER}</value>
     </property>
     <property name="integrationserver-default.is-resources.storesettings.triggerdocumentstore.user" many="false" isSecure="false" displayName="integrationserver-default.is-resources.storesettings.triggerdocumentstore.user">
         <value>Administrator</value>
@@ -205,28 +205,28 @@
         <value>'75'</value>
     </property>
     <property name="integrationserver-default.common-jms-brokera_native_lt_q.jms.user" many="false" isSecure="false" displayName="integrationserver-default.common-jms-brokera_native_lt_q.jms.user">
-        <value>''</value>
+        <value>${UM_USER}</value>
     </property>
     <property name="integrationserver-default.common-jms-brokera_native_xa_t.jms.user" many="false" isSecure="false" displayName="integrationserver-default.common-jms-brokera_native_xa_t.jms.user">
-        <value>''</value>
+        <value>${UM_USER}</value>
     </property>
     <property name="integrationserver-default.common-jms-brokera_xa_q2.jms.user" many="false" isSecure="false" displayName="integrationserver-default.common-jms-brokera_xa_q2.jms.user">
-        <value>''</value>
+        <value>${UM_USER}</value>
     </property>
     <property name="integrationserver-default.common-jms-numa_lt_ef.jms.user" many="false" isSecure="false" displayName="integrationserver-default.common-jms-numa_lt_ef.jms.user">
-        <value>''</value>
+        <value>${UM_USER}</value>
     </property>
     <property name="integrationserver-default.common-jndi-brokera_xa.jndi.provider.url" many="false" isSecure="false" displayName="integrationserver-default.common-jndi-brokera_xa.jndi.provider.url">
-        <value>wmjmsnaming://BrokerA@vm103sd2.eur.ad.sag:6849</value>
+        <value>${UM_URL}</value>
     </property>
     <property name="integrationserver-default.common-jndi-numa.jndi.provider.user" many="false" isSecure="false" displayName="integrationserver-default.common-jndi-numa.jndi.provider.user">
-        <value>''</value>
+        <value>${UM_USER}</value>
     </property>
     <property name="integrationserver-default.is-provider-endpoints-https-provider_https.provider.transport.protocol" many="false" isSecure="false" displayName="integrationserver-default.is-provider-endpoints-https-provider_https.provider.transport.protocol">
         <value>HTTPS</value>
     </property>
     <property name="integrationserver-default.common-jms-testssl.jms.user" many="false" isSecure="false" displayName="integrationserver-default.common-jms-testssl.jms.user">
-        <value>D:/SSLKeyStore/Certificates/Truststore/b.jks</value>
+        <value>${UM_USER}</value>
     </property>
     <property name="integrationserver-default.common-jms-brokera_native_nt_t.jms.provider.url" many="false" isSecure="false" displayName="integrationserver-default.common-jms-brokera_native_nt_t.jms.provider.url">
         <value>BrokerA@vm103sd2.eur.ad.sag:6849</value>
@@ -238,19 +238,19 @@
         <value>localhost</value>
     </property>
     <property name="integrationserver-default.common-jms-brokera_lt_q.jms.user" many="false" isSecure="false" displayName="integrationserver-default.common-jms-brokera_lt_q.jms.user">
-        <value>''</value>
+        <value>${UM_USER}</value>
     </property>
     <property name="integrationserver-default.is-resources.storesettings.defaultdocumentstore.initialstoresize" many="false" isSecure="false" displayName="integrationserver-default.is-resources.storesettings.defaultdocumentstore.initialstoresize">
         <value>'25'</value>
     </property>
     <property name="integrationserver-default.common-jms-brokerb_xa_q2.jms.user" many="false" isSecure="false" displayName="integrationserver-default.common-jms-brokerb_xa_q2.jms.user">
-        <value>''</value>
+        <value>${UM_USER}</value>
     </property>
     <property name="integrationserver-default.common-jms-numb_lt_ef.jms.user" many="false" isSecure="false" displayName="integrationserver-default.common-jms-numb_lt_ef.jms.user">
-        <value>''</value>
+        <value>${UM_USER}</value>
     </property>
     <property name="integrationserver-default.common-jndi-brokera.jndi.provider.user" many="false" isSecure="false" displayName="integrationserver-default.common-jndi-brokera.jndi.provider.user">
-        <value>''</value>
+        <value>${UM_USER}</value>
     </property>
     <property name="integrationserver-default.is-consumer-endpoints-https-consumer_https.@alias" many="false" isSecure="false" displayName="integrationserver-default.is-consumer-endpoints-https-consumer_https.@alias">
         <value>consumer_https</value>
@@ -259,7 +259,7 @@
         <value>DocumentStore</value>
     </property>
     <property name="integrationserver-default.common-jndi-brokerb_xa.jndi.provider.url" many="false" isSecure="false" displayName="integrationserver-default.common-jndi-brokerb_xa.jndi.provider.url">
-        <value>wmjmsnaming://BrokerB@vm103sd2.eur.ad.sag:6849</value>
+        <value>${UM_URL}</value>
     </property>
     <property name="integrationserver-default.is-resources.resources.session.sessiontimeout" many="false" isSecure="false" displayName="integrationserver-default.is-resources.resources.session.sessiontimeout">
         <value>'10'</value>
@@ -268,7 +268,7 @@
         <value>pk1</value>
     </property>
     <property name="integrationserver-default.common-jndi-brokerb.jndi.provider.user" many="false" isSecure="false" displayName="integrationserver-default.common-jndi-brokerb.jndi.provider.user">
-        <value>''</value>
+        <value>${UM_USER}</value>
     </property>
     <property name="integrationserver-default.common-vars-key1.variable.$" many="false" isSecure="false" displayName="integrationserver-default.common-vars-key1.variable.$">
         <value>'25'</value>
@@ -277,7 +277,7 @@
         <value>'4'</value>
     </property>
     <property name="integrationserver-default.common-jms-brokera_nt_q.jms.user" many="false" isSecure="false" displayName="integrationserver-default.common-jms-brokera_nt_q.jms.user">
-        <value>''</value>
+        <value>${UM_USER}</value>
     </property>
     <property name="integrationserver-default.is-resources.storesettings.defaultdocumentstore.capacity" many="false" isSecure="false" displayName="integrationserver-default.is-resources.storesettings.defaultdocumentstore.capacity">
         <value>'10'</value>
