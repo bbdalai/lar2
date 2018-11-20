@@ -1,0 +1,118 @@
+<asset_composite xmlns="http://namespaces.softwareag.com/acdl/1.0" targetNamespace="http://namespaces.softwareag.com/webMethods/IS" name="commonTest" runtimeVersion="10.3.0.0">
+  <implementation.generic type="ispackage" />
+  <buildInfo name="BuildVersion" value="10.3.0.0.1542704786503" />
+  <buildInfo name="BuildTimestamp" value="2018-11-20T01:06:26" />
+  <buildInfo name="MinimumTargetRuntimeVersion" value="10.3.0.0" />
+  <property name="activatePkgOnInstall" displayName="Activate Package On Install">
+    <value>true</value>
+  </property>
+  <property name="archivePkgOnInstall" displayName="Archive Package On Install">
+    <value>true</value>
+  </property>
+  <property name="compilePackage" displayName="Compile Package On Install">
+    <value>true</value>
+  </property>
+  <property name="fragPackage" displayName="Fragment Package On Install">
+    <value>true</value>
+  </property>
+  <property name="clearACLs" displayName="Delete ACLs for the assets from the target Integration Server">
+    <value>false</value>
+  </property>
+  <property name="disallowActivePackageInstall" displayName="disallowActivePackageInstall">
+    <value>false</value>
+  </property>
+  <property name="packageExecutionCheck" displayName="packageExecutionCheck">
+    <value>0</value>
+  </property>
+  <property name="suspendTriggersDuringDeploy" displayName="Suspend Triggers During Deployment">
+    <value>false</value>
+  </property>
+  <property name="syncDocTypesToBroker" displayName="Synchronize Document Types To Broker During Deployment">
+    <value>true</value>
+  </property>
+  <asset name="ISPackage.commonTest" displayName="commonTest">
+    <implementation.generic type="ispackage" />
+  </asset>
+  <asset name="commonTest.service.getCurrencyList" displayName="commonTest.service:getCurrencyList">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="commonTest.service.changeContractMulti" displayName="commonTest.service:changeContractMulti">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:commonTest.docs.ws.changeContractMultiRequest</dependsOn>
+  </asset>
+  <asset name="commonTest.service.changeContract" displayName="commonTest.service:changeContract">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:commonTest.docs.ws.changeContractRequest</dependsOn>
+  </asset>
+  <asset name="commonTest.service.getAccountList" displayName="commonTest.service:getAccountList">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="commonTest.service.getCreditCardList" displayName="commonTest.service:getCreditCardList">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="commonTest.service.getDocumentTypeList" displayName="commonTest.service:getDocumentTypeList">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="commonTest.service.billingService" displayName="commonTest.service:billingService">
+    <implementation.generic type="iswsdprovider" />
+    <dependsOn>IS:commonTest.service.changeContract</dependsOn>
+    <dependsOn>IS:commonTest.service.getAccountList</dependsOn>
+    <dependsOn>IS:commonTest.service.getCreditCardList</dependsOn>
+    <dependsOn>IS:commonTest.service.getCurrencyList</dependsOn>
+    <dependsOn>IS:commonTest.service.getDocumentTypeList</dependsOn>
+    <dependsOn>IS:commonTest.service.changeContractMulti</dependsOn>
+  </asset>
+  <asset name="commonTest.service.changeContractMulti_WSD" displayName="commonTest.service:changeContractMulti_WSD">
+    <implementation.generic type="iswsdprovider" />
+    <dependsOn>IS:commonTest.service.changeContractMulti</dependsOn>
+    <dependsOn>IS:commonTest.service.changeContract</dependsOn>
+  </asset>
+  <asset name="commonTest.docs.ws.changeContractMultiRequest" displayName="commonTest.docs.ws:changeContractMultiRequest">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:commonTest.docs._contractMultipleType</dependsOn>
+  </asset>
+  <asset name="commonTest.docs.ws.changeContractRequest" displayName="commonTest.docs.ws:changeContractRequest">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:commonTest.docs._contractType</dependsOn>
+  </asset>
+  <asset name="commonTest.docs._contractType" displayName="commonTest.docs:_contractType">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="commonTest.docs._contractMultipleType" displayName="commonTest.docs:_contractMultipleType">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="commonTest.code" displayName="code">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="commonTest.code.classes" displayName="code/classes">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="commonTest.code.jars" displayName="code/jars">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="commonTest.code.source" displayName="code/source">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="commonTest.config" displayName="config">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="commonTest.doc" displayName="doc">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="commonTest.lib" displayName="lib">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="commonTest.pub" displayName="pub">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="commonTest.resources" displayName="resources">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="commonTest.templates" displayName="templates">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="commonTest.web" displayName="web">
+    <implementation.generic type="isfolder" />
+  </asset>
+</asset_composite>
+
