@@ -1,8 +1,8 @@
-<asset_composite xmlns="http://namespaces.softwareag.com/acdl/1.0" targetNamespace="http://namespaces.softwareag.com/webMethods/IS" name="commonTest" runtimeVersion="10.3.0.0">
+<asset_composite xmlns="http://namespaces.softwareag.com/acdl/1.0" targetNamespace="http://namespaces.softwareag.com/webMethods/IS" name="commonTest" runtimeVersion="10.4.0.0">
   <implementation.generic type="ispackage" />
-  <buildInfo name="BuildVersion" value="10.3.0.0.1542722274266" />
-  <buildInfo name="BuildTimestamp" value="2018-11-20T05:57:54" />
-  <buildInfo name="MinimumTargetRuntimeVersion" value="10.3.0.0" />
+  <buildInfo name="BuildVersion" value="10.4.0.0.1542820854705" />
+  <buildInfo name="BuildTimestamp" value="2018-11-21T09:20:55" />
+  <buildInfo name="MinimumTargetRuntimeVersion" value="10.4.0.0" />
   <property name="activatePkgOnInstall" displayName="Activate Package On Install">
     <value>true</value>
   </property>
@@ -18,16 +18,16 @@
   <property name="clearACLs" displayName="Delete ACLs for the assets from the target Integration Server">
     <value>false</value>
   </property>
-  <property name="disallowActivePackageInstall" displayName="disallowActivePackageInstall">
+  <property name="disallowActivePackageInstall" displayName="Disallow Active Package Install">
     <value>false</value>
   </property>
-  <property name="packageExecutionCheck" displayName="packageExecutionCheck">
+  <property name="packageExecutionCheck" displayName="Package Execution Check">
     <value>0</value>
   </property>
   <property name="suspendTriggersDuringDeploy" displayName="Suspend Triggers During Deployment">
     <value>false</value>
   </property>
-  <property name="syncDocTypesToBroker" displayName="Synchronize Document Types To Broker During Deployment">
+  <property name="syncDocTypesToBroker" displayName="Synchronize Document Types During Deployment">
     <value>true</value>
   </property>
   <asset name="ISPackage.commonTest" displayName="commonTest">
