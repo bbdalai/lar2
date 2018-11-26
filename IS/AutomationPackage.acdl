@@ -1,7 +1,7 @@
 <asset_composite xmlns="http://namespaces.softwareag.com/acdl/1.0" targetNamespace="http://namespaces.softwareag.com/webMethods/IS" name="AutomationPackage" runtimeVersion="10.4.0.0">
   <implementation.generic type="ispackage" />
-  <buildInfo name="BuildVersion" value="10.4.0.0.1540965296268" />
-  <buildInfo name="BuildTimestamp" value="2018-10-30T22:54:56" />
+  <buildInfo name="BuildVersion" value="10.4.0.0.1543248839759" />
+  <buildInfo name="BuildTimestamp" value="2018-11-26T08:14:00" />
   <buildInfo name="MinimumTargetRuntimeVersion" value="10.4.0.0" />
   <property name="activatePkgOnInstall" displayName="Activate Package On Install">
     <value>true</value>
@@ -33,11 +33,19 @@
   <asset name="ISPackage.AutomationPackage" displayName="AutomationPackage">
     <implementation.generic type="ispackage" />
   </asset>
+  <asset name="AutomationFolder.js" displayName="AutomationFolder:js">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:AutomationPackage.code.source.AutomationFolder.java</dependsOn>
+    <dependsOn>IS:AutomationPackage.code.classes.AutomationFolder.class</dependsOn>
+  </asset>
   <asset name="AutomationPackage.code" displayName="code">
     <implementation.generic type="isfolder" />
   </asset>
   <asset name="AutomationPackage.code.classes" displayName="code/classes">
     <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="AutomationPackage.code.classes.AutomationFolder.class" displayName="code/classes/AutomationFolder.class">
+    <implementation.generic type="isfile" />
   </asset>
   <asset name="AutomationPackage.code.jars" displayName="code/jars">
     <implementation.generic type="isfolder" />
@@ -45,8 +53,14 @@
   <asset name="AutomationPackage.code.source" displayName="code/source">
     <implementation.generic type="isfolder" />
   </asset>
+  <asset name="AutomationPackage.code.source.AutomationFolder.java" displayName="code/source/AutomationFolder.java">
+    <implementation.generic type="isfile" />
+  </asset>
   <asset name="AutomationPackage.config" displayName="config">
     <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="AutomationPackage.config.aclmap_pkg.cnf" displayName="config/aclmap_pkg.cnf">
+    <implementation.generic type="isfile" />
   </asset>
   <asset name="AutomationPackage.doc" displayName="doc">
     <implementation.generic type="isfolder" />
