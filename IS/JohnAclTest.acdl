@@ -1,7 +1,7 @@
 <asset_composite xmlns="http://namespaces.softwareag.com/acdl/1.0" targetNamespace="http://namespaces.softwareag.com/webMethods/IS" name="JohnAclTest" runtimeVersion="10.4.0.0">
   <implementation.generic type="ispackage" />
-  <buildInfo name="BuildVersion" value="10.4.0.0.1542981840565" />
-  <buildInfo name="BuildTimestamp" value="2018-11-23T06:04:00" />
+  <buildInfo name="BuildVersion" value="10.4.0.0.1543249661098" />
+  <buildInfo name="BuildTimestamp" value="2018-11-26T08:27:41" />
   <buildInfo name="MinimumTargetRuntimeVersion" value="10.4.0.0" />
   <property name="activatePkgOnInstall" displayName="Activate Package On Install">
     <value>true</value>
@@ -55,21 +55,18 @@
   <asset name="WED4729.getProperties" displayName="WED4729:getProperties">
     <implementation.generic type="isjavaservice" />
     <dependsOn>IS:JohnAclTest.code.source.WED4729.java</dependsOn>
-    <dependsOn>IS:JohnAclTest.code.classes.WED4729.class</dependsOn>
     <dependsOn>IS:WED4729.getKeys</dependsOn>
     <dependsOn>IS:WED4729.loadProperties</dependsOn>
   </asset>
   <asset name="WED4729.getKeys" displayName="WED4729:getKeys">
     <implementation.generic type="isjavaservice" />
     <dependsOn>IS:JohnAclTest.code.source.WED4729.java</dependsOn>
-    <dependsOn>IS:JohnAclTest.code.classes.WED4729.class</dependsOn>
     <dependsOn>IS:WED4729.getProperties</dependsOn>
     <dependsOn>IS:WED4729.loadProperties</dependsOn>
   </asset>
   <asset name="WED4729.loadProperties" displayName="WED4729:loadProperties">
     <implementation.generic type="isjavaservice" />
     <dependsOn>IS:JohnAclTest.code.source.WED4729.java</dependsOn>
-    <dependsOn>IS:JohnAclTest.code.classes.WED4729.class</dependsOn>
     <dependsOn>IS:WED4729.getProperties</dependsOn>
     <dependsOn>IS:WED4729.getKeys</dependsOn>
   </asset>
@@ -131,9 +128,6 @@
   </asset>
   <asset name="JohnAclTest.code.classes" displayName="code/classes">
     <implementation.generic type="isfolder" />
-  </asset>
-  <asset name="JohnAclTest.code.classes.WED4729.class" displayName="code/classes/WED4729.class">
-    <implementation.generic type="isfile" />
   </asset>
   <asset name="JohnAclTest.code.jars" displayName="code/jars">
     <implementation.generic type="isfolder" />
