@@ -1,4 +1,4 @@
-<asset_composite xmlns="http://namespaces.softwareag.com/acdl/1.0" targetNamespace="http://namespaces.softwareag.com/webMethods/IS" name="trigger1" runtimeVersion="10.3.0.0">
+<asset_composite xmlns="http://namespaces.softwareag.com/acdl/1.0" targetNamespace="http://namespaces.softwareag.com/webMethods/IS" name="testCloudDeployment" runtimeVersion="10.3.0.0">
   <implementation.generic type="ispackage" />
   <buildInfo name="BuildVersion" value="10.3.0.0.1543472627206" />
   <buildInfo name="BuildTimestamp" value="2018-11-29T11:53:51" />
@@ -30,47 +30,46 @@
   <property name="syncDocTypesToBroker" displayName="Synchronize Document Types To Broker During Deployment">
     <value>true</value>
   </property>
-  <asset name="ISPackage.trigger1" displayName="trigger1">
+  <asset name="ISPackage.testCloudDeployment" displayName="testCloudDeployment">
     <implementation.generic type="ispackage" />
   </asset>
-  <asset name="trigger1.new_jms_trigger" displayName="trigger1:new_jms_trigger">
-    <implementation.generic type="isjmstrigger" />
-    <dependsOn>IS:JMSAlias.CLOUD_DEMO_JMS1</dependsOn>
+  <asset name="testCloudDeployment.com.softwareag.submit.getPORequestFromBackend" displayName="testCloudDeployment.com.softwareag.submit:getPORequestFromBackend">
+    <implementation.generic type="isflowservice" />
   </asset>
-  <asset name="trigger1.code" displayName="code">
+  <asset name="testCloudDeployment.com.softwareag.test.tester" displayName="testCloudDeployment.com.softwareag.test:tester">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="testCloudDeployment.code" displayName="code">
     <implementation.generic type="isfolder" />
   </asset>
-  <asset name="trigger1.code.classes" displayName="code/classes">
+  <asset name="testCloudDeployment.code.classes" displayName="code/classes">
     <implementation.generic type="isfolder" />
   </asset>
-  <asset name="trigger1.code.source" displayName="code/source">
+  <asset name="testCloudDeployment.code.source" displayName="code/source">
     <implementation.generic type="isfolder" />
   </asset>
-  <asset name="trigger1.code.jars" displayName="code/jars">
+  <asset name="testCloudDeployment.code.jars" displayName="code/jars">
     <implementation.generic type="isfolder" />
   </asset>
-  <asset name="trigger1.doc" displayName="doc">
+  <asset name="testCloudDeployment.config" displayName="config">
     <implementation.generic type="isfolder" />
   </asset>
-  <asset name="trigger1.pub" displayName="pub">
+  <asset name="testCloudDeployment.pub" displayName="pub">
     <implementation.generic type="isfolder" />
   </asset>
-  <asset name="trigger1.templates" displayName="templates">
+  <asset name="testCloudDeployment.doc" displayName="doc">
     <implementation.generic type="isfolder" />
   </asset>
-  <asset name="trigger1.web" displayName="web">
+  <asset name="testCloudDeployment.templates" displayName="templates">
     <implementation.generic type="isfolder" />
   </asset>
-  <asset name="trigger1.config" displayName="config">
+  <asset name="testCloudDeployment.web" displayName="web">
     <implementation.generic type="isfolder" />
   </asset>
-  <asset name="trigger1.config.aclmap_pkg.cnf" displayName="config/aclmap_pkg.cnf">
-    <implementation.generic type="isfile" />
-  </asset>
-  <asset name="trigger1.resources" displayName="resources">
+  <asset name="testCloudDeployment.resources" displayName="resources">
     <implementation.generic type="isfolder" />
   </asset>
-  <asset name="trigger1.lib" displayName="lib">
+  <asset name="testCloudDeployment.lib" displayName="lib">
     <implementation.generic type="isfolder" />
   </asset>
 </asset_composite>
