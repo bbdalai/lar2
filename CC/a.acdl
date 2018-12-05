@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<asset_composite name="a" displayName="a" runtimeVersion="10.3" targetNamespace="http://namespaces.softwareag.com/webMethods/CC" xmlns="http://namespaces.softwareag.com/acdl/1.0" xmlns:EDA="http://namespaces.softwareag.com/webMethods/EDA" xmlns:MWS="http://namespaces.softwareag.com/webMethods/MWS" xmlns:IS="http://namespaces.softwareag.com/webMethods/IS" xmlns:APIPORTAL="http://namespaces.softwareag.com/webMethods/APIPORTAL" xmlns:AgileApps="http://namespaces.softwareag.com/webMethods/AgileApps" xmlns:BROKER="http://namespaces.softwareag.com/webMethods/BROKER" xmlns:implDetails="http://namespaces.softwareag.com/acdl/implDetails" xmlns:UniversalMessaging="http://namespaces.softwareag.com/webMethods/UniversalMessaging" xmlns:TN="http://namespaces.softwareag.com/webMethods/TN" xmlns:RULES="http://namespaces.softwareag.com/webMethods/RULES" xmlns:BPM="http://namespaces.softwareag.com/webMethods/BPM" xmlns:Optimize="http://namespaces.softwareag.com/webMethods/Optimize">
+    <buildInfo name="build.timestamp" value="2018-12-05T12:38:59"/>
+    <buildInfo name="build.version" value="10.3.12"/>
+    <property name="integrationserver-default.is-resources.storesettings.xarecoverystore.storelocation" many="false" isSecure="false" displayName="integrationserver-default.is-resources.storesettings.xarecoverystore.storelocation">
+        <value>XAStore</value>
+    </property>
+    <property name="integrationserver-default.is-resources.storesettings.brokerconfigured" many="false" isSecure="false" displayName="integrationserver-default.is-resources.storesettings.brokerconfigured">
+        <value>'false'</value>
+    </property>
+    <property name="integrationserver-default.is-resources.storesettings.defaultdocumentstore.storelocation" many="false" isSecure="false" displayName="integrationserver-default.is-resources.storesettings.defaultdocumentstore.storelocation">
+        <value>DocumentStore</value>
+    </property>
+    <property name="integrationserver-default.is-resources.resources.serverthreadpool.schedulerthreadthrottle" many="false" isSecure="false" displayName="integrationserver-default.is-resources.resources.serverthreadpool.schedulerthreadthrottle">
+        <value>'75'</value>
+    </property>
+    <property name="integrationserver-default.is-resources.storesettings.triggerdocumentstore.storelocation" many="false" isSecure="false" displayName="integrationserver-default.is-resources.storesettings.triggerdocumentstore.storelocation">
+        <value>DocumentStore</value>
+    </property>
+    <property name="integrationserver-default.common-keystores_partner1_ks1.keystore.password" many="false" isSecure="false" displayName="integrationserver-default.common-keystores_partner1_ks1.keystore.password">
+        <value>'{AES/CBC/PKCS5Padding}{/80C/YUHEMj5/NOFXn/9xX7nVappPqUQmO3g+hkKOiM=}{0FHG80KIk+WzWmJPM7MRJw==}VAcPELBP/ixK1vyH45FYIw=='</value>
+    </property>
+    <property name="integrationserver-default.is-resources.storesettings.triggerdocumentstore.initialstoresize" many="false" isSecure="false" displayName="integrationserver-default.is-resources.storesettings.triggerdocumentstore.initialstoresize">
+        <value>'35'</value>
+    </property>
+    <property name="integrationserver-default.common-keystores_default_is_keystore.keystore.password" many="false" isSecure="false" displayName="integrationserver-default.common-keystores_default_is_keystore.keystore.password">
+        <value>'{AES/CBC/PKCS5Padding}{xDlgnFhgOGzYC5EqNpScMlsX8kmQmIfKIO03t9mDjmw=}{smlNj75aqsoa4HTufgveaw==}gbP4AHhL8731xR3zAtlVMw=='</value>
+    </property>
+    <property name="integrationserver-default.common-keystores_default_is_keystore.keystore.type" many="false" isSecure="false" displayName="integrationserver-default.common-keystores_default_is_keystore.keystore.type">
+        <value>JKS</value>
+    </property>
+    <property name="integrationserver-default.common-keystores_default_is_keystore.keystore.location" many="false" isSecure="false" displayName="integrationserver-default.common-keystores_default_is_keystore.keystore.location">
+        <value>../../../common/conf/keystore.jks</value>
+    </property>
+    <property name="integrationserver-default.is-resources.resources.serverthreadpool.availablethreadswarningthreshold" many="false" isSecure="false" displayName="integrationserver-default.is-resources.resources.serverthreadpool.availablethreadswarningthreshold">
+        <value>'15'</value>
+    </property>
+    <property name="integrationserver-default.common-keystores_default_is_keystore.keystore.key.password" many="false" isSecure="false" displayName="integrationserver-default.common-keystores_default_is_keystore.keystore.key.password">
+        <value>'{AES/CBC/PKCS5Padding}{YtfzjRvTq9Z9EtT1FoFBzFrMpSY9+XfVREA6Rp7uEUs=}{Bf6G5ugoXHS1TBZLUo0x1Q==}KypnhuTBbmQ3KYjzzxhLgg=='</value>
+    </property>
+    <property name="integrationserver-default.common-jndi-cloud_demo_jdni.jndi.provider.password" many="false" isSecure="false" displayName="integrationserver-default.common-jndi-cloud_demo_jdni.jndi.provider.password">
+        <value>'{AES/CBC/PKCS5Padding}{P7t/KAw4npcmwImYpOqjs9LwC8281Sg800KEXOv4tUI=}{xsdwyG0LcJa+1l2zjf7ckQ==}0DdbkyogQis7q9E46U02qA=='</value>
+    </property>
+    <property name="integrationserver-default.is-resources.resources.session.sessiontimeout" many="false" isSecure="false" displayName="integrationserver-default.is-resources.resources.session.sessiontimeout">
+        <value>'10'</value>
+    </property>
+    <property name="integrationserver-default.is-resources.resources.session.maximumstatefulsessions" many="false" isSecure="false" displayName="integrationserver-default.is-resources.resources.session.maximumstatefulsessions">
+        <value>'2147483647'</value>
+    </property>
+    <property name="integrationserver-default.common-keystores_partner1_ks1.keystore.type" many="false" isSecure="false" displayName="integrationserver-default.common-keystores_partner1_ks1.keystore.type">
+        <value>JKS</value>
+    </property>
+    <property name="integrationserver-default.is-resources.storesettings.triggerdocumentstore.user" many="false" isSecure="false" displayName="integrationserver-default.is-resources.storesettings.triggerdocumentstore.user">
+        <value>Administrator</value>
+    </property>
+    <property name="integrationserver-default.is-resources.storesettings.defaultdocumentstore.initialstoresize" many="false" isSecure="false" displayName="integrationserver-default.is-resources.storesettings.defaultdocumentstore.initialstoresize">
+        <value>'25'</value>
+    </property>
+    <property name="integrationserver-default.is-resources.resources.serverthreadpool.maximumthreads" many="false" isSecure="false" displayName="integrationserver-default.is-resources.resources.serverthreadpool.maximumthreads">
+        <value>'75'</value>
+    </property>
+    <property name="integrationserver-default.common-jndi-cloud_demo_jdni.jndi.provider.url" many="false" isSecure="false" displayName="integrationserver-default.common-jndi-cloud_demo_jdni.jndi.provider.url">
+        <value>nsp://vmdbvt05:9000/</value>
+    </property>
+    <property name="integrationserver-default.is-resources.resources.session.enablestatefulsessionlimit" many="false" isSecure="false" displayName="integrationserver-default.is-resources.resources.session.enablestatefulsessionlimit">
+        <value>'true'</value>
+    </property>
+    <property name="integrationserver-default.common-jndi-cloud_demo_jdni.jndi.provider.user" many="false" isSecure="false" displayName="integrationserver-default.common-jndi-cloud_demo_jdni.jndi.provider.user">
+        <value>bbdalai</value>
+    </property>
+    <property name="integrationserver-default.common-jms-cloud_demo_jms.jms.user" many="false" isSecure="false" displayName="integrationserver-default.common-jms-cloud_demo_jms.jms.user">
+        <value>bbdalai</value>
+    </property>
+    <property name="integrationserver-default.is-resources.resources.session.availablestatefulsessionwarningthreshold" many="false" isSecure="false" displayName="integrationserver-default.is-resources.resources.session.availablestatefulsessionwarningthreshold">
+        <value>'25'</value>
+    </property>
+    <property name="integrationserver-default.common-jms-cloud_demo_jms.jms.password" many="false" isSecure="false" displayName="integrationserver-default.common-jms-cloud_demo_jms.jms.password">
+        <value>'{AES/CBC/PKCS5Padding}{6174nVdQ9PHHAxQRHHqfl/OZs4yxtwJcdUYk1TO8RPk=}{nv5z4pPBJnKYx7QfxMyxxw==}SGY47hxXPEP/Qsjz9wwZHw=='</value>
+    </property>
+    <property name="integrationserver-default.is-resources.resources.serverthreadpool.minimumthreads" many="false" isSecure="false" displayName="integrationserver-default.is-resources.resources.serverthreadpool.minimumthreads">
+        <value>'10'</value>
+    </property>
+    <property name="integrationserver-default.is-resources.storesettings.xarecoverystore.initialstoresize" many="false" isSecure="false" displayName="integrationserver-default.is-resources.storesettings.xarecoverystore.initialstoresize">
+        <value>'10'</value>
+    </property>
+    <property name="integrationserver-default.common-keystores_partner1_ks1.keystore.location" many="false" isSecure="false" displayName="integrationserver-default.common-keystores_partner1_ks1.keystore.location">
+        <value>packages/mytruststore/config/secrets/partner1_ks1</value>
+    </property>
+</asset_composite>
