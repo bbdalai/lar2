@@ -4,12 +4,12 @@
     <buildInfo name="build.timestamp" value="2019-01-18T15:27:59"/>
     <buildInfo name="productId" value="integrationServer"/>
     <property name="integrationserver-i1.common-jndi-local_um.jndi.provider.user" many="false" isSecure="false" displayName="integrationserver-i1.common-jndi-local_um.jndi.provider.user">
-        <value>''</value>
+        <value>${UM_USER}</value>
     </property>
     <property name="integrationserver-i1.common-jndi-local_um.jndi.provider.url" many="false" isSecure="false" displayName="integrationserver-i1.common-jndi-local_um.jndi.provider.url">
-        <value>nsp://localhost:9000/</value>
+        <value>${UM_URL}</value>
     </property>
-    <property name="integrationserver-i1.common-jndi-local_um.jndi.provider.password" many="false" isSecure="true" displayName="integrationserver-i1.common-jndi-local_um.jndi.provider.password">
-        <value>''</value>
+    <property name="integrationserver-i1.common-jndi-local_um.jndi.provider.password" many="false" isSecure="false" displayName="integrationserver-i1.common-jndi-local_um.jndi.provider.password">
+        <value>${UM_PASSWORD}</value>
     </property>
 </asset_composite>
