@@ -1,15 +1,60 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <asset_composite name="jndi01" displayName="jndi01" runtimeVersion="10.3" targetNamespace="http://namespaces.softwareag.com/webMethods/CC" xmlns="http://namespaces.softwareag.com/acdl/1.0" xmlns:EDA="http://namespaces.softwareag.com/webMethods/EDA" xmlns:MWS="http://namespaces.softwareag.com/webMethods/MWS" xmlns:IS="http://namespaces.softwareag.com/webMethods/IS" xmlns:APIPORTAL="http://namespaces.softwareag.com/webMethods/APIPORTAL" xmlns:AgileApps="http://namespaces.softwareag.com/webMethods/AgileApps" xmlns:BROKER="http://namespaces.softwareag.com/webMethods/BROKER" xmlns:implDetails="http://namespaces.softwareag.com/acdl/implDetails" xmlns:UniversalMessaging="http://namespaces.softwareag.com/webMethods/UniversalMessaging" xmlns:TN="http://namespaces.softwareag.com/webMethods/TN" xmlns:RULES="http://namespaces.softwareag.com/webMethods/RULES" xmlns:BPM="http://namespaces.softwareag.com/webMethods/BPM" xmlns:Optimize="http://namespaces.softwareag.com/webMethods/Optimize">
     <buildInfo name="BuildVersion" value="10.3"/>
-    <buildInfo name="build.timestamp" value="2019-01-14T20:25:00"/>
+    <buildInfo name="build.timestamp" value="2019-01-18T15:24:04"/>
     <buildInfo name="productId" value="integrationServer"/>
-    <property name="integrationserver-i1.common-jndi-dcgwm_test0.jndi.provider.password" many="false" isSecure="true" displayName="integrationserver-i1.common-jndi-dcgwm_test0.jndi.provider.password">
-        <value>'{AES/CBC/PKCS5Padding}{bkLCQjLTk41Hp4UAH2jZDSWP3HNsVkT1+vJOepAo9lc=}{h+zNwjzVevE8t41/iGw+ig==}d2qQbfJtmCYMeHcZ7B945Q=='</value>
+    <property name="integrationserver-i1.is-resources.resources.serverthreadpool.maximumthreads" many="false" isSecure="false" displayName="integrationserver-i1.is-resources.resources.serverthreadpool.maximumthreads">
+        <value>'75'</value>
     </property>
-    <property name="integrationserver-i1.common-jndi-dcgwm_test0.jndi.provider.url" many="false" isSecure="false" displayName="integrationserver-i1.common-jndi-dcgwm_test0.jndi.provider.url">
-        <value>nsp://dcgwm01.eur.ad.sag:9001</value>
+    <property name="integrationserver-i1.common-truststores_default_is_truststore.truststore.password" many="false" isSecure="true" displayName="integrationserver-i1.common-truststores_default_is_truststore.truststore.password">
+        <value>'{AES/CBC/PKCS5Padding}{IFh0Mdz4oPlDW0NG5kyEoVjkFY6o1Qy0ny2jQaBeHRE=}{fIQSTyonj2K020kn5/P8Ag==}jOK0Y1PJYgvv0FgzQQ0oEg=='</value>
     </property>
-    <property name="integrationserver-i1.common-jndi-dcgwm_test0.jndi.provider.user" many="false" isSecure="false" displayName="integrationserver-i1.common-jndi-dcgwm_test0.jndi.provider.user">
-        <value>sss</value>
+    <property name="integrationserver-i1.is-resources.resources.serverthreadpool.minimumthreads" many="false" isSecure="false" displayName="integrationserver-i1.is-resources.resources.serverthreadpool.minimumthreads">
+        <value>'10'</value>
+    </property>
+    <property name="integrationserver-i1.is-resources.resources.serverthreadpool.availablethreadswarningthreshold" many="false" isSecure="false" displayName="integrationserver-i1.is-resources.resources.serverthreadpool.availablethreadswarningthreshold">
+        <value>'15'</value>
+    </property>
+    <property name="integrationserver-i1.common-keystores_default_is_keystore.keystore.location" many="false" isSecure="false" displayName="integrationserver-i1.common-keystores_default_is_keystore.keystore.location">
+        <value>../../../common/conf/keystore.jks</value>
+    </property>
+    <property name="integrationserver-i1.common-keystores_default_is_keystore.keystore.key.password" many="false" isSecure="true" displayName="integrationserver-i1.common-keystores_default_is_keystore.keystore.key.password">
+        <value>'{AES/CBC/PKCS5Padding}{SHHJQthsbURWtK2k8G9ItjiOy4bI5CRETCJdi880F2w=}{gQS2NTGqOt8CHGFV4uBQ1w==}s4JwPJ2N1lrEd2Bfny2bnQ=='</value>
+    </property>
+    <property name="integrationserver-i1.common-truststores_default_is_truststore.truststore.type" many="false" isSecure="false" displayName="integrationserver-i1.common-truststores_default_is_truststore.truststore.type">
+        <value>JKS</value>
+    </property>
+    <property name="integrationserver-i1.is-resources.resources.serverthreadpool.schedulerthreadthrottle" many="false" isSecure="false" displayName="integrationserver-i1.is-resources.resources.serverthreadpool.schedulerthreadthrottle">
+        <value>'75'</value>
+    </property>
+    <property name="integrationserver-i1.common-jndi-local_um.jndi.provider.user" many="false" isSecure="false" displayName="integrationserver-i1.common-jndi-local_um.jndi.provider.user">
+        <value>''</value>
+    </property>
+    <property name="integrationserver-i1.common-keystores_default_is_keystore.keystore.type" many="false" isSecure="false" displayName="integrationserver-i1.common-keystores_default_is_keystore.keystore.type">
+        <value>JKS</value>
+    </property>
+    <property name="integrationserver-i1.is-resources.resources.session.sessiontimeout" many="false" isSecure="false" displayName="integrationserver-i1.is-resources.resources.session.sessiontimeout">
+        <value>'10'</value>
+    </property>
+    <property name="integrationserver-i1.common-keystores_default_is_keystore.keystore.password" many="false" isSecure="true" displayName="integrationserver-i1.common-keystores_default_is_keystore.keystore.password">
+        <value>'{AES/CBC/PKCS5Padding}{hCoAqhDWVXuyOe6JnI0zg/gYMfYzijANNyzzpM5ewnQ=}{ZQbeMxlyaThPVG7xOebW1g==}2+8VEqbD5yh1Vcd+jHggTQ=='</value>
+    </property>
+    <property name="integrationserver-i1.common-jndi-local_um.jndi.provider.url" many="false" isSecure="false" displayName="integrationserver-i1.common-jndi-local_um.jndi.provider.url">
+        <value>nsp://localhost:9000/</value>
+    </property>
+    <property name="integrationserver-i1.common-truststores_default_is_truststore.truststore.location" many="false" isSecure="false" displayName="integrationserver-i1.common-truststores_default_is_truststore.truststore.location">
+        <value>../../../common/conf/platform_truststore.jks</value>
+    </property>
+    <property name="integrationserver-i1.is-resources.resources.session.enablestatefulsessionlimit" many="false" isSecure="false" displayName="integrationserver-i1.is-resources.resources.session.enablestatefulsessionlimit">
+        <value>'true'</value>
+    </property>
+    <property name="integrationserver-i1.common-jndi-local_um.jndi.provider.password" many="false" isSecure="true" displayName="integrationserver-i1.common-jndi-local_um.jndi.provider.password">
+        <value>''</value>
+    </property>
+    <property name="integrationserver-i1.is-resources.resources.session.maximumstatefulsessions" many="false" isSecure="false" displayName="integrationserver-i1.is-resources.resources.session.maximumstatefulsessions">
+        <value>'2147483647'</value>
+    </property>
+    <property name="integrationserver-i1.is-resources.resources.session.availablestatefulsessionwarningthreshold" many="false" isSecure="false" displayName="integrationserver-i1.is-resources.resources.session.availablestatefulsessionwarningthreshold">
+        <value>'25'</value>
     </property>
 </asset_composite>
