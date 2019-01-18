@@ -6,8 +6,8 @@
     <property name="integrationserver-i1.is-resources.resources.serverthreadpool.maximumthreads" many="false" isSecure="false" displayName="integrationserver-i1.is-resources.resources.serverthreadpool.maximumthreads">
         <value>'75'</value>
     </property>
-    <property name="integrationserver-i1.common-truststores_default_is_truststore.truststore.password" many="false" isSecure="true" displayName="integrationserver-i1.common-truststores_default_is_truststore.truststore.password">
-        <value>'{AES/CBC/PKCS5Padding}{IFh0Mdz4oPlDW0NG5kyEoVjkFY6o1Qy0ny2jQaBeHRE=}{fIQSTyonj2K020kn5/P8Ag==}jOK0Y1PJYgvv0FgzQQ0oEg=='</value>
+    <property name="integrationserver-i1.common-truststores_default_is_truststore.truststore.password" many="false" isSecure="false" displayName="integrationserver-i1.common-truststores_default_is_truststore.truststore.password">
+        <value></value>
     </property>
     <property name="integrationserver-i1.is-resources.resources.serverthreadpool.minimumthreads" many="false" isSecure="false" displayName="integrationserver-i1.is-resources.resources.serverthreadpool.minimumthreads">
         <value>'10'</value>
@@ -28,7 +28,7 @@
         <value>'75'</value>
     </property>
     <property name="integrationserver-i1.common-jndi-local_um.jndi.provider.user" many="false" isSecure="false" displayName="integrationserver-i1.common-jndi-local_um.jndi.provider.user">
-        <value>''</value>
+        <value>${UM_USER}</value>
     </property>
     <property name="integrationserver-i1.common-keystores_default_is_keystore.keystore.type" many="false" isSecure="false" displayName="integrationserver-i1.common-keystores_default_is_keystore.keystore.type">
         <value>JKS</value>
@@ -40,7 +40,7 @@
         <value>'{AES/CBC/PKCS5Padding}{hCoAqhDWVXuyOe6JnI0zg/gYMfYzijANNyzzpM5ewnQ=}{ZQbeMxlyaThPVG7xOebW1g==}2+8VEqbD5yh1Vcd+jHggTQ=='</value>
     </property>
     <property name="integrationserver-i1.common-jndi-local_um.jndi.provider.url" many="false" isSecure="false" displayName="integrationserver-i1.common-jndi-local_um.jndi.provider.url">
-        <value>nsp://localhost:9000/</value>
+        <value>${UM_URL}</value>
     </property>
     <property name="integrationserver-i1.common-truststores_default_is_truststore.truststore.location" many="false" isSecure="false" displayName="integrationserver-i1.common-truststores_default_is_truststore.truststore.location">
         <value>../../../common/conf/platform_truststore.jks</value>
@@ -48,8 +48,8 @@
     <property name="integrationserver-i1.is-resources.resources.session.enablestatefulsessionlimit" many="false" isSecure="false" displayName="integrationserver-i1.is-resources.resources.session.enablestatefulsessionlimit">
         <value>'true'</value>
     </property>
-    <property name="integrationserver-i1.common-jndi-local_um.jndi.provider.password" many="false" isSecure="true" displayName="integrationserver-i1.common-jndi-local_um.jndi.provider.password">
-        <value>''</value>
+    <property name="integrationserver-i1.common-jndi-local_um.jndi.provider.password" many="false" isSecure="false" displayName="integrationserver-i1.common-jndi-local_um.jndi.provider.password">
+        <value>${UM_PASSWORD}</value>
     </property>
     <property name="integrationserver-i1.is-resources.resources.session.maximumstatefulsessions" many="false" isSecure="false" displayName="integrationserver-i1.is-resources.resources.session.maximumstatefulsessions">
         <value>'2147483647'</value>
