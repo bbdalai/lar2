@@ -21,8 +21,8 @@
     <property name="integrationserver-default.common-keystores_cloudmigration_keystore.keystore.type" many="false" isSecure="false" displayName="integrationserver-default.common-keystores_cloudmigration_keystore.keystore.type">
         <value>JKS</value>
     </property>
-    <property name="integrationserver-default.common-truststores_cloudmigration_truststore.truststore.password" many="false" isSecure="true" displayName="integrationserver-default.common-truststores_cloudmigration_truststore.truststore.password">
-        <value>'{AES/CBC/PKCS5Padding}{diD911MDCIQoiZFh0YqMTw6QgVjSD3i9gcWQp251dhE=}{ORp30RQSapB4wfjLqpGRhQ==}H2P4b9RXdNa9ut5tQxqtgg=='</value>
+    <property name="integrationserver-default.common-truststores_cloudmigration_truststore.truststore.password" many="false" isSecure="false" displayName="integrationserver-default.common-truststores_cloudmigration_truststore.truststore.password">
+        <value></value>
     </property>
     <property name="integrationserver-default.is-consumer-endpoints-http-webservicesconsumerhttp01.consumer.transport.host" many="false" isSecure="false" displayName="integrationserver-default.is-consumer-endpoints-http-webservicesconsumerhttp01.consumer.transport.host">
         <value>VMSIQACLOUD02</value>
@@ -46,10 +46,10 @@
         <value>milliseconds</value>
     </property>
     <property name="integrationserver-default.common-jndi-jndi_nsp.jndi.provider.user" many="false" isSecure="false" displayName="integrationserver-default.common-jndi-jndi_nsp.jndi.provider.user">
-        <value>''</value>
+        <value>${UM_USER}</value>
     </property>
-    <property name="integrationserver-default.common-truststores_default_wmcloud_truststore.truststore.password" many="false" isSecure="true" displayName="integrationserver-default.common-truststores_default_wmcloud_truststore.truststore.password">
-        <value>'{AES/CBC/PKCS5Padding}{h2erWKfoh0twFpfPzv/0NpwZfvBwzUlIgfR5x/LBYC0=}{s0PneEU7MhMm+tKYz6Mgkw==}t/8A0Bw1iiyRQfeZtJCkpw=='</value>
+    <property name="integrationserver-default.common-truststores_default_wmcloud_truststore.truststore.password" many="false" isSecure="false" displayName="integrationserver-default.common-truststores_default_wmcloud_truststore.truststore.password">
+        <value></value>
     </property>
     <property name="integrationserver-default.common-keystores_default_is_keystore.keystore.location" many="false" isSecure="false" displayName="integrationserver-default.common-keystores_default_is_keystore.keystore.location">
         <value>C:\SoftwareAG103\common\conf\keystore.jks</value>
@@ -78,8 +78,8 @@
     <property name="integrationserver-default.is-resources.resources.serverthreadpool.availablethreadswarningthreshold" many="false" isSecure="false" displayName="integrationserver-default.is-resources.resources.serverthreadpool.availablethreadswarningthreshold">
         <value>'15'</value>
     </property>
-    <property name="integrationserver-default.common-jndi-jndi_nsp.jndi.provider.password" many="false" isSecure="true" displayName="integrationserver-default.common-jndi-jndi_nsp.jndi.provider.password">
-        <value>''</value>
+    <property name="integrationserver-default.common-jndi-jndi_nsp.jndi.provider.password" many="false" isSecure="false" displayName="integrationserver-default.common-jndi-jndi_nsp.jndi.provider.password">
+        <value>${UM_PASSWORD}</value>
     </property>
     <property name="integrationserver-default.is-resources.storesettings.brokerconfigured" many="false" isSecure="false" displayName="integrationserver-default.is-resources.storesettings.brokerconfigured">
         <value>'false'</value>
@@ -90,17 +90,17 @@
     <property name="integrationserver-default.common-truststores_cloudmigration_truststore.truststore.type" many="false" isSecure="false" displayName="integrationserver-default.common-truststores_cloudmigration_truststore.truststore.type">
         <value>JKS</value>
     </property>
-    <property name="integrationserver-default.common-jms-tcfshareddurable_is_jms_connection.jms.password" many="false" isSecure="true" displayName="integrationserver-default.common-jms-tcfshareddurable_is_jms_connection.jms.password">
-        <value>'{AES/CBC/PKCS5Padding}{KE7AOEqL66HMjQqJ/YrGUkjfC3/CLFT9HcmwpoiYQWk=}{cJ35I41jon2Ues9k8936ug==}1M9zwR6RgXPd6cHP69pfhw=='</value>
+    <property name="integrationserver-default.common-jms-tcfshareddurable_is_jms_connection.jms.password" many="false" isSecure="false" displayName="integrationserver-default.common-jms-tcfshareddurable_is_jms_connection.jms.password">
+        <value>${UM_PASSWORD}</value>
     </property>
     <property name="integrationserver-default.common-keystores_default_is_keystore.keystore.password" many="false" isSecure="true" displayName="integrationserver-default.common-keystores_default_is_keystore.keystore.password">
         <value>'{AES/CBC/PKCS5Padding}{ul+o5ma903LEd+zxw+Yo5tMUbp6p2i/XMUr2YFod5Kk=}{cbpUw/QJ/EKAgrVm4mFHqA==}JlDzgCzeQVwZFE5jE2BhZA=='</value>
     </property>
     <property name="integrationserver-default.common-jndi-jndi_nhp.jndi.provider.url" many="false" isSecure="false" displayName="integrationserver-default.common-jndi-jndi_nhp.jndi.provider.url">
-        <value>nhp://localhost:9004/</value>
+        <value>${UM_URL}</value>
     </property>
     <property name="integrationserver-default.common-jndi-jndi_nsp.jndi.provider.url" many="false" isSecure="false" displayName="integrationserver-default.common-jndi-jndi_nsp.jndi.provider.url">
-        <value>nsp://localhost:9000/</value>
+        <value>${UM_URL}</value>
     </property>
     <property name="integrationserver-default.is-resources.resources.session.availablestatefulsessionwarningthreshold" many="false" isSecure="false" displayName="integrationserver-default.is-resources.resources.session.availablestatefulsessionwarningthreshold">
         <value>'25'</value>
@@ -115,19 +115,19 @@
         <value>'true'</value>
     </property>
     <property name="integrationserver-default.common-wmmessaging-secure_nhps_is_um_connection.messaging.provider.url" many="false" isSecure="false" displayName="integrationserver-default.common-wmmessaging-secure_nhps_is_um_connection.messaging.provider.url">
-        <value>nhps://localhost:9003/</value>
+        <value>${UM_URL}</value>
     </property>
     <property name="integrationserver-default.common-keystores_is_um_keystore.keystore.type" many="false" isSecure="false" displayName="integrationserver-default.common-keystores_is_um_keystore.keystore.type">
         <value>JKS</value>
     </property>
-    <property name="integrationserver-default.common-jms-qcf_is_jms_connection.jms.password" many="false" isSecure="true" displayName="integrationserver-default.common-jms-qcf_is_jms_connection.jms.password">
-        <value>'{AES/CBC/PKCS5Padding}{b6dBmvm/qhk/PIXNfBxdfryuK3SPNuP+GZDC9/mEKaA=}{YiZ+t0+ZY1jrIKexZSG1EA==}RmKkCDpYB7Dw1YJe0uVTeA=='</value>
+    <property name="integrationserver-default.common-jms-qcf_is_jms_connection.jms.password" many="false" isSecure="false" displayName="integrationserver-default.common-jms-qcf_is_jms_connection.jms.password">
+        <value>${UM_PASSWORD}</value>
     </property>
     <property name="integrationserver-default.common-truststores_default_wmcloud_truststore.truststore.type" many="false" isSecure="false" displayName="integrationserver-default.common-truststores_default_wmcloud_truststore.truststore.type">
         <value>JKS</value>
     </property>
-    <property name="integrationserver-default.common-jms-xacf_is_jms_connection.jms.password" many="false" isSecure="true" displayName="integrationserver-default.common-jms-xacf_is_jms_connection.jms.password">
-        <value>'{AES/CBC/PKCS5Padding}{qmL9Wc3nW4RPJyvmllXGeRAB8odUHNfUBnrs+rV95p8=}{N1ni6ayY1ZFAKs27qVC9Ow==}Ajj3hoUTxFnPL0Q+Go5avQ=='</value>
+    <property name="integrationserver-default.common-jms-xacf_is_jms_connection.jms.password" many="false" isSecure="false" displayName="integrationserver-default.common-jms-xacf_is_jms_connection.jms.password">
+        <value>${UM_PASSWORD}</value>
     </property>
     <property name="integrationserver-default.common-keystores_cloudmigration_keystore.keystore.key.password" many="false" isSecure="true" displayName="integrationserver-default.common-keystores_cloudmigration_keystore.keystore.key.password">
         <value>'{AES/CBC/PKCS5Padding}{0MP5/OhWIGyCEHstI4ijAoL8ZTun6SZgpq2Y+Vl3YRM=}{Zqx5DXZTc6IYREHjtnrEBg==}FWO49H3RzsXyM08npy17LQ=='</value>
@@ -139,34 +139,34 @@
         <value>VMSIQACLOUD02</value>
     </property>
     <property name="integrationserver-default.common-jndi-jndi_nhps.jndi.provider.url" many="false" isSecure="false" displayName="integrationserver-default.common-jndi-jndi_nhps.jndi.provider.url">
-        <value>nhps://localhost:9003/</value>
+        <value>${UM_URL}</value>
     </property>
     <property name="integrationserver-default.common-truststores_is_um_truststore.truststore.location" many="false" isSecure="false" displayName="integrationserver-default.common-truststores_is_um_truststore.truststore.location">
         <value>C:\SoftwareAG103\UniversalMessaging\server\umserver\bin\nirvanacacerts.jks</value>
     </property>
     <property name="integrationserver-default.common-jms-cfshareddurable_is_jms_connection.jms.user" many="false" isSecure="false" displayName="integrationserver-default.common-jms-cfshareddurable_is_jms_connection.jms.user">
-        <value>Administrator</value>
+        <value>${UM_USER}</value>
     </property>
     <property name="integrationserver-default.common-jms-tcfshareddurable_is_jms_connection.jms.user" many="false" isSecure="false" displayName="integrationserver-default.common-jms-tcfshareddurable_is_jms_connection.jms.user">
-        <value>Administrator</value>
+        <value>${UM_USER}</value>
     </property>
     <property name="integrationserver-default.common-wmmessaging-secure_is_um_connection.messaging.provider.url" many="false" isSecure="false" displayName="integrationserver-default.common-wmmessaging-secure_is_um_connection.messaging.provider.url">
-        <value>nsps://localhost:9002</value>
+        <value>${UM_URL}</value>
     </property>
     <property name="integrationserver-default.common-jndi-test_without_auth.jndi.provider.user" many="false" isSecure="false" displayName="integrationserver-default.common-jndi-test_without_auth.jndi.provider.user">
-        <value>''</value>
+        <value>${UM_USER}</value>
     </property>
     <property name="integrationserver-default.is-provider-endpoints-https-webservicesproviderhttps01.provider.wssecurity.timetolive" many="false" isSecure="false" displayName="integrationserver-default.is-provider-endpoints-https-webservicesproviderhttps01.provider.wssecurity.timetolive">
         <value>'60'</value>
     </property>
-    <property name="integrationserver-default.common-jndi-test_without_auth.jndi.provider.password" many="false" isSecure="true" displayName="integrationserver-default.common-jndi-test_without_auth.jndi.provider.password">
-        <value>''</value>
+    <property name="integrationserver-default.common-jndi-test_without_auth.jndi.provider.password" many="false" isSecure="false" displayName="integrationserver-default.common-jndi-test_without_auth.jndi.provider.password">
+        <value>${UM_PASSWORD}</value>
     </property>
     <property name="integrationserver-default.common-jms-xacf_is_jms_connection.jms.user" many="false" isSecure="false" displayName="integrationserver-default.common-jms-xacf_is_jms_connection.jms.user">
-        <value>Administrator</value>
+        <value>${UM_USER}</value>
     </property>
     <property name="integrationserver-default.common-jms-qcf_is_jms_connection.jms.user" many="false" isSecure="false" displayName="integrationserver-default.common-jms-qcf_is_jms_connection.jms.user">
-        <value>Administrator</value>
+        <value>${UM_USER}</value>
     </property>
     <property name="integrationserver-default.is-consumer-endpoints-http-webservicesconsumerhttp01.consumer.description" many="false" isSecure="false" displayName="integrationserver-default.is-consumer-endpoints-http-webservicesconsumerhttp01.consumer.description">
         <value>WebServicesConsumerHTTP01</value>
@@ -180,11 +180,11 @@
     <property name="integrationserver-default.is-resources.storesettings.xarecoverystore.storelocation" many="false" isSecure="false" displayName="integrationserver-default.is-resources.storesettings.xarecoverystore.storelocation">
         <value>XAStore</value>
     </property>
-    <property name="integrationserver-default.common-truststores_is_um_truststore.truststore.password" many="false" isSecure="true" displayName="integrationserver-default.common-truststores_is_um_truststore.truststore.password">
-        <value>'{AES/CBC/PKCS5Padding}{TTDUTO1C8unoLaWtSUPzEmhL++1eWFNe1tUeP+oQlx8=}{wKXi4g/grmRmiSiy0hLa6g==}XSpEwcspabRFeSXn85zbjA=='</value>
+    <property name="integrationserver-default.common-truststores_is_um_truststore.truststore.password" many="false" isSecure="false" displayName="integrationserver-default.common-truststores_is_um_truststore.truststore.password">
+        <value></value>
     </property>
     <property name="integrationserver-default.common-jms-cfnonshareddurable_is_jms_connection.jms.user" many="false" isSecure="false" displayName="integrationserver-default.common-jms-cfnonshareddurable_is_jms_connection.jms.user">
-        <value>Administrator</value>
+        <value>${UM_USER}</value>
     </property>
     <property name="integrationserver-default.is-provider-endpoints-http-webservicesproviderhttp01.@alias" many="false" isSecure="false" displayName="integrationserver-default.is-provider-endpoints-http-webservicesproviderhttp01.@alias">
         <value>WebServicesProviderHTTP01</value>
@@ -193,7 +193,7 @@
         <value>JKS</value>
     </property>
     <property name="integrationserver-default.common-jndi-jndi_nhps.jndi.provider.user" many="false" isSecure="false" displayName="integrationserver-default.common-jndi-jndi_nhps.jndi.provider.user">
-        <value>''</value>
+        <value>${UM_USER}</value>
     </property>
     <property name="integrationserver-default.is-provider-endpoints-http-webservicesproviderhttp01.provider.wssecurity.keystorealias" many="false" isSecure="false" displayName="integrationserver-default.is-provider-endpoints-http-webservicesproviderhttp01.provider.wssecurity.keystorealias">
         <value>CloudMigration_keystore</value>
@@ -207,14 +207,14 @@
     <property name="integrationserver-default.common-truststores_default_is_truststore.truststore.location" many="false" isSecure="false" displayName="integrationserver-default.common-truststores_default_is_truststore.truststore.location">
         <value>C:\SoftwareAG912\common\conf\platform_truststore.jks</value>
     </property>
-    <property name="integrationserver-default.common-truststores_default_is_truststore.truststore.password" many="false" isSecure="true" displayName="integrationserver-default.common-truststores_default_is_truststore.truststore.password">
-        <value>'{AES/CBC/PKCS5Padding}{t8bKsIoUfjS6X2eXcu1qz7VgxKFpgYpeIQIm6JaRLhY=}{M525fzlYAIy+RQGefq0NSg==}p0oK2n1oZyFNoN+vP2UNJQ=='</value>
+    <property name="integrationserver-default.common-truststores_default_is_truststore.truststore.password" many="false" isSecure="false" displayName="integrationserver-default.common-truststores_default_is_truststore.truststore.password">
+        <value></value>
     </property>
-    <property name="integrationserver-default.common-jms-cfshareddurable_is_jms_connection.jms.password" many="false" isSecure="true" displayName="integrationserver-default.common-jms-cfshareddurable_is_jms_connection.jms.password">
-        <value>'{AES/CBC/PKCS5Padding}{xfzDyToxUwZmvdJBgBpyBAGn0PwQlXXvCHuJY/oW5Wc=}{UQmCus8ORY6BDrgWo3vjIA==}O7FdGHUsKIfJrVe3Hh0WAg=='</value>
+    <property name="integrationserver-default.common-jms-cfshareddurable_is_jms_connection.jms.password" many="false" isSecure="false" displayName="integrationserver-default.common-jms-cfshareddurable_is_jms_connection.jms.password">
+        <value>${UM_PASSWORD}</value>
     </property>
     <property name="integrationserver-default.common-jndi-jndi_nsps.jndi.provider.url" many="false" isSecure="false" displayName="integrationserver-default.common-jndi-jndi_nsps.jndi.provider.url">
-        <value>nsps://vmsiqacloud02:9002/</value>
+        <value>${UM_URL}</value>
     </property>
     <property name="integrationserver-default.is-provider-endpoints-https-webservicesproviderhttps01.provider.wssecurity.maxskew" many="false" isSecure="false" displayName="integrationserver-default.is-provider-endpoints-https-webservicesproviderhttps01.provider.wssecurity.maxskew">
         <value>'60'</value>
@@ -228,8 +228,8 @@
     <property name="integrationserver-default.is-consumer-endpoints-https-webservicesconsumerhttps01.consumer.description" many="false" isSecure="false" displayName="integrationserver-default.is-consumer-endpoints-https-webservicesconsumerhttps01.consumer.description">
         <value>WebServicesConsumerHTTPS01</value>
     </property>
-    <property name="integrationserver-default.common-jms-cfnonshareddurable_is_jms_connection.jms.password" many="false" isSecure="true" displayName="integrationserver-default.common-jms-cfnonshareddurable_is_jms_connection.jms.password">
-        <value>'{AES/CBC/PKCS5Padding}{cTGQ2mw3WU5B8PJTsH81q9fcRQlk/WoweS7OqaGUm54=}{Oy9Zog7Fir4qn9HVfrG1Dw==}VUDTuhodxGMSVgLl1EOrpg=='</value>
+    <property name="integrationserver-default.common-jms-cfnonshareddurable_is_jms_connection.jms.password" many="false" isSecure="false" displayName="integrationserver-default.common-jms-cfnonshareddurable_is_jms_connection.jms.password">
+        <value>${UM_PASSWORD}</value>
     </property>
     <property name="integrationserver-default.is-provider-endpoints-https-webservicesproviderhttps01.provider.wssecurity.keystorealias" many="false" isSecure="false" displayName="integrationserver-default.is-provider-endpoints-https-webservicesproviderhttps01.provider.wssecurity.keystorealias">
         <value>CloudMigration_keystore</value>
@@ -244,7 +244,7 @@
         <value>Basic</value>
     </property>
     <property name="integrationserver-default.common-jndi-test_without_auth.jndi.provider.url" many="false" isSecure="false" displayName="integrationserver-default.common-jndi-test_without_auth.jndi.provider.url">
-        <value>nsp://localhost:9000/</value>
+        <value>${UM_URL}</value>
     </property>
     <property name="integrationserver-default.common-truststores_default_is_truststore.truststore.type" many="false" isSecure="false" displayName="integrationserver-default.common-truststores_default_is_truststore.truststore.type">
         <value>JKS</value>
@@ -258,8 +258,8 @@
     <property name="integrationserver-default.is-resources.storesettings.triggerdocumentstore.user" many="false" isSecure="false" displayName="integrationserver-default.is-resources.storesettings.triggerdocumentstore.user">
         <value>Administrator</value>
     </property>
-    <property name="integrationserver-default.common-jndi-jndi_nhps.jndi.provider.password" many="false" isSecure="true" displayName="integrationserver-default.common-jndi-jndi_nhps.jndi.provider.password">
-        <value>''</value>
+    <property name="integrationserver-default.common-jndi-jndi_nhps.jndi.provider.password" many="false" isSecure="false" displayName="integrationserver-default.common-jndi-jndi_nhps.jndi.provider.password">
+        <value>${UM_PASSWORD}</value>
     </property>
     <property name="integrationserver-default.is-resources.resources.serverthreadpool.schedulerthreadthrottle" many="false" isSecure="false" displayName="integrationserver-default.is-resources.resources.serverthreadpool.schedulerthreadthrottle">
         <value>'75'</value>
@@ -267,26 +267,26 @@
     <property name="integrationserver-default.is-consumer-endpoints-https-webservicesconsumerhttps01.consumer.transport.protocol" many="false" isSecure="false" displayName="integrationserver-default.is-consumer-endpoints-https-webservicesconsumerhttps01.consumer.transport.protocol">
         <value>HTTPS</value>
     </property>
-    <property name="integrationserver-default.common-jndi-jndi_nhp.jndi.provider.password" many="false" isSecure="true" displayName="integrationserver-default.common-jndi-jndi_nhp.jndi.provider.password">
-        <value>''</value>
+    <property name="integrationserver-default.common-jndi-jndi_nhp.jndi.provider.password" many="false" isSecure="false" displayName="integrationserver-default.common-jndi-jndi_nhp.jndi.provider.password">
+        <value>${UM_PASSWORD}</value>
     </property>
-    <property name="integrationserver-default.common-jndi-jndi_nsps.jndi.provider.password" many="false" isSecure="true" displayName="integrationserver-default.common-jndi-jndi_nsps.jndi.provider.password">
-        <value>''</value>
+    <property name="integrationserver-default.common-jndi-jndi_nsps.jndi.provider.password" many="false" isSecure="false" displayName="integrationserver-default.common-jndi-jndi_nsps.jndi.provider.password">
+        <value>${UM_PASSWORD}</value>
     </property>
     <property name="integrationserver-default.common-jndi-jndi_nsps.jndi.provider.user" many="false" isSecure="false" displayName="integrationserver-default.common-jndi-jndi_nsps.jndi.provider.user">
-        <value>''</value>
+        <value>${UM_USER}</value>
     </property>
     <property name="integrationserver-default.is-consumer-endpoints-https-webservicesconsumerhttps01.@alias" many="false" isSecure="false" displayName="integrationserver-default.is-consumer-endpoints-https-webservicesconsumerhttps01.@alias">
         <value>WebServicesConsumerHTTPS01</value>
     </property>
     <property name="integrationserver-default.common-wmmessaging-basic_is_jms_connection.messaging.provider.url" many="false" isSecure="false" displayName="integrationserver-default.common-wmmessaging-basic_is_jms_connection.messaging.provider.url">
-        <value>nsp://localhost:9000</value>
+        <value>${UM_URL}</value>
     </property>
     <property name="integrationserver-default.common-smtp.portnumber" many="false" isSecure="false" displayName="integrationserver-default.common-smtp.portnumber">
-        <value>'25'</value>
+        <value>'45'</value>
     </property>
     <property name="integrationserver-default.common-jndi-jndi_nhp.jndi.provider.user" many="false" isSecure="false" displayName="integrationserver-default.common-jndi-jndi_nhp.jndi.provider.user">
-        <value>''</value>
+        <value>${UM_USER}</value>
     </property>
     <property name="integrationserver-default.is-provider-endpoints-http-webservicesproviderhttp01.provider.description" many="false" isSecure="false" displayName="integrationserver-default.is-provider-endpoints-http-webservicesproviderhttp01.provider.description">
         <value>WebServicesProviderHTTP01</value>
@@ -319,7 +319,7 @@
         <value>'Hello Cloud Migration: Global variable'</value>
     </property>
     <property name="integrationserver-default.common-jms-tcfnonshareddurable_is_jms_connection.jms.user" many="false" isSecure="false" displayName="integrationserver-default.common-jms-tcfnonshareddurable_is_jms_connection.jms.user">
-        <value>''</value>
+        <value>${UM_USER}</value>
     </property>
     <property name="integrationserver-default.is-resources.resources.serverthreadpool.maximumthreads" many="false" isSecure="false" displayName="integrationserver-default.is-resources.resources.serverthreadpool.maximumthreads">
         <value>'75'</value>
