@@ -1,7 +1,7 @@
 <asset_composite xmlns="http://namespaces.softwareag.com/acdl/1.0" targetNamespace="http://namespaces.softwareag.com/webMethods/IS" name="loanserver" runtimeVersion="10.3.0.0">
   <implementation.generic type="ispackage" />
-  <buildInfo name="BuildVersion" value="10.3.0.0.1548328204637" />
-  <buildInfo name="BuildTimestamp" value="2019-01-24T16:40:04" />
+  <buildInfo name="BuildVersion" value="10.3.0.0.1548329417704" />
+  <buildInfo name="BuildTimestamp" value="2019-01-24T17:00:17" />
   <buildInfo name="MinimumTargetRuntimeVersion" value="10.3.0.0" />
   <property name="activatePkgOnInstall" displayName="Activate Package On Install">
     <value>true</value>
@@ -32,7 +32,6 @@
   </property>
   <asset name="ISPackage.loanserver" displayName="loanserver">
     <implementation.generic type="ispackage" />
-    <dependsOn>IS:ISPackage.loanmessage</dependsOn>
   </asset>
   <asset name="loan.loanApprovalService_1" displayName="loan:loanApprovalService_1">
     <implementation.generic type="isflowservice" />
