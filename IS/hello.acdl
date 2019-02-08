@@ -1,7 +1,7 @@
 <asset_composite xmlns="http://namespaces.softwareag.com/acdl/1.0" targetNamespace="http://namespaces.softwareag.com/webMethods/IS" name="hello" runtimeVersion="10.3.0.0">
   <implementation.generic type="ispackage" />
-  <buildInfo name="BuildVersion" value="10.3.0.0.1548917615630" />
-  <buildInfo name="BuildTimestamp" value="2019-01-31T12:23:35" />
+  <buildInfo name="BuildVersion" value="10.3.0.0.1549627864279" />
+  <buildInfo name="BuildTimestamp" value="2019-02-08T17:41:04" />
   <buildInfo name="MinimumTargetRuntimeVersion" value="10.3.0.0" />
   <property name="activatePkgOnInstall" displayName="Activate Package On Install">
     <value>true</value>
@@ -35,6 +35,9 @@
   </asset>
   <asset name="hello.xtest" displayName="hello:xtest">
     <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="hello.doc1" displayName="hello:doc1">
+    <implementation.generic type="isdocumenttype" />
   </asset>
   <asset name="hello.code" displayName="code">
     <implementation.generic type="isfolder" />
