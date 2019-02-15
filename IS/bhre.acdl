@@ -1,7 +1,7 @@
 <asset_composite xmlns="http://namespaces.softwareag.com/acdl/1.0" targetNamespace="http://namespaces.softwareag.com/webMethods/IS" name="bhre" runtimeVersion="10.3.0.0">
   <implementation.generic type="ispackage" />
-  <buildInfo name="BuildVersion" value="10.3.0.0.1550221096765" />
-  <buildInfo name="BuildTimestamp" value="2019-02-15T14:28:16" />
+  <buildInfo name="BuildVersion" value="10.3.0.0.1550222236523" />
+  <buildInfo name="BuildTimestamp" value="2019-02-15T14:47:16" />
   <buildInfo name="MinimumTargetRuntimeVersion" value="10.3.0.0" />
   <property name="activatePkgOnInstall" displayName="Activate Package On Install">
     <value>true</value>
