@@ -1,0 +1,804 @@
+<asset_composite xmlns="http://namespaces.softwareag.com/acdl/1.0" targetNamespace="http://namespaces.softwareag.com/webMethods/IS" name="WmSalesforceProvider" runtimeVersion="10.3.0.0">
+  <implementation.generic type="ispackage" />
+  <buildInfo name="BuildVersion" value="10.3.0.0.1552477754122" />
+  <buildInfo name="BuildTimestamp" value="2019-03-13T17:19:14" />
+  <buildInfo name="MinimumTargetRuntimeVersion" value="10.3.0.0" />
+  <property name="activatePkgOnInstall" displayName="Activate Package On Install">
+    <value>true</value>
+  </property>
+  <property name="archivePkgOnInstall" displayName="Archive Package On Install">
+    <value>true</value>
+  </property>
+  <property name="compilePackage" displayName="Compile Package On Install">
+    <value>true</value>
+  </property>
+  <property name="fragPackage" displayName="Fragment Package On Install">
+    <value>true</value>
+  </property>
+  <property name="clearACLs" displayName="Delete ACLs for the assets from the target Integration Server">
+    <value>false</value>
+  </property>
+  <property name="disallowActivePackageInstall" displayName="disallowActivePackageInstall">
+    <value>false</value>
+  </property>
+  <property name="packageExecutionCheck" displayName="packageExecutionCheck">
+    <value>0</value>
+  </property>
+  <property name="suspendTriggersDuringDeploy" displayName="Suspend Triggers During Deployment">
+    <value>false</value>
+  </property>
+  <property name="syncDocTypesToBroker" displayName="Synchronize Document Types To Broker During Deployment">
+    <value>true</value>
+  </property>
+  <asset name="ISPackage.WmSalesforceProvider" displayName="WmSalesforceProvider">
+    <implementation.generic type="ispackage" />
+    <dependsOn>IS:ISPackage.WmCloudStreams</dependsOn>
+  </asset>
+  <asset name="wm.cloudstreams.salesforce.utils.UpdateServerUrl" displayName="wm.cloudstreams.salesforce.utils:UpdateServerUrl">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:wm.cloudstreams.service.common.lookup.specs.mapServiceSpec</dependsOn>
+    <dependsOn>IS:Acl.WmPrivate</dependsOn>
+  </asset>
+  <asset name="wm.cloudstreams.salesforce.plm.unregisterProvider" displayName="wm.cloudstreams.salesforce.plm:unregisterProvider">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:wm.cloudstreams.provider.lifecycle.bootstrap.unregisterProvider</dependsOn>
+    <dependsOn>IS:Acl.WmPrivate</dependsOn>
+  </asset>
+  <asset name="wm.cloudstreams.salesforce.plm.registerProviderType" displayName="wm.cloudstreams.salesforce.plm:registerProviderType">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:WmSalesforceProvider.code.classes.wm.cloudstreams.salesforce.plm.class</dependsOn>
+    <dependsOn>IS:wm.cloudstreams.salesforce.plm.setACLs</dependsOn>
+    <dependsOn>IS:Acl.WmPrivate</dependsOn>
+  </asset>
+  <asset name="wm.cloudstreams.salesforce.plm.registerProvider" displayName="wm.cloudstreams.salesforce.plm:registerProvider">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:wm.cloudstreams.provider.lifecycle.bootstrap.registerProvider</dependsOn>
+    <dependsOn>IS:wm.cloudstreams.salesforce.plm.setACLs</dependsOn>
+    <dependsOn>IS:Acl.WmPrivate</dependsOn>
+  </asset>
+  <asset name="wm.cloudstreams.salesforce.plm.setACLs" displayName="wm.cloudstreams.salesforce.plm:setACLs">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:WmSalesforceProvider.code.classes.wm.cloudstreams.salesforce.plm.class</dependsOn>
+    <dependsOn>IS:wm.cloudstreams.salesforce.plm.registerProviderType</dependsOn>
+    <dependsOn>IS:Acl.WmPrivate</dependsOn>
+  </asset>
+  <asset name="wmSalesforceBulkConnector_v25.customDoctypes.docTypeRef_LoginOutput" displayName="wmSalesforceBulkConnector_v25.customDoctypes:docTypeRef_LoginOutput">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:wmSalesforceBulkConnector_v25.customDoctypes.docTypeRef_tns_LoginResult</dependsOn>
+  </asset>
+  <asset name="wmSalesforceBulkConnector_v25.customDoctypes.docTypeRef_LoginInput" displayName="wmSalesforceBulkConnector_v25.customDoctypes:docTypeRef_LoginInput">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="wmSalesforceBulkConnector_v25.customDoctypes.docTypeRef_LogoutInput" displayName="wmSalesforceBulkConnector_v25.customDoctypes:docTypeRef_LogoutInput">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="wmSalesforceBulkConnector_v25.customDoctypes.docTypeRef_LogoutOutput" displayName="wmSalesforceBulkConnector_v25.customDoctypes:docTypeRef_LogoutOutput">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="wmSalesforceBulkConnector_v25.customDoctypes.docTypeRef_tns_GetUserInfoResult" displayName="wmSalesforceBulkConnector_v25.customDoctypes:docTypeRef_tns_GetUserInfoResult">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="wmSalesforceBulkConnector_v25.customDoctypes.docTypeRef_tns_LoginResult" displayName="wmSalesforceBulkConnector_v25.customDoctypes:docTypeRef_tns_LoginResult">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:wmSalesforceBulkConnector_v25.customDoctypes.docTypeRef_tns_GetUserInfoResult</dependsOn>
+  </asset>
+  <asset name="wmSalesforceConnector_v42.lookup.services.businessObjectDescribe" displayName="wmSalesforceConnector_v42.lookup.services:businessObjectDescribe">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:wm.cloudstreams.service.soap.lookup.specs.boDescribeSpecEx</dependsOn>
+    <dependsOn>IS:WmSalesforceProvider.code.classes.wmSalesforceConnector_v42.lookup.services.class</dependsOn>
+    <dependsOn>IS:wmSalesforceConnector_v42.lookup.services.getExternalIDFields</dependsOn>
+  </asset>
+  <asset name="wmSalesforceConnector_v42.lookup.services.getExternalIDFields" displayName="wmSalesforceConnector_v42.lookup.services:getExternalIDFields">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:WmSalesforceProvider.code.classes.wmSalesforceConnector_v42.lookup.services.class</dependsOn>
+    <dependsOn>IS:wmSalesforceConnector_v42.lookup.services.businessObjectDescribe</dependsOn>
+  </asset>
+  <asset name="wmSalesforceConnector_v42.lookup.filters.filterObjectList" displayName="wmSalesforceConnector_v42.lookup.filters:filterObjectList">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:wmSalesforceConnector_v42.SforceService.doctypes.docTypeRef_tns_DescribeGlobalSObjectResult</dependsOn>
+    <dependsOn>IS:WmSalesforceProvider.code.classes.wmSalesforceConnector_v42.lookup.filters.class</dependsOn>
+    <dependsOn>IS:wmSalesforceConnector_v42.lookup.filters.isRequiredField</dependsOn>
+    <dependsOn>IS:wmSalesforceConnector_v42.lookup.filters.filterObjectDescribe</dependsOn>
+  </asset>
+  <asset name="wmSalesforceConnector_v42.lookup.filters.isRequiredField" displayName="wmSalesforceConnector_v42.lookup.filters:isRequiredField">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:wmSalesforceConnector_v42.SforceService.doctypes.docTypeRef_tns_Field</dependsOn>
+    <dependsOn>IS:WmSalesforceProvider.code.classes.wmSalesforceConnector_v42.lookup.filters.class</dependsOn>
+    <dependsOn>IS:wmSalesforceConnector_v42.lookup.filters.filterObjectList</dependsOn>
+    <dependsOn>IS:wmSalesforceConnector_v42.lookup.filters.filterObjectDescribe</dependsOn>
+  </asset>
+  <asset name="wmSalesforceConnector_v42.lookup.filters.filterObjectDescribe" displayName="wmSalesforceConnector_v42.lookup.filters:filterObjectDescribe">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:wmSalesforceConnector_v42.SforceService.doctypes.docTypeRef_tns_Field</dependsOn>
+    <dependsOn>IS:WmSalesforceProvider.code.classes.wmSalesforceConnector_v42.lookup.filters.class</dependsOn>
+    <dependsOn>IS:wmSalesforceConnector_v42.lookup.filters.filterObjectList</dependsOn>
+    <dependsOn>IS:wmSalesforceConnector_v42.lookup.filters.isRequiredField</dependsOn>
+  </asset>
+  <asset name="wmSalesforceConnector_v42.lookup.businessObjectList" displayName="wmSalesforceConnector_v42.lookup:businessObjectList">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:wm.cloudstreams.service.soap.lookup.specs.boListSpec</dependsOn>
+    <dependsOn>IS:wmSalesforceConnector_v42.lookup.interactions.describeGlobal</dependsOn>
+    <dependsOn>IS:wmSalesforceConnector_v42.lookup.filters.filterObjectList</dependsOn>
+  </asset>
+  <asset name="wmSalesforceConnector_v42.lookup.dboList" displayName="wmSalesforceConnector_v42.lookup:dboList">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:wm.cloudstreams.service.common.lookup.specs.dboListSpec</dependsOn>
+    <dependsOn>IS:wmSalesforceConnector_v42.lookup.businessObjectList</dependsOn>
+  </asset>
+  <asset name="wmSalesforceConnector_v42.lookup.dboDescribe" displayName="wmSalesforceConnector_v42.lookup:dboDescribe">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:wm.cloudstreams.service.common.lookup.specs.dboDescribeSpec</dependsOn>
+    <dependsOn>IS:wmSalesforceConnector_v42.lookup.businessObjectDescribe</dependsOn>
+  </asset>
+  <asset name="wmSalesforceConnector_v42.lookup.dboInteractions" displayName="wmSalesforceConnector_v42.lookup:dboInteractions">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:wm.cloudstreams.service.common.lookup.specs.dboInteractionSpec</dependsOn>
+  </asset>
+  <asset name="wmSalesforceConnector_v42.lookup.businessObjectDescribe" displayName="wmSalesforceConnector_v42.lookup:businessObjectDescribe">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:wm.cloudstreams.service.soap.lookup.specs.boDescribeSpecEx</dependsOn>
+    <dependsOn>IS:wmSalesforceConnector_v42.lookup.services.businessObjectDescribe</dependsOn>
+  </asset>
+  <asset name="wmSalesforceConnector_v42.util.services.getLoginError" displayName="wmSalesforceConnector_v42.util.services:getLoginError">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:wm.cloudstreams.service.common.lookup.specs.mapServiceSpec</dependsOn>
+    <dependsOn>IS:WmSalesforceProvider.code.classes.wmSalesforceConnector_v42.util.services.class</dependsOn>
+    <dependsOn>IS:wmSalesforceConnector_v42.util.services.queryFormatter</dependsOn>
+  </asset>
+  <asset name="wmSalesforceConnector_v42.util.services.queryFormatter" displayName="wmSalesforceConnector_v42.util.services:queryFormatter">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:wm.cloudstreams.service.common.lookup.specs.mapServiceSpec</dependsOn>
+    <dependsOn>IS:WmSalesforceProvider.code.classes.wmSalesforceConnector_v42.util.services.class</dependsOn>
+    <dependsOn>IS:wmSalesforceConnector_v42.util.services.getLoginError</dependsOn>
+  </asset>
+  <asset name="wmSalesforceConnector_v44.document.listener.platformEventResponse" displayName="wmSalesforceConnector_v44.document.listener:platformEventResponse">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="wmSalesforceConnector_v44.document.listener.pushTopicEventResponse" displayName="wmSalesforceConnector_v44.document.listener:pushTopicEventResponse">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="wmSalesforceConnector_v44.document.listener.cdcEventResponse" displayName="wmSalesforceConnector_v44.document.listener:cdcEventResponse">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="wmSalesforceConnector_v44.document.listener.genericEventResponse" displayName="wmSalesforceConnector_v44.document.listener:genericEventResponse">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="wmSalesforceConnector_v44.lookup.filters.filterObjectDescribe" displayName="wmSalesforceConnector_v44.lookup.filters:filterObjectDescribe">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:wmSalesforceConnector_v44.SforceService.doctypes.docTypeRef_tns_Field</dependsOn>
+    <dependsOn>IS:WmSalesforceProvider.code.classes.wmSalesforceConnector_v44.lookup.filters.class</dependsOn>
+    <dependsOn>IS:wmSalesforceConnector_v44.lookup.filters.isRequiredField</dependsOn>
+    <dependsOn>IS:wmSalesforceConnector_v44.lookup.filters.filterObjectList</dependsOn>
+  </asset>
+  <asset name="wmSalesforceConnector_v44.lookup.filters.isRequiredField" displayName="wmSalesforceConnector_v44.lookup.filters:isRequiredField">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:wmSalesforceConnector_v44.SforceService.doctypes.docTypeRef_tns_Field</dependsOn>
+    <dependsOn>IS:WmSalesforceProvider.code.classes.wmSalesforceConnector_v44.lookup.filters.class</dependsOn>
+    <dependsOn>IS:wmSalesforceConnector_v44.lookup.filters.filterObjectDescribe</dependsOn>
+    <dependsOn>IS:wmSalesforceConnector_v44.lookup.filters.filterObjectList</dependsOn>
+  </asset>
+  <asset name="wmSalesforceConnector_v44.lookup.filters.filterObjectList" displayName="wmSalesforceConnector_v44.lookup.filters:filterObjectList">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:wmSalesforceConnector_v44.SforceService.doctypes.docTypeRef_tns_DescribeGlobalSObjectResult</dependsOn>
+    <dependsOn>IS:WmSalesforceProvider.code.classes.wmSalesforceConnector_v44.lookup.filters.class</dependsOn>
+    <dependsOn>IS:wmSalesforceConnector_v44.lookup.filters.filterObjectDescribe</dependsOn>
+    <dependsOn>IS:wmSalesforceConnector_v44.lookup.filters.isRequiredField</dependsOn>
+  </asset>
+  <asset name="wmSalesforceConnector_v44.lookup.services.businessObjectDescribe" displayName="wmSalesforceConnector_v44.lookup.services:businessObjectDescribe">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:wm.cloudstreams.service.soap.lookup.specs.boDescribeSpecEx</dependsOn>
+    <dependsOn>IS:WmSalesforceProvider.code.classes.wmSalesforceConnector_v44.lookup.services.class</dependsOn>
+    <dependsOn>IS:wmSalesforceConnector_v44.lookup.services.getExternalIDFields</dependsOn>
+  </asset>
+  <asset name="wmSalesforceConnector_v44.lookup.services.getExternalIDFields" displayName="wmSalesforceConnector_v44.lookup.services:getExternalIDFields">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:WmSalesforceProvider.code.classes.wmSalesforceConnector_v44.lookup.services.class</dependsOn>
+    <dependsOn>IS:wmSalesforceConnector_v44.lookup.services.businessObjectDescribe</dependsOn>
+  </asset>
+  <asset name="wmSalesforceConnector_v44.lookup.dboInteractions" displayName="wmSalesforceConnector_v44.lookup:dboInteractions">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:wm.cloudstreams.service.common.lookup.specs.dboInteractionSpec</dependsOn>
+  </asset>
+  <asset name="wmSalesforceConnector_v44.lookup.dboList" displayName="wmSalesforceConnector_v44.lookup:dboList">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:wm.cloudstreams.service.common.lookup.specs.dboListSpec</dependsOn>
+    <dependsOn>IS:wmSalesforceConnector_v44.lookup.businessObjectList</dependsOn>
+  </asset>
+  <asset name="wmSalesforceConnector_v44.lookup.dboDescribe" displayName="wmSalesforceConnector_v44.lookup:dboDescribe">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:wm.cloudstreams.service.common.lookup.specs.dboDescribeSpec</dependsOn>
+    <dependsOn>IS:wmSalesforceConnector_v44.lookup.businessObjectDescribe</dependsOn>
+  </asset>
+  <asset name="wmSalesforceConnector_v44.lookup.businessObjectList" displayName="wmSalesforceConnector_v44.lookup:businessObjectList">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:wm.cloudstreams.service.soap.lookup.specs.boListSpec</dependsOn>
+    <dependsOn>IS:wmSalesforceConnector_v44.lookup.interactions.describeGlobal</dependsOn>
+    <dependsOn>IS:wmSalesforceConnector_v44.lookup.filters.filterObjectList</dependsOn>
+  </asset>
+  <asset name="wmSalesforceConnector_v44.lookup.businessObjectDescribe" displayName="wmSalesforceConnector_v44.lookup:businessObjectDescribe">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:wm.cloudstreams.service.soap.lookup.specs.boDescribeSpecEx</dependsOn>
+    <dependsOn>IS:wmSalesforceConnector_v44.lookup.services.businessObjectDescribe</dependsOn>
+  </asset>
+  <asset name="wmSalesforceConnector_v44.util.services.getLoginError" displayName="wmSalesforceConnector_v44.util.services:getLoginError">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:wm.cloudstreams.service.common.lookup.specs.mapServiceSpec</dependsOn>
+    <dependsOn>IS:WmSalesforceProvider.code.classes.wmSalesforceConnector_v44.util.services.class</dependsOn>
+    <dependsOn>IS:wmSalesforceConnector_v44.util.services.queryFormatter</dependsOn>
+  </asset>
+  <asset name="wmSalesforceConnector_v44.util.services.queryFormatter" displayName="wmSalesforceConnector_v44.util.services:queryFormatter">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:wm.cloudstreams.service.common.lookup.specs.mapServiceSpec</dependsOn>
+    <dependsOn>IS:WmSalesforceProvider.code.classes.wmSalesforceConnector_v44.util.services.class</dependsOn>
+    <dependsOn>IS:wmSalesforceConnector_v44.util.services.getLoginError</dependsOn>
+  </asset>
+  <asset name="wmSalesforceConnector_v25.lookup.filters.filterObjectList" displayName="wmSalesforceConnector_v25.lookup.filters:filterObjectList">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:wmSalesforceConnector_v25.doctypes.docTypeRef_tns_DescribeGlobalSObjectResult</dependsOn>
+    <dependsOn>IS:WmSalesforceProvider.code.classes.wmSalesforceConnector_v25.lookup.filters.class</dependsOn>
+    <dependsOn>IS:wmSalesforceConnector_v25.lookup.filters.isRequiredField</dependsOn>
+    <dependsOn>IS:wmSalesforceConnector_v25.lookup.filters.filterObjectDescribe</dependsOn>
+  </asset>
+  <asset name="wmSalesforceConnector_v25.lookup.filters.isRequiredField" displayName="wmSalesforceConnector_v25.lookup.filters:isRequiredField">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:wmSalesforceConnector_v25.doctypes.docTypeRef_tns_Field</dependsOn>
+    <dependsOn>IS:WmSalesforceProvider.code.classes.wmSalesforceConnector_v25.lookup.filters.class</dependsOn>
+    <dependsOn>IS:wmSalesforceConnector_v25.lookup.filters.filterObjectList</dependsOn>
+    <dependsOn>IS:wmSalesforceConnector_v25.lookup.filters.filterObjectDescribe</dependsOn>
+  </asset>
+  <asset name="wmSalesforceConnector_v25.lookup.filters.filterObjectDescribe" displayName="wmSalesforceConnector_v25.lookup.filters:filterObjectDescribe">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:wmSalesforceConnector_v25.doctypes.docTypeRef_tns_Field</dependsOn>
+    <dependsOn>IS:WmSalesforceProvider.code.classes.wmSalesforceConnector_v25.lookup.filters.class</dependsOn>
+    <dependsOn>IS:wmSalesforceConnector_v25.lookup.filters.filterObjectList</dependsOn>
+    <dependsOn>IS:wmSalesforceConnector_v25.lookup.filters.isRequiredField</dependsOn>
+  </asset>
+  <asset name="wmSalesforceConnector_v25.lookup.services.getExternalIDFields" displayName="wmSalesforceConnector_v25.lookup.services:getExternalIDFields">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:WmSalesforceProvider.code.classes.wmSalesforceConnector_v25.lookup.services.class</dependsOn>
+    <dependsOn>IS:wmSalesforceConnector_v25.lookup.services.businessObjectDescribe</dependsOn>
+  </asset>
+  <asset name="wmSalesforceConnector_v25.lookup.services.businessObjectDescribe" displayName="wmSalesforceConnector_v25.lookup.services:businessObjectDescribe">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:wm.cloudstreams.service.soap.lookup.specs.boDescribeSpecEx</dependsOn>
+    <dependsOn>IS:WmSalesforceProvider.code.classes.wmSalesforceConnector_v25.lookup.services.class</dependsOn>
+    <dependsOn>IS:wmSalesforceConnector_v25.lookup.services.getExternalIDFields</dependsOn>
+  </asset>
+  <asset name="wmSalesforceConnector_v25.lookup.businessObjectDescribe" displayName="wmSalesforceConnector_v25.lookup:businessObjectDescribe">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:wm.cloudstreams.service.soap.lookup.specs.boDescribeSpec</dependsOn>
+    <dependsOn>IS:wmSalesforceConnector_v25.lookup.services.businessObjectDescribe</dependsOn>
+  </asset>
+  <asset name="wmSalesforceConnector_v25.lookup.businessObjectList" displayName="wmSalesforceConnector_v25.lookup:businessObjectList">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:wm.cloudstreams.service.soap.lookup.specs.boListSpec</dependsOn>
+    <dependsOn>IS:wmSalesforceConnector_v25.lookup.interactions.describeGlobal</dependsOn>
+    <dependsOn>IS:wmSalesforceConnector_v25.lookup.filters.filterObjectList</dependsOn>
+  </asset>
+  <asset name="wmSalesforceConnector_v25.util.services.queryFormatter" displayName="wmSalesforceConnector_v25.util.services:queryFormatter">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:wm.cloudstreams.service.common.lookup.specs.mapServiceSpec</dependsOn>
+    <dependsOn>IS:WmSalesforceProvider.code.classes.wmSalesforceConnector_v25.util.services.class</dependsOn>
+    <dependsOn>IS:wmSalesforceConnector_v25.util.services.getLoginError</dependsOn>
+  </asset>
+  <asset name="wmSalesforceConnector_v25.util.services.getLoginError" displayName="wmSalesforceConnector_v25.util.services:getLoginError">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:wm.cloudstreams.service.common.lookup.specs.mapServiceSpec</dependsOn>
+    <dependsOn>IS:WmSalesforceProvider.code.classes.wmSalesforceConnector_v25.util.services.class</dependsOn>
+    <dependsOn>IS:wmSalesforceConnector_v25.util.services.queryFormatter</dependsOn>
+  </asset>
+  <asset name="wmSalesforceBulkConnector_v44.customDoctypes.docTypeRef_LogoutOutput" displayName="wmSalesforceBulkConnector_v44.customDoctypes:docTypeRef_LogoutOutput">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="wmSalesforceBulkConnector_v44.customDoctypes.docTypeRef_LogoutInput" displayName="wmSalesforceBulkConnector_v44.customDoctypes:docTypeRef_LogoutInput">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="wmSalesforceBulkConnector_v44.customDoctypes.docTypeRef_LoginInput" displayName="wmSalesforceBulkConnector_v44.customDoctypes:docTypeRef_LoginInput">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="wmSalesforceBulkConnector_v44.customDoctypes.docTypeRef_tns_LoginResult" displayName="wmSalesforceBulkConnector_v44.customDoctypes:docTypeRef_tns_LoginResult">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:wmSalesforceBulkConnector_v44.customDoctypes.docTypeRef_tns_GetUserInfoResult</dependsOn>
+  </asset>
+  <asset name="wmSalesforceBulkConnector_v44.customDoctypes.docTypeRef_tns_GetUserInfoResult" displayName="wmSalesforceBulkConnector_v44.customDoctypes:docTypeRef_tns_GetUserInfoResult">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="wmSalesforceBulkConnector_v44.customDoctypes.docTypeRef_LoginOutput" displayName="wmSalesforceBulkConnector_v44.customDoctypes:docTypeRef_LoginOutput">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:wmSalesforceBulkConnector_v44.customDoctypes.docTypeRef_tns_LoginResult</dependsOn>
+  </asset>
+  <asset name="wmSalesforceBulkConnector_v37.customDoctypes.docTypeRef_LoginInput" displayName="wmSalesforceBulkConnector_v37.customDoctypes:docTypeRef_LoginInput">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="wmSalesforceBulkConnector_v37.customDoctypes.docTypeRef_LogoutOutput" displayName="wmSalesforceBulkConnector_v37.customDoctypes:docTypeRef_LogoutOutput">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="wmSalesforceBulkConnector_v37.customDoctypes.docTypeRef_LoginOutput" displayName="wmSalesforceBulkConnector_v37.customDoctypes:docTypeRef_LoginOutput">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:wmSalesforceBulkConnector_v37.customDoctypes.docTypeRef_tns_LoginResult</dependsOn>
+  </asset>
+  <asset name="wmSalesforceBulkConnector_v37.customDoctypes.docTypeRef_tns_LoginResult" displayName="wmSalesforceBulkConnector_v37.customDoctypes:docTypeRef_tns_LoginResult">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:wmSalesforceBulkConnector_v37.customDoctypes.docTypeRef_tns_GetUserInfoResult</dependsOn>
+  </asset>
+  <asset name="wmSalesforceBulkConnector_v37.customDoctypes.docTypeRef_tns_GetUserInfoResult" displayName="wmSalesforceBulkConnector_v37.customDoctypes:docTypeRef_tns_GetUserInfoResult">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="wmSalesforceBulkConnector_v37.customDoctypes.docTypeRef_LogoutInput" displayName="wmSalesforceBulkConnector_v37.customDoctypes:docTypeRef_LogoutInput">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="wmSalesforceBulkConnector_v42.customDoctypes.docTypeRef_LogoutInput" displayName="wmSalesforceBulkConnector_v42.customDoctypes:docTypeRef_LogoutInput">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="wmSalesforceBulkConnector_v42.customDoctypes.docTypeRef_tns_GetUserInfoResult" displayName="wmSalesforceBulkConnector_v42.customDoctypes:docTypeRef_tns_GetUserInfoResult">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="wmSalesforceBulkConnector_v42.customDoctypes.docTypeRef_LoginOutput" displayName="wmSalesforceBulkConnector_v42.customDoctypes:docTypeRef_LoginOutput">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:wmSalesforceBulkConnector_v42.customDoctypes.docTypeRef_tns_LoginResult</dependsOn>
+  </asset>
+  <asset name="wmSalesforceBulkConnector_v42.customDoctypes.docTypeRef_LogoutOutput" displayName="wmSalesforceBulkConnector_v42.customDoctypes:docTypeRef_LogoutOutput">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="wmSalesforceBulkConnector_v42.customDoctypes.docTypeRef_tns_LoginResult" displayName="wmSalesforceBulkConnector_v42.customDoctypes:docTypeRef_tns_LoginResult">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:wmSalesforceBulkConnector_v42.customDoctypes.docTypeRef_tns_GetUserInfoResult</dependsOn>
+  </asset>
+  <asset name="wmSalesforceBulkConnector_v42.customDoctypes.docTypeRef_LoginInput" displayName="wmSalesforceBulkConnector_v42.customDoctypes:docTypeRef_LoginInput">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="wmSalesforceConnector_v29.lookup.filters.isRequiredField" displayName="wmSalesforceConnector_v29.lookup.filters:isRequiredField">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:wmSalesforceConnector_v29.doctypes.docTypeRef_tns_Field</dependsOn>
+    <dependsOn>IS:WmSalesforceProvider.code.classes.wmSalesforceConnector_v29.lookup.filters.class</dependsOn>
+    <dependsOn>IS:wmSalesforceConnector_v29.lookup.filters.filterObjectDescribe</dependsOn>
+    <dependsOn>IS:wmSalesforceConnector_v29.lookup.filters.filterObjectList</dependsOn>
+  </asset>
+  <asset name="wmSalesforceConnector_v29.lookup.filters.filterObjectDescribe" displayName="wmSalesforceConnector_v29.lookup.filters:filterObjectDescribe">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:wmSalesforceConnector_v29.doctypes.docTypeRef_tns_Field</dependsOn>
+    <dependsOn>IS:WmSalesforceProvider.code.classes.wmSalesforceConnector_v29.lookup.filters.class</dependsOn>
+    <dependsOn>IS:wmSalesforceConnector_v29.lookup.filters.isRequiredField</dependsOn>
+    <dependsOn>IS:wmSalesforceConnector_v29.lookup.filters.filterObjectList</dependsOn>
+  </asset>
+  <asset name="wmSalesforceConnector_v29.lookup.filters.filterObjectList" displayName="wmSalesforceConnector_v29.lookup.filters:filterObjectList">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:wmSalesforceConnector_v29.doctypes.docTypeRef_tns_DescribeGlobalSObjectResult</dependsOn>
+    <dependsOn>IS:WmSalesforceProvider.code.classes.wmSalesforceConnector_v29.lookup.filters.class</dependsOn>
+    <dependsOn>IS:wmSalesforceConnector_v29.lookup.filters.isRequiredField</dependsOn>
+    <dependsOn>IS:wmSalesforceConnector_v29.lookup.filters.filterObjectDescribe</dependsOn>
+  </asset>
+  <asset name="wmSalesforceConnector_v29.lookup.services.businessObjectDescribe" displayName="wmSalesforceConnector_v29.lookup.services:businessObjectDescribe">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:wm.cloudstreams.service.soap.lookup.specs.boDescribeSpecEx</dependsOn>
+    <dependsOn>IS:WmSalesforceProvider.code.classes.wmSalesforceConnector_v29.lookup.services.class</dependsOn>
+    <dependsOn>IS:wmSalesforceConnector_v29.lookup.services.getExternalIDFields</dependsOn>
+  </asset>
+  <asset name="wmSalesforceConnector_v29.lookup.services.getExternalIDFields" displayName="wmSalesforceConnector_v29.lookup.services:getExternalIDFields">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:WmSalesforceProvider.code.classes.wmSalesforceConnector_v29.lookup.services.class</dependsOn>
+    <dependsOn>IS:wmSalesforceConnector_v29.lookup.services.businessObjectDescribe</dependsOn>
+  </asset>
+  <asset name="wmSalesforceConnector_v29.lookup.businessObjectList" displayName="wmSalesforceConnector_v29.lookup:businessObjectList">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:wm.cloudstreams.service.soap.lookup.specs.boListSpec</dependsOn>
+    <dependsOn>IS:wmSalesforceConnector_v29.lookup.interactions.describeGlobal</dependsOn>
+    <dependsOn>IS:wmSalesforceConnector_v29.lookup.filters.filterObjectList</dependsOn>
+  </asset>
+  <asset name="wmSalesforceConnector_v29.lookup.businessObjectDescribe" displayName="wmSalesforceConnector_v29.lookup:businessObjectDescribe">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:wm.cloudstreams.service.soap.lookup.specs.boDescribeSpecEx</dependsOn>
+    <dependsOn>IS:wmSalesforceConnector_v29.lookup.services.businessObjectDescribe</dependsOn>
+  </asset>
+  <asset name="wmSalesforceConnector_v29.util.services.queryFormatter" displayName="wmSalesforceConnector_v29.util.services:queryFormatter">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:wm.cloudstreams.service.common.lookup.specs.mapServiceSpec</dependsOn>
+    <dependsOn>IS:WmSalesforceProvider.code.classes.wmSalesforceConnector_v29.util.services.class</dependsOn>
+    <dependsOn>IS:wmSalesforceConnector_v29.util.services.getLoginError</dependsOn>
+  </asset>
+  <asset name="wmSalesforceConnector_v29.util.services.getLoginError" displayName="wmSalesforceConnector_v29.util.services:getLoginError">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:wm.cloudstreams.service.common.lookup.specs.mapServiceSpec</dependsOn>
+    <dependsOn>IS:WmSalesforceProvider.code.classes.wmSalesforceConnector_v29.util.services.class</dependsOn>
+    <dependsOn>IS:wmSalesforceConnector_v29.util.services.queryFormatter</dependsOn>
+  </asset>
+  <asset name="wmSalesforceBulkConnector_v31.customDoctypes.docTypeRef_tns_GetUserInfoResult" displayName="wmSalesforceBulkConnector_v31.customDoctypes:docTypeRef_tns_GetUserInfoResult">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="wmSalesforceBulkConnector_v31.customDoctypes.docTypeRef_LogoutOutput" displayName="wmSalesforceBulkConnector_v31.customDoctypes:docTypeRef_LogoutOutput">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="wmSalesforceBulkConnector_v31.customDoctypes.docTypeRef_tns_LoginResult" displayName="wmSalesforceBulkConnector_v31.customDoctypes:docTypeRef_tns_LoginResult">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:wmSalesforceBulkConnector_v31.customDoctypes.docTypeRef_tns_GetUserInfoResult</dependsOn>
+  </asset>
+  <asset name="wmSalesforceBulkConnector_v31.customDoctypes.docTypeRef_LogoutInput" displayName="wmSalesforceBulkConnector_v31.customDoctypes:docTypeRef_LogoutInput">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="wmSalesforceBulkConnector_v31.customDoctypes.docTypeRef_LoginInput" displayName="wmSalesforceBulkConnector_v31.customDoctypes:docTypeRef_LoginInput">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="wmSalesforceBulkConnector_v31.customDoctypes.docTypeRef_LoginOutput" displayName="wmSalesforceBulkConnector_v31.customDoctypes:docTypeRef_LoginOutput">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:wmSalesforceBulkConnector_v31.customDoctypes.docTypeRef_tns_LoginResult</dependsOn>
+  </asset>
+  <asset name="wmSalesforceConnector_v37.lookup.filters.filterObjectList" displayName="wmSalesforceConnector_v37.lookup.filters:filterObjectList">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:wmSalesforceConnector_v37.doctypes.docTypeRef_tns_DescribeGlobalSObjectResult</dependsOn>
+    <dependsOn>IS:WmSalesforceProvider.code.classes.wmSalesforceConnector_v37.lookup.filters.class</dependsOn>
+    <dependsOn>IS:wmSalesforceConnector_v37.lookup.filters.filterObjectDescribe</dependsOn>
+    <dependsOn>IS:wmSalesforceConnector_v37.lookup.filters.isRequiredField</dependsOn>
+  </asset>
+  <asset name="wmSalesforceConnector_v37.lookup.filters.filterObjectDescribe" displayName="wmSalesforceConnector_v37.lookup.filters:filterObjectDescribe">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:wmSalesforceConnector_v37.doctypes.docTypeRef_tns_Field</dependsOn>
+    <dependsOn>IS:WmSalesforceProvider.code.classes.wmSalesforceConnector_v37.lookup.filters.class</dependsOn>
+    <dependsOn>IS:wmSalesforceConnector_v37.lookup.filters.filterObjectList</dependsOn>
+    <dependsOn>IS:wmSalesforceConnector_v37.lookup.filters.isRequiredField</dependsOn>
+  </asset>
+  <asset name="wmSalesforceConnector_v37.lookup.filters.isRequiredField" displayName="wmSalesforceConnector_v37.lookup.filters:isRequiredField">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:wmSalesforceConnector_v37.doctypes.docTypeRef_tns_Field</dependsOn>
+    <dependsOn>IS:WmSalesforceProvider.code.classes.wmSalesforceConnector_v37.lookup.filters.class</dependsOn>
+    <dependsOn>IS:wmSalesforceConnector_v37.lookup.filters.filterObjectList</dependsOn>
+    <dependsOn>IS:wmSalesforceConnector_v37.lookup.filters.filterObjectDescribe</dependsOn>
+  </asset>
+  <asset name="wmSalesforceConnector_v37.lookup.services.getExternalIDFields" displayName="wmSalesforceConnector_v37.lookup.services:getExternalIDFields">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:WmSalesforceProvider.code.classes.wmSalesforceConnector_v37.lookup.services.class</dependsOn>
+    <dependsOn>IS:wmSalesforceConnector_v37.lookup.services.businessObjectDescribe</dependsOn>
+  </asset>
+  <asset name="wmSalesforceConnector_v37.lookup.services.businessObjectDescribe" displayName="wmSalesforceConnector_v37.lookup.services:businessObjectDescribe">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:wm.cloudstreams.service.soap.lookup.specs.boDescribeSpecEx</dependsOn>
+    <dependsOn>IS:WmSalesforceProvider.code.classes.wmSalesforceConnector_v37.lookup.services.class</dependsOn>
+    <dependsOn>IS:wmSalesforceConnector_v37.lookup.services.getExternalIDFields</dependsOn>
+  </asset>
+  <asset name="wmSalesforceConnector_v37.lookup.businessObjectList" displayName="wmSalesforceConnector_v37.lookup:businessObjectList">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:wm.cloudstreams.service.soap.lookup.specs.boListSpec</dependsOn>
+    <dependsOn>IS:wmSalesforceConnector_v37.lookup.interactions.describeGlobal</dependsOn>
+    <dependsOn>IS:wmSalesforceConnector_v37.lookup.filters.filterObjectList</dependsOn>
+  </asset>
+  <asset name="wmSalesforceConnector_v37.lookup.businessObjectDescribe" displayName="wmSalesforceConnector_v37.lookup:businessObjectDescribe">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:wm.cloudstreams.service.soap.lookup.specs.boDescribeSpecEx</dependsOn>
+    <dependsOn>IS:wmSalesforceConnector_v37.lookup.services.businessObjectDescribe</dependsOn>
+  </asset>
+  <asset name="wmSalesforceConnector_v37.util.services.getLoginError" displayName="wmSalesforceConnector_v37.util.services:getLoginError">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:wm.cloudstreams.service.common.lookup.specs.mapServiceSpec</dependsOn>
+    <dependsOn>IS:WmSalesforceProvider.code.classes.wmSalesforceConnector_v37.util.services.class</dependsOn>
+    <dependsOn>IS:wmSalesforceConnector_v37.util.services.queryFormatter</dependsOn>
+  </asset>
+  <asset name="wmSalesforceConnector_v37.util.services.queryFormatter" displayName="wmSalesforceConnector_v37.util.services:queryFormatter">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:wm.cloudstreams.service.common.lookup.specs.mapServiceSpec</dependsOn>
+    <dependsOn>IS:WmSalesforceProvider.code.classes.wmSalesforceConnector_v37.util.services.class</dependsOn>
+    <dependsOn>IS:wmSalesforceConnector_v37.util.services.getLoginError</dependsOn>
+  </asset>
+  <asset name="wmSalesforceBulkConnector_v29.customDoctypes.docTypeRef_LogoutOutput" displayName="wmSalesforceBulkConnector_v29.customDoctypes:docTypeRef_LogoutOutput">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="wmSalesforceBulkConnector_v29.customDoctypes.docTypeRef_LoginOutput" displayName="wmSalesforceBulkConnector_v29.customDoctypes:docTypeRef_LoginOutput">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:wmSalesforceBulkConnector_v29.customDoctypes.docTypeRef_tns_LoginResult</dependsOn>
+  </asset>
+  <asset name="wmSalesforceBulkConnector_v29.customDoctypes.docTypeRef_tns_GetUserInfoResult" displayName="wmSalesforceBulkConnector_v29.customDoctypes:docTypeRef_tns_GetUserInfoResult">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="wmSalesforceBulkConnector_v29.customDoctypes.docTypeRef_LogoutInput" displayName="wmSalesforceBulkConnector_v29.customDoctypes:docTypeRef_LogoutInput">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="wmSalesforceBulkConnector_v29.customDoctypes.docTypeRef_LoginInput" displayName="wmSalesforceBulkConnector_v29.customDoctypes:docTypeRef_LoginInput">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="wmSalesforceBulkConnector_v29.customDoctypes.docTypeRef_tns_LoginResult" displayName="wmSalesforceBulkConnector_v29.customDoctypes:docTypeRef_tns_LoginResult">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:wmSalesforceBulkConnector_v29.customDoctypes.docTypeRef_tns_GetUserInfoResult</dependsOn>
+  </asset>
+  <asset name="wmSalesforceConnector_v31.lookup.services.businessObjectDescribe" displayName="wmSalesforceConnector_v31.lookup.services:businessObjectDescribe">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:wm.cloudstreams.service.soap.lookup.specs.boDescribeSpecEx</dependsOn>
+    <dependsOn>IS:WmSalesforceProvider.code.classes.wmSalesforceConnector_v31.lookup.services.class</dependsOn>
+    <dependsOn>IS:wmSalesforceConnector_v31.lookup.services.getExternalIDFields</dependsOn>
+  </asset>
+  <asset name="wmSalesforceConnector_v31.lookup.services.getExternalIDFields" displayName="wmSalesforceConnector_v31.lookup.services:getExternalIDFields">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:WmSalesforceProvider.code.classes.wmSalesforceConnector_v31.lookup.services.class</dependsOn>
+    <dependsOn>IS:wmSalesforceConnector_v31.lookup.services.businessObjectDescribe</dependsOn>
+  </asset>
+  <asset name="wmSalesforceConnector_v31.lookup.filters.filterObjectList" displayName="wmSalesforceConnector_v31.lookup.filters:filterObjectList">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:wmSalesforceConnector_v31.doctypes.docTypeRef_tns_DescribeGlobalSObjectResult</dependsOn>
+    <dependsOn>IS:WmSalesforceProvider.code.classes.wmSalesforceConnector_v31.lookup.filters.class</dependsOn>
+    <dependsOn>IS:wmSalesforceConnector_v31.lookup.filters.filterObjectDescribe</dependsOn>
+    <dependsOn>IS:wmSalesforceConnector_v31.lookup.filters.isRequiredField</dependsOn>
+  </asset>
+  <asset name="wmSalesforceConnector_v31.lookup.filters.filterObjectDescribe" displayName="wmSalesforceConnector_v31.lookup.filters:filterObjectDescribe">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:wmSalesforceConnector_v31.doctypes.docTypeRef_tns_Field</dependsOn>
+    <dependsOn>IS:WmSalesforceProvider.code.classes.wmSalesforceConnector_v31.lookup.filters.class</dependsOn>
+    <dependsOn>IS:wmSalesforceConnector_v31.lookup.filters.filterObjectList</dependsOn>
+    <dependsOn>IS:wmSalesforceConnector_v31.lookup.filters.isRequiredField</dependsOn>
+  </asset>
+  <asset name="wmSalesforceConnector_v31.lookup.filters.isRequiredField" displayName="wmSalesforceConnector_v31.lookup.filters:isRequiredField">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:wmSalesforceConnector_v31.doctypes.docTypeRef_tns_Field</dependsOn>
+    <dependsOn>IS:WmSalesforceProvider.code.classes.wmSalesforceConnector_v31.lookup.filters.class</dependsOn>
+    <dependsOn>IS:wmSalesforceConnector_v31.lookup.filters.filterObjectList</dependsOn>
+    <dependsOn>IS:wmSalesforceConnector_v31.lookup.filters.filterObjectDescribe</dependsOn>
+  </asset>
+  <asset name="wmSalesforceConnector_v31.lookup.businessObjectDescribe" displayName="wmSalesforceConnector_v31.lookup:businessObjectDescribe">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:wm.cloudstreams.service.soap.lookup.specs.boDescribeSpecEx</dependsOn>
+    <dependsOn>IS:wmSalesforceConnector_v31.lookup.services.businessObjectDescribe</dependsOn>
+  </asset>
+  <asset name="wmSalesforceConnector_v31.lookup.businessObjectList" displayName="wmSalesforceConnector_v31.lookup:businessObjectList">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:wm.cloudstreams.service.soap.lookup.specs.boListSpec</dependsOn>
+    <dependsOn>IS:wmSalesforceConnector_v31.lookup.interactions.describeGlobal</dependsOn>
+    <dependsOn>IS:wmSalesforceConnector_v31.lookup.filters.filterObjectList</dependsOn>
+  </asset>
+  <asset name="wmSalesforceConnector_v31.lookup.dboDescribe" displayName="wmSalesforceConnector_v31.lookup:dboDescribe">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:wm.cloudstreams.service.common.lookup.specs.dboDescribeSpec</dependsOn>
+    <dependsOn>IS:wmSalesforceConnector_v31.lookup.businessObjectDescribe</dependsOn>
+  </asset>
+  <asset name="wmSalesforceConnector_v31.lookup.dboList" displayName="wmSalesforceConnector_v31.lookup:dboList">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:wm.cloudstreams.service.common.lookup.specs.dboListSpec</dependsOn>
+    <dependsOn>IS:wmSalesforceConnector_v31.lookup.businessObjectList</dependsOn>
+  </asset>
+  <asset name="wmSalesforceConnector_v31.lookup.dboInteractions" displayName="wmSalesforceConnector_v31.lookup:dboInteractions">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:wm.cloudstreams.service.common.lookup.specs.dboInteractionSpec</dependsOn>
+  </asset>
+  <asset name="wmSalesforceConnector_v31.util.services.getLoginError" displayName="wmSalesforceConnector_v31.util.services:getLoginError">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:wm.cloudstreams.service.common.lookup.specs.mapServiceSpec</dependsOn>
+    <dependsOn>IS:WmSalesforceProvider.code.classes.wmSalesforceConnector_v31.util.services.class</dependsOn>
+    <dependsOn>IS:wmSalesforceConnector_v31.util.services.queryFormatter</dependsOn>
+  </asset>
+  <asset name="wmSalesforceConnector_v31.util.services.queryFormatter" displayName="wmSalesforceConnector_v31.util.services:queryFormatter">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:wm.cloudstreams.service.common.lookup.specs.mapServiceSpec</dependsOn>
+    <dependsOn>IS:WmSalesforceProvider.code.classes.wmSalesforceConnector_v31.util.services.class</dependsOn>
+    <dependsOn>IS:wmSalesforceConnector_v31.util.services.getLoginError</dependsOn>
+  </asset>
+  <asset name="WmSalesforceProvider.code" displayName="code">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="WmSalesforceProvider.code.classes" displayName="code/classes">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="WmSalesforceProvider.code.classes.wm.cloudstreams.salesforce.common.Lookup.class" displayName="code/classes/wm/cloudstreams/salesforce/common/Lookup.class">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="WmSalesforceProvider.code.classes.wm.cloudstreams.salesforce.common.Utils.class" displayName="code/classes/wm/cloudstreams/salesforce/common/Utils.class">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="WmSalesforceProvider.code.classes.wm.cloudstreams.salesforce.AbstractInteractionHandler.class" displayName="code/classes/wm/cloudstreams/salesforce/AbstractInteractionHandler.class">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="WmSalesforceProvider.code.classes.wm.cloudstreams.salesforce.CreateInteractionHandler.class" displayName="code/classes/wm/cloudstreams/salesforce/CreateInteractionHandler.class">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="WmSalesforceProvider.code.classes.wm.cloudstreams.salesforce.plm.class" displayName="code/classes/wm/cloudstreams/salesforce/plm.class">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="WmSalesforceProvider.code.classes.wm.cloudstreams.salesforce.UpdateInteractionHandler.class" displayName="code/classes/wm/cloudstreams/salesforce/UpdateInteractionHandler.class">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="WmSalesforceProvider.code.classes.wm.cloudstreams.salesforce.Utils.class" displayName="code/classes/wm/cloudstreams/salesforce/Utils.class">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="WmSalesforceProvider.code.classes.wmSalesforceConnector_v29.lookup.filters$FieldFilter.class" displayName="code/classes/wmSalesforceConnector_v29/lookup/filters$FieldFilter.class">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="WmSalesforceProvider.code.classes.wmSalesforceConnector_v29.lookup.filters$FieldFilterFactory$1.class" displayName="code/classes/wmSalesforceConnector_v29/lookup/filters$FieldFilterFactory$1.class">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="WmSalesforceProvider.code.classes.wmSalesforceConnector_v29.lookup.filters$FieldFilterFactory$2.class" displayName="code/classes/wmSalesforceConnector_v29/lookup/filters$FieldFilterFactory$2.class">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="WmSalesforceProvider.code.classes.wmSalesforceConnector_v29.lookup.filters$FieldFilterFactory$3.class" displayName="code/classes/wmSalesforceConnector_v29/lookup/filters$FieldFilterFactory$3.class">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="WmSalesforceProvider.code.classes.wmSalesforceConnector_v29.lookup.filters$FieldFilterFactory$4.class" displayName="code/classes/wmSalesforceConnector_v29/lookup/filters$FieldFilterFactory$4.class">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="WmSalesforceProvider.code.classes.wmSalesforceConnector_v29.lookup.filters$FieldFilterFactory.class" displayName="code/classes/wmSalesforceConnector_v29/lookup/filters$FieldFilterFactory.class">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="WmSalesforceProvider.code.classes.wmSalesforceConnector_v29.lookup.filters.class" displayName="code/classes/wmSalesforceConnector_v29/lookup/filters.class">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="WmSalesforceProvider.code.classes.wmSalesforceConnector_v29.lookup.services.class" displayName="code/classes/wmSalesforceConnector_v29/lookup/services.class">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="WmSalesforceProvider.code.classes.wmSalesforceConnector_v29.util.services.class" displayName="code/classes/wmSalesforceConnector_v29/util/services.class">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="WmSalesforceProvider.code.classes.wmSalesforceConnector_v25.lookup.filters$FieldFilter.class" displayName="code/classes/wmSalesforceConnector_v25/lookup/filters$FieldFilter.class">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="WmSalesforceProvider.code.classes.wmSalesforceConnector_v25.lookup.filters$FieldFilterFactory$1.class" displayName="code/classes/wmSalesforceConnector_v25/lookup/filters$FieldFilterFactory$1.class">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="WmSalesforceProvider.code.classes.wmSalesforceConnector_v25.lookup.filters$FieldFilterFactory$2.class" displayName="code/classes/wmSalesforceConnector_v25/lookup/filters$FieldFilterFactory$2.class">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="WmSalesforceProvider.code.classes.wmSalesforceConnector_v25.lookup.filters$FieldFilterFactory$3.class" displayName="code/classes/wmSalesforceConnector_v25/lookup/filters$FieldFilterFactory$3.class">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="WmSalesforceProvider.code.classes.wmSalesforceConnector_v25.lookup.filters$FieldFilterFactory$4.class" displayName="code/classes/wmSalesforceConnector_v25/lookup/filters$FieldFilterFactory$4.class">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="WmSalesforceProvider.code.classes.wmSalesforceConnector_v25.lookup.filters$FieldFilterFactory.class" displayName="code/classes/wmSalesforceConnector_v25/lookup/filters$FieldFilterFactory.class">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="WmSalesforceProvider.code.classes.wmSalesforceConnector_v25.lookup.filters.class" displayName="code/classes/wmSalesforceConnector_v25/lookup/filters.class">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="WmSalesforceProvider.code.classes.wmSalesforceConnector_v25.lookup.services.class" displayName="code/classes/wmSalesforceConnector_v25/lookup/services.class">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="WmSalesforceProvider.code.classes.wmSalesforceConnector_v25.util.services.class" displayName="code/classes/wmSalesforceConnector_v25/util/services.class">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="WmSalesforceProvider.code.classes.wmSalesforceConnector_v37.util.services.class" displayName="code/classes/wmSalesforceConnector_v37/util/services.class">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="WmSalesforceProvider.code.classes.wmSalesforceConnector_v37.lookup.filters$FieldFilter.class" displayName="code/classes/wmSalesforceConnector_v37/lookup/filters$FieldFilter.class">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="WmSalesforceProvider.code.classes.wmSalesforceConnector_v37.lookup.filters$FieldFilterFactory$1.class" displayName="code/classes/wmSalesforceConnector_v37/lookup/filters$FieldFilterFactory$1.class">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="WmSalesforceProvider.code.classes.wmSalesforceConnector_v37.lookup.filters$FieldFilterFactory$2.class" displayName="code/classes/wmSalesforceConnector_v37/lookup/filters$FieldFilterFactory$2.class">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="WmSalesforceProvider.code.classes.wmSalesforceConnector_v37.lookup.filters$FieldFilterFactory$3.class" displayName="code/classes/wmSalesforceConnector_v37/lookup/filters$FieldFilterFactory$3.class">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="WmSalesforceProvider.code.classes.wmSalesforceConnector_v37.lookup.filters$FieldFilterFactory$4.class" displayName="code/classes/wmSalesforceConnector_v37/lookup/filters$FieldFilterFactory$4.class">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="WmSalesforceProvider.code.classes.wmSalesforceConnector_v37.lookup.filters$FieldFilterFactory.class" displayName="code/classes/wmSalesforceConnector_v37/lookup/filters$FieldFilterFactory.class">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="WmSalesforceProvider.code.classes.wmSalesforceConnector_v37.lookup.filters.class" displayName="code/classes/wmSalesforceConnector_v37/lookup/filters.class">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="WmSalesforceProvider.code.classes.wmSalesforceConnector_v37.lookup.services.class" displayName="code/classes/wmSalesforceConnector_v37/lookup/services.class">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="WmSalesforceProvider.code.classes.wmSalesforceConnector_v44.util.services.class" displayName="code/classes/wmSalesforceConnector_v44/util/services.class">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="WmSalesforceProvider.code.classes.wmSalesforceConnector_v44.lookup.filters$FieldFilter.class" displayName="code/classes/wmSalesforceConnector_v44/lookup/filters$FieldFilter.class">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="WmSalesforceProvider.code.classes.wmSalesforceConnector_v44.lookup.filters$FieldFilterFactory$1.class" displayName="code/classes/wmSalesforceConnector_v44/lookup/filters$FieldFilterFactory$1.class">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="WmSalesforceProvider.code.classes.wmSalesforceConnector_v44.lookup.filters$FieldFilterFactory$2.class" displayName="code/classes/wmSalesforceConnector_v44/lookup/filters$FieldFilterFactory$2.class">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="WmSalesforceProvider.code.classes.wmSalesforceConnector_v44.lookup.filters$FieldFilterFactory$3.class" displayName="code/classes/wmSalesforceConnector_v44/lookup/filters$FieldFilterFactory$3.class">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="WmSalesforceProvider.code.classes.wmSalesforceConnector_v44.lookup.filters$FieldFilterFactory$4.class" displayName="code/classes/wmSalesforceConnector_v44/lookup/filters$FieldFilterFactory$4.class">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="WmSalesforceProvider.code.classes.wmSalesforceConnector_v44.lookup.filters$FieldFilterFactory$5.class" displayName="code/classes/wmSalesforceConnector_v44/lookup/filters$FieldFilterFactory$5.class">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="WmSalesforceProvider.code.classes.wmSalesforceConnector_v44.lookup.filters$FieldFilterFactory.class" displayName="code/classes/wmSalesforceConnector_v44/lookup/filters$FieldFilterFactory.class">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="WmSalesforceProvider.code.classes.wmSalesforceConnector_v44.lookup.filters.class" displayName="code/classes/wmSalesforceConnector_v44/lookup/filters.class">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="WmSalesforceProvider.code.classes.wmSalesforceConnector_v44.lookup.services.class" displayName="code/classes/wmSalesforceConnector_v44/lookup/services.class">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="WmSalesforceProvider.code.classes.wmSalesforceConnector_v42.lookup.filters$FieldFilter.class" displayName="code/classes/wmSalesforceConnector_v42/lookup/filters$FieldFilter.class">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="WmSalesforceProvider.code.classes.wmSalesforceConnector_v42.lookup.filters$FieldFilterFactory$1.class" displayName="code/classes/wmSalesforceConnector_v42/lookup/filters$FieldFilterFactory$1.class">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="WmSalesforceProvider.code.classes.wmSalesforceConnector_v42.lookup.filters$FieldFilterFactory$2.class" displayName="code/classes/wmSalesforceConnector_v42/lookup/filters$FieldFilterFactory$2.class">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="WmSalesforceProvider.code.classes.wmSalesforceConnector_v42.lookup.filters$FieldFilterFactory$3.class" displayName="code/classes/wmSalesforceConnector_v42/lookup/filters$FieldFilterFactory$3.class">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="WmSalesforceProvider.code.classes.wmSalesforceConnector_v42.lookup.filters$FieldFilterFactory$4.class" displayName="code/classes/wmSalesforceConnector_v42/lookup/filters$FieldFilterFactory$4.class">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="WmSalesforceProvider.code.classes.wmSalesforceConnector_v42.lookup.filters$FieldFilterFactory$5.class" displayName="code/classes/wmSalesforceConnector_v42/lookup/filters$FieldFilterFactory$5.class">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="WmSalesforceProvider.code.classes.wmSalesforceConnector_v42.lookup.filters$FieldFilterFactory.class" displayName="code/classes/wmSalesforceConnector_v42/lookup/filters$FieldFilterFactory.class">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="WmSalesforceProvider.code.classes.wmSalesforceConnector_v42.lookup.filters.class" displayName="code/classes/wmSalesforceConnector_v42/lookup/filters.class">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="WmSalesforceProvider.code.classes.wmSalesforceConnector_v42.lookup.services.class" displayName="code/classes/wmSalesforceConnector_v42/lookup/services.class">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="WmSalesforceProvider.code.classes.wmSalesforceConnector_v42.util.services.class" displayName="code/classes/wmSalesforceConnector_v42/util/services.class">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="WmSalesforceProvider.code.classes.wmSalesforceConnector_v31.util.services.class" displayName="code/classes/wmSalesforceConnector_v31/util/services.class">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="WmSalesforceProvider.code.classes.wmSalesforceConnector_v31.lookup.filters$FieldFilter.class" displayName="code/classes/wmSalesforceConnector_v31/lookup/filters$FieldFilter.class">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="WmSalesforceProvider.code.classes.wmSalesforceConnector_v31.lookup.filters$FieldFilterFactory$1.class" displayName="code/classes/wmSalesforceConnector_v31/lookup/filters$FieldFilterFactory$1.class">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="WmSalesforceProvider.code.classes.wmSalesforceConnector_v31.lookup.filters$FieldFilterFactory$2.class" displayName="code/classes/wmSalesforceConnector_v31/lookup/filters$FieldFilterFactory$2.class">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="WmSalesforceProvider.code.classes.wmSalesforceConnector_v31.lookup.filters$FieldFilterFactory$3.class" displayName="code/classes/wmSalesforceConnector_v31/lookup/filters$FieldFilterFactory$3.class">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="WmSalesforceProvider.code.classes.wmSalesforceConnector_v31.lookup.filters$FieldFilterFactory$4.class" displayName="code/classes/wmSalesforceConnector_v31/lookup/filters$FieldFilterFactory$4.class">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="WmSalesforceProvider.code.classes.wmSalesforceConnector_v31.lookup.filters$FieldFilterFactory.class" displayName="code/classes/wmSalesforceConnector_v31/lookup/filters$FieldFilterFactory.class">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="WmSalesforceProvider.code.classes.wmSalesforceConnector_v31.lookup.filters.class" displayName="code/classes/wmSalesforceConnector_v31/lookup/filters.class">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="WmSalesforceProvider.code.classes.wmSalesforceConnector_v31.lookup.services.class" displayName="code/classes/wmSalesforceConnector_v31/lookup/services.class">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="WmSalesforceProvider.code.jars" displayName="code/jars">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="WmSalesforceProvider.code.source" displayName="code/source">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="WmSalesforceProvider.connectors" displayName="connectors">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="WmSalesforceProvider.pub" displayName="pub">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="WmSalesforceProvider.config" displayName="config">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="WmSalesforceProvider.config.connectors" displayName="config/connectors">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="WmSalesforceProvider.config.connectors.cls-collectionKeys.xml" displayName="config/connectors/cls-collectionKeys.xml">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="WmSalesforceProvider.config.aclmap_pkg.cnf" displayName="config/aclmap_pkg.cnf">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="WmSalesforceProvider.config.browsemap_pkg.cnf" displayName="config/browsemap_pkg.cnf">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="WmSalesforceProvider.config.readmap_pkg.cnf" displayName="config/readmap_pkg.cnf">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="WmSalesforceProvider.config.writemap_pkg.cnf" displayName="config/writemap_pkg.cnf">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="WmSalesforceProvider.lib" displayName="lib">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="WmSalesforceProvider.resources" displayName="resources">
+    <implementation.generic type="isfolder" />
+  </asset>
+</asset_composite>
+
