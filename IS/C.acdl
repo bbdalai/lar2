@@ -1,0 +1,76 @@
+<asset_composite xmlns="http://namespaces.softwareag.com/acdl/1.0" targetNamespace="http://namespaces.softwareag.com/webMethods/IS" name="C" runtimeVersion="10.3.0.0">
+  <implementation.generic type="ispackage" />
+  <buildInfo name="BuildVersion" value="10.3.0.0.1553169781958" />
+  <buildInfo name="BuildTimestamp" value="2019-03-21T17:33:01" />
+  <buildInfo name="MinimumTargetRuntimeVersion" value="10.3.0.0" />
+  <property name="activatePkgOnInstall" displayName="Activate Package On Install">
+    <value>true</value>
+  </property>
+  <property name="archivePkgOnInstall" displayName="Archive Package On Install">
+    <value>true</value>
+  </property>
+  <property name="compilePackage" displayName="Compile Package On Install">
+    <value>true</value>
+  </property>
+  <property name="fragPackage" displayName="Fragment Package On Install">
+    <value>true</value>
+  </property>
+  <property name="clearACLs" displayName="Delete ACLs for the assets from the target Integration Server">
+    <value>false</value>
+  </property>
+  <property name="disallowActivePackageInstall" displayName="disallowActivePackageInstall">
+    <value>false</value>
+  </property>
+  <property name="packageExecutionCheck" displayName="packageExecutionCheck">
+    <value>0</value>
+  </property>
+  <property name="suspendTriggersDuringDeploy" displayName="Suspend Triggers During Deployment">
+    <value>false</value>
+  </property>
+  <property name="syncDocTypesToBroker" displayName="Synchronize Document Types To Broker During Deployment">
+    <value>true</value>
+  </property>
+  <asset name="ISPackage.C" displayName="C">
+    <implementation.generic type="ispackage" />
+  </asset>
+  <asset name="c.fc" displayName="c:fc">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="C.code" displayName="code">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="C.code.classes" displayName="code/classes">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="C.code.source" displayName="code/source">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="C.code.jars" displayName="code/jars">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="C.doc" displayName="doc">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="C.pub" displayName="pub">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="C.templates" displayName="templates">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="C.web" displayName="web">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="C.config" displayName="config">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="C.config.aclmap_pkg.cnf" displayName="config/aclmap_pkg.cnf">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="C.resources" displayName="resources">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="C.lib" displayName="lib">
+    <implementation.generic type="isfolder" />
+  </asset>
+</asset_composite>
+
