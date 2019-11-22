@@ -1,0 +1,79 @@
+<asset_composite xmlns="http://namespaces.softwareag.com/acdl/1.0" targetNamespace="http://namespaces.softwareag.com/webMethods/IS" name="DeployTest" runtimeVersion="10.4.0.0">
+  <implementation.generic type="ispackage" />
+  <buildInfo name="BuildVersion" value="10.4.0.0.1574426444681" />
+  <buildInfo name="BuildTimestamp" value="2019-11-22T18:10:44" />
+  <buildInfo name="MinimumTargetRuntimeVersion" value="10.4.0.0" />
+  <property name="activatePkgOnInstall" displayName="Activate Package On Install">
+    <value>true</value>
+  </property>
+  <property name="archivePkgOnInstall" displayName="Archive Package On Install">
+    <value>true</value>
+  </property>
+  <property name="compilePackage" displayName="Compile Package On Install">
+    <value>true</value>
+  </property>
+  <property name="fragPackage" displayName="Fragment Package On Install">
+    <value>true</value>
+  </property>
+  <property name="clearACLs" displayName="Delete ACLs for the assets from the target Integration Server">
+    <value>false</value>
+  </property>
+  <property name="disallowActivePackageInstall" displayName="Disallow Active Package Install">
+    <value>false</value>
+  </property>
+  <property name="packageExecutionCheck" displayName="Package Execution Check">
+    <value>0</value>
+  </property>
+  <property name="suspendTriggersDuringDeploy" displayName="Suspend Triggers During Deployment">
+    <value>false</value>
+  </property>
+  <property name="syncDocTypesToBroker" displayName="Synchronize Document Types During Deployment">
+    <value>true</value>
+  </property>
+  <asset name="ISPackage.DeployTest" displayName="DeployTest">
+    <implementation.generic type="ispackage" />
+  </asset>
+  <asset name="DeployTest.Docs.MyDoc1" displayName="DeployTest.Docs:MyDoc1">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="DeployTest.Docs.Doc2" displayName="DeployTest.Docs:Doc2">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="DeployTest.Services.MyFlow1" displayName="DeployTest.Services:MyFlow1">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="DeployTest.code" displayName="code">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="DeployTest.code.classes" displayName="code/classes">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="DeployTest.code.jars" displayName="code/jars">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="DeployTest.code.source" displayName="code/source">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="DeployTest.pub" displayName="pub">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="DeployTest.config" displayName="config">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="DeployTest.doc" displayName="doc">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="DeployTest.lib" displayName="lib">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="DeployTest.resources" displayName="resources">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="DeployTest.templates" displayName="templates">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="DeployTest.web" displayName="web">
+    <implementation.generic type="isfolder" />
+  </asset>
+</asset_composite>
+
