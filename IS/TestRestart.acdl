@@ -1,87 +1,87 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<asset_composite name="TestRestart" runtimeVersion="10.7.0.0" targetNamespace="http://namespaces.softwareag.com/webMethods/IS" xmlns="http://namespaces.softwareag.com/acdl/1.0" xmlns:EDA="http://namespaces.softwareag.com/webMethods/EDA" xmlns:MWS="http://namespaces.softwareag.com/webMethods/MWS" xmlns:IS="http://namespaces.softwareag.com/webMethods/IS" xmlns:APIPORTAL="http://namespaces.softwareag.com/webMethods/APIPORTAL" xmlns:AgileApps="http://namespaces.softwareag.com/webMethods/AgileApps" xmlns:BROKER="http://namespaces.softwareag.com/webMethods/BROKER" xmlns:implDetails="http://namespaces.softwareag.com/acdl/implDetails" xmlns:UniversalMessaging="http://namespaces.softwareag.com/webMethods/UniversalMessaging" xmlns:TN="http://namespaces.softwareag.com/webMethods/TN" xmlns:RULES="http://namespaces.softwareag.com/webMethods/RULES" xmlns:BPM="http://namespaces.softwareag.com/webMethods/BPM" xmlns:Optimize="http://namespaces.softwareag.com/webMethods/Optimize">
-    <implementation.generic type="ispackage"/>
-    <buildInfo name="BuildTimestamp" value="2019-12-11T14:45:02"/>
-    <buildInfo name="BuildVersion" value="10.7.0.0.1576055702983"/>
-    <buildInfo name="MinimumTargetRuntimeVersion" value="10.7.0.0"/>
-    <asset name="ISPackage.TestRestart" displayName="TestRestart" isDeployable="true">
-        <implementation.generic type="ispackage"/>
-    </asset>
-    <asset name="restart.myjs1" displayName="restart:myjs1" isDeployable="true">
-        <implementation.generic type="isjavaservice"/>
-        <dependsOn>IS:TestRestart.code.classes.restart.class</dependsOn>
-        <dependsOn>IS:TestRestart.code.source.restart.java</dependsOn>
-    </asset>
-    <asset name="TestRestart.lib" displayName="lib" isDeployable="true">
-        <implementation.generic type="isfolder"/>
-    </asset>
-    <asset name="TestRestart.web" displayName="web" isDeployable="true">
-        <implementation.generic type="isfolder"/>
-    </asset>
-    <asset name="TestRestart.config" displayName="config" isDeployable="true">
-        <implementation.generic type="isfolder"/>
-    </asset>
-    <asset name="TestRestart.config.aclmap_pkg.cnf" displayName="config/aclmap_pkg.cnf" isDeployable="true">
-        <implementation.generic type="isfile"/>
-    </asset>
-    <asset name="TestRestart.code" displayName="code" isDeployable="true">
-        <implementation.generic type="isfolder"/>
-    </asset>
-    <asset name="TestRestart.code.classes" displayName="code/classes" isDeployable="true">
-        <implementation.generic type="isfolder"/>
-    </asset>
-    <asset name="TestRestart.code.classes.restart.class" displayName="code/classes/restart.class" isDeployable="true">
-        <implementation.generic type="isfile"/>
-    </asset>
-    <asset name="TestRestart.code.source" displayName="code/source" isDeployable="true">
-        <implementation.generic type="isfolder"/>
-    </asset>
-    <asset name="TestRestart.code.source.restart.java" displayName="code/source/restart.java" isDeployable="true">
-        <implementation.generic type="isfile"/>
-    </asset>
-    <asset name="TestRestart.code.jars" displayName="code/jars" isDeployable="true">
-        <implementation.generic type="isfolder"/>
-    </asset>
-    <asset name="TestRestart.doc" displayName="doc" isDeployable="true">
-        <implementation.generic type="isfolder"/>
-    </asset>
-    <asset name="TestRestart.resources" displayName="resources" isDeployable="true">
-        <implementation.generic type="isfolder"/>
-    </asset>
-    <asset name="TestRestart.pub" displayName="pub" isDeployable="true">
-        <implementation.generic type="isfolder"/>
-    </asset>
-    <asset name="TestRestart.templates" displayName="templates" isDeployable="true">
-        <implementation.generic type="isfolder"/>
-    </asset>
-    <property name="activatePkgOnInstall" many="false" isSecure="false" displayName="Activate Package On Install">
-        <value>true</value>
-    </property>
-    <property name="archivePkgOnInstall" many="false" isSecure="false" displayName="Archive Package On Install">
-        <value>true</value>
-    </property>
-    <property name="compilePackage" many="false" isSecure="false" displayName="Compile Package On Install">
-        <value>true</value>
-    </property>
-    <property name="fragPackage" many="false" isSecure="false" displayName="Fragment Package On Install">
-        <value>true</value>
-    </property>
-    <property name="clearACLs" many="false" isSecure="false" displayName="Delete ACLs for the assets from the target Integration Server">
-        <value>false</value>
-    </property>
-    <property name="disallowActivePackageInstall" many="false" isSecure="false" displayName="Disallow Active Package Install">
-        <value>false</value>
-    </property>
-    <property name="packageExecutionCheck" many="false" isSecure="false" displayName="Package Execution Check">
-        <value>0</value>
-    </property>
-    <property name="suspendTriggersDuringDeploy" many="false" isSecure="false" displayName="Suspend Triggers During Deployment">
-        <value>false</value>
-    </property>
-    <property name="syncDocTypesToBroker" many="false" isSecure="false" displayName="Synchronize Document Types During Deployment">
-        <value>true</value>
-    </property>
-    <property name="restartRuntimes" many="false" isSecure="false" displayName="restartRuntimes">
-        <value>true</value>
-    </property>
+<asset_composite xmlns="http://namespaces.softwareag.com/acdl/1.0" targetNamespace="http://namespaces.softwareag.com/webMethods/IS" name="TestRestart" runtimeVersion="10.7.0.0">
+  <implementation.generic type="ispackage" />
+  <buildInfo name="BuildVersion" value="10.7.0.0.1576065350632" />
+  <buildInfo name="BuildTimestamp" value="2019-12-11T17:25:50" />
+  <buildInfo name="MinimumTargetRuntimeVersion" value="10.7.0.0" />
+  <property name="activatePkgOnInstall" displayName="Activate Package On Install">
+    <value>true</value>
+  </property>
+  <property name="archivePkgOnInstall" displayName="Archive Package On Install">
+    <value>true</value>
+  </property>
+  <property name="compilePackage" displayName="Compile Package On Install">
+    <value>true</value>
+  </property>
+  <property name="fragPackage" displayName="Fragment Package On Install">
+    <value>true</value>
+  </property>
+  <property name="clearACLs" displayName="Delete ACLs for the assets from the target Integration Server">
+    <value>false</value>
+  </property>
+  <property name="disallowActivePackageInstall" displayName="Disallow Active Package Install">
+    <value>false</value>
+  </property>
+  <property name="packageExecutionCheck" displayName="Package Execution Check">
+    <value>0</value>
+  </property>
+  <property name="suspendTriggersDuringDeploy" displayName="Suspend Triggers During Deployment">
+    <value>false</value>
+  </property>
+  <property name="syncDocTypesToBroker" displayName="Synchronize Document Types During Deployment">
+    <value>true</value>
+  </property>
+  <property name="restartRuntimes" displayName="restartRuntimes">
+    <value>false</value>
+  </property>
+  <asset name="ISPackage.TestRestart" displayName="TestRestart">
+    <implementation.generic type="ispackage" />
+  </asset>
+  <asset name="restart.myjs1" displayName="restart:myjs1">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:TestRestart.code.source.restart.java</dependsOn>
+    <dependsOn>IS:TestRestart.code.classes.restart.class</dependsOn>
+  </asset>
+  <asset name="TestRestart.lib" displayName="lib">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="TestRestart.web" displayName="web">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="TestRestart.config" displayName="config">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="TestRestart.config.aclmap_pkg.cnf" displayName="config/aclmap_pkg.cnf">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="TestRestart.code" displayName="code">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="TestRestart.code.classes" displayName="code/classes">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="TestRestart.code.classes.restart.class" displayName="code/classes/restart.class">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="TestRestart.code.source" displayName="code/source">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="TestRestart.code.source.restart.java" displayName="code/source/restart.java">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="TestRestart.code.jars" displayName="code/jars">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="TestRestart.doc" displayName="doc">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="TestRestart.resources" displayName="resources">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="TestRestart.pub" displayName="pub">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="TestRestart.templates" displayName="templates">
+    <implementation.generic type="isfolder" />
+  </asset>
 </asset_composite>
+
