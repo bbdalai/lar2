@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<asset_composite name="localhost-OSGI-IS_default" displayName="localhost-OSGI-IS_default" targetNamespace="http://namespaces.softwareag.com/webMethods/CC" xmlns="http://namespaces.softwareag.com/acdl/1.0" xmlns:EDA="http://namespaces.softwareag.com/webMethods/EDA" xmlns:MWS="http://namespaces.softwareag.com/webMethods/MWS" xmlns:IS="http://namespaces.softwareag.com/webMethods/IS" xmlns:APIPORTAL="http://namespaces.softwareag.com/webMethods/APIPORTAL" xmlns:AgileApps="http://namespaces.softwareag.com/webMethods/AgileApps" xmlns:BROKER="http://namespaces.softwareag.com/webMethods/BROKER" xmlns:implDetails="http://namespaces.softwareag.com/acdl/implDetails" xmlns:UniversalMessaging="http://namespaces.softwareag.com/webMethods/UniversalMessaging" xmlns:TN="http://namespaces.softwareag.com/webMethods/TN" xmlns:RULES="http://namespaces.softwareag.com/webMethods/RULES" xmlns:BPM="http://namespaces.softwareag.com/webMethods/BPM" xmlns:Optimize="http://namespaces.softwareag.com/webMethods/Optimize">
+    <buildInfo name="BuildVersion" value="1"/>
+    <buildInfo name="build.timestamp" value="2019-12-11T14:42:33"/>
+    <buildInfo name="productId" value="integrationServer"/>
+    <property name="rollbackConfigurations" many="false" isSecure="false" displayName="rollbackConfigurations">
+        <value>TRUE</value>
+    </property>
+    <property name="restartRuntimes" many="false" isSecure="false" displayName="restartRuntimes">
+        <value>FALSE</value>
+    </property>
+    <property name="integrationserver-default.common-truststores_default_wmcloud_truststore.truststore.type" data_type="string" many="false" isSecure="false" displayName="integrationserver-default.common-truststores_default_wmcloud_truststore.truststore.type">
+        <value>JKS</value>
+    </property>
+    <property name="integrationserver-default.is-resources.resources.serverthreadpool.schedulerthreadthrottle" data_type="number" many="false" isSecure="false" displayName="integrationserver-default.is-resources.resources.serverthreadpool.schedulerthreadthrottle">
+        <value>'75'</value>
+    </property>
+    <property name="integrationserver-default.common-truststores_default_is_truststore.truststore.type" data_type="string" many="false" isSecure="false" displayName="integrationserver-default.common-truststores_default_is_truststore.truststore.type">
+        <value>JKS</value>
+    </property>
+    <property name="integrationserver-default.common-truststores_default_is_truststore.truststore.location" data_type="string" many="false" isSecure="false" displayName="integrationserver-default.common-truststores_default_is_truststore.truststore.location">
+        <value>../../../common/conf/platform_truststore.jks</value>
+    </property>
+    <property name="integrationserver-default.common-truststores_default_wmcloud_truststore.truststore.password" data_type="string" many="false" isSecure="true" displayName="integrationserver-default.common-truststores_default_wmcloud_truststore.truststore.password">
+        <value>'{AES/CBC/PKCS5Padding}{tFmLunv+UTiRW33/qjVHSvb2PSzJJTDq2D9jX4lCkpo=}{dxiEKK1B8nZJkwzv+wkziw==}7Ga8Snz7vXj3Qq6XJ7WHqA=='</value>
+    </property>
+    <property name="integrationserver-default.common-truststores_default_wmcloud_truststore.truststore.location" data_type="string" many="false" isSecure="false" displayName="integrationserver-default.common-truststores_default_wmcloud_truststore.truststore.location">
+        <value>packages/WmCloud/config/wmcloud_truststore.jks</value>
+    </property>
+    <property name="integrationserver-default.common-keystores_default_is_keystore.keystore.password" data_type="string" many="false" isSecure="true" displayName="integrationserver-default.common-keystores_default_is_keystore.keystore.password">
+        <value>'{AES/CBC/PKCS5Padding}{L4ldwV3g6ZvFp9DITLHayFSH8K0u2PQ0lUsJ//kIO5w=}{UaQcYci30n/nrHp7yYV2mg==}Ma4vp+EIaomBWeFGDr7nUA=='</value>
+    </property>
+    <property name="integrationserver-default.common-keystores_default_is_keystore.keystore.type" data_type="string" many="false" isSecure="false" displayName="integrationserver-default.common-keystores_default_is_keystore.keystore.type">
+        <value>JKS</value>
+    </property>
+    <property name="integrationserver-default.common-keystores_default_is_keystore.keystore.location" data_type="string" many="false" isSecure="false" displayName="integrationserver-default.common-keystores_default_is_keystore.keystore.location">
+        <value>../../../common/conf/keystore.jks</value>
+    </property>
+    <property name="integrationserver-default.is-resources.resources.serverthreadpool.availablethreadswarningthreshold" data_type="number" many="false" isSecure="false" displayName="integrationserver-default.is-resources.resources.serverthreadpool.availablethreadswarningthreshold">
+        <value>'15'</value>
+    </property>
+    <property name="integrationserver-default.common-keystores_default_is_keystore.keystore.key.password" data_type="string" many="false" isSecure="true" displayName="integrationserver-default.common-keystores_default_is_keystore.keystore.key.password">
+        <value>'{AES/CBC/PKCS5Padding}{NZ5y5kSroMn5PbttZ7uxENCXf3p1X6SzNg0/n4q/mtw=}{l/O9JzqiUQ5Iztom4PJECw==}qFwMLSTzzTjcdMUIO9MC6g=='</value>
+    </property>
+    <property name="integrationserver-default.is-resources.resources.session.sessiontimeout" data_type="number" many="false" isSecure="false" displayName="integrationserver-default.is-resources.resources.session.sessiontimeout">
+        <value>'10'</value>
+    </property>
+    <property name="integrationserver-default.is-resources.resources.session.maximumstatefulsessions" data_type="number" many="false" isSecure="false" displayName="integrationserver-default.is-resources.resources.session.maximumstatefulsessions">
+        <value>'2147483647'</value>
+    </property>
+    <property name="integrationserver-default.common-truststores_default_is_truststore.truststore.password" data_type="string" many="false" isSecure="true" displayName="integrationserver-default.common-truststores_default_is_truststore.truststore.password">
+        <value>'{AES/CBC/PKCS5Padding}{OILGFuCbexD8LfJb8Y0aDPionoo5EVctPKjC0o6LsiM=}{zgMcgQnjD6ml41LfRD8YWw==}m++g/od40tZ9xWyFxZH9aQ=='</value>
+    </property>
+    <property name="integrationserver-default.is-resources.resources.serverthreadpool.maximumthreads" data_type="number" many="false" isSecure="false" displayName="integrationserver-default.is-resources.resources.serverthreadpool.maximumthreads">
+        <value>'75'</value>
+    </property>
+    <property name="integrationserver-default.is-resources.resources.session.enablestatefulsessionlimit" data_type="boolean" many="false" isSecure="false" displayName="integrationserver-default.is-resources.resources.session.enablestatefulsessionlimit">
+        <value>'true'</value>
+    </property>
+    <property name="integrationserver-default.is-resources.resources.session.availablestatefulsessionwarningthreshold" data_type="number" many="false" isSecure="false" displayName="integrationserver-default.is-resources.resources.session.availablestatefulsessionwarningthreshold">
+        <value>'25'</value>
+    </property>
+    <property name="integrationserver-default.is-resources.resources.serverthreadpool.minimumthreads" data_type="number" many="false" isSecure="false" displayName="integrationserver-default.is-resources.resources.serverthreadpool.minimumthreads">
+        <value>'10'</value>
+    </property>
+</asset_composite>
