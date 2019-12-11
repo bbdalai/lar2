@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <asset_composite name="localhost-OSGI-IS_default" displayName="localhost-OSGI-IS_default" targetNamespace="http://namespaces.softwareag.com/webMethods/CC" xmlns="http://namespaces.softwareag.com/acdl/1.0" xmlns:EDA="http://namespaces.softwareag.com/webMethods/EDA" xmlns:MWS="http://namespaces.softwareag.com/webMethods/MWS" xmlns:IS="http://namespaces.softwareag.com/webMethods/IS" xmlns:APIPORTAL="http://namespaces.softwareag.com/webMethods/APIPORTAL" xmlns:AgileApps="http://namespaces.softwareag.com/webMethods/AgileApps" xmlns:BROKER="http://namespaces.softwareag.com/webMethods/BROKER" xmlns:implDetails="http://namespaces.softwareag.com/acdl/implDetails" xmlns:UniversalMessaging="http://namespaces.softwareag.com/webMethods/UniversalMessaging" xmlns:TN="http://namespaces.softwareag.com/webMethods/TN" xmlns:RULES="http://namespaces.softwareag.com/webMethods/RULES" xmlns:BPM="http://namespaces.softwareag.com/webMethods/BPM" xmlns:Optimize="http://namespaces.softwareag.com/webMethods/Optimize">
     <buildInfo name="BuildVersion" value="1"/>
-    <buildInfo name="build.timestamp" value="2019-12-11T14:42:33"/>
+    <buildInfo name="build.timestamp" value="2019-12-11T14:46:53"/>
     <buildInfo name="productId" value="integrationServer"/>
     <property name="rollbackConfigurations" many="false" isSecure="false" displayName="rollbackConfigurations">
         <value>TRUE</value>
@@ -22,13 +22,13 @@
         <value>../../../common/conf/platform_truststore.jks</value>
     </property>
     <property name="integrationserver-default.common-truststores_default_wmcloud_truststore.truststore.password" data_type="string" many="false" isSecure="true" displayName="integrationserver-default.common-truststores_default_wmcloud_truststore.truststore.password">
-        <value></value>
+        <value>'{AES/CBC/PKCS5Padding}{X8eoo/Ng3IsVS/Xdx9SFnnJCTPbYZmlcORWsri0Z74Y=}{WIhl2I8pvqmZ5aOuZsDgDA==}0srtHQe6fOeTZ0kIXsTsqg=='</value>
     </property>
     <property name="integrationserver-default.common-truststores_default_wmcloud_truststore.truststore.location" data_type="string" many="false" isSecure="false" displayName="integrationserver-default.common-truststores_default_wmcloud_truststore.truststore.location">
         <value>packages/WmCloud/config/wmcloud_truststore.jks</value>
     </property>
     <property name="integrationserver-default.common-keystores_default_is_keystore.keystore.password" data_type="string" many="false" isSecure="true" displayName="integrationserver-default.common-keystores_default_is_keystore.keystore.password">
-        <value>'{AES/CBC/PKCS5Padding}{L4ldwV3g6ZvFp9DITLHayFSH8K0u2PQ0lUsJ//kIO5w=}{UaQcYci30n/nrHp7yYV2mg==}Ma4vp+EIaomBWeFGDr7nUA=='</value>
+        <value>'{AES/CBC/PKCS5Padding}{kuqprLZ485j7hmx3uYzlL4S+pbZejptv/ZEOwtF1zuU=}{X/EW1XF+Yy86ATgpnh7O8A==}knIOHrNaxUBiLNxf3l6LSg=='</value>
     </property>
     <property name="integrationserver-default.common-keystores_default_is_keystore.keystore.type" data_type="string" many="false" isSecure="false" displayName="integrationserver-default.common-keystores_default_is_keystore.keystore.type">
         <value>JKS</value>
@@ -40,7 +40,7 @@
         <value>'15'</value>
     </property>
     <property name="integrationserver-default.common-keystores_default_is_keystore.keystore.key.password" data_type="string" many="false" isSecure="true" displayName="integrationserver-default.common-keystores_default_is_keystore.keystore.key.password">
-        <value>'{AES/CBC/PKCS5Padding}{NZ5y5kSroMn5PbttZ7uxENCXf3p1X6SzNg0/n4q/mtw=}{l/O9JzqiUQ5Iztom4PJECw==}qFwMLSTzzTjcdMUIO9MC6g=='</value>
+        <value>'{AES/CBC/PKCS5Padding}{TpwLqMTinWiCJX4J6dxg7bxTObiirpbk5DoWTcIX3oM=}{gGV/XcupqzhbGXipTd2oRA==}Or+npYWIdI8eHrivVR1G+w=='</value>
     </property>
     <property name="integrationserver-default.is-resources.resources.session.sessiontimeout" data_type="number" many="false" isSecure="false" displayName="integrationserver-default.is-resources.resources.session.sessiontimeout">
         <value>'10'</value>
@@ -49,7 +49,7 @@
         <value>'2147483647'</value>
     </property>
     <property name="integrationserver-default.common-truststores_default_is_truststore.truststore.password" data_type="string" many="false" isSecure="true" displayName="integrationserver-default.common-truststores_default_is_truststore.truststore.password">
-        <value></value>
+        <value>'{AES/CBC/PKCS5Padding}{4aHNndIwT7qGmslLOGcSGslfi5d6j49yOK0IbHV0V+4=}{pxrKfmESnEJxSGxrny5IxA==}0nyVHburIodKWr3+piMuFA=='</value>
     </property>
     <property name="integrationserver-default.is-resources.resources.serverthreadpool.maximumthreads" data_type="number" many="false" isSecure="false" displayName="integrationserver-default.is-resources.resources.serverthreadpool.maximumthreads">
         <value>'75'</value>
