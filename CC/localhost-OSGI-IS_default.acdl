@@ -7,7 +7,7 @@
         <value>TRUE</value>
     </property>
     <property name="restartRuntimes" many="false" isSecure="false" displayName="restartRuntimes">
-        <value>FALSE</value>
+        <value>TRUE</value>
     </property>
     <property name="integrationserver-default.common-truststores_default_wmcloud_truststore.truststore.type" data_type="string" many="false" isSecure="false" displayName="integrationserver-default.common-truststores_default_wmcloud_truststore.truststore.type">
         <value>JKS</value>
@@ -22,7 +22,7 @@
         <value>../../../common/conf/platform_truststore.jks</value>
     </property>
     <property name="integrationserver-default.common-truststores_default_wmcloud_truststore.truststore.password" data_type="string" many="false" isSecure="true" displayName="integrationserver-default.common-truststores_default_wmcloud_truststore.truststore.password">
-        <value>'{AES/CBC/PKCS5Padding}{X8eoo/Ng3IsVS/Xdx9SFnnJCTPbYZmlcORWsri0Z74Y=}{WIhl2I8pvqmZ5aOuZsDgDA==}0srtHQe6fOeTZ0kIXsTsqg=='</value>
+        <value></value>
     </property>
     <property name="integrationserver-default.common-truststores_default_wmcloud_truststore.truststore.location" data_type="string" many="false" isSecure="false" displayName="integrationserver-default.common-truststores_default_wmcloud_truststore.truststore.location">
         <value>packages/WmCloud/config/wmcloud_truststore.jks</value>
@@ -49,7 +49,7 @@
         <value>'2147483647'</value>
     </property>
     <property name="integrationserver-default.common-truststores_default_is_truststore.truststore.password" data_type="string" many="false" isSecure="true" displayName="integrationserver-default.common-truststores_default_is_truststore.truststore.password">
-        <value>'{AES/CBC/PKCS5Padding}{4aHNndIwT7qGmslLOGcSGslfi5d6j49yOK0IbHV0V+4=}{pxrKfmESnEJxSGxrny5IxA==}0nyVHburIodKWr3+piMuFA=='</value>
+        <value></value>
     </property>
     <property name="integrationserver-default.is-resources.resources.serverthreadpool.maximumthreads" data_type="number" many="false" isSecure="false" displayName="integrationserver-default.is-resources.resources.serverthreadpool.maximumthreads">
         <value>'75'</value>
