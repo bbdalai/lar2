@@ -22,7 +22,7 @@
         <value>../../../common/conf/platform_truststore.jks</value>
     </property>
     <property name="integrationserver-default.common-truststores_default_wmcloud_truststore.truststore.password" data_type="string" many="false" isSecure="true" displayName="integrationserver-default.common-truststores_default_wmcloud_truststore.truststore.password">
-        <value>'{AES/CBC/PKCS5Padding}{tFmLunv+UTiRW33/qjVHSvb2PSzJJTDq2D9jX4lCkpo=}{dxiEKK1B8nZJkwzv+wkziw==}7Ga8Snz7vXj3Qq6XJ7WHqA=='</value>
+        <value></value>
     </property>
     <property name="integrationserver-default.common-truststores_default_wmcloud_truststore.truststore.location" data_type="string" many="false" isSecure="false" displayName="integrationserver-default.common-truststores_default_wmcloud_truststore.truststore.location">
         <value>packages/WmCloud/config/wmcloud_truststore.jks</value>
@@ -49,7 +49,7 @@
         <value>'2147483647'</value>
     </property>
     <property name="integrationserver-default.common-truststores_default_is_truststore.truststore.password" data_type="string" many="false" isSecure="true" displayName="integrationserver-default.common-truststores_default_is_truststore.truststore.password">
-        <value>'{AES/CBC/PKCS5Padding}{OILGFuCbexD8LfJb8Y0aDPionoo5EVctPKjC0o6LsiM=}{zgMcgQnjD6ml41LfRD8YWw==}m++g/od40tZ9xWyFxZH9aQ=='</value>
+        <value></value>
     </property>
     <property name="integrationserver-default.is-resources.resources.serverthreadpool.maximumthreads" data_type="number" many="false" isSecure="false" displayName="integrationserver-default.is-resources.resources.serverthreadpool.maximumthreads">
         <value>'75'</value>
