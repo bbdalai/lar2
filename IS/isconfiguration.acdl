@@ -1,0 +1,35 @@
+<asset_composite xmlns="http://namespaces.softwareag.com/acdl/1.0" targetNamespace="http://namespaces.softwareag.com/webMethods/IS" name="isconfiguration" runtimeVersion="10.7.0.0">
+  <implementation.generic type="isconfiguration" />
+  <property name="suspendTasksDuringDeploy" displayName="Suspend Tasks During Deployment">
+    <value>none</value>
+  </property>
+  <property name="activateTasksAfterDeploy" displayName="Activate Tasks After Deployment">
+    <value>none</value>
+  </property>
+  <property name="enablePortsAfterDeploy" displayName="Enable Ports After Deployment">
+    <value>none</value>
+  </property>
+  <property name="reloadCacheManagersAfterDeployment" displayName="Reload Cache Managers After Deployment">
+    <value>none</value>
+  </property>
+  <buildInfo name="BuildVersion" value="10.7.0.0.1591096918820" />
+  <buildInfo name="BuildTimestamp" value="2020-06-02T16:51:58" />
+  <buildInfo name="MinimumTargetRuntimeVersion" value="10.7.0.0" />
+  <asset name="Task.c46c2d30-a4ae-11ea-87aa-000000000000" displayName="demo.task:demotask">
+    <implementation.generic type="istask" />
+    <property name="runAsUser" displayName="Run As User">
+      <value>Administrator</value>
+    </property>
+    <property name="target" displayName="Cluster Target Node">
+      <value />
+    </property>
+    <property name="suspendDuringDeploy" displayName="Suspend During Deployment">
+      <value>none</value>
+    </property>
+    <property name="activateAfterDeploy" displayName="Activate After Deployment">
+      <value>true</value>
+    </property>
+    <dependsOn>IS:demo.task.demotask</dependsOn>
+  </asset>
+</asset_composite>
+
