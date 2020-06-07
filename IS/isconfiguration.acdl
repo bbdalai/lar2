@@ -1,69 +1,69 @@
-<asset_composite xmlns="http://namespaces.softwareag.com/acdl/1.0" targetNamespace="http://namespaces.softwareag.com/webMethods/IS" name="isconfiguration" runtimeVersion="10.7.0.0">
-  <implementation.generic type="isconfiguration" />
-  <property name="suspendTasksDuringDeploy" displayName="Suspend Tasks During Deployment">
-    <value>none</value>
-  </property>
-  <property name="activateTasksAfterDeploy" displayName="Activate Tasks After Deployment">
-    <value>none</value>
-  </property>
-  <property name="enablePortsAfterDeploy" displayName="Enable Ports After Deployment">
-    <value>none</value>
-  </property>
-  <property name="reloadCacheManagersAfterDeployment" displayName="Reload Cache Managers After Deployment">
-    <value>none</value>
-  </property>
-  <buildInfo name="BuildVersion" value="10.7.0.0.1591531308372" />
-  <buildInfo name="BuildTimestamp" value="2020-06-07T17:31:48" />
-  <buildInfo name="MinimumTargetRuntimeVersion" value="10.7.0.0" />
-  <asset name="Task.c46c2d30-a4ae-11ea-87aa-000000000000" displayName="demo.task:demotask">
-    <implementation.generic type="istask" />
-    <property name="runAsUser" displayName="Run As User">
-      <value>Administrator</value>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<asset_composite name="isconfiguration" runtimeVersion="10.7.0.0" targetNamespace="http://namespaces.softwareag.com/webMethods/IS" xmlns="http://namespaces.softwareag.com/acdl/1.0" xmlns:EDA="http://namespaces.softwareag.com/webMethods/EDA" xmlns:MWS="http://namespaces.softwareag.com/webMethods/MWS" xmlns:IS="http://namespaces.softwareag.com/webMethods/IS" xmlns:APIPORTAL="http://namespaces.softwareag.com/webMethods/APIPORTAL" xmlns:AgileApps="http://namespaces.softwareag.com/webMethods/AgileApps" xmlns:BROKER="http://namespaces.softwareag.com/webMethods/BROKER" xmlns:implDetails="http://namespaces.softwareag.com/acdl/implDetails" xmlns:UniversalMessaging="http://namespaces.softwareag.com/webMethods/UniversalMessaging" xmlns:TN="http://namespaces.softwareag.com/webMethods/TN" xmlns:RULES="http://namespaces.softwareag.com/webMethods/RULES" xmlns:BPM="http://namespaces.softwareag.com/webMethods/BPM" xmlns:Optimize="http://namespaces.softwareag.com/webMethods/Optimize">
+    <implementation.generic type="isconfiguration"/>
+    <buildInfo name="BuildTimestamp" value="2020-06-07T17:31:48"/>
+    <buildInfo name="BuildVersion" value="10.7.0.0.1591531308372"/>
+    <buildInfo name="MinimumTargetRuntimeVersion" value="10.7.0.0"/>
+    <asset name="Task.c46c2d30-a4ae-11ea-87aa-000000000000" displayName="demo.task:demotask" isDeployable="true">
+        <implementation.generic type="istask"/>
+        <dependsOn>IS:demo.task.demotask</dependsOn>
+        <property name="runAsUser" many="false" isSecure="false" displayName="Run As User">
+            <value>Administrator</value>
+        </property>
+        <property name="target" many="false" isSecure="false" displayName="Cluster Target Node">
+            <value></value>
+        </property>
+        <property name="suspendDuringDeploy" many="false" isSecure="false" displayName="Suspend During Deployment">
+            <value>none</value>
+        </property>
+        <property name="activateAfterDeploy" many="false" isSecure="false" displayName="Activate After Deployment">
+            <value>true</value>
+        </property>
+    </asset>
+    <asset name="JNDIAlias.demo" displayName="demo" isDeployable="true">
+        <implementation.generic type="isjndialias"/>
+        <property name="providerURL" many="false" isSecure="false" displayName="Provider URL">
+            <value>${UM_URL}</value>
+        </property>
+        <property name="providerURLFailoverList" many="false" isSecure="false" displayName="Provider URL Failover List">
+            <value></value>
+        </property>
+        <property name="securityPrincipal" many="false" isSecure="false" displayName="Security Principal">
+            <value>${UM_USER}</value>
+        </property>
+        <property name="securityCredentials" many="false" isSecure="true" displayName="Security Credentials">
+            <value>${UM_PASSWORD}</value>
+        </property>
+    </asset>
+    <asset name="JMSAlias.demo1" displayName="demo1" isDeployable="true">
+        <implementation.generic type="isjmsalias"/>
+        <dependsOn>IS:JNDIAlias.demo</dependsOn>
+        <property name="clientID" many="false" isSecure="false" displayName="Connection Client ID">
+            <value></value>
+        </property>
+        <property name="user" many="false" isSecure="false" displayName="User">
+            <value>${UM_USER}</value>
+        </property>
+        <property name="password" many="false" isSecure="true" displayName="Password">
+            <value>${UM_PASSWORD}</value>
+        </property>
+        <property name="jndi_connectionFactoryLookupName" many="false" isSecure="false" displayName="Connection Factory Lookup Name">
+            <value>demo</value>
+        </property>
+        <property name="jndi_automaticallyCreateUMAdminObjects" many="false" isSecure="false" displayName="Automatically Create Administered Objects">
+            <value>false</value>
+        </property>
+    </asset>
+    <property name="suspendTasksDuringDeploy" many="false" isSecure="false" displayName="Suspend Tasks During Deployment">
+        <value>none</value>
     </property>
-    <property name="target" displayName="Cluster Target Node">
-      <value />
+    <property name="activateTasksAfterDeploy" many="false" isSecure="false" displayName="Activate Tasks After Deployment">
+        <value>none</value>
     </property>
-    <property name="suspendDuringDeploy" displayName="Suspend During Deployment">
-      <value>none</value>
+    <property name="enablePortsAfterDeploy" many="false" isSecure="false" displayName="Enable Ports After Deployment">
+        <value>none</value>
     </property>
-    <property name="activateAfterDeploy" displayName="Activate After Deployment">
-      <value>true</value>
+    <property name="reloadCacheManagersAfterDeployment" many="false" isSecure="false" displayName="Reload Cache Managers After Deployment">
+        <value>none</value>
     </property>
-    <dependsOn>IS:demo.task.demotask</dependsOn>
-  </asset>
-  <asset name="JNDIAlias.demo" displayName="demo">
-    <implementation.generic type="isjndialias" />
-    <property name="providerURL" displayName="Provider URL">
-      <value>nsp://localhost:9000/</value>
-    </property>
-    <property name="providerURLFailoverList" displayName="Provider URL Failover List">
-      <value />
-    </property>
-    <property name="securityPrincipal" displayName="Security Principal">
-      <value />
-    </property>
-    <property name="securityCredentials" displayName="Security Credentials" isSecure="true">
-      <value>{AES}aYrXC43dTWsDUHRWG5mhTA==</value>
-    </property>
-  </asset>
-  <asset name="JMSAlias.demo1" displayName="demo1">
-    <implementation.generic type="isjmsalias" />
-    <property name="clientID" displayName="Connection Client ID">
-      <value />
-    </property>
-    <property name="user" displayName="User">
-      <value>dcldev01.eur.ad.sag</value>
-    </property>
-    <property name="password" displayName="Password" isSecure="true">
-      <value>{AES}dQqG9OmWxy081+Y/oQ09Vg==</value>
-    </property>
-    <property name="jndi_connectionFactoryLookupName" displayName="Connection Factory Lookup Name">
-      <value>demo</value>
-    </property>
-    <property name="jndi_automaticallyCreateUMAdminObjects" displayName="Automatically Create Administered Objects">
-      <value>false</value>
-    </property>
-    <dependsOn>IS:JNDIAlias.demo</dependsOn>
-  </asset>
 </asset_composite>
-
