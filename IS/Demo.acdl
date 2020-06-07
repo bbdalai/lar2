@@ -1,7 +1,7 @@
 <asset_composite xmlns="http://namespaces.softwareag.com/acdl/1.0" targetNamespace="http://namespaces.softwareag.com/webMethods/IS" name="Demo" runtimeVersion="10.7.0.0">
   <implementation.generic type="ispackage" />
-  <buildInfo name="BuildVersion" value="10.7.0.0.1591529280235" />
-  <buildInfo name="BuildTimestamp" value="2020-06-07T16:58:00" />
+  <buildInfo name="BuildVersion" value="10.7.0.0.1591540545187" />
+  <buildInfo name="BuildTimestamp" value="2020-06-07T20:05:45" />
   <buildInfo name="MinimumTargetRuntimeVersion" value="10.7.0.0" />
   <property name="activatePkgOnInstall" displayName="Activate Package On Install">
     <value>true</value>
