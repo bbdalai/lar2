@@ -1,7 +1,7 @@
 <asset_composite xmlns="http://namespaces.softwareag.com/acdl/1.0" targetNamespace="http://namespaces.softwareag.com/webMethods/IS" name="Demo" runtimeVersion="10.7.0.0">
   <implementation.generic type="ispackage" />
-  <buildInfo name="BuildVersion" value="10.7.0.0.1589863014123" />
-  <buildInfo name="BuildTimestamp" value="2020-05-19T10:06:54" />
+  <buildInfo name="BuildVersion" value="10.7.0.0.1591516283270" />
+  <buildInfo name="BuildTimestamp" value="2020-06-07T13:21:23" />
   <buildInfo name="MinimumTargetRuntimeVersion" value="10.7.0.0" />
   <property name="activatePkgOnInstall" displayName="Activate Package On Install">
     <value>true</value>
@@ -36,6 +36,9 @@
   <asset name="ISPackage.Demo" displayName="Demo">
     <implementation.generic type="ispackage" />
   </asset>
+  <asset name="demo.task.demotask" displayName="demo.task:demotask">
+    <implementation.generic type="isflowservice" />
+  </asset>
   <asset name="Demo.code" displayName="code">
     <implementation.generic type="isfolder" />
   </asset>
@@ -50,6 +53,9 @@
   </asset>
   <asset name="Demo.config" displayName="config">
     <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="Demo.config.aclmap_pkg.cnf" displayName="config/aclmap_pkg.cnf">
+    <implementation.generic type="isfile" />
   </asset>
   <asset name="Demo.doc" displayName="doc">
     <implementation.generic type="isfolder" />
