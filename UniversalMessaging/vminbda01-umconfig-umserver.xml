@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<NirvanaRealm name="umserver" exportDate="2020-07-15+05:30" comment="Realm configuration from umserver" version="10.5" buildInfo="10.5.0.0.123831">
+    <ChannelSet>
+        <ChannelEntry>
+            <ChannelAttributesEntry name="/naming/defaultContext" TTL="0" capacity="0" EID="0" clusterWide="false" jmsEngine="false" mergeEngine="false" type="MIXED_TYPE"/>
+            <StorePropertiesEntry HonorCapacityWhenFull="true" SyncOnEachWrite="false" SyncMaxBatchSize="0" SyncBatchTime="0" PerformAutomaticMaintenance="true" EnableCaching="true" CacheOnReload="true" EnableReadBuffering="true" ReadBufferSize="10240" Priority="4" EnableMulticast="false" MultiFileEventsPerSpindle="50000" StampDictionary="0"/>
+            <ChannelKeySet>
+                <ChannelKeyEntry keyName="alias" keyDepth="1"/>
+            </ChannelKeySet>
+            <EventsSet>
+                <Event id="0">
+                    <EventAttribSet>
+                        <EventAttrib name="nrvpub.time" type="Long" value="1593521704018"/>
+                        <EventAttrib name="nrvpub.host" type="String" value="vminbda01.eur.ad.sag"/>
+                        <EventAttrib name="nrvpub.name" type="String" value="administrator"/>
+                        <EventAttrib name="JMSDeliveryMode" type="String" value="PERSISTENT"/>
+                        <EventAttrib name="JMSPriority" type="Byte" value="4"/>
+                    </EventAttribSet>
+                    <EventPropSet>
+                        <EventProp name="JMS_my-channels_EnableMultiplexedConnections" type="Boolean" value="true"/>
+                        <EventProp name="JMS_my-channels_RandomRNames" type="Boolean" value="false"/>
+                        <EventProp name="JMS_my-channels_RetryCommit" type="Boolean" value="false"/>
+                        <EventProp name="JMS_my-channels_ConxExceptionOnRetryFailure" type="Boolean" value="false"/>
+                        <EventProp name="JMS_my-channels_MaxReconnectAttempts" type="Integer" value="-1"/>
+                        <EventProp name="JMS_my-channels_EnableSharedDurable" type="Boolean" value="true"/>
+                        <EventProp name="JMS_my-channels_EnableSerialDurable" type="Boolean" value="false"/>
+                        <EventProp name="JMS_my-channels_EnableSingleSharedDurableAck" type="Boolean" value="false"/>
+                        <EventProp name="JMS_my-channels_EnableSingleQueueAck" type="Boolean" value="false"/>
+                        <EventProp name="JMS_my-channels_SyncWritesToDisc" type="Boolean" value="false"/>
+                        <EventProp name="JMS_my-channels_SyncSendPersistent" type="Boolean" value="true"/>
+                        <EventProp name="JMS_my-channels_InitialConnectionRetryCount" type="Integer" value="2"/>
+                        <EventProp name="JMS_my-channels_SyncBatchSize" type="Integer" value="50"/>
+                        <EventProp name="JMS_my-channels_SyncTime" type="Integer" value="20"/>
+                        <EventProp name="JMS_my-channels_GlobalStoreCapacity" type="Integer" value="0"/>
+                        <EventProp name="JMS_my-channels_AutoAckCount" type="Integer" value="50"/>
+                        <EventProp name="JMS_my-channels_WindowSize" type="Integer" value="100"/>
+                        <EventProp name="JMS_my-channels_useInfiniteWindowSize" type="Boolean" value="false"/>
+                        <EventProp name="JMS_my-channels_UnAckedSize" type="Integer" value="100"/>
+                        <EventProp name="JMS_my-channels_RedliveredSize" type="Integer" value="100"/>
+                        <EventProp name="JMS_my-channels_ThreadPoolSize" type="Integer" value="30"/>
+                        <EventProp name="JMS_my-channels_AutoReconnectAfterACL" type="Boolean" value="false"/>
+                        <EventProp name="JMS_my-channels_ImmediateReconnect" type="Boolean" value="true"/>
+                        <EventProp name="JMS_my-channels_ReconnectInterval" type="Long" value="2000"/>
+                        <EventProp name="JMS_my-channels_UseJMSEngine" type="Boolean" value="true"/>
+                        <EventProp name="JMS_my-channels_DisconnectAfterClusterFailure" type="Boolean" value="true"/>
+                        <EventProp name="JMS_my-channels_ConnectionTimeout" type="Long" value="10000"/>
+                        <EventProp name="JMS_my-channels_PermittedKeepAlivesMissed" type="Integer" value="2"/>
+                        <EventProp name="JMS_my-channels_SyncNamedTopicAcks" type="Boolean" value="true"/>
+                        <EventProp name="JMS_my-channels_AdapterBuffer" type="Integer" value="1310720"/>
+                        <EventProp name="JMS_my-channels_WriteHandler" type="Integer" value="3"/>
+                        <EventProp name="JMS_my-channels_SyncQueueAcks" type="Boolean" value="true"/>
+                        <EventProp name="JMS_my-channels_SyncTopicAcks" type="Boolean" value="true"/>
+                        <EventProp name="JMS_my-channels_AutoCreateResource" type="Boolean" value="true"/>
+                        <EventProp name="JMS_my-channels_FollowMaster" type="Boolean" value="false"/>
+                        <EventProp name="alias.type" type="Integer" value="1"/>
+                        <EventProp name="alias" type="String" value="cnf1"/>
+                        <EventProp name="alias.reference.classname" type="String" value="javax.jms.ConnectionFactory"/>
+                        <EventProp name="alias.reference.factoryclass" type="String" value="com.pcbsys.nirvana.nJMS.ConnectionFactoryFactory"/>
+                        <EventProp name="alias.reference.url" type="String" value="{&quot;JMS_my-channels_EnableMultiplexedConnections&quot;:[3,true],&quot;JMS_my-channels_RandomRNames&quot;:[3,false],&quot;JMS_my-channels_RetryCommit&quot;:[3,false],&quot;JMS_my-channels_ConxExceptionOnRetryFailure&quot;:[3,false],&quot;JMS_my-channels_MaxReconnectAttempts&quot;:[4,-1],&quot;JMS_my-channels_EnableSharedDurable&quot;:[3,true],&quot;JMS_my-channels_EnableSerialDurable&quot;:[3,false],&quot;JMS_my-channels_EnableSingleSharedDurableAck&quot;:[3,false],&quot;JMS_my-channels_EnableSingleQueueAck&quot;:[3,false],&quot;JMS_my-channels_SyncWritesToDisc&quot;:[3,false],&quot;JMS_my-channels_SyncSendPersistent&quot;:[3,true],&quot;JMS_my-channels_InitialConnectionRetryCount&quot;:[4,2],&quot;JMS_my-channels_SyncBatchSize&quot;:[4,50],&quot;JMS_my-channels_SyncTime&quot;:[4,20],&quot;JMS_my-channels_GlobalStoreCapacity&quot;:[4,0],&quot;JMS_my-channels_AutoAckCount&quot;:[4,50],&quot;JMS_my-channels_WindowSize&quot;:[4,100],&quot;JMS_my-channels_useInfiniteWindowSize&quot;:[3,false],&quot;JMS_my-channels_UnAckedSize&quot;:[4,100],&quot;JMS_my-channels_RedliveredSize&quot;:[4,100],&quot;JMS_my-channels_ThreadPoolSize&quot;:[4,30],&quot;JMS_my-channels_AutoReconnectAfterACL&quot;:[3,false],&quot;JMS_my-channels_ImmediateReconnect&quot;:[3,true],&quot;JMS_my-channels_ReconnectInterval&quot;:[1,2000],&quot;JMS_my-channels_UseJMSEngine&quot;:[3,true],&quot;JMS_my-channels_DisconnectAfterClusterFailure&quot;:[3,true],&quot;JMS_my-channels_ConnectionTimeout&quot;:[1,10000],&quot;JMS_my-channels_PermittedKeepAlivesMissed&quot;:[4,2],&quot;JMS_my-channels_SyncNamedTopicAcks&quot;:[3,true],&quot;JMS_my-channels_AdapterBuffer&quot;:[4,1310720],&quot;JMS_my-channels_WriteHandler&quot;:[4,3],&quot;JMS_my-channels_SyncQueueAcks&quot;:[3,true],&quot;JMS_my-channels_SyncTopicAcks&quot;:[3,true],&quot;JMS_my-channels_AutoCreateResource&quot;:[3,true],&quot;JMS_my-channels_FollowMaster&quot;:[3,false]}"/>
+                        <EventProp name="alias.stringRefAddr.type" type="String" value="ConnectionFactory"/>
+                        <EventProp name="alias.stringRefAddr.addr" type="String" value="nsp://vminbda01:9000"/>
+                    </EventPropSet>
+                    <EventData>Y25mMQ==</EventData>
+                </Event>
+                <Event id="1">
+                    <EventAttribSet>
+                        <EventAttrib name="nrvpub.time" type="Long" value="1593521826241"/>
+                        <EventAttrib name="nrvpub.host" type="String" value="vminbda01.eur.ad.sag"/>
+                        <EventAttrib name="nrvpub.name" type="String" value="administrator"/>
+                        <EventAttrib name="JMSDeliveryMode" type="String" value="PERSISTENT"/>
+                        <EventAttrib name="JMSPriority" type="Byte" value="4"/>
+                    </EventAttribSet>
+                    <EventPropSet>
+                        <EventProp name="alias.type" type="Integer" value="1"/>
+                        <EventProp name="alias" type="String" value="topic1"/>
+                        <EventProp name="alias.reference.classname" type="String" value="javax.jms.Topic"/>
+                        <EventProp name="alias.reference.factoryclass" type="String" value="com.pcbsys.nirvana.nJMS.TopicFactory"/>
+                        <EventProp name="alias.reference.url" type="String" value=""/>
+                        <EventProp name="alias.stringRefAddr.type" type="String" value="Topic"/>
+                        <EventProp name="alias.stringRefAddr.addr" type="String" value="topic1"/>
+                    </EventPropSet>
+                    <EventData>dG9waWMx</EventData>
+                </Event>
+                <Event id="2">
+                    <EventAttribSet>
+                        <EventAttrib name="nrvpub.time" type="Long" value="1593521845477"/>
+                        <EventAttrib name="nrvpub.host" type="String" value="vminbda01.eur.ad.sag"/>
+                        <EventAttrib name="nrvpub.name" type="String" value="administrator"/>
+                        <EventAttrib name="JMSDeliveryMode" type="String" value="PERSISTENT"/>
+                        <EventAttrib name="JMSPriority" type="Byte" value="4"/>
+                    </EventAttribSet>
+                    <EventPropSet>
+                        <EventProp name="alias.type" type="Integer" value="1"/>
+                        <EventProp name="alias" type="String" value="queue1"/>
+                        <EventProp name="alias.reference.classname" type="String" value="javax.jms.Queue"/>
+                        <EventProp name="alias.reference.factoryclass" type="String" value="com.pcbsys.nirvana.nJMS.QueueFactory"/>
+                        <EventProp name="alias.reference.url" type="String" value=""/>
+                        <EventProp name="alias.stringRefAddr.type" type="String" value="Queue"/>
+                        <EventProp name="alias.stringRefAddr.addr" type="String" value="queue1"/>
+                    </EventPropSet>
+                    <EventData>cXVldWUx</EventData>
+                </Event>
+                <Event id="3">
+                    <EventAttribSet>
+                        <EventAttrib name="nrvpub.time" type="Long" value="1594199312252"/>
+                        <EventAttrib name="nrvpub.host" type="String" value="vminbda01.eur.ad.sag"/>
+                        <EventAttrib name="nrvpub.name" type="String" value="administrator"/>
+                        <EventAttrib name="JMSDeliveryMode" type="String" value="PERSISTENT"/>
+                        <EventAttrib name="JMSPriority" type="Byte" value="4"/>
+                    </EventAttribSet>
+                    <EventPropSet>
+                        <EventProp name="JMS_my-channels_EnableMultiplexedConnections" type="Boolean" value="true"/>
+                        <EventProp name="JMS_my-channels_RandomRNames" type="Boolean" value="false"/>
+                        <EventProp name="JMS_my-channels_RetryCommit" type="Boolean" value="false"/>
+                        <EventProp name="JMS_my-channels_ConxExceptionOnRetryFailure" type="Boolean" value="false"/>
+                        <EventProp name="JMS_my-channels_MaxReconnectAttempts" type="Integer" value="-1"/>
+                        <EventProp name="JMS_my-channels_EnableSharedDurable" type="Boolean" value="true"/>
+                        <EventProp name="JMS_my-channels_EnableSerialDurable" type="Boolean" value="false"/>
+                        <EventProp name="JMS_my-channels_EnableSingleSharedDurableAck" type="Boolean" value="false"/>
+                        <EventProp name="JMS_my-channels_EnableSingleQueueAck" type="Boolean" value="false"/>
+                        <EventProp name="JMS_my-channels_SyncWritesToDisc" type="Boolean" value="false"/>
+                        <EventProp name="JMS_my-channels_SyncSendPersistent" type="Boolean" value="true"/>
+                        <EventProp name="JMS_my-channels_InitialConnectionRetryCount" type="Integer" value="2"/>
+                        <EventProp name="JMS_my-channels_SyncBatchSize" type="Integer" value="50"/>
+                        <EventProp name="JMS_my-channels_SyncTime" type="Integer" value="20"/>
+                        <EventProp name="JMS_my-channels_GlobalStoreCapacity" type="Integer" value="0"/>
+                        <EventProp name="JMS_my-channels_AutoAckCount" type="Integer" value="50"/>
+                        <EventProp name="JMS_my-channels_WindowSize" type="Integer" value="100"/>
+                        <EventProp name="JMS_my-channels_useInfiniteWindowSize" type="Boolean" value="false"/>
+                        <EventProp name="JMS_my-channels_UnAckedSize" type="Integer" value="100"/>
+                        <EventProp name="JMS_my-channels_RedliveredSize" type="Integer" value="100"/>
+                        <EventProp name="JMS_my-channels_ThreadPoolSize" type="Integer" value="30"/>
+                        <EventProp name="JMS_my-channels_AutoReconnectAfterACL" type="Boolean" value="false"/>
+                        <EventProp name="JMS_my-channels_ImmediateReconnect" type="Boolean" value="true"/>
+                        <EventProp name="JMS_my-channels_ReconnectInterval" type="Long" value="2000"/>
+                        <EventProp name="JMS_my-channels_UseJMSEngine" type="Boolean" value="true"/>
+                        <EventProp name="JMS_my-channels_DisconnectAfterClusterFailure" type="Boolean" value="true"/>
+                        <EventProp name="JMS_my-channels_ConnectionTimeout" type="Long" value="10000"/>
+                        <EventProp name="JMS_my-channels_PermittedKeepAlivesMissed" type="Integer" value="2"/>
+                        <EventProp name="JMS_my-channels_SyncNamedTopicAcks" type="Boolean" value="true"/>
+                        <EventProp name="JMS_my-channels_AdapterBuffer" type="Integer" value="1310720"/>
+                        <EventProp name="JMS_my-channels_WriteHandler" type="Integer" value="3"/>
+                        <EventProp name="JMS_my-channels_SyncQueueAcks" type="Boolean" value="true"/>
+                        <EventProp name="JMS_my-channels_SyncTopicAcks" type="Boolean" value="true"/>
+                        <EventProp name="JMS_my-channels_AutoCreateResource" type="Boolean" value="true"/>
+                        <EventProp name="JMS_my-channels_FollowMaster" type="Boolean" value="false"/>
+                        <EventProp name="alias.type" type="Integer" value="1"/>
+                        <EventProp name="alias" type="String" value="cnf2"/>
+                        <EventProp name="alias.reference.classname" type="String" value="javax.jms.ConnectionFactory"/>
+                        <EventProp name="alias.reference.factoryclass" type="String" value="com.pcbsys.nirvana.nJMS.ConnectionFactoryFactory"/>
+                        <EventProp name="alias.reference.url" type="String" value="{&quot;JMS_my-channels_EnableMultiplexedConnections&quot;:[3,true],&quot;JMS_my-channels_RandomRNames&quot;:[3,false],&quot;JMS_my-channels_RetryCommit&quot;:[3,false],&quot;JMS_my-channels_ConxExceptionOnRetryFailure&quot;:[3,false],&quot;JMS_my-channels_MaxReconnectAttempts&quot;:[4,-1],&quot;JMS_my-channels_EnableSharedDurable&quot;:[3,true],&quot;JMS_my-channels_EnableSerialDurable&quot;:[3,false],&quot;JMS_my-channels_EnableSingleSharedDurableAck&quot;:[3,false],&quot;JMS_my-channels_EnableSingleQueueAck&quot;:[3,false],&quot;JMS_my-channels_SyncWritesToDisc&quot;:[3,false],&quot;JMS_my-channels_SyncSendPersistent&quot;:[3,true],&quot;JMS_my-channels_InitialConnectionRetryCount&quot;:[4,2],&quot;JMS_my-channels_SyncBatchSize&quot;:[4,50],&quot;JMS_my-channels_SyncTime&quot;:[4,20],&quot;JMS_my-channels_GlobalStoreCapacity&quot;:[4,0],&quot;JMS_my-channels_AutoAckCount&quot;:[4,50],&quot;JMS_my-channels_WindowSize&quot;:[4,100],&quot;JMS_my-channels_useInfiniteWindowSize&quot;:[3,false],&quot;JMS_my-channels_UnAckedSize&quot;:[4,100],&quot;JMS_my-channels_RedliveredSize&quot;:[4,100],&quot;JMS_my-channels_ThreadPoolSize&quot;:[4,30],&quot;JMS_my-channels_AutoReconnectAfterACL&quot;:[3,false],&quot;JMS_my-channels_ImmediateReconnect&quot;:[3,true],&quot;JMS_my-channels_ReconnectInterval&quot;:[1,2000],&quot;JMS_my-channels_UseJMSEngine&quot;:[3,true],&quot;JMS_my-channels_DisconnectAfterClusterFailure&quot;:[3,true],&quot;JMS_my-channels_ConnectionTimeout&quot;:[1,10000],&quot;JMS_my-channels_PermittedKeepAlivesMissed&quot;:[4,2],&quot;JMS_my-channels_SyncNamedTopicAcks&quot;:[3,true],&quot;JMS_my-channels_AdapterBuffer&quot;:[4,1310720],&quot;JMS_my-channels_WriteHandler&quot;:[4,3],&quot;JMS_my-channels_SyncQueueAcks&quot;:[3,true],&quot;JMS_my-channels_SyncTopicAcks&quot;:[3,true],&quot;JMS_my-channels_AutoCreateResource&quot;:[3,true],&quot;JMS_my-channels_FollowMaster&quot;:[3,false]}"/>
+                        <EventProp name="alias.stringRefAddr.type" type="String" value="ConnectionFactory"/>
+                        <EventProp name="alias.stringRefAddr.addr" type="String" value="nsp://localhost:9000"/>
+                    </EventPropSet>
+                    <EventData>Y25mMg==</EventData>
+                </Event>
+                <Event id="4">
+                    <EventAttribSet>
+                        <EventAttrib name="nrvpub.time" type="Long" value="1594368854813"/>
+                        <EventAttrib name="nrvpub.host" type="String" value="vminbda01.eur.ad.sag"/>
+                        <EventAttrib name="nrvpub.name" type="String" value="administrator"/>
+                        <EventAttrib name="JMSDeliveryMode" type="String" value="PERSISTENT"/>
+                        <EventAttrib name="JMSPriority" type="Byte" value="4"/>
+                    </EventAttribSet>
+                    <EventPropSet>
+                        <EventProp name="alias.type" type="Integer" value="1"/>
+                        <EventProp name="alias" type="String" value="topic2"/>
+                        <EventProp name="alias.reference.classname" type="String" value="javax.jms.Topic"/>
+                        <EventProp name="alias.reference.factoryclass" type="String" value="com.pcbsys.nirvana.nJMS.TopicFactory"/>
+                        <EventProp name="alias.reference.url" type="String" value=""/>
+                        <EventProp name="alias.stringRefAddr.type" type="String" value="Topic"/>
+                        <EventProp name="alias.stringRefAddr.addr" type="String" value="topic2"/>
+                    </EventPropSet>
+                    <EventData>dG9waWMy</EventData>
+                </Event>
+            </EventsSet>
+        </ChannelEntry>
+    </ChannelSet>
+</NirvanaRealm>
