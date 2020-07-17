@@ -1,0 +1,275 @@
+<asset_composite xmlns="http://namespaces.softwareag.com/acdl/1.0" targetNamespace="http://namespaces.softwareag.com/webMethods/IS" name="Acme" runtimeVersion="10.5.0.0">
+  <implementation.generic type="ispackage" />
+  <buildInfo name="BuildVersion" value="10.5.0.0.1594978483910" />
+  <buildInfo name="BuildTimestamp" value="2020-07-17T15:04:43" />
+  <buildInfo name="MinimumTargetRuntimeVersion" value="10.5.0.0" />
+  <property name="activatePkgOnInstall" displayName="Activate Package On Install">
+    <value>true</value>
+  </property>
+  <property name="archivePkgOnInstall" displayName="Archive Package On Install">
+    <value>true</value>
+  </property>
+  <property name="compilePackage" displayName="Compile Package On Install">
+    <value>true</value>
+  </property>
+  <property name="fragPackage" displayName="Fragment Package On Install">
+    <value>true</value>
+  </property>
+  <property name="clearACLs" displayName="Delete ACLs for the assets from the target Integration Server">
+    <value>false</value>
+  </property>
+  <property name="disallowActivePackageInstall" displayName="Disallow Active Package Install">
+    <value>false</value>
+  </property>
+  <property name="packageExecutionCheck" displayName="Package Execution Check">
+    <value>0</value>
+  </property>
+  <property name="suspendTriggersDuringDeploy" displayName="Suspend Triggers During Deployment">
+    <value>false</value>
+  </property>
+  <property name="syncDocTypesToBroker" displayName="Synchronize Document Types During Deployment">
+    <value>true</value>
+  </property>
+  <property name="restartRuntimes" displayName="restartRuntimes">
+    <value>false</value>
+  </property>
+  <asset name="ISPackage.Acme" displayName="Acme">
+    <implementation.generic type="ispackage" />
+  </asset>
+  <asset name="acme.ff.dictionary.customer" displayName="acme.ff.dictionary:customer">
+    <implementation.generic type="ffdictionary" />
+  </asset>
+  <asset name="acme.ff.schema.addressFixedDT" displayName="acme.ff.schema:addressFixedDT">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="acme.ff.schema.addressFixed" displayName="acme.ff.schema:addressFixed">
+    <implementation.generic type="ffschema" />
+    <dependsOn>IS:acme.ff.dictionary.customer</dependsOn>
+  </asset>
+  <asset name="acme.ff.readAddressFF" displayName="acme.ff:readAddressFF">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:acme.ff.schema.addressFixedDT</dependsOn>
+  </asset>
+  <asset name="acme.ws.consumer.sequenceTryCatch_.connectors.sequenceTryCatch_PortType_sequenceTryCatch" displayName="acme.ws.consumer.sequenceTryCatch_.connectors:sequenceTryCatch_PortType_sequenceTryCatch">
+    <implementation.generic type="iswsconnector" />
+    <dependsOn>IS:acme.ws.consumer.sequenceTryCatch_.docTypes.sequenceTryCatch_PortType_sequenceTryCatch_Input</dependsOn>
+    <dependsOn>IS:acme.ws.consumer.sequenceTryCatch_.docTypes.sequenceTryCatch_PortType_sequenceTryCatch_Output</dependsOn>
+    <dependsOn>IS:acme.ws.consumer.sequenceTryCatch</dependsOn>
+  </asset>
+  <asset name="acme.ws.consumer.sequenceTryCatch_.responseServices.sequenceTryCatch_PortType_sequenceTryCatch_Response" displayName="acme.ws.consumer.sequenceTryCatch_.responseServices:sequenceTryCatch_PortType_sequenceTryCatch_Response">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:acme.ws.consumer.sequenceTryCatch_.docTypes.docTypeRef_tns_sequenceTryCatchResponse</dependsOn>
+  </asset>
+  <asset name="acme.ws.consumer.sequenceTryCatch_.responseServices.genericFault_Response" displayName="acme.ws.consumer.sequenceTryCatch_.responseServices:genericFault_Response">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="acme.ws.consumer.sequenceTryCatch_.docTypes.docTypeRef_tns_sequenceTryCatchResponse" displayName="acme.ws.consumer.sequenceTryCatch_.docTypes:docTypeRef_tns_sequenceTryCatchResponse">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="acme.ws.consumer.sequenceTryCatch_.docTypes.docTypeRef_tns_sequenceTryCatch" displayName="acme.ws.consumer.sequenceTryCatch_.docTypes:docTypeRef_tns_sequenceTryCatch">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="acme.ws.consumer.sequenceTryCatch_.docTypes.schema_sequenceTryCatch" displayName="acme.ws.consumer.sequenceTryCatch_.docTypes:schema_sequenceTryCatch">
+    <implementation.generic type="isschema" />
+  </asset>
+  <asset name="acme.ws.consumer.sequenceTryCatch_.docTypes.sequenceTryCatch_PortType_sequenceTryCatch_Input" displayName="acme.ws.consumer.sequenceTryCatch_.docTypes:sequenceTryCatch_PortType_sequenceTryCatch_Input">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:acme.ws.consumer.sequenceTryCatch_.docTypes.docTypeRef_tns_sequenceTryCatch</dependsOn>
+  </asset>
+  <asset name="acme.ws.consumer.sequenceTryCatch_.docTypes.sequenceTryCatch_PortType_sequenceTryCatch_Output" displayName="acme.ws.consumer.sequenceTryCatch_.docTypes:sequenceTryCatch_PortType_sequenceTryCatch_Output">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:acme.ws.consumer.sequenceTryCatch_.docTypes.docTypeRef_tns_sequenceTryCatchResponse</dependsOn>
+  </asset>
+  <asset name="acme.ws.consumer.sequenceTryCatch" displayName="acme.ws.consumer:sequenceTryCatch">
+    <implementation.generic type="iswsdconsumer" />
+    <dependsOn>IS:acme.ws.consumer.sequenceTryCatch_.docTypes.sequenceTryCatch_PortType_sequenceTryCatch_Input</dependsOn>
+    <dependsOn>IS:acme.ws.consumer.sequenceTryCatch_.docTypes.sequenceTryCatch_PortType_sequenceTryCatch_Output</dependsOn>
+    <dependsOn>IS:acme.ws.consumer.sequenceTryCatch_.connectors.sequenceTryCatch_PortType_sequenceTryCatch</dependsOn>
+    <dependsOn>IS:acme.ws.consumer.sequenceTryCatch_.responseServices.sequenceTryCatch_PortType_sequenceTryCatch_Response</dependsOn>
+    <dependsOn>IS:acme.ws.consumer.sequenceTryCatch_.responseServices.genericFault_Response</dependsOn>
+  </asset>
+  <asset name="acme.ws.provider.sequenceTryCatch" displayName="acme.ws.provider:sequenceTryCatch">
+    <implementation.generic type="iswsdprovider" />
+    <dependsOn>IS:acme.work.sequenceTryCatch</dependsOn>
+    <dependsOn>IS:acme.docs.Error</dependsOn>
+  </asset>
+  <asset name="acme.work.bookInformation._get" displayName="acme.work.bookInformation:_get">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:acmeSupport.bookInformation.getBook</dependsOn>
+  </asset>
+  <asset name="acme.work.bookInformation._post" displayName="acme.work.bookInformation:_post">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:acmeSupport.bookInformation.postBook</dependsOn>
+  </asset>
+  <asset name="acme.work.bookInformation._delete" displayName="acme.work.bookInformation:_delete">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:acmeSupport.bookInformation.deleteBook</dependsOn>
+  </asset>
+  <asset name="acme.work.bookInformation._put" displayName="acme.work.bookInformation:_put">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:acmeSupport.bookInformation.putBook</dependsOn>
+  </asset>
+  <asset name="acme.work.publishValidation" displayName="acme.work:publishValidation">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:acme.docs.Validation</dependsOn>
+  </asset>
+  <asset name="acme.work.handleValidationJMS" displayName="acme.work:handleValidationJMS">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="acme.work.sequenceTryCatch" displayName="acme.work:sequenceTryCatch">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:acme.work.riskyOperation</dependsOn>
+  </asset>
+  <asset name="acme.work.branch2" displayName="acme.work:branch2">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="acme.work.branch1" displayName="acme.work:branch1">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="acme.work.publishValidationJMS" displayName="acme.work:publishValidationJMS">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:acme.docs.Validation</dependsOn>
+  </asset>
+  <asset name="acme.work.handleValidation" displayName="acme.work:handleValidation">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:acme.docs.Validation</dependsOn>
+  </asset>
+  <asset name="acme.work.calcPercentage" displayName="acme.work:calcPercentage">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="acme.work.endsWith" displayName="acme.work:endsWith">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:Acme.code.source.acme.work.java</dependsOn>
+    <dependsOn>IS:Acme.code.classes.acme.work.class</dependsOn>
+  </asset>
+  <asset name="acme.work.getBookInformation" displayName="acme.work:getBookInformation">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="acme.work.riskyOperation" displayName="acme.work:riskyOperation">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="acme.work.loopTest" displayName="acme.work:loopTest">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:acmeSupport.docs.Department</dependsOn>
+  </asset>
+  <asset name="acme.work.listenForValidationJMS" displayName="acme.work:listenForValidationJMS">
+    <implementation.generic type="isjmstrigger" />
+    <dependsOn>IS:acme.work.handleValidationJMS</dependsOn>
+    <dependsOn>IS:JMSAlias.UniversalMessagingSampleJMSConnAlias</dependsOn>
+  </asset>
+  <asset name="acme.work.listenForValidation" displayName="acme.work:listenForValidation">
+    <implementation.generic type="istrigger" />
+    <dependsOn>IS:acme.work.handleValidation</dependsOn>
+    <dependsOn>IS:acme.docs.Validation</dependsOn>
+  </asset>
+  <asset name="acme.docs.request.schema_OrderRequest" displayName="acme.docs.request:schema_OrderRequest">
+    <implementation.generic type="isschema" />
+  </asset>
+  <asset name="acme.docs.request.OrderRequest" displayName="acme.docs.request:OrderRequest">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:acme.docs.request.docType_PartnerRoleDescription</dependsOn>
+  </asset>
+  <asset name="acme.docs.request.docType_PartnerRoleDescription" displayName="acme.docs.request:docType_PartnerRoleDescription">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="acme.docs.Error" displayName="acme.docs:Error">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="acme.docs.OrderCanonical" displayName="acme.docs:OrderCanonical">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="acme.docs.Validation" displayName="acme.docs:Validation">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="acme.utils.inspectLineItems" displayName="acme.utils:inspectLineItems">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:acme.docs.request.OrderRequest</dependsOn>
+  </asset>
+  <asset name="acme.utils.insertOrderCanonical" displayName="acme.utils:insertOrderCanonical">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:acme.docs.OrderCanonical</dependsOn>
+    <dependsOn>IS:acme.adapters.insertOrderHeader</dependsOn>
+    <dependsOn>IS:acme.adapters.insertOrderDetails</dependsOn>
+  </asset>
+  <asset name="acme.maps.orderRequestToCanonical" displayName="acme.maps:orderRequestToCanonical">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:acme.docs.request.OrderRequest</dependsOn>
+    <dependsOn>IS:acme.docs.OrderCanonical</dependsOn>
+  </asset>
+  <asset name="acme.adapters.selectOrderHeader" displayName="acme.adapters:selectOrderHeader">
+    <implementation.generic type="artservice" />
+    <dependsOn>IS:commonSupport.adapters.acmeAdapter</dependsOn>
+  </asset>
+  <asset name="acme.adapters.selectOrderDetails" displayName="acme.adapters:selectOrderDetails">
+    <implementation.generic type="artservice" />
+    <dependsOn>IS:commonSupport.adapters.acmeAdapter</dependsOn>
+  </asset>
+  <asset name="acme.adapters.insertOrderHeader" displayName="acme.adapters:insertOrderHeader">
+    <implementation.generic type="artservice" />
+    <dependsOn>IS:commonSupport.adapters.acmeAdapter</dependsOn>
+  </asset>
+  <asset name="acme.adapters.insertOrderDetails" displayName="acme.adapters:insertOrderDetails">
+    <implementation.generic type="artservice" />
+    <dependsOn>IS:commonSupport.adapters.acmeAdapter</dependsOn>
+  </asset>
+  <asset name="acme.notifiers.orderCanonicalNotifierPublishDocument" displayName="acme.notifiers:orderCanonicalNotifierPublishDocument">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="acme.notifiers.orderCanonicalNotifier" displayName="acme.notifiers:orderCanonicalNotifier">
+    <implementation.generic type="artpollingnotification" />
+    <property name="art.deployment.state" displayName="State After Deployment">
+      <value>disable</value>
+    </property>
+    <property name="notificationImmediate" displayName="Immediate:">
+      <value>false</value>
+    </property>
+    <property name="notificationInterval" displayName="Interval: (seconds)">
+      <value>10</value>
+    </property>
+    <property name="notificationOverlap" displayName="Overlap:">
+      <value>false</value>
+    </property>
+    <dependsOn>IS:acme.notifiers.orderCanonicalNotifierPublishDocument</dependsOn>
+    <dependsOn>IS:commonSupport.adapters.acmeAdapter</dependsOn>
+  </asset>
+  <asset name="Acme.code" displayName="code">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="Acme.code.classes" displayName="code/classes">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="Acme.code.classes.acme.work.class" displayName="code/classes/acme/work.class">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="Acme.code.source" displayName="code/source">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="Acme.code.source.acme.work.java" displayName="code/source/acme/work.java">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="Acme.code.jars" displayName="code/jars">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="Acme.pub" displayName="pub">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="Acme.config" displayName="config">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="Acme.doc" displayName="doc">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="Acme.lib" displayName="lib">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="Acme.resources" displayName="resources">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="Acme.templates" displayName="templates">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="Acme.web" displayName="web">
+    <implementation.generic type="isfolder" />
+  </asset>
+</asset_composite>
+
