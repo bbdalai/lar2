@@ -3,19 +3,4 @@
     <implementation.generic type="UniversalMessaging"/>
     <buildInfo name="build.timestamp"/>
     <buildInfo name="build.version" value="10.7.0.0000-133343"/>
-    <asset name="ConnectionFactory:cnf1" isDeployable="true">
-        <implementation.generic type="ConnectionFactory"/>
-    </asset>
-    <asset name="ConnectionFactory:cnf2" isDeployable="true">
-        <implementation.generic type="ConnectionFactory"/>
-    </asset>
-    <asset name="JNDITopic:topic1" isDeployable="true">
-        <implementation.generic type="JNDITopic"/>
-    </asset>
-    <asset name="JNDITopic:topic2" isDeployable="true">
-        <implementation.generic type="JNDITopic"/>
-    </asset>
-    <asset name="JNDIQueue:queue1" isDeployable="true">
-        <implementation.generic type="JNDIQueue"/>
-    </asset>
 </asset_composite>
