@@ -1,194 +1,62 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<asset_composite name="isconfiguration" runtimeVersion="10.7.0.0" targetNamespace="http://namespaces.softwareag.com/webMethods/IS" xmlns="http://namespaces.softwareag.com/acdl/1.0" xmlns:EDA="http://namespaces.softwareag.com/webMethods/EDA" xmlns:MWS="http://namespaces.softwareag.com/webMethods/MWS" xmlns:IS="http://namespaces.softwareag.com/webMethods/IS" xmlns:APIPORTAL="http://namespaces.softwareag.com/webMethods/APIPORTAL" xmlns:AgileApps="http://namespaces.softwareag.com/webMethods/AgileApps" xmlns:BROKER="http://namespaces.softwareag.com/webMethods/BROKER" xmlns:implDetails="http://namespaces.softwareag.com/acdl/implDetails" xmlns:UniversalMessaging="http://namespaces.softwareag.com/webMethods/UniversalMessaging" xmlns:TN="http://namespaces.softwareag.com/webMethods/TN" xmlns:RULES="http://namespaces.softwareag.com/webMethods/RULES" xmlns:BPM="http://namespaces.softwareag.com/webMethods/BPM" xmlns:Optimize="http://namespaces.softwareag.com/webMethods/Optimize">
-    <implementation.generic type="isconfiguration"/>
-    <buildInfo name="BuildTimestamp" value="2020-07-17T15:06:35"/>
-    <buildInfo name="BuildVersion" value="10.5.0.0.1594978595344"/>
-    <buildInfo name="MinimumTargetRuntimeVersion" value="10.5.0.0"/>
-    <asset name="User.biswa" displayName="biswa" isDeployable="true">
-        <implementation.generic type="isuser"/>
-        <property name="allowDigestAuth" many="false" isSecure="false" displayName="Allow Digest Authentication">
-            <value>false</value>
-        </property>
-    </asset>
-    <asset name="JNDIAlias.demo" displayName="demo" isDeployable="true">
-        <implementation.generic type="isjndialias"/>
-        <property name="providerURL" many="false" isSecure="false" displayName="Provider URL">
-            <value>${UM_URL}</value>
-        </property>
-        <property name="providerURLFailoverList" many="false" isSecure="false" displayName="Provider URL Failover List">
-            <value></value>
-        </property>
-        <property name="securityPrincipal" many="false" isSecure="false" displayName="Security Principal">
-            <value>${UM_USER}</value>
-        </property>
-        <property name="securityCredentials" many="false" isSecure="true" displayName="Security Credentials">
-            <value>${UM_PASSWORD}</value>
-        </property>
-    </asset>
-    <asset name="JMSAlias.demo" displayName="demo" isDeployable="true">
-        <implementation.generic type="isjmsalias"/>
-        <dependsOn>IS:JNDIAlias.demo</dependsOn>
-        <property name="clientID" many="false" isSecure="false" displayName="Connection Client ID">
-            <value></value>
-        </property>
-        <property name="user" many="false" isSecure="false" displayName="User">
-            <value>${UM_USER}</value>
-        </property>
-        <property name="password" many="false" isSecure="true" displayName="Password">
-            <value>${UM_PASSWORD}</value>
-        </property>
-        <property name="jndi_connectionFactoryLookupName" many="false" isSecure="false" displayName="Connection Factory Lookup Name">
-            <value>demo</value>
-        </property>
-        <property name="jndi_automaticallyCreateUMAdminObjects" many="false" isSecure="false" displayName="Automatically Create Administered Objects">
-            <value>false</value>
-        </property>
-    </asset>
-    <asset name="WebserviceEndpointAlias.Provider.HTTPS.provider_https" displayName="HTTPS Endpoint Alias 'provider_https' for Web service Provider" isDeployable="true">
-        <implementation.generic type="iswebserviceendpointalias"/>
-        <dependsOn>IS:KeystoreAlias.partner1_ks1</dependsOn>
-        <dependsOn>IS:TruststoreAlias.partner1_ts1</dependsOn>
-        <property name="host" many="false" isSecure="false" displayName="Host Name or IP Address">
-            <value>localhost</value>
-        </property>
-        <property name="port" many="false" isSecure="false" displayName="Port Number">
-            <value>5734</value>
-        </property>
-        <property name="enable" many="false" isSecure="false" displayName="Enable">
-            <value>false</value>
-        </property>
-        <property name="retransmissionInterval" many="false" isSecure="false" displayName="Retransmission Interval (milliseconds)">
-            <value>6000</value>
-        </property>
-        <property name="acknowledgementInterval" many="false" isSecure="false" displayName="Acknowledgement Interval (milliseconds)">
-            <value>3000</value>
-        </property>
-        <property name="exponentialBackoff" many="false" isSecure="false" displayName="Exponential Backoff">
-            <value>true</value>
-        </property>
-        <property name="maximumRetransmissionCount" many="false" isSecure="false" displayName="Maximum Retransmission Count">
-            <value>10</value>
-        </property>
-    </asset>
-    <asset name="WebserviceEndpointAlias.Consumer.HTTPS.consumer_https" displayName="HTTPS Endpoint Alias 'consumer_https' for Web service Consumer" isDeployable="true">
-        <implementation.generic type="iswebserviceendpointalias"/>
-        <dependsOn>IS:KeystoreAlias.partner1_ks1</dependsOn>
-        <dependsOn>IS:TruststoreAlias.partner1_ts1</dependsOn>
-        <property name="host" many="false" isSecure="false" displayName="Host Name or IP Address">
-            <value>localhost</value>
-        </property>
-        <property name="port" many="false" isSecure="false" displayName="Port Number">
-            <value>5734</value>
-        </property>
-        <property name="transportUser" many="false" isSecure="false" displayName="User Name (For Transport)">
-            <value>Administrator</value>
-        </property>
-        <property name="transportPassword" many="false" isSecure="true" displayName="Password (For Transport)">
-            <value>{AES}Y5IgMqjfvkgbg7p5VUZztw==</value>
-        </property>
-        <property name="transportAuthType" many="false" isSecure="false" displayName="Authentication Type (For Transport)">
-            <value>basic</value>
-        </property>
-        <property name="messageUser" many="false" isSecure="false" displayName="User Name (For Message)">
-            <value>Administrator</value>
-        </property>
-        <property name="messagePassword" many="false" isSecure="true" displayName="Password (For Message)">
-            <value>{AES}Y5IgMqjfvkgbg7p5VUZztw==</value>
-        </property>
-        <property name="jaasContext" many="false" isSecure="false" displayName="JAAS Context">
-            <value></value>
-        </property>
-        <property name="clientPrincipal" many="false" isSecure="false" displayName="Client Principal">
-            <value></value>
-        </property>
-        <property name="clientPassword" many="false" isSecure="true" displayName="Client Principal Password">
-            <value>{AES}aYrXC43dTWsDUHRWG5mhTA==</value>
-        </property>
-        <property name="servicePrincipal" many="false" isSecure="false" displayName="Service Principal Name">
-            <value></value>
-        </property>
-        <property name="servicePrincipalForm" many="false" isSecure="false" displayName="Service Principal Name Form">
-            <value></value>
-        </property>
-        <property name="partnerCertificateFileName" many="false" isSecure="false" displayName="Partner's Certificate">
-            <value>packages/test_https/pub/secureCerts/jpegu/partner1cert.der</value>
-        </property>
-        <property name="useSourcePartnerCertificate" many="false" isSecure="false" displayName="Use Source Partner's Certificate">
-            <value>true</value>
-        </property>
-        <property name="enable" many="false" isSecure="false" displayName="Enable">
-            <value>false</value>
-        </property>
-        <property name="retransmissionInterval" many="false" isSecure="false" displayName="Retransmission Interval (milliseconds)">
-            <value>6000</value>
-        </property>
-        <property name="acknowledgementInterval" many="false" isSecure="false" displayName="Acknowledgement Interval (milliseconds)">
-            <value>3000</value>
-        </property>
-        <property name="exponentialBackoff" many="false" isSecure="false" displayName="Exponential Backoff">
-            <value>true</value>
-        </property>
-        <property name="maximumRetransmissionCount" many="false" isSecure="false" displayName="Maximum Retransmission Count">
-            <value>10</value>
-        </property>
-    </asset>
-    <asset name="CertificateSettingsAlias.SSLKey" displayName="Certificates SSL Key" isDeployable="true">
-        <implementation.generic type="iscertificatesettings"/>
-        <dependsOn>IS:KeystoreAlias.partner1_ks1</dependsOn>
-    </asset>
-    <asset name="CertificateSettingsAlias.Truststore" displayName="Certificates Truststore" isDeployable="true">
-        <implementation.generic type="iscertificatesettings"/>
-        <dependsOn>IS:TruststoreAlias.partner1_ts1</dependsOn>
-    </asset>
-    <asset name="ClientCert.partner1.SSL_Authentication" displayName="Client Certificate with SubjectCN 'partner1' and Usage 'SSL_Authentication'" isDeployable="true">
-        <implementation.generic type="isclientcerts"/>
-        <property name="certificatePath" many="false" isSecure="false" displayName="Certificate File Location">
-            <value></value>
-        </property>
-    </asset>
-    <asset name="Parsing.Configuration" displayName="Configuration" isDeployable="true">
-        <implementation.generic type="isparsing"/>
-        <property name="defaultPartitionBytes" many="false" isSecure="false" displayName="Default Partition Bytes">
-            <value>20k</value>
-        </property>
-        <property name="useCache" many="false" isSecure="false" displayName="Use Cache">
-            <value>false</value>
-        </property>
-        <property name="maximumHeapBytes" many="false" isSecure="false" displayName="Maximum Heap Bytes">
-            <value>40%</value>
-        </property>
-        <property name="maximumDocBytes" many="false" isSecure="false" displayName="Maximum Document Bytes">
-            <value>20%</value>
-        </property>
-        <property name="maximumBigMemoryBytes" many="false" isSecure="false" displayName="Maximum BigMemory Bytes">
-            <value>200m</value>
-        </property>
-        <property name="useBigMemory" many="false" isSecure="false" displayName="Use BigMemory">
-            <value>false</value>
-        </property>
-    </asset>
-    <asset name="FileAccessControlConfig.isfileaccesscontrol" displayName="FileAccessControl Config" isDeployable="true">
-        <implementation.generic type="isfileaccesscontrol"/>
-        <property name="allowedWritePaths" many="false" isSecure="false" displayName="Allowed Write Paths">
-            <value></value>
-        </property>
-        <property name="allowedReadPaths" many="false" isSecure="false" displayName="Allowed Read Paths">
-            <value></value>
-        </property>
-        <property name="allowedDeletePaths" many="false" isSecure="false" displayName="Allowed Delete Paths">
-            <value></value>
-        </property>
-    </asset>
-    <property name="suspendTasksDuringDeploy" many="false" isSecure="false" displayName="Suspend Tasks During Deployment">
-        <value>none</value>
+<asset_composite xmlns="http://namespaces.softwareag.com/acdl/1.0" targetNamespace="http://namespaces.softwareag.com/webMethods/IS" name="isconfiguration" runtimeVersion="10.7.0.0">
+  <implementation.generic type="isconfiguration" />
+  <property name="suspendTasksDuringDeploy" displayName="Suspend Tasks During Deployment">
+    <value>none</value>
+  </property>
+  <property name="activateTasksAfterDeploy" displayName="Activate Tasks After Deployment">
+    <value>none</value>
+  </property>
+  <property name="enablePortsAfterDeploy" displayName="Enable Ports After Deployment">
+    <value>none</value>
+  </property>
+  <property name="reloadCacheManagersAfterDeployment" displayName="Reload Cache Managers After Deployment">
+    <value>none</value>
+  </property>
+  <buildInfo name="BuildVersion" value="10.7.0.0." />
+  <buildInfo name="BuildTimestamp" value="2020-07-24T04:28:13" />
+  <buildInfo name="MinimumTargetRuntimeVersion" value="10.7.0.0" />
+  <asset name="CloudStreams.Administration.DatabaseConfig" displayName="DatabaseConfig">
+    <implementation.generic type="iscloudstreamsadmindatabaseconfig" />
+    <property name="pg.jdbc.active" displayName="Database Publishing">
+      <value>true</value>
     </property>
-    <property name="activateTasksAfterDeploy" many="false" isSecure="false" displayName="Activate Tasks After Deployment">
-        <value>none</value>
+    <property name="pg.PgMenConfiguration.perfDataEnabled" displayName="Publish Performance Metrics">
+      <value>true</value>
     </property>
-    <property name="enablePortsAfterDeploy" many="false" isSecure="false" displayName="Enable Ports After Deployment">
-        <value>none</value>
+    <property name="pg.PgMenConfiguration.reportInterval" displayName="Publish Interval">
+      <value>1</value>
     </property>
-    <property name="reloadCacheManagersAfterDeployment" many="false" isSecure="false" displayName="Reload Cache Managers After Deployment">
-        <value>none</value>
+    <property name="pg.publish.events" displayName="Publish Events">
+      <value>true</value>
     </property>
+    <dependsOn>IS:JDBCFunctionalAlias.CloudStreams</dependsOn>
+  </asset>
+  <asset name="CloudStreams.Administration.General.LargeFileConfig" displayName="LargeFileConfig">
+    <implementation.generic type="iscloudstreamslargefileconfig" />
+    <property name="wst.largedata.binaryStreamEnabled" displayName="Handle Binary Streams">
+      <value>true</value>
+    </property>
+    <property name="wst.largedata.threshold" displayName="Large Data Threshold Size">
+      <value>5242880</value>
+    </property>
+    <dependsOn>IS:ISProperty.watt.server.tspace.location</dependsOn>
+    <dependsOn>IS:ISProperty.watt.server.tspace.max</dependsOn>
+    <dependsOn>IS:ISProperty.watt.server.tspace.timeToLive</dependsOn>
+  </asset>
+  <asset name="CloudStreams.OAuthTokens.kmat_twitter_deploy" displayName="kmat_twitter_deploy">
+    <implementation.generic type="iscloudstreamsoauthtokens" />
+    <property name="clientId" displayName="Consumer ID">
+      <value>D4MfFLXFdW7VjYbhed01BLDw2</value>
+    </property>
+    <property name="clientSecret" displayName="Consumer Secret" isSecure="true">
+      <value>{AES}UoAE0f9E8snE2G5zU3D4iw073z6cs3tfmp3CGTneJm82O28ss7OgymuGbYJ0S2mZuU/827NtZK2xwq70gLwffg==</value>
+    </property>
+    <property name="accessToken" displayName="Access Token" isSecure="true">
+      <value>{AES}AvD8b/cXP8PUy9DCjHxQC4LtdFjsmOd0SXz3Jj3OoMUN0rO0ATpYTeqoQTPgSPvr6eJ6UPYbCBwpMMNNZHg7wA==</value>
+    </property>
+    <property name="accessTokenSecret" displayName="Access Token Secret" isSecure="true">
+      <value>{AES}1PrCXeTDCkq2gprMX/LG+6sOwwylvFhw1GYoXvk9Sz00JOq8JVpq+BZ73A3myLQB</value>
+    </property>
+  </asset>
 </asset_composite>
+
