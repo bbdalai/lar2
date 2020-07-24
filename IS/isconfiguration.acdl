@@ -12,50 +12,22 @@
   <property name="reloadCacheManagersAfterDeployment" displayName="Reload Cache Managers After Deployment">
     <value>none</value>
   </property>
-  <buildInfo name="BuildVersion" value="10.7.0.0." />
-  <buildInfo name="BuildTimestamp" value="2020-07-24T04:28:13" />
+  <buildInfo name="BuildVersion" value="isasset-build-Administrator" />
+  <buildInfo name="BuildTimestamp" value="2020-07-24T21:35:37" />
   <buildInfo name="MinimumTargetRuntimeVersion" value="10.7.0.0" />
-  <asset name="CloudStreams.Administration.DatabaseConfig" displayName="DatabaseConfig">
-    <implementation.generic type="iscloudstreamsadmindatabaseconfig" />
-    <property name="pg.jdbc.active" displayName="Database Publishing">
-      <value>true</value>
+  <asset name="JNDIAlias.demo" displayName="demo">
+    <implementation.generic type="isjndialias" />
+    <property name="providerURL" displayName="Provider URL">
+      <value>nsp://vminbda01:9000/</value>
     </property>
-    <property name="pg.PgMenConfiguration.perfDataEnabled" displayName="Publish Performance Metrics">
-      <value>true</value>
+    <property name="providerURLFailoverList" displayName="Provider URL Failover List">
+      <value />
     </property>
-    <property name="pg.PgMenConfiguration.reportInterval" displayName="Publish Interval">
-      <value>1</value>
+    <property name="securityPrincipal" displayName="Security Principal">
+      <value />
     </property>
-    <property name="pg.publish.events" displayName="Publish Events">
-      <value>true</value>
-    </property>
-    <dependsOn>IS:JDBCFunctionalAlias.CloudStreams</dependsOn>
-  </asset>
-  <asset name="CloudStreams.Administration.General.LargeFileConfig" displayName="LargeFileConfig">
-    <implementation.generic type="iscloudstreamslargefileconfig" />
-    <property name="wst.largedata.binaryStreamEnabled" displayName="Handle Binary Streams">
-      <value>true</value>
-    </property>
-    <property name="wst.largedata.threshold" displayName="Large Data Threshold Size">
-      <value>5242880</value>
-    </property>
-    <dependsOn>IS:ISProperty.watt.server.tspace.location</dependsOn>
-    <dependsOn>IS:ISProperty.watt.server.tspace.max</dependsOn>
-    <dependsOn>IS:ISProperty.watt.server.tspace.timeToLive</dependsOn>
-  </asset>
-  <asset name="CloudStreams.OAuthTokens.kmat_twitter_deploy" displayName="kmat_twitter_deploy">
-    <implementation.generic type="iscloudstreamsoauthtokens" />
-    <property name="clientId" displayName="Consumer ID">
-      <value>D4MfFLXFdW7VjYbhed01BLDw2</value>
-    </property>
-    <property name="clientSecret" displayName="Consumer Secret" isSecure="true">
-      <value>{AES}UoAE0f9E8snE2G5zU3D4iw073z6cs3tfmp3CGTneJm82O28ss7OgymuGbYJ0S2mZuU/827NtZK2xwq70gLwffg==</value>
-    </property>
-    <property name="accessToken" displayName="Access Token" isSecure="true">
-      <value>{AES}AvD8b/cXP8PUy9DCjHxQC4LtdFjsmOd0SXz3Jj3OoMUN0rO0ATpYTeqoQTPgSPvr6eJ6UPYbCBwpMMNNZHg7wA==</value>
-    </property>
-    <property name="accessTokenSecret" displayName="Access Token Secret" isSecure="true">
-      <value>{AES}1PrCXeTDCkq2gprMX/LG+6sOwwylvFhw1GYoXvk9Sz00JOq8JVpq+BZ73A3myLQB</value>
+    <property name="securityCredentials" displayName="Security Credentials" isSecure="true">
+      <value>{AES}dQqG9OmWxy081+Y/oQ09Vg==</value>
     </property>
   </asset>
 </asset_composite>
