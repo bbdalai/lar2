@@ -1,34 +1,22 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<asset_composite name="isconfiguration" runtimeVersion="10.7.0.0" targetNamespace="http://namespaces.softwareag.com/webMethods/IS" xmlns="http://namespaces.softwareag.com/acdl/1.0" xmlns:EDA="http://namespaces.softwareag.com/webMethods/EDA" xmlns:MWS="http://namespaces.softwareag.com/webMethods/MWS" xmlns:IS="http://namespaces.softwareag.com/webMethods/IS" xmlns:APIPORTAL="http://namespaces.softwareag.com/webMethods/APIPORTAL" xmlns:AgileApps="http://namespaces.softwareag.com/webMethods/AgileApps" xmlns:BROKER="http://namespaces.softwareag.com/webMethods/BROKER" xmlns:implDetails="http://namespaces.softwareag.com/acdl/implDetails" xmlns:UniversalMessaging="http://namespaces.softwareag.com/webMethods/UniversalMessaging" xmlns:TN="http://namespaces.softwareag.com/webMethods/TN" xmlns:RULES="http://namespaces.softwareag.com/webMethods/RULES" xmlns:BPM="http://namespaces.softwareag.com/webMethods/BPM" xmlns:Optimize="http://namespaces.softwareag.com/webMethods/Optimize">
-    <implementation.generic type="isconfiguration"/>
-    <buildInfo name="BuildTimestamp" value="2020-07-24T21:35:37"/>
-    <buildInfo name="BuildVersion" value="isasset-build-Administrator"/>
-    <buildInfo name="MinimumTargetRuntimeVersion" value="10.7.0.0"/>
-    <asset name="JNDIAlias.demo" displayName="demo" isDeployable="true">
-        <implementation.generic type="isjndialias"/>
-        <property name="providerURL" many="false" isSecure="false" displayName="Provider URL">
-            <value>${UM_URL}</value>
-        </property>
-        <property name="providerURLFailoverList" many="false" isSecure="false" displayName="Provider URL Failover List">
-            <value></value>
-        </property>
-        <property name="securityPrincipal" many="false" isSecure="false" displayName="Security Principal">
-            <value>${UM_USER}</value>
-        </property>
-        <property name="securityCredentials" many="false" isSecure="true" displayName="Security Credentials">
-            <value>${UM_PASSWORD}</value>
-        </property>
-    </asset>
-    <property name="suspendTasksDuringDeploy" many="false" isSecure="false" displayName="Suspend Tasks During Deployment">
-        <value>none</value>
-    </property>
-    <property name="activateTasksAfterDeploy" many="false" isSecure="false" displayName="Activate Tasks After Deployment">
-        <value>none</value>
-    </property>
-    <property name="enablePortsAfterDeploy" many="false" isSecure="false" displayName="Enable Ports After Deployment">
-        <value>none</value>
-    </property>
-    <property name="reloadCacheManagersAfterDeployment" many="false" isSecure="false" displayName="Reload Cache Managers After Deployment">
-        <value>none</value>
-    </property>
+<asset_composite xmlns="http://namespaces.softwareag.com/acdl/1.0" targetNamespace="http://namespaces.softwareag.com/webMethods/IS" name="isconfiguration" runtimeVersion="10.11.0.0">
+  <implementation.generic type="isconfiguration" />
+  <property name="suspendTasksDuringDeploy" displayName="Suspend Tasks During Deployment">
+    <value>none</value>
+  </property>
+  <property name="activateTasksAfterDeploy" displayName="Activate Tasks After Deployment">
+    <value>none</value>
+  </property>
+  <property name="enablePortsAfterDeploy" displayName="Enable Ports After Deployment">
+    <value>none</value>
+  </property>
+  <property name="reloadCacheManagersAfterDeployment" displayName="Reload Cache Managers After Deployment">
+    <value>none</value>
+  </property>
+  <property name="restartRuntimes" displayName="restartRuntimes">
+    <value>true</value>
+  </property>
+  <buildInfo name="BuildVersion" value="10.11.0.0.61083723" />
+  <buildInfo name="BuildTimestamp" value="2021-06-30T15:56:24" />
+  <buildInfo name="MinimumTargetRuntimeVersion" value="10.11.0.0" />
 </asset_composite>
+
