@@ -15,8 +15,20 @@
   <property name="restartRuntimes" displayName="restartRuntimes">
     <value>true</value>
   </property>
-  <buildInfo name="BuildVersion" value="10.11.0.0.61083723" />
-  <buildInfo name="BuildTimestamp" value="2021-06-30T15:56:24" />
+  <buildInfo name="BuildVersion" value="10.11.0.0.-1963587925" />
+  <buildInfo name="BuildTimestamp" value="2021-07-09T18:54:13" />
   <buildInfo name="MinimumTargetRuntimeVersion" value="10.11.0.0" />
+  <asset name="GlobalVariable.Key1" displayName="Global Variable 'Key1'">
+    <implementation.generic type="isglobalvariable" />
+    <property name="value" displayName="Value">
+      <value>Value1</value>
+    </property>
+  </asset>
+  <asset name="GlobalVariable.key2" displayName="Global Variable 'key2'">
+    <implementation.generic type="isglobalvariable" />
+    <property name="value" displayName="Value">
+      <value>Value2</value>
+    </property>
+  </asset>
 </asset_composite>
 
