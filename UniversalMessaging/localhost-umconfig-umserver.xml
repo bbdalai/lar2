@@ -82,6 +82,25 @@
                     </EventPropSet>
                     <EventData>cXVldWUx</EventData>
                 </Event>
+                <Event id="2">
+                    <EventAttribSet>
+                        <EventAttrib name="nrvpub.time" type="Long" value="1625651716984"/>
+                        <EventAttrib name="nrvpub.host" type="String" value="sag-d9qt9y2"/>
+                        <EventAttrib name="nrvpub.name" type="String" value="inbda"/>
+                        <EventAttrib name="JMSDeliveryMode" type="String" value="PERSISTENT"/>
+                        <EventAttrib name="JMSPriority" type="Byte" value="4"/>
+                    </EventAttribSet>
+                    <EventPropSet>
+                        <EventProp name="alias.type" type="Integer" value="1"/>
+                        <EventProp name="alias" type="String" value="topic1"/>
+                        <EventProp name="alias.reference.classname" type="String" value="javax.jms.Topic"/>
+                        <EventProp name="alias.reference.factoryclass" type="String" value="com.pcbsys.nirvana.nJMS.TopicFactory"/>
+                        <EventProp name="alias.reference.url" type="String" value=""/>
+                        <EventProp name="alias.stringRefAddr.type" type="String" value="Topic"/>
+                        <EventProp name="alias.stringRefAddr.addr" type="String" value="topic1"/>
+                    </EventPropSet>
+                    <EventData>dG9waWMx</EventData>
+                </Event>
                 <Event id="3">
                     <EventAttribSet>
                         <EventAttrib name="nrvpub.time" type="Long" value="1625651736917"/>
@@ -101,7 +120,34 @@
                     </EventPropSet>
                     <EventData>cXVldWUy</EventData>
                 </Event>
+                <Event id="4">
+                    <EventAttribSet>
+                        <EventAttrib name="nrvpub.time" type="Long" value="1625651748361"/>
+                        <EventAttrib name="nrvpub.host" type="String" value="sag-d9qt9y2"/>
+                        <EventAttrib name="nrvpub.name" type="String" value="inbda"/>
+                        <EventAttrib name="JMSDeliveryMode" type="String" value="PERSISTENT"/>
+                        <EventAttrib name="JMSPriority" type="Byte" value="4"/>
+                    </EventAttribSet>
+                    <EventPropSet>
+                        <EventProp name="alias.type" type="Integer" value="1"/>
+                        <EventProp name="alias" type="String" value="topic2"/>
+                        <EventProp name="alias.reference.classname" type="String" value="javax.jms.Topic"/>
+                        <EventProp name="alias.reference.factoryclass" type="String" value="com.pcbsys.nirvana.nJMS.TopicFactory"/>
+                        <EventProp name="alias.reference.url" type="String" value=""/>
+                        <EventProp name="alias.stringRefAddr.type" type="String" value="Topic"/>
+                        <EventProp name="alias.stringRefAddr.addr" type="String" value="topic2"/>
+                    </EventPropSet>
+                    <EventData>dG9waWMy</EventData>
+                </Event>
             </EventsSet>
+        </ChannelEntry>
+        <ChannelEntry>
+            <ChannelAttributesEntry name="topic1" TTL="0" capacity="0" EID="0" clusterWide="false" jmsEngine="true" mergeEngine="false" type="MIXED_TYPE"/>
+            <StorePropertiesEntry HonorCapacityWhenFull="true" SyncOnEachWrite="false" SyncMaxBatchSize="0" SyncBatchTime="0" PerformAutomaticMaintenance="true" EnableCaching="true" CacheOnReload="true" EnableReadBuffering="true" ReadBufferSize="10240" Priority="4" EnableMulticast="false" MultiFileEventsPerSpindle="50000" StampDictionary="0"/>
+        </ChannelEntry>
+        <ChannelEntry>
+            <ChannelAttributesEntry name="topic2" TTL="0" capacity="0" EID="0" clusterWide="false" jmsEngine="true" mergeEngine="false" type="MIXED_TYPE"/>
+            <StorePropertiesEntry HonorCapacityWhenFull="true" SyncOnEachWrite="false" SyncMaxBatchSize="0" SyncBatchTime="0" PerformAutomaticMaintenance="true" EnableCaching="true" CacheOnReload="true" EnableReadBuffering="true" ReadBufferSize="10240" Priority="4" EnableMulticast="false" MultiFileEventsPerSpindle="50000" StampDictionary="0"/>
         </ChannelEntry>
     </ChannelSet>
     <QueueSet>
