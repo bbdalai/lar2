@@ -6,9 +6,6 @@
     <asset name="Channel:topic1" isDeployable="true">
         <implementation.generic type="Channel"/>
     </asset>
-    <asset name="Channel:topic2" isDeployable="true">
-        <implementation.generic type="Channel"/>
-    </asset>
     <asset name="UMQueue:queue1" isDeployable="true">
         <implementation.generic type="UMQueue"/>
     </asset>
@@ -19,9 +16,6 @@
         <implementation.generic type="ConnectionFactory"/>
     </asset>
     <asset name="JNDITopic:topic1" isDeployable="true">
-        <implementation.generic type="JNDITopic"/>
-    </asset>
-    <asset name="JNDITopic:topic2" isDeployable="true">
         <implementation.generic type="JNDITopic"/>
     </asset>
     <asset name="JNDIQueue:queue1" isDeployable="true">
