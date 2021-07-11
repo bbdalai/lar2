@@ -3,9 +3,6 @@
     <implementation.generic type="UniversalMessaging"/>
     <buildInfo name="build.timestamp"/>
     <buildInfo name="build.version" value="10.11.0.0000-0435"/>
-    <asset name="Channel:topic1" isDeployable="true">
-        <implementation.generic type="Channel"/>
-    </asset>
     <asset name="UMQueue:queue1" isDeployable="true">
         <implementation.generic type="UMQueue"/>
     </asset>
@@ -14,9 +11,6 @@
     </asset>
     <asset name="ConnectionFactory:cf1" isDeployable="true">
         <implementation.generic type="ConnectionFactory"/>
-    </asset>
-    <asset name="JNDITopic:topic1" isDeployable="true">
-        <implementation.generic type="JNDITopic"/>
     </asset>
     <asset name="JNDIQueue:queue1" isDeployable="true">
         <implementation.generic type="JNDIQueue"/>
