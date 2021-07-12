@@ -1,34 +1,28 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<asset_composite name="isconfiguration" runtimeVersion="10.11.0.0" targetNamespace="http://namespaces.softwareag.com/webMethods/IS" xmlns="http://namespaces.softwareag.com/acdl/1.0" xmlns:EDA="http://namespaces.softwareag.com/webMethods/EDA" xmlns:MWS="http://namespaces.softwareag.com/webMethods/MWS" xmlns:IS="http://namespaces.softwareag.com/webMethods/IS" xmlns:APIPORTAL="http://namespaces.softwareag.com/webMethods/APIPORTAL" xmlns:AgileApps="http://namespaces.softwareag.com/webMethods/AgileApps" xmlns:BROKER="http://namespaces.softwareag.com/webMethods/BROKER" xmlns:implDetails="http://namespaces.softwareag.com/acdl/implDetails" xmlns:UniversalMessaging="http://namespaces.softwareag.com/webMethods/UniversalMessaging" xmlns:TN="http://namespaces.softwareag.com/webMethods/TN" xmlns:RULES="http://namespaces.softwareag.com/webMethods/RULES" xmlns:BPM="http://namespaces.softwareag.com/webMethods/BPM" xmlns:Optimize="http://namespaces.softwareag.com/webMethods/Optimize">
-    <implementation.generic type="isconfiguration"/>
-    <buildInfo name="BuildTimestamp" value="2021-07-09T18:54:13"/>
-    <buildInfo name="BuildVersion" value="10.11.0.0.-1963587925"/>
-    <buildInfo name="MinimumTargetRuntimeVersion" value="10.11.0.0"/>
-    <asset name="GlobalVariable.Key1" displayName="Global Variable 'Key1'" isDeployable="true">
-        <implementation.generic type="isglobalvariable"/>
-        <property name="value" many="false" isSecure="false" displayName="Value">
-            <value>Value11</value>
-        </property>
-    </asset>
-    <asset name="GlobalVariable.key2" displayName="Global Variable 'key2'" isDeployable="true">
-        <implementation.generic type="isglobalvariable"/>
-        <property name="value" many="false" isSecure="false" displayName="Value">
-            <value>Value21</value>
-        </property>
-    </asset>
-    <property name="suspendTasksDuringDeploy" many="false" isSecure="false" displayName="Suspend Tasks During Deployment">
-        <value>none</value>
+<asset_composite xmlns="http://namespaces.softwareag.com/acdl/1.0" targetNamespace="http://namespaces.softwareag.com/webMethods/IS" name="isconfiguration" runtimeVersion="10.11.0.0">
+  <implementation.generic type="isconfiguration" />
+  <property name="suspendTasksDuringDeploy" displayName="Suspend Tasks During Deployment">
+    <value>none</value>
+  </property>
+  <property name="activateTasksAfterDeploy" displayName="Activate Tasks After Deployment">
+    <value>none</value>
+  </property>
+  <property name="enablePortsAfterDeploy" displayName="Enable Ports After Deployment">
+    <value>none</value>
+  </property>
+  <property name="reloadCacheManagersAfterDeployment" displayName="Reload Cache Managers After Deployment">
+    <value>none</value>
+  </property>
+  <property name="restartRuntimes" displayName="restartRuntimes">
+    <value>true</value>
+  </property>
+  <buildInfo name="BuildVersion" value="10.11.0.0.511821283" />
+  <buildInfo name="BuildTimestamp" value="2021-07-12T20:21:59" />
+  <buildInfo name="MinimumTargetRuntimeVersion" value="10.11.0.0" />
+  <asset name="GlobalVariable.Key1" displayName="Global Variable 'Key1'">
+    <implementation.generic type="isglobalvariable" />
+    <property name="value" displayName="Value">
+      <value>Value1</value>
     </property>
-    <property name="activateTasksAfterDeploy" many="false" isSecure="false" displayName="Activate Tasks After Deployment">
-        <value>none</value>
-    </property>
-    <property name="enablePortsAfterDeploy" many="false" isSecure="false" displayName="Enable Ports After Deployment">
-        <value>none</value>
-    </property>
-    <property name="reloadCacheManagersAfterDeployment" many="false" isSecure="false" displayName="Reload Cache Managers After Deployment">
-        <value>none</value>
-    </property>
-    <property name="restartRuntimes" many="false" isSecure="false" displayName="restartRuntimes">
-        <value>true</value>
-    </property>
+  </asset>
 </asset_composite>
+
