@@ -2,7 +2,7 @@
 <asset_composite name="localhost-umconfig-umserver" displayName="localhost-umconfig-umserver" runtimeVersion="10.11" targetNamespace="http://namespaces.softwareag.com/webMethods/UniversalMessaging" xmlns="http://namespaces.softwareag.com/acdl/1.0" xmlns:EDA="http://namespaces.softwareag.com/webMethods/EDA" xmlns:MWS="http://namespaces.softwareag.com/webMethods/MWS" xmlns:IS="http://namespaces.softwareag.com/webMethods/IS" xmlns:APIPORTAL="http://namespaces.softwareag.com/webMethods/APIPORTAL" xmlns:AgileApps="http://namespaces.softwareag.com/webMethods/AgileApps" xmlns:BROKER="http://namespaces.softwareag.com/webMethods/BROKER" xmlns:implDetails="http://namespaces.softwareag.com/acdl/implDetails" xmlns:UniversalMessaging="http://namespaces.softwareag.com/webMethods/UniversalMessaging" xmlns:TN="http://namespaces.softwareag.com/webMethods/TN" xmlns:RULES="http://namespaces.softwareag.com/webMethods/RULES" xmlns:BPM="http://namespaces.softwareag.com/webMethods/BPM" xmlns:Optimize="http://namespaces.softwareag.com/webMethods/Optimize">
     <implementation.generic type="UniversalMessaging"/>
     <buildInfo name="build.timestamp"/>
-    <buildInfo name="build.version" value="10.11.0.0000-0435"/>
+    <buildInfo name="build.version" value="10.11.0.0000-0446"/>
     <asset name="Channel:topic1" isDeployable="true">
         <implementation.generic type="Channel"/>
     </asset>
