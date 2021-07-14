@@ -15,8 +15,8 @@
   <property name="restartRuntimes" displayName="restartRuntimes">
     <value>true</value>
   </property>
-  <buildInfo name="BuildVersion" value="10.11.0.0.-1818508137" />
-  <buildInfo name="BuildTimestamp" value="2021-07-14T11:04:14" />
+  <buildInfo name="BuildVersion" value="10.11.0.0.-682973584" />
+  <buildInfo name="BuildTimestamp" value="2021-07-14T18:33:25" />
   <buildInfo name="MinimumTargetRuntimeVersion" value="10.11.0.0" />
   <asset name="GlobalVariable.Key1" displayName="Global Variable 'Key1'">
     <implementation.generic type="isglobalvariable" />
