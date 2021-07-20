@@ -6,16 +6,10 @@
     <asset name="Channel:q1" isDeployable="true">
         <implementation.generic type="Channel"/>
     </asset>
-    <asset name="UMQueue:t1" isDeployable="true">
-        <implementation.generic type="UMQueue"/>
-    </asset>
     <asset name="ConnectionFactory:con1" isDeployable="true">
         <implementation.generic type="ConnectionFactory"/>
     </asset>
     <asset name="JNDITopic:q1" isDeployable="true">
         <implementation.generic type="JNDITopic"/>
-    </asset>
-    <asset name="JNDIQueue:t1" isDeployable="true">
-        <implementation.generic type="JNDIQueue"/>
     </asset>
 </asset_composite>

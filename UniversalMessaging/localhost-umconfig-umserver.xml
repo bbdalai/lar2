@@ -2,7 +2,7 @@
 <NirvanaRealm name="umserver" exportDate="2021-07-20+05:30" comment="Realm configuration from umserver" version="10.11" buildInfo="10.11.0.0.355">
     <ChannelSet>
         <ChannelEntry>
-            <ChannelAttributesEntry name="/naming/defaultContext" TTL="0" capacity="0" EID="18" clusterWide="false" jmsEngine="false" mergeEngine="false" type="MIXED_TYPE"/>
+            <ChannelAttributesEntry name="/naming/defaultContext" TTL="0" capacity="0" EID="0" clusterWide="false" jmsEngine="false" mergeEngine="false" type="MIXED_TYPE"/>
             <StorePropertiesEntry HonorCapacityWhenFull="true" SyncOnEachWrite="false" SyncMaxBatchSize="0" SyncBatchTime="0" PerformAutomaticMaintenance="true" EnableCaching="true" CacheOnReload="true" EnableReadBuffering="true" ReadBufferSize="10240" Priority="4" EnableMulticast="false" MultiFileEventsPerSpindle="50000" StampDictionary="0"/>
             <ChannelKeySet>
                 <ChannelKeyEntry keyName="alias" keyDepth="1"/>
@@ -63,25 +63,6 @@
                     </EventPropSet>
                     <EventData>Y29uMQ==</EventData>
                 </Event>
-                <Event id="17">
-                    <EventAttribSet>
-                        <EventAttrib name="nrvpub.time" type="Long" value="1626704014967"/>
-                        <EventAttrib name="nrvpub.host" type="String" value="sag-d9qt9y2"/>
-                        <EventAttrib name="nrvpub.name" type="String" value="inbda"/>
-                        <EventAttrib name="JMSDeliveryMode" type="String" value="PERSISTENT"/>
-                        <EventAttrib name="JMSPriority" type="Byte" value="4"/>
-                    </EventAttribSet>
-                    <EventPropSet>
-                        <EventProp name="alias.type" type="Integer" value="1"/>
-                        <EventProp name="alias" type="String" value="t1"/>
-                        <EventProp name="alias.reference.classname" type="String" value="javax.jms.Queue"/>
-                        <EventProp name="alias.reference.factoryclass" type="String" value="com.pcbsys.nirvana.nJMS.QueueFactory"/>
-                        <EventProp name="alias.reference.url" type="String" value=""/>
-                        <EventProp name="alias.stringRefAddr.type" type="String" value="Queue"/>
-                        <EventProp name="alias.stringRefAddr.addr" type="String" value="t1"/>
-                    </EventPropSet>
-                    <EventData>dDE=</EventData>
-                </Event>
                 <Event id="18">
                     <EventAttribSet>
                         <EventAttrib name="nrvpub.time" type="Long" value="1626704028078"/>
@@ -108,10 +89,5 @@
             <StorePropertiesEntry HonorCapacityWhenFull="true" SyncOnEachWrite="false" SyncMaxBatchSize="0" SyncBatchTime="0" PerformAutomaticMaintenance="true" EnableCaching="true" CacheOnReload="true" EnableReadBuffering="true" ReadBufferSize="10240" Priority="4" EnableMulticast="false" MultiFileEventsPerSpindle="50000" StampDictionary="0"/>
         </ChannelEntry>
     </ChannelSet>
-    <QueueSet>
-        <QueueEntry>
-            <ChannelAttributesEntry name="t1" TTL="0" capacity="0" EID="0" clusterWide="false" jmsEngine="false" mergeEngine="false" type="MIXED_TYPE"/>
-            <StorePropertiesEntry HonorCapacityWhenFull="true" SyncOnEachWrite="false" SyncMaxBatchSize="0" SyncBatchTime="0" PerformAutomaticMaintenance="true" EnableCaching="true" CacheOnReload="true" EnableReadBuffering="true" ReadBufferSize="10240" Priority="4" EnableMulticast="false" MultiFileEventsPerSpindle="50000" StampDictionary="0"/>
-        </QueueEntry>
-    </QueueSet>
+    <QueueSet/>
 </NirvanaRealm>
