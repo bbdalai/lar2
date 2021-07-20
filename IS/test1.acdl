@@ -1,0 +1,74 @@
+<asset_composite xmlns="http://namespaces.softwareag.com/acdl/1.0" targetNamespace="http://namespaces.softwareag.com/webMethods/IS" name="test1" runtimeVersion="10.11.0.0">
+  <implementation.generic type="ispackage" />
+  <buildInfo name="BuildVersion" value="10.11.0.0.921427727" />
+  <buildInfo name="BuildTimestamp" value="2021-07-20T14:44:54" />
+  <buildInfo name="MinimumTargetRuntimeVersion" value="10.11.0.0" />
+  <property name="activatePkgOnInstall" displayName="Activate Package On Install">
+    <value>true</value>
+  </property>
+  <property name="archivePkgOnInstall" displayName="Archive Package On Install">
+    <value>true</value>
+  </property>
+  <property name="compilePackage" displayName="Compile Package On Install">
+    <value>true</value>
+  </property>
+  <property name="fragPackage" displayName="Fragment Package On Install">
+    <value>true</value>
+  </property>
+  <property name="clearACLs" displayName="Delete ACLs for the assets from the target Integration Server">
+    <value>false</value>
+  </property>
+  <property name="disallowActivePackageInstall" displayName="Disallow Active Package Install">
+    <value>false</value>
+  </property>
+  <property name="packageExecutionCheck" displayName="Package Execution Check">
+    <value>0</value>
+  </property>
+  <property name="suspendTriggersDuringDeploy" displayName="Suspend Triggers During Deployment">
+    <value>false</value>
+  </property>
+  <property name="syncDocTypesToBroker" displayName="Synchronize Document Types During Deployment">
+    <value>true</value>
+  </property>
+  <property name="restartRuntimes" displayName="restartRuntimes">
+    <value>false</value>
+  </property>
+  <asset name="ISPackage.test1" displayName="test1">
+    <implementation.generic type="ispackage" />
+    <dependsOn>IS:ISPackage.test</dependsOn>
+  </asset>
+  <asset name="test1.code" displayName="code">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="test1.code.classes" displayName="code/classes">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="test1.code.jars" displayName="code/jars">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="test1.code.source" displayName="code/source">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="test1.config" displayName="config">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="test1.doc" displayName="doc">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="test1.lib" displayName="lib">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="test1.pub" displayName="pub">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="test1.resources" displayName="resources">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="test1.templates" displayName="templates">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="test1.web" displayName="web">
+    <implementation.generic type="isfolder" />
+  </asset>
+</asset_composite>
+
